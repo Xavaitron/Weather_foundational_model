@@ -4,12 +4,12 @@ First milestone: run the original, unmodified GraphCast checkpoint on official E
 
 ## Quick start
 
-This runner targets **Linux x86_64 with an NVIDIA GPU**. From Windows, first connect to your Linux GPU server over SSH; these Bash commands do not run in PowerShell. From the repository root on that server, set up the environment, verify the GPU, and make a six-hour forecast:
+This runner targets **Linux x86_64 with an NVIDIA GPU**. From Windows, first connect to your Linux GPU server over SSH; these Bash commands do not run in PowerShell. Use your existing environment's Python 3.11 or 3.12; setup installs the dependencies into that environment and does not create a virtual environment:
 
 ```bash
-conda create -n graphcast-bootstrap python=3.11 -y
-conda activate graphcast-bootstrap
-PYTHON_BIN="$(command -v python)" bash scripts/setup_inference.sh
+export PYTHON_BIN="$(command -v python)"
+"$PYTHON_BIN" --version
+bash scripts/setup_inference.sh
 bash scripts/run_inference.sh --check-device
 bash scripts/run_inference.sh --steps 1
 ```
@@ -18,16 +18,15 @@ The first prediction downloads the checkpoint and sample data, then saves NetCDF
 
 ## 1. Install on the server
 
-From the root of your pulled repository:
+From the repository root, with the environment you want to use already active:
 
 ```bash
-# Use a separate environment rather than the server's existing geomotion env.
-conda create -n graphcast-bootstrap python=3.11 -y
-conda activate graphcast-bootstrap
-PYTHON_BIN="$(command -v python)" bash scripts/setup_inference.sh
+export PYTHON_BIN="$(command -v python)"
+"$PYTHON_BIN" --version
+bash scripts/setup_inference.sh
 ```
 
-If `python3.11` is already installed, just run `bash scripts/setup_inference.sh`. The setup creates `.venv` and installs a pinned original GraphCast revision, its inference dependencies, and JAX with pip-provided CUDA 12 libraries. The newer CUDA-capable driver reported by `nvidia-smi` does not require us to use the same CUDA version for pip packages. Do not install or change the server GPU driver for this setup. See [JAX's installation guidance](https://docs.jax.dev/en/latest/installation.html).
+The selected interpreter must be Python 3.11 or 3.12. Setup installs a pinned original GraphCast revision, its inference dependencies, and JAX with pip-provided CUDA 12 libraries directly into that environment. This can change or conflict with packages already installed there. The newer CUDA-capable driver reported by `nvidia-smi` does not require us to use the same CUDA version for pip packages. Do not install or change the server GPU driver for this setup. See [JAX's installation guidance](https://docs.jax.dev/en/latest/installation.html).
 
 The upstream GraphCast package is installed with `--no-deps` after installing the dependencies in `requirements-inference.txt`. This deliberately avoids its notebook-only `colabtools`/Cartopy dependencies. `pip check` can consequently report those unused upstream requirements; model imports are checked by the setup script.
 
@@ -78,24 +77,27 @@ The model only receives two input weather states plus known forcings. Future ERA
 
 | Symptom | Next action |
 | --- | --- |
-| CUDA backend initialization fails | Run `--check-device`; confirm the selected GPU is healthy and available. Record the complete traceback and `.venv/bin/python -m pip freeze`. |
+| CUDA backend initialization fails | Run `--check-device`; confirm the selected GPU is healthy and available. Record the complete traceback and `$PYTHON_BIN -m pip freeze`. |
 | CUDA library conflict | Check whether `LD_LIBRARY_PATH` injects an incompatible system CUDA/cuDNN into the pip environment. See the JAX link above. |
 | Out of memory | Start with `--steps 1` on an available A6000, inspect both host RAM and VRAM, and share the traceback. Fewer steps reduce host/output storage; they do not eliminate the one-step model's GPU memory requirement. |
 | Download interruption | Rerun the same command; verified cached files are reused and the incomplete object restarts. |
 | Output directory already exists | Use a new directory, or omit `--output-dir` for a timestamped one. |
-| Installation failure | Send the first pip error and Python version. The specified setup targets Linux x86_64 and Python 3.11. |
+| Installation failure | Send the first pip error and Python version. The specified setup targets Linux x86_64 and Python 3.11 or 3.12. |
 
-To download assets separately, without initializing JAX: `.venv/bin/python scripts/infer_graphcast.py --download-only --steps 1`.
+To download assets separately, without initializing JAX: `$PYTHON_BIN scripts/infer_graphcast.py --download-only --steps 1`.
 
-## Project context and provenance
+## GPU validation
 
-Local verification: Python compilation, CLI help, Bash syntax, sample selection, checksum encoding, and corrupt-cache replacement passed. The CPU integration test and full pretrained GPU run have **not** been executed here; local installation of the numerical dependencies was interrupted because downloads were too slow. After server setup, the included small random-model test exercises the upstream wrappers, two-step rollout, NetCDF round trip, and plot generation:
+Run these on the Linux GPU server after setup. The device check confirms JAX can execute a GPU computation; the one-step run is the actual end-to-end inference check using the pretrained checkpoint:
 
 ```bash
-JAX_PLATFORMS=cpu .venv/bin/python -m unittest discover -s tests -v
+bash scripts/run_inference.sh --check-device
+bash scripts/run_inference.sh --steps 1
 ```
 
-This test checks pipeline behavior only. The real checkpoint is used by `scripts/run_inference.sh`.
+The first forecast downloads the model and sample data, compiles on the GPU, and writes NetCDF output, a temperature plot, and `run.json` under `outputs/`. CPU-only testing is not required for this inference workflow.
+
+## Project context and provenance
 
 See [the research notes](docs/research_context.md) for the Aurora/advection context, dataset choices, experiment split, and unresolved 0.1-degree requirement. See [the GraphCast model reference](docs/graphcast_model_reference.md) for the paper's architecture, data dimensions, and inference details.
 

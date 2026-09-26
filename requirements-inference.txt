@@ -1,4 +1,4 @@
-# Linux, Python 3.11. CUDA runtime libraries are installed by the JAX extra.
+# Linux, Python 3.11 or 3.12. CUDA runtime libraries come from the JAX extra.
 jax[cuda12]==0.4.35
 chex==0.1.87
 dm-haiku==0.0.13
