@@ -83,7 +83,7 @@ def parse_args():
                         help="Number of six-hour steps, 1-12 (default: 1)")
     parser.add_argument("--cache-dir", type=Path, default=Path("data"))
     parser.add_argument("--output-dir", type=Path, default=None,
-                        help="New/empty directory; defaults to a timestamped outputs/ folder")
+                        help="New/empty directory; defaults to a timestamped outputs/inference/ folder")
     parser.add_argument("--download-only", action="store_true")
     parser.add_argument("--check-device", action="store_true")
     return parser.parse_args()
@@ -166,7 +166,7 @@ def run(args):
     final_valid_label = time_label(final_valid_time)
     folder_time_label = np.datetime_as_string(np.datetime64(initialization, "m"), unit="m")
     folder_time_label = folder_time_label.replace("-", "").replace("T", "_").replace(":", "") + "Z"
-    output = args.output_dir or Path("outputs") / f"graphcast_{folder_time_label}_{args.steps}step"
+    output = args.output_dir or Path("outputs/inference") / f"graphcast_{folder_time_label}_{args.steps}step"
     if output.exists() and any(output.iterdir()):
         raise ValueError(f"Output directory must be empty: {output}")
     output.mkdir(parents=True, exist_ok=True)
@@ -231,17 +231,26 @@ def run(args):
     print(f"Completed. Results: {output.resolve()}", flush=True)
 
 
-def make_forward(model_config, task_config, stats):
-    """The official predictor wrapper order, shared with the CPU pipeline test."""
-    import haiku as hk
+def make_predictor(model_config, task_config, stats, gradient_checkpointing=False):
+    """Build the pinned GraphCast predictor with the official wrappers."""
     from graphcast import autoregressive, casting, graphcast, normalization
+
+    predictor = graphcast.GraphCast(model_config, task_config)
+    predictor = casting.Bfloat16Cast(predictor)
+    predictor = normalization.InputsAndResiduals(predictor, **stats)
+    return autoregressive.Predictor(
+        predictor, gradient_checkpointing=gradient_checkpointing)
+
+
+def make_forward(model_config, task_config, stats, gradient_checkpointing=False):
+    """Transform the official predictor for inference or autoregressive training."""
+    import haiku as hk
 
     @hk.transform_with_state
     def forward(inputs, targets_template, forcings):
-        predictor = graphcast.GraphCast(model_config, task_config)
-        predictor = casting.Bfloat16Cast(predictor)
-        predictor = normalization.InputsAndResiduals(predictor, **stats)
-        predictor = autoregressive.Predictor(predictor, gradient_checkpointing=False)
+        predictor = make_predictor(
+            model_config, task_config, stats,
+            gradient_checkpointing=gradient_checkpointing)
         return predictor(inputs, targets_template=targets_template, forcings=forcings)
 
     return forward
