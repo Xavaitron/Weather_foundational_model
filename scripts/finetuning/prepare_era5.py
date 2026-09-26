@@ -17,14 +17,16 @@ CLIMATOLOGY_SOURCE = (
     "1990-2017_6h_1440x721.zarr"
 )
 LEVELS = (50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000)
+TISR = "toa_incident_solar_radiation"
 SURFACE = (
     "2m_temperature",
     "10m_u_component_of_wind",
     "10m_v_component_of_wind",
     "mean_sea_level_pressure",
     "total_precipitation_6hr",
-    "toa_incident_solar_radiation",
+    TISR,
 )
+STORED_SURFACE = tuple(name for name in SURFACE if name != TISR)
 ATMOSPHERIC = (
     "temperature",
     "geopotential",
@@ -220,7 +222,7 @@ def run(args):
         raise ValueError("ERA5 Zarr must contain time, latitude, and longitude coordinates.")
     if "level" not in source.coords or not set(LEVELS).issubset(set(source.level.values.tolist())):
         raise ValueError("ERA5 source is missing one or more GraphCast_small pressure levels.")
-    required = list(SURFACE + ATMOSPHERIC + STATIC)
+    required = list(STORED_SURFACE + ATMOSPHERIC + STATIC)
     missing = sorted(set(required) - set(source.data_vars))
     if missing:
         raise ValueError(f"ERA5 Zarr is missing required GraphCast_small variables: {missing}")
@@ -256,7 +258,7 @@ def run(args):
             return
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    variables = list(SURFACE + ATMOSPHERIC + STATIC)
+    variables = list(STORED_SURFACE + ATMOSPHERIC + STATIC)
     for name, (start, stop) in selected_splits.items():
         destination = args.output_dir / f"{name}.zarr"
         if destination.exists():
@@ -265,7 +267,12 @@ def run(args):
         split = split.assign_coords(datetime=("time", split.time.values))
         split = regrid_dataset(split)
         split = split.rename({"latitude": "lat", "longitude": "lon"})
-        split.attrs.update(split=name, start_utc=start, stop_utc=stop)
+        split.attrs.update(
+            split=name,
+            start_utc=start,
+            stop_utc=stop,
+            graphcast_derived_forcing=TISR,
+        )
         split = split.chunk({"time": 1, "lat": 181, "lon": 360})
         split.to_zarr(destination, mode="w", consolidated=True)
         print(f"Staged {name}: {destination}", flush=True)
