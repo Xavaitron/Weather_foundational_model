@@ -1,5 +1,6 @@
 # Linux, Python 3.11 or 3.12. CUDA runtime libraries come from the JAX extra.
-jax[cuda12]==0.4.35
+# 0.4.36 handles nvidia.cuda_nvcc as a namespace package from pip CUDA wheels.
+jax[cuda12]==0.4.36
 chex==0.1.87
 dm-haiku==0.0.13
 dm-tree==0.1.8
