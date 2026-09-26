@@ -4,6 +4,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 data/
+# Reused data can also be a local symlink.
+/data
 /outputs/**/*.nc
 *.log
 /work/
