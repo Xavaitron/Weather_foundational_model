@@ -32,7 +32,9 @@ SCORED_ATMOSPHERIC = (
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--split", choices=("validation", "test"), default="test")
-    parser.add_argument("--data-dir", type=Path, default=Path("data/era5_graphcast_small_1deg"))
+    default_data_dir = os.environ.get(
+        "ERA5_DATA_DIR", os.environ.get("DATA_DIR", "data/era5_graphcast_small_1deg"))
+    parser.add_argument("--data-dir", type=Path, default=Path(default_data_dir))
     parser.add_argument("--cache-dir", type=Path, default=Path("data/graphcast"))
     parser.add_argument("--finetuned-checkpoint", type=Path,
                         default=Path("outputs/finetuning/graphcast_small_finetuned/graphcast_small_finetuned.npz"))

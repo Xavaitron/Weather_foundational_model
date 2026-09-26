@@ -17,6 +17,6 @@ if [[ "${1:-}" == "--skip-data" ]]; then
   fi
   printf '\nDependencies ready. Dataset staging skipped.\n'
 else
-  DATA_DIR="${ERA5_DATA_DIR:-data/era5_graphcast_small_1deg}"
-  "$PYTHON_BIN" scripts/finetuning/prepare_era5.py --output-dir "$DATA_DIR" "$@"
+  OUTPUT_DATA_DIR="${ERA5_DATA_DIR:-${DATA_DIR:-data/era5_graphcast_small_1deg}}"
+  "$PYTHON_BIN" scripts/finetuning/prepare_era5.py --output-dir "$OUTPUT_DATA_DIR" "$@"
 fi

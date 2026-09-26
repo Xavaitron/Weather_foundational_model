@@ -10,9 +10,12 @@ This workflow uses the official 1-degree, 13-pressure-level GraphCast_small chec
 
 ```bash
 export PYTHON_BIN="$(command -v python)"
+export ERA5_DATA_DIR="/path/to/writable/era5_graphcast_small_1deg"
 bash scripts/finetuning/setup_finetuning.sh --skip-data
 "$PYTHON_BIN" scripts/finetuning/prepare_era5.py --estimate-only
 ```
+
+Set `ERA5_DATA_DIR` once in this shell (or add the export to `~/.bashrc`). Preparation, training, evaluation, and the setup wrapper use it by default. The existing `DATA_DIR` variable is also accepted. Explicit `--output-dir` or `--data-dir` arguments override the environment setting.
 
 ### 2. Stage ERA5
 

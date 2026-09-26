@@ -1,5 +1,6 @@
 """Stage split-safe ERA5 GraphCast_small data from the public WeatherBench 2 bucket."""
 import argparse
+import os
 from pathlib import Path
 import shutil
 import sys
@@ -196,7 +197,9 @@ def prepare_climatology(output_dir, latitude_weights, longitude_weights, target_
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=Path("data/era5_graphcast_small_1deg"))
+    default_data_dir = os.environ.get(
+        "ERA5_DATA_DIR", os.environ.get("DATA_DIR", "data/era5_graphcast_small_1deg"))
+    parser.add_argument("--output-dir", type=Path, default=Path(default_data_dir))
     parser.add_argument("--source-zarr", default=SOURCE)
     parser.add_argument("--split", choices=("all", *SPLITS), default="all")
     parser.add_argument("--yes", action="store_true", help="Skip the large-data staging confirmation")
