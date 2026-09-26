@@ -23,6 +23,12 @@ PARAMS = (
     "pressure levels 37 - mesh 2to6 - precipitation input and output.npz"
 )
 STATS = ("mean_by_level", "stddev_by_level", "diffs_stddev_by_level")
+PLOT_FIELDS = (
+    ("2m_temperature", None, "2m_temperature", "K"),
+    ("mean_sea_level_pressure", None, "mean_sea_level_pressure", "Pa"),
+    ("temperature", 850, "temperature_850hPa", "K"),
+    ("geopotential", 500, "geopotential_500hPa", "m^2 s^-2"),
+)
 
 
 def sample_name(steps):
@@ -151,12 +157,22 @@ def run(args):
     def predict(**kwargs):
         return apply(**kwargs)[0]
 
-    output = args.output_dir or Path("outputs") / time.strftime("graphcast_%Y%m%d_%H%M%S")
+    def time_label(value):
+        label = np.datetime_as_string(np.datetime64(value, "s"), unit="s")
+        return label.replace("-", "").replace(":", "") + "Z"
+
+    initialization_label = time_label(initialization)
+    final_valid_time = initialization + np.timedelta64(args.steps * 6, "h")
+    final_valid_label = time_label(final_valid_time)
+    folder_time_label = np.datetime_as_string(np.datetime64(initialization, "m"), unit="m")
+    folder_time_label = folder_time_label.replace("-", "").replace("T", "_").replace(":", "") + "Z"
+    output = args.output_dir or Path("outputs") / f"graphcast_{folder_time_label}_{args.steps}step"
     if output.exists() and any(output.iterdir()):
         raise ValueError(f"Output directory must be empty: {output}")
     output.mkdir(parents=True, exist_ok=True)
     metadata = {
-        "status": "running", "upstream_commit": REVISION, "initialization_utc": str(initialization),
+        "status": "running", "upstream_commit": REVISION,
+        "initialization_utc": initialization_label, "forecast_valid_time_utc": final_valid_label,
         "steps": args.steps, "resolution": 0.25, "pressure_levels": list(ckpt.task_config.pressure_levels),
         "assets": assets, "device": str(devices[0]), "device_kind": devices[0].device_kind,
         "packages": dict(sorted((d.metadata["Name"], d.version)
@@ -177,19 +193,39 @@ def run(args):
         for name, value in chunk.data_vars.items():
             if not np.isfinite(value.values).all():
                 raise RuntimeError(f"Non-finite prediction: {name}, step {step}")
-        chunk = chunk.assign_coords(valid_time=("time", initialization + chunk.time.values))
-        chunk.attrs.update(initialization_utc=str(initialization), source="Pretrained GraphCast ERA5 1979-2017")
-        dest = output / f"prediction_{step * 6:03d}h.nc"
+        valid_times = initialization + chunk.time.values
+        valid_time = np.asarray(valid_times).reshape(-1)[0]
+        valid_label = time_label(valid_time)
+        chunk = chunk.assign_coords(valid_time=("time", valid_times))
+        chunk.attrs.update(initialization_utc=initialization_label, source="Pretrained GraphCast ERA5 1979-2017")
+        dest = output / f"prediction_{valid_label}_lead_{step * 6:03d}h.nc"
         chunk.to_netcdf(dest, engine="netcdf4")
-        truth = targets["2m_temperature"].isel(time=step - 1)
-        forecast = chunk["2m_temperature"].isel(time=0)
-        weights = np.cos(np.deg2rad(truth.lat)).clip(min=0)
-        rmse = float(np.sqrt(((forecast - truth) ** 2).weighted(weights).mean()))
-        metadata["metrics"].append({"lead_hours": step * 6, "t2m_area_weighted_rmse_K": rmse})
-        manifest.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-        print(f"Saved {dest}; 2m temperature RMSE={rmse:.3f} K", flush=True)
+        print(f"Saved {dest}", flush=True)
         if step == args.steps:
-            plot_temperature(forecast, truth, output / "temperature.png", step * 6)
+            metadata["metrics"] = []
+            for variable, level, field_label, units in PLOT_FIELDS:
+                truth = select_field(targets, variable, step - 1, level)
+                forecast = select_field(chunk, variable, 0, level)
+                weights = np.cos(np.deg2rad(truth.lat)).clip(min=0)
+                rmse = float(np.sqrt(((forecast - truth) ** 2).weighted(weights).mean()))
+                display_name = variable.replace("_", " ")
+                if level is not None:
+                    display_name = f"{display_name} at {level} hPa"
+                display_name = f"{display_name} ({units})"
+                metadata["metrics"].append({
+                    "field": field_label,
+                    "pressure_level_hpa": level,
+                    "units": units,
+                    "lead_hours": step * 6,
+                    "valid_time_utc": valid_label,
+                    "area_weighted_rmse": rmse,
+                })
+                plot_field_comparison(
+                    forecast, truth,
+                    output / f"{field_label}_{valid_label}_lead_{step * 6:03d}h.png",
+                    display_name, units, step * 6)
+                print(f"{field_label} area-weighted RMSE={rmse:.4f}", flush=True)
+        manifest.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     metadata.update(status="complete", elapsed_seconds_including_compile_and_io=time.monotonic() - start)
     manifest.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     print(f"Completed. Results: {output.resolve()}", flush=True)
@@ -221,18 +257,26 @@ def to_host(dataset):
         dataset)
 
 
-def plot_temperature(prediction, truth, path, hours):
+def select_field(dataset, variable, time_index, level):
+    field = dataset[variable].isel(time=time_index)
+    if "batch" in field.dims:
+        field = field.isel(batch=0)
+    if level is not None:
+        field = field.sel(level=level)
+    return field.squeeze(drop=True)
+
+
+def plot_field_comparison(prediction, truth, path, name, units, hours):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    prediction, truth = prediction.squeeze(), truth.squeeze()
     fig, axes = plt.subplots(1, 3, figsize=(16, 4), constrained_layout=True)
     low, high = float(truth.min()), float(truth.max())
     for ax, field, title in zip(axes[:2], (truth, prediction), ("ERA5 reference", "GraphCast")):
-        field.plot(ax=ax, x="lon", y="lat", vmin=low, vmax=high, cmap="coolwarm")
-        ax.set_title(f"{title}: 2m temperature (K)")
+        field.plot(ax=ax, x="lon", y="lat", vmin=low, vmax=high, cmap="viridis")
+        ax.set_title(f"{title}: {name}")
     (prediction - truth).plot(ax=axes[2], x="lon", y="lat", cmap="RdBu_r", center=0)
-    axes[2].set_title("Forecast minus reference (K)")
+    axes[2].set_title(f"Forecast minus reference ({units})")
     fig.suptitle(f"Lead time: {hours} hours")
     fig.savefig(path, dpi=150)
     plt.close(fig)

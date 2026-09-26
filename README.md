@@ -28,17 +28,19 @@ GRAPHCAST_GPU=2 bash scripts/run_inference.sh --steps 1
 - **Normalization:** three statistics files matched to the checkpoint, from the same bucket.
 - **Weather data:** DeepMind's prepared global ERA5 sample for January 1, 2022, at 0.25-degree resolution and 37 pressure levels. The runner downloads the smallest available sample that covers the requested forecast length. Downloads are cached in `data/` and checked by size and MD5.
 
-For a one-step forecast, the model gets two weather states six hours apart and predicts the next state. The runner compares that prediction with the ERA5 reference; future weather values are not passed to the model, though known time and radiation forcings are. It reports 2-metre temperature RMSE.
+For a forecast, the model gets two weather states six hours apart and predicts the next state. The runner compares predictions with ERA5 references; future weather values are not passed to the model, though known time and radiation forcings are.
 
 ## What It Checks
 
-`--check-device` runs a small JAX calculation on the selected GPU. It checks GPU access but does not load the model or weather data. `--steps 1` is the actual inference smoke test: it loads the checkpoint, compiles and runs GraphCast on the GPU, then writes a timestamped folder under `outputs/` containing:
+`--check-device` runs a small JAX calculation on the selected GPU. It checks GPU access but does not load the model or weather data. `--steps 1` is the actual inference smoke test: it loads the checkpoint, compiles and runs GraphCast on the GPU. For longer runs, a NetCDF forecast is written at each lead; four plots and four area-weighted RMSE metrics are produced for the final requested lead. The output folder uses the forecast initialization time (latest input time) and requested number of steps, for example `graphcast_20220101_0000Z_1step` for a 00:00 initialization and one-step forecast to 06:00. Forecast files include their valid time and lead. The folder contains:
 
-- `prediction_006h.nc`: forecast weather fields at +6 hours.
-- `temperature.png`: ERA5 reference, predicted 2-metre temperature, and their difference.
-- `run.json`: model and data identifiers, initialization time, device, run status, and RMSE.
+- `prediction_<valid-time>_lead_<hours>.nc`: forecast weather fields at that lead.
+- `<field>_<valid-time>_lead_<hours>.png`: ERA5 reference, prediction, and difference for each selected field.
+- `run.json`: model and data identifiers, initialization and valid times, device, run status, and four RMSE metrics (including units).
 
-The NetCDF forecast is ignored by Git because it is large. The plot and `run.json` are not ignored and can be committed.
+The `.nc` forecasts are ignored by Git because they are large. The four plots and `run.json` are not ignored and can be committed.
+
+The selected diagnostics are 2-metre temperature and mean sea-level pressure at the surface, plus temperature at 850 hPa and geopotential at 500 hPa. Each RMSE is cosine-latitude-weighted and compares the final forecast lead with the corresponding ERA5 sample.
 
 ## Limits
 
