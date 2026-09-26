@@ -6,3 +6,6 @@ __pycache__/
 data/
 /outputs/**/*.nc
 *.log
+/work/
+/runs/
+/setup-finetune.log

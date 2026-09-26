@@ -1,5 +1,7 @@
 # GraphCast Inference
 
+The experimental baseline/advection fine-tuning implementation is documented in [docs/finetuning.md](docs/finetuning.md). Its feasibility checks and pilot runs must not be confused with a completed 0.1° training experiment.
+
 Run the original pretrained GraphCast model on an official ERA5 sample. This does not train or fine-tune the model. Run these Bash commands on the Linux GPU server, not in Windows PowerShell.
 
 ## Run
