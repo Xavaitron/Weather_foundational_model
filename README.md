@@ -6,6 +6,15 @@ Run commands on Deathstar's Linux GPU server, not Windows PowerShell. The script
 
 This workflow uses the official 1-degree, 13-pressure-level GraphCast_small checkpoint. ERA5 is remapped from 0.25 degrees to 1 degree and split into 2016-2019 train, 2020 validation, and 2021-2022 test. Regridding reduces grid resolution; it does not add weather information.
 
+To run the entire workflow unattended in `tmux`, set the data directory and launch:
+
+```bash
+export ERA5_DATA_DIR="/path/to/writable/era5_graphcast_small_1deg"
+bash scripts/finetuning/run_finetuning_pipeline.sh
+```
+
+The pipeline installs dependencies, stages data if all four Zarr stores are not already complete, runs a one-step GPU smoke test, fine-tunes, then evaluates validation and test. It stops without deleting anything if it finds a partial dataset. The log, checkpoint, training manifest, and metrics are grouped in a unique `outputs/finetuning/run_*/` folder. Optional environment settings include `CUDA_VISIBLE_DEVICES` (default `6`), `EPOCHS` (default `1`), `STEPS_PER_EPOCH` (default `1000`), `TARGET_STEPS` (default `2`), and `EVAL_INITIALIZATIONS` (default `4`).
+
 ### 1. Install and estimate
 
 ```bash
@@ -57,6 +66,7 @@ Compare the fine-tuned checkpoint with frozen GraphCast_small on identical initi
 | `scripts/finetuning/prepare_era5.py` | Estimates disk requirements, selects required ERA5 fields, remaps them to 1 degree, writes the three split stores, and stages the WB2 climatology. |
 | `scripts/finetuning/finetune_graphcast.py` | Loads GraphCast_small and its statistics, trains only on the train split with autoregressive gradient checkpointing, and saves a checkpoint plus `training.json`. |
 | `scripts/finetuning/evaluate_graphcast.py` | Compares frozen and fine-tuned checkpoints on validation or test and writes detailed metrics to JSON. |
+| `scripts/finetuning/run_finetuning_pipeline.sh` | Runs setup, data staging, GPU smoke test, fine-tuning, validation, and test scoring; intended for `tmux`. |
 | `scripts/inference/setup_inference.sh` | Installs the pinned inference environment and GraphCast code. |
 | `scripts/inference/run_inference.sh` | Selects one GPU (default index 6), configures JAX, and launches the inference runner. |
 | `scripts/inference/infer_graphcast.py` | Runs the separate 0.25-degree, 37-level pretrained inference smoke test on a January 2022 sample; this is not benchmark evidence. |
