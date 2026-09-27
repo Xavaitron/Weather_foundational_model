@@ -134,7 +134,8 @@ def run(args):
     apply_functions = {
         name: functools.partial(
             jax.jit(forward.apply), params=model_checkpoint.params,
-            state=model_checkpoint.state)
+            # Released GraphCast checkpoints do not contain Haiku state.
+            state={})
         for name, model_checkpoint in checkpoints.items()
     }
     sums = {

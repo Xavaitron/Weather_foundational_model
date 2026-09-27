@@ -100,7 +100,10 @@ def run(args):
     optimizer = optax.adamw(args.learning_rate, weight_decay=args.weight_decay)
     opt_state = optimizer.init(pretrained.params)
     params = pretrained.params
-    state = pretrained.state
+    # The pinned GraphCast CheckPoint stores parameters and configuration only.
+    # The Haiku transform is still stateful at the API boundary, but GraphCast
+    # itself has no persistent Haiku state, so start each run with an empty tree.
+    state = {}
     rng = jax.random.PRNGKey(args.seed)
     input_duration = pd.Timedelta(model_config.input_duration)
     six_hours = pd.Timedelta("6h")
@@ -186,7 +189,7 @@ def run(args):
         manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
         print(f"Epoch {epoch}: mean loss={record['mean_training_loss']:.6g}", flush=True)
 
-    trained = dataclasses.replace(pretrained, params=params, state=state)
+    trained = dataclasses.replace(pretrained, params=params)
     checkpoint_path = args.output_dir / "graphcast_small_finetuned.npz"
     with checkpoint_path.open("wb") as stream:
         checkpoint.dump(stream, trained)
