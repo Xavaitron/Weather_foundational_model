@@ -135,6 +135,40 @@ def test_pretrained_missing_keys_rejected():
     assert merge_pretrained({}, {legacy:{'w':np.ones(1)}}) == {}
 
 
+def test_donated_updates_match_and_keep_weather_reusable():
+    # Exercise flattened xarray arguments and two consecutive Adam updates;
+    # donating weather by mistake would invalidate the second invocation.
+    @hk.transform_with_state
+    def loss(inputs, targets, forcings):
+        from graphcast import xarray_jax
+        x = xarray_jax.unwrap_data(inputs.x, require_jax=True)
+        y = xarray_jax.unwrap_data(targets.y, require_jax=True)
+        w = hk.get_parameter('w', (3,), init=hk.initializers.Constant(.2))
+        value = jnp.mean((x*w-y)**2)
+        return value, {'mse': value}
+    from graphcast import xarray_jax
+    inputs = xarray_jax.Dataset({'x': (('lat',), jnp.array([1.,2.,3.]))},
+                               coords={'lat': [-90.,0.,90.]})
+    targets = xarray_jax.Dataset({'y': (('lat',), jnp.array([.5,.4,.3]))},
+                                coords={'lat': [-90.,0.,90.]})
+    batch = (inputs,targets,xr.Dataset())
+    rng = jax.random.PRNGKey(0)
+    params,state = loss.init(rng,*batch)
+    optimizer = optax.adam(1e-3)
+    update = make_update(loss,optimizer)
+    reference = (params,state,optimizer.init(params))
+    donated = jax.tree.map(lambda x:jnp.array(x,copy=True),reference)
+    regular_step = compile_update(update,*reference,rng,*batch)
+    donated_step = compile_update(update,*donated,rng,*batch,donate=True)
+    for _ in range(2):
+        expected = regular_step(*reference,rng,*batch)
+        actual = donated_step(*donated,rng,*batch)
+        for a,b in zip(jax.tree.leaves(actual),jax.tree.leaves(expected)):
+            np.testing.assert_allclose(a,b,rtol=1e-6,atol=1e-7)
+        reference,donated = expected[:3],actual[:3]
+    np.testing.assert_array_equal(inputs.x.values,[1.,2.,3.])
+
+
 def test_physical_rmse_axes_and_exact_alignment():
     from finetuning.evaluate import spatial_mse
     reference=xr.DataArray(np.zeros((1,2,2,3,4)),dims=('batch','time','level','lat','lon'),

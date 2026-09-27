@@ -57,6 +57,25 @@ export XLA_FLAGS=--xla_gpu_autotune_level=0
 
 The implementation checkpoints each message-passing block, each graph embedding, and each output network. Float32 forward and gradient equivalence is tested against stock GraphCast; BF16 backward rounding may change with recomputation.
 
+BF16 computation is already enabled through the official `Bfloat16Cast` wrapper. Pretrained parameters and Adam moments remain float32. The trainer now also donates parameter and optimizer buffers to the compiled update, allowing XLA to reuse their storage. Weather arrays are not donated, so a pilot can reuse its batch. A two-update regression test checks numerical agreement with donation disabled and verifies the input batch remains usable. This saves parameter/optimizer storage; it does not remove the much larger grid and edge activations. Use `--no-donate` with `finetuning.profile` for a comparison.
+
+### GraphCast-small feasibility fallback
+
+The official `GraphCast_small - ERA5 1979-2015 - resolution 1.0 - pressure levels 13 - mesh 2to5 - precipitation input and output.npz` checkpoint can use the same trainer and profiler. Its mesh has 10,242 vertices and its task has 13 pressure levels, but it still has 512 latent channels and 16 message-passing steps. Switching its input/output grid to 0.1° therefore does not guarantee that it fits a 48 GiB GPU. Profile that exact configuration first. A native 1° pilot is an engineering fallback and does not satisfy the requested 0.1° experiment or the full checkpoint's 37-level task. The same checkpoint and task must be used for both baseline and adapter in any eventual comparison.
+
+The downloaded checkpoint at `work/graphcast-small.npz` has SHA-256 `e9438d8ad31ca6e1d3397a33b2508f4bbb6ec16aed84629f9a64712bf756bc29`. Its checksum was verified against the official Cloud Storage object's MD5 metadata before transfer and against SHA-256 after transfer. Example native-grid engineering run:
+
+```bash
+GRAPHCAST_GPU=6 GRAPHCAST_GEOMETRY_CACHE=work/geometry-cache \
+XLA_FLAGS=--xla_gpu_autotune_level=0 bash scripts/run_finetune.sh \
+  --checkpoint work/graphcast-small.npz --stats-dir data/graphcast/stats \
+  --resolution 1.0 --variant baseline --updates 2 \
+  --train-window work/era5-train-pilot-20160101.nc \
+  --output runs/engineering-small-1deg-baseline
+```
+
+Replace `baseline` with `advection` and use a new output directory for its matched engineering run. Disable kernel autotuning for the memory investigation; performance measurements with this flag are not throughput benchmarks.
+
 Compiler memory estimates are not measured training peak memory and exclude some runtime overhead. The trainer also checks free GPU memory before its first execution, reserving 2 GiB. A memory rejection must be resolved through implementation/compute changes; do not silently lower the required resolution. Merely having two 48 GiB cards does not pool their memory for the current single-device implementation.
 
 ## Training commands after feasibility passes
@@ -95,4 +114,5 @@ See [experiment-status.md](experiment-status.md) for completed engineering runs,
 - [GraphCast, arXiv:2212.12794v2](https://arxiv.org/abs/2212.12794v2): main paper and supplement, including normalization, graph construction, training, evaluation and spectral analyses. The original model uses two historical states and six-hour residual forecasts; the requested split and resolution are project-specific adaptations.
 - [Neural semi-Lagrangian advection / PARADIS, arXiv:2601.21151v3](https://arxiv.org/abs/2601.21151v3): main paper and appendices, especially learned latent transport, spherical backtracing, interpolation and ADR composition. Version 3 (September 2026) differs substantially from the initial version, so do not mix their model/compute claims.
 - [Official GraphCast source](https://github.com/google-deepmind/weathernext/tree/97d1ad50b0b7af4aaed7790167dffa769bae1f2c/graphcast) and [PARADIS author source](https://github.com/Wx-Alliance-Alliance-Meteo/paradis_model) were checked against the implementation design.
+- [Official GraphCast checkpoint variants](https://github.com/google-deepmind/weathernext/blob/main/docs/weathernext1_graph/README.md) and [JAX buffer donation](https://docs.jax.dev/en/latest/buffer_donation.html).
 - [WeatherBench 2 data guide](https://weatherbench2.readthedocs.io/en/latest/data-guide.html) identifies the public ERA5 stores. Data provenance/units and chronology still need to be checked on every new source.

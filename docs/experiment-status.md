@@ -2,12 +2,16 @@
 
 The requested 0.1° experiment is **not trained**. The baseline and learned-advection implementation is present, with strict 2016–2019 / 2020 / 2021–2022 chronology. Full-size memory profiling identifies the current blocker.
 
+## Latest optimization follow-up
+
+BF16 and activation checkpointing were already enabled. Parameter/optimizer buffer donation is now enabled and tested, lowering the full-model 0.1° estimate to **198.98 GiB**. The official GraphCast-small checkpoint was also checked: **180.81 GiB at 0.1°**, so it still cannot fit the available cards. At its native 1°/13-level task, the baseline and adapter each completed two real-data engineering updates, with estimates of **3.96 and 4.09 GiB** respectively. Both saved checkpoints passed finite-weight and parameter-change audits. Nine tests now pass. See [the optimization results](optimization-results.md) for exact scope, losses and evidence. These pilots do not replace the requested 0.1° experiment.
+
 ## Verified results
 
 - Read the GraphCast v2 paper and supplement and the advection/PARADIS v3 paper and appendices, and checked the relevant official implementations. Version-specific sources and design differences are in `finetuning.md`.
 - Isolated the work in `/home/anwar/Weather_foundational_model_finetune`, branch `codex/finetune-0p1`; the original teammate inference checkout is preserved.
 - Downloaded one real 37-level training window: 2016-01-01 06:00, 12:00 and 18:00 UTC. It is an engineering sample, not the full dataset.
-- Eight tests passed in 106.51 seconds on the server. They cover chronology, precipitation accumulation, periodic 0.1° regridding, spherical interpolation/gradients, identity initialization, an optimizer update, checkpoint round-trip prediction, physical RMSE alignment, and float32 equivalence of activation checkpointing to stock GraphCast.
+- The original eight tests passed in 106.51 seconds on the server; the expanded nine-test suite subsequently passed in 95.88 seconds. They cover chronology, precipitation accumulation, periodic 0.1° regridding, spherical interpolation/gradients, identity initialization, an optimizer update, checkpoint round-trip prediction, physical RMSE alignment, and float32 equivalence of activation checkpointing to stock GraphCast.
 - The requested global grid has 6,483,600 nodes, about 6.245 times the pretrained 0.25° grid. No test-weather values have been used for training or model selection in this work.
 
 ## Memory evidence
@@ -18,10 +22,14 @@ The 0.1° profiles below are for the baseline; the 0.1° adapter has not been co
 |---|---:|---:|
 | Checkpoint message-passing blocks | 0.1° | 303.72 GiB |
 | Also checkpoint graph embeddings and outputs | 0.1° | **199.38 GiB** |
+| Full model with buffer donation | 0.1° | **198.98 GiB** |
+| GraphCast-small with buffer donation | 0.1° | **180.81 GiB** |
+| GraphCast-small baseline, native grid | 1° | **3.96 GiB** |
+| GraphCast-small advection, native grid | 1° | **4.09 GiB** |
 | Same final checkpointing, native-grid baseline | 0.25° | 33.82 GiB |
 | Native-grid advection adapter | 0.25° | 34.10 GiB |
 
-The final 0.1° breakdown is 18,227,262,400 bytes of arguments, 436,184,028 bytes of outputs, and 195,417,022,640 temporary bytes, with no buffer aliases: **214,080,469,068 bytes total**. The profile is `work/memory-0p1-full-remat.json` on the server.
+The pre-donation 0.1° breakdown was 18,227,262,400 bytes of arguments, 436,184,028 bytes of outputs, and 195,417,022,640 temporary bytes, with no buffer aliases: **214,080,469,068 bytes total**. The profile is `work/memory-0p1-full-remat.json` on the server.
 
 The server has two 48 GB RTX A6000s, already shared with other workloads. The current implementation runs on one device. Merely selecting two devices does not combine their memory, and their combined capacity is below this estimate anyway. A larger node would still require explicit model sharding unless a single device has sufficient memory.
 
@@ -36,3 +44,15 @@ Before the requested experiment can run: resolve single-example memory through a
 Server DNS to Google Cloud failed intermittently. The one-window download succeeded with a process-local DNS override preserving HTTPS hostname/certificate validation; no system DNS settings were changed. A durable data-access setup is still needed for unattended full-source streaming.
 
 There are no trained 0.1° model weights, final benchmark scores, or evidence yet that this adapter improves forecasting.
+
+## Saved code and evidence
+
+Server branch: `codex/finetune-0p1`, initial implementation commit `02961d7f1532d9ed2f34958efaee5c81cdc27336`, followed by the data-symlink ignore fix and the memory-optimization follow-up. Changes are committed on the server and have not been pushed to GitHub.
+
+- [Review/apply the patch](finetuning.patch)
+- [Reproduction guide](finetuning-guide.md)
+- [Run manifests, memory profiles, checkpoint audits and test log](experiment-evidence.tar.gz)
+
+The experiment worktree is clean. The original checkout currently has inference-output modifications; those files were left in place. All jobs launched for these checks have finished.
+
+- [Optimization profiles, small-model manifests, checkpoint audit and nine-test log](optimization-evidence.tar.gz)

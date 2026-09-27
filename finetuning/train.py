@@ -77,12 +77,23 @@ def make_update(loss, optimizer):
     return update
 
 
-def compile_update(update, *arguments):
-    """Flatten xarray pytrees before AOT lowering (upstream cannot wrap ArgInfo)."""
+def compile_update(update, *arguments, donate=False):
+    """Lower flattened xarray inputs, optionally reusing parameter/optimizer buffers.
+
+    With donation, callers must replace params and opt_state with returned values.
+    Weather inputs, model state and RNG remain reusable across pilot updates.
+    """
     leaves, structure = jax.tree.flatten(arguments)
+    donated = []
+    offset = 0
+    for index, argument in enumerate(arguments):
+        count = len(jax.tree.leaves(argument))
+        if donate and index in (0, 2):
+            donated.extend(range(offset, offset+count))
+        offset += count
     def flat_update(*flat_arguments):
         return update(*jax.tree.unflatten(structure,flat_arguments))
-    executable = jax.jit(flat_update).lower(*leaves).compile()
+    executable = jax.jit(flat_update, donate_argnums=tuple(donated)).lower(*leaves).compile()
     def execute(*values):
         flat, actual = jax.tree.flatten(values)
         if actual != structure:
@@ -127,6 +138,8 @@ def main():
                     regridding='periodic bilinear interpolation; not native 0.1 degree observations',
                     message_passing_checkpointing=True,
                     embedding_output_checkpointing=True,
+                    parameter_optimizer_buffer_donation=True,
+                    compute_dtype='bfloat16', parameter_dtype='float32',
                     xla_flags=os.environ.get('XLA_FLAGS',''),
                     package_versions=dict(jax=jax.__version__,numpy=np.__version__,xarray=xr.__version__,optax=optax.__version__),
                     pilot_only=bool(args.train_window), completed_updates=0)
@@ -142,6 +155,8 @@ def main():
         with args.checkpoint.open('rb') as f:
             original = checkpoint.load(f, graphcast.CheckPoint)
         config = dataclasses.replace(original.model_config, resolution=args.resolution)
+        metadata['model_config'] = dataclasses.asdict(config)
+        metadata['pressure_levels'] = list(original.task_config.pressure_levels)
         stats = {n: xr.load_dataset(args.stats_dir/(n+'.nc')) for n in
                  ('mean_by_level', 'stddev_by_level', 'diffs_stddev_by_level')}
         generator = np.random.default_rng(args.seed)
@@ -166,6 +181,9 @@ def main():
                 if source is None:
                     source = open_source(args.source)
                 data = read_window(source, init, split, args.steps, original.task_config.pressure_levels)
+            # A cached 37-level pilot can also serve the 13-level small model.
+            # Discard unused levels before allocating the interpolated grid.
+            data = data.sel(level=list(original.task_config.pressure_levels))
             return model_batch(regrid(data, args.resolution), original.task_config, args.steps)
 
         first_init = generator.choice(train_dates)
@@ -217,7 +235,8 @@ def main():
         update = make_update(loss, optimizer)
         print('Compiling update', flush=True)
         t0 = time.monotonic()
-        compiled = compile_update(update,params,state,opt_state,jax.random.PRNGKey(args.seed),*first)
+        compiled = compile_update(update,params,state,opt_state,jax.random.PRNGKey(args.seed),*first,
+                                  donate=True)
         memory = compiled.memory_analysis()
         metadata['compiled_memory'] = str(memory)
         metadata['estimated_device_bytes'] = estimate(memory)

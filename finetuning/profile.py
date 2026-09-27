@@ -25,6 +25,7 @@ def main():
     p.add_argument('--resolution',type=float,default=.1)
     p.add_argument('--variant',choices=['baseline','advection'],default='baseline')
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--no-donate',action='store_true',help='Disable buffer donation for comparison')
     a=p.parse_args()
     with a.checkpoint.open('rb') as f: ckpt=checkpoint.load(f,graphcast.CheckPoint)
     config=dataclasses.replace(ckpt.model_config,resolution=a.resolution)
@@ -58,11 +59,16 @@ def main():
     # Abstract optimizer leaves avoid unnecessary device allocations during profiling.
     step=make_update(loss,opt)
     print('Compiling full update',flush=True)
-    executable=compile_update(step,params,state,opt_state,jax.random.PRNGKey(0),*batch)
+    executable=compile_update(step,params,state,opt_state,jax.random.PRNGKey(0),*batch,
+                              donate=not a.no_donate)
     memory=executable.memory_analysis()
     report=dict(resolution=a.resolution,variant=a.variant,seconds=time.monotonic()-started,
                 message_passing_checkpointing=True,
                 embedding_output_checkpointing=True, xla_flags=os.environ.get('XLA_FLAGS',''),
+                parameter_optimizer_buffer_donation=not a.no_donate,
+                compute_dtype='bfloat16', parameter_dtype='float32',
+                model_config=dataclasses.asdict(config),
+                pressure_levels=list(ckpt.task_config.pressure_levels),
                 kind='synthetic-shape compilation only; no training or weather values',
                 device=str(jax.devices()[0]),device_kind=jax.devices()[0].device_kind)
     for key in ('argument_size_in_bytes','output_size_in_bytes','temp_size_in_bytes',
