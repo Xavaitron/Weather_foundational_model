@@ -1,4 +1,4 @@
-"""Pilot trainer. Run as python -m finetuning.train; see docs/finetuning.md."""
+"""GraphCast fine-tuning with bounded ERA5 windows; see docs/finetuning.md."""
 import argparse
 import dataclasses
 import json
@@ -22,6 +22,7 @@ from finetuning.advection import AdvectedGraphCast
 from finetuning.checkpoints import save_model
 from finetuning.memory import guard, estimate
 from finetuning.geometry import CachedGraphCast
+from finetuning.window_cache import cached_window
 
 
 def transformed_loss(model_config, task, stats, variant, modes=16, adapter_resolution=1.):
@@ -120,6 +121,9 @@ def arguments():
     p.add_argument('--save-every', type=int, default=10)
     p.add_argument('--validate-every', type=int, default=10)
     p.add_argument('--validation-count', type=int, default=4)
+    p.add_argument('--validate-initial', action='store_true', help='Evaluate pretrained weights on the fixed validation windows')
+    p.add_argument('--window-cache', type=Path, help='Shared local cache for regridded ERA5 windows')
+    p.add_argument('--cache-max-gib', type=float, default=32.)
     p.add_argument('--train-window', type=Path, help='Prepared absolute-time NetCDF for a pilot only')
     p.add_argument('--resume', type=Path, help='Trusted local training-state pickle from this code')
     p.add_argument('--compile-only', action='store_true', help='Compile and report memory, no optimizer execution')
@@ -130,6 +134,8 @@ def main():
     args = arguments()
     if min(args.updates, args.steps, args.save_every, args.validate_every, args.validation_count) < 1:
         raise ValueError('Counts must be positive')
+    if not np.isfinite(args.cache_max_gib) or args.cache_max_gib <= 0:
+        raise ValueError('Cache size must be positive')
     if args.output.exists() and any(args.output.iterdir()):
         raise ValueError('Use a new output directory; resume can read state from an older directory')
     args.output.mkdir(parents=True, exist_ok=True)
@@ -164,6 +170,7 @@ def main():
         val_dates = valid_initializations('val', args.steps)
         # Fixed evenly spaced dates across 2020, identical for both variants.
         val_dates = val_dates[np.linspace(0, len(val_dates)-1, args.validation_count, dtype=int)]
+        metadata['validation_initializations_utc'] = [str(d) for d in val_dates]
         source = None
         def batch(split, init):
             nonlocal source
@@ -178,9 +185,20 @@ def main():
                 if not np.array_equal(data.time.values, expected):
                     raise ValueError('Pilot data must contain consecutive six-hour states')
             else:
-                if source is None:
-                    source = open_source(args.source)
-                data = read_window(source, init, split, args.steps, original.task_config.pressure_levels)
+                assert_window(init,split,args.steps)
+                metadata.update(status='loading_window',loading_split=split,loading_initialization_utc=str(init))
+                manifest.write_text(json.dumps(metadata,indent=2))
+                def fetch():
+                    nonlocal source
+                    if source is None:
+                        source = open_source(args.source)
+                    return read_window(source,init,split,args.steps,original.task_config.pressure_levels,
+                                       resolution=args.resolution)
+                identity=dict(format_version=1,source=args.source,split=split,initialization=str(init),
+                              steps=args.steps,levels=list(original.task_config.pressure_levels),
+                              resolution=args.resolution)
+                data = (cached_window(args.window_cache,identity,fetch,int(args.cache_max_gib*1024**3))
+                        if args.window_cache else fetch())
             # A cached 37-level pilot can also serve the 13-level small model.
             # Discard unused levels before allocating the interpolated grid.
             data = data.sel(level=list(original.task_config.pressure_levels))
@@ -234,6 +252,8 @@ def main():
             generator.bit_generator.state = saved['sampler_state']
         update = make_update(loss, optimizer)
         print('Compiling update', flush=True)
+        metadata['status']='compiling'
+        manifest.write_text(json.dumps(metadata,indent=2))
         t0 = time.monotonic()
         compiled = compile_update(update,params,state,opt_state,jax.random.PRNGKey(args.seed),*first,
                                   donate=True)
@@ -250,8 +270,28 @@ def main():
             save_model(path,original,config,params,args.variant,args.adapter_modes,args.adapter_resolution)
         validation = jax.jit(loss.apply)
         log = (args.output/'metrics.jsonl').open('a')
+        def validate():
+            values=[]
+            for date in val_dates:
+                (v,_),_ = validation(params,state,jax.random.PRNGKey(0),*batch('val',date))
+                values.append(float(v))
+            result=float(np.mean(values))
+            if not np.isfinite(result):
+                raise FloatingPointError('Non-finite validation loss')
+            return result
+        if args.validate_initial and not args.resume:
+            best=validate()
+            row=dict(update=0,val_loss=best,kind='pretrained_validation')
+            print(json.dumps(row),flush=True); log.write(json.dumps(row)+'\n'); log.flush()
+            save(args.output/'best.npz')
+            metadata['initial_val_loss']=best
         for index in range(step, args.updates):
-            data = first if args.train_window or (index == 0 and not args.resume) else batch('train', generator.choice(train_dates))
+            data_t0=time.monotonic()
+            use_first=args.train_window or (index == 0 and not args.resume)
+            current_init=first_init if use_first else generator.choice(train_dates)
+            data = first if use_first else batch('train',current_init)
+            data_seconds=time.monotonic()-data_t0
+            metadata['status']='training'
             t0 = time.monotonic()
             params,state,opt_state,value,diag,gradnorm = compiled(
                 params,state,opt_state,jax.random.fold_in(jax.random.PRNGKey(args.seed),index),*data)
@@ -259,21 +299,16 @@ def main():
             if not np.isfinite(value+gradnorm):
                 raise FloatingPointError('Non-finite training loss/gradient; stopping')
             row = dict(update=index+1, loss=value, gradient_norm=gradnorm,
-                       seconds=time.monotonic()-t0)
+                       seconds=time.monotonic()-t0,data_seconds=data_seconds,
+                       initialization_utc=str(current_init))
             if (index+1) % args.validate_every == 0:
-                values = []
-                for date in val_dates:
-                    (v,_),_ = validation(params,state,jax.random.PRNGKey(0),*batch('val',date))
-                    values.append(float(v))
-                row['val_loss'] = float(np.mean(values))
-                if not np.isfinite(row['val_loss']):
-                    raise FloatingPointError('Non-finite validation loss')
+                row['val_loss'] = validate()
                 if row['val_loss'] < best:
                     best = row['val_loss']
                     save(args.output/'best.npz')
             print(json.dumps(row),flush=True); log.write(json.dumps(row)+'\n'); log.flush()
             metadata['completed_updates'] = index+1
-            if (index+1) % args.save_every == 0 or index+1 == args.updates:
+            if index == 0 or (index+1) % args.save_every == 0 or index+1 == args.updates:
                 save(args.output/'latest.npz')
                 training_state = dict(params=jax.device_get(params),state=jax.device_get(state),
                                       opt_state=jax.device_get(opt_state),step=index+1,best=best,
@@ -281,6 +316,7 @@ def main():
                 temp = args.output/'training-state.tmp'
                 with temp.open('wb') as f: pickle.dump(training_state,f)
                 temp.replace(args.output/'training-state.pkl')
+            metadata.update(status='training',best_val_loss=best)
             manifest.write_text(json.dumps(metadata,indent=2))
         metadata['status'] = 'pilot_complete' if args.train_window else 'requested_updates_complete'
         log.close()

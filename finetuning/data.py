@@ -36,7 +36,9 @@ def assert_window(initialization, split, steps):
 
 def open_source(source=SOURCE):
     options = {'storage_options': {'token': 'anon'}} if source.startswith('gs://') else {}
-    data = xr.open_zarr(source, consolidated=True, **options)
+    # Keep backend arrays lazy without constructing Dask tasks for every hour
+    # of the 1959-2023 archive. read_window selects bounded slices before load.
+    data = xr.open_zarr(source, consolidated=True, chunks=None, **options)
     data.attrs['source_store'] = source
     return data
 
@@ -53,20 +55,33 @@ def precipitation_six_hours(precip, times):
     return output
 
 
-def read_window(source, initialization, split, steps, levels):
+def read_window(source, initialization, split, steps, levels, resolution=None):
     init = assert_window(initialization, split, steps)
+    lat = lon = None
+    if resolution is not None:
+        if not np.isfinite(resolution) or resolution <= 0 or not np.isclose(round(180/resolution)*resolution,180):
+            raise ValueError('Resolution must be positive and divide 180 degrees')
+        lat = np.linspace(-90,90,round(180/resolution)+1,dtype=np.float64)
+        lon = np.arange(round(360/resolution),dtype=np.float64)*resolution
     times = init + np.arange(-1, steps + 1) * np.timedelta64(6, 'h')
     dynamic = source[list(ATMOSPHERE + SURFACE)].sel(time=times, level=list(levels))
     dynamic['total_precipitation_6hr'] = precipitation_six_hours(source.total_precipitation, times)
     data = xr.merge([dynamic, source[list(STATIC)]], join='exact')
     data = data.rename({'latitude': 'lat', 'longitude': 'lon'}).sortby('lat')
+    # Slice time/variables BEFORE space: selecting space on the entire hourly
+    # source builds enormous intermediate Dask graphs for unused years/fields.
+    # Exact aligned-grid selection equals bilinear interpolation at these points.
+    if lat is not None and np.isin(lat,data.lat.values).all() and np.isin(lon,data.lon.values).all():
+        data = data.sel(lat=lat,lon=lon).assign_coords(lat=lat,lon=lon)
     # One window only, never .load() on the full source store.
-    data = data.compute()
+    data = data.compute(scheduler='threads',num_workers=4)
     for name, value in data.data_vars.items():
         if not np.isfinite(value.values).all():
             raise ValueError(f'Missing/non-finite ERA5 data in {name}')
     data.attrs.update(source=source.attrs.get('source_store', 'unspecified'), split=split, initialization_utc=str(init),
                       precipitation='sum of hourly accumulations ending at t-5h,...,t')
+    if resolution is not None:
+        data = regrid(data,resolution)
     return data
 
 

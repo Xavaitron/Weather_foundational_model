@@ -97,6 +97,18 @@ Use `--variant advection --output runs/advection-pilot` for the matched treatmen
 
 Adapter checkpoints embed their architecture metadata. For inference use `finetuning.checkpoints.predictor` inside `hk.transform_with_state`, with loaded checkpoint parameters and the matching statistics. The original repository inference script constructs stock GraphCast and must not be used to evaluate adapter checkpoints, because it can ignore the extra weights. The tests verify saving, loading and predicting with the adapter.
 
+## Paired stage-one fine-tuning
+
+`bash scripts/run_paired_1deg.sh` launches normal GraphCast baseline on GPU 2 and advection on GPU 6. It refuses to reuse an existing output root. Override `RUN_ROOT`, `BASELINE_GPU`, or `ADVECTION_GPU` as needed before launch. The default run root is `runs/full-1deg-stage1-20260927`.
+
+This initial stage uses 1,000 full-parameter updates per variant, batch size one, one six-hour forecast step, learning rate 1e-5, AdamW, clipping at norm 32, and seed 0. Each update samples from eligible 2016–2019 initializations using the same random sequence for both variants. Sampling is with replacement; this is not a complete pass through all four years or a final convergence schedule. Both runs start from the original normal pretrained checkpoint, not the engineering pilot weights.
+
+Initial validation and validation every 50 updates use the same four evenly spaced eligible 2020 initializations. Save a resumable state after the first update, every 25 updates and at completion. `best.npz` is selected by normalized validation loss and may remain the initial pretrained checkpoint if no improvement is seen. Four validation windows provide an initial training diagnostic; they are not the final benchmark. No 2021–2022 weather is accessed.
+
+The shared `work/era5-1deg-window-cache` is capped at 32 GiB of completed NetCDF files. Its identity includes source, split, date, levels, grid and rollout, and per-window locks prevent duplicate downloads between processes. Writes are atomic; least-recently-used, unlocked files are removed as needed. A small temporary overage can occur during concurrent writes. The cache preserves bilinear point-sampling semantics: for an exactly aligned 1° grid, select those points before materializing source arrays. The upstream cloud chunks still span the complete spatial grid, so network transfer can dominate training time.
+
+The run root contains one log and PID file per variant plus the source-code revision. Each variant's `run.json` records progress, the exact validation dates and loading state. `metrics.jsonl` records each training initialization, data-loading time, update time, loss and gradient norm. Both jobs use `nohup` and continue after SSH disconnects. No recurring monitor is installed.
+
 ## Diagnostic evaluation
 
 `python -m finetuning.evaluate --checkpoint runs/VARIANT/best.npz --stats-dir data/graphcast/stats --split val --steps 4 --count 4 --output runs/VARIANT-validation` runs physical-unit, area-weighted RMSE by variable, pressure level and forecast lead. Select a GPU with `CUDA_VISIBLE_DEVICES` and disable JAX preallocation as above. This runner passes a zero target template into prediction; verification targets are not forecast inputs. Its RMSE aggregates squared errors across dates before taking the square root. The complete runner has not yet been exercised on a full checkpoint; its metric/alignment logic is tested.
