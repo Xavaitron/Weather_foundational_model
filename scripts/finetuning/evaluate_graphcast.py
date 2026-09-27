@@ -113,7 +113,7 @@ def run(args):
     forward = make_forward(pretrained.model_config, pretrained.task_config, stats)
     climatology = xr.open_zarr(climatology_path, chunks=None)
     split = xr.open_zarr(split_path, chunks=None)
-    duration = pd.Timedelta(pretrained.model_config.input_duration)
+    duration = pd.Timedelta(pretrained.task_config.input_duration)
     six_hours = pd.Timedelta("6h")
     frame_count = int(duration / six_hours) + args.max_lead_hours // 6
     candidate_starts = np.arange(

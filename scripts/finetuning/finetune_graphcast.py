@@ -105,7 +105,7 @@ def run(args):
     # itself has no persistent Haiku state, so start each run with an empty tree.
     state = {}
     rng = jax.random.PRNGKey(args.seed)
-    input_duration = pd.Timedelta(model_config.input_duration)
+    input_duration = pd.Timedelta(task_config.input_duration)
     six_hours = pd.Timedelta("6h")
     if input_duration % six_hours:
         raise ValueError(f"Model input duration is not a multiple of six hours: {input_duration}")
