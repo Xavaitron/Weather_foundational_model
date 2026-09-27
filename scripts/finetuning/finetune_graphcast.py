@@ -81,7 +81,7 @@ def run(args):
     import optax
     import pandas as pd
     import xarray as xr
-    from graphcast import checkpoint, data_utils, graphcast, losses
+    from graphcast import checkpoint, data_utils, graphcast, losses, xarray_jax
 
     devices = jax.devices()
     if len(devices) != 1 or devices[0].platform != "gpu":
@@ -122,7 +122,9 @@ def run(args):
             inputs, targets * np.nan, forcings)
         batch_loss, _ = losses.weighted_mse_per_level(
             predictions, targets, per_variable_weights)
-        return jnp.mean(batch_loss.data), updated_state
+        # ``weighted_mse_per_level`` returns an xarray object whose underlying
+        # value is a GraphCast JAX wrapper. Unwrap it before JAX traces the loss.
+        return jnp.mean(xarray_jax.unwrap_data(batch_loss)), updated_state
 
     @jax.jit
     def train_step(current_params, current_state, current_opt_state, step_rng,
