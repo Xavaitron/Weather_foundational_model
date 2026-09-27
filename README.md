@@ -20,11 +20,11 @@ The 0.25-degree / 37-level model requires substantially more GPU memory than Gra
 
 Fine-tuning uses the official **GraphCast_small** checkpoint at 1-degree resolution and 13 pressure levels. ERA5 is split into train (2016-2019), validation (2020), and test (2021-2022). The pretrained checkpoint ends in 2015.
 
-Set the staged dataset location and install the dependencies once. Replace `<absolute_path_to_existing_era5_data>` with the real directory containing `train.zarr`, `validation.zarr`, `test.zarr`, and `climatology.zarr`; do not copy the placeholder text literally.
+Set the staged dataset location and install the dependencies once. The staged dataset is stored at `/media/data_dump/Anwar/era5_graphcast_small_1deg`; it must contain `train.zarr`, `validation.zarr`, `test.zarr`, and `climatology.zarr`.
 
 ```bash
 export PYTHON_BIN="$(command -v python)"
-export ERA5_DATA_DIR="<absolute_path_to_existing_era5_data>"
+export ERA5_DATA_DIR="/media/data_dump/Anwar/era5_graphcast_small_1deg"
 bash scripts/finetuning/setup_finetuning.sh --skip-data
 ```
 
