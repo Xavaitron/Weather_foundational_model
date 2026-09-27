@@ -1,6 +1,6 @@
 # GraphCast fine-tuning experiment
 
-This is a research implementation for two matched experiments: pretrained GraphCast fine-tuning and the same fine-tuning with a learned latent advection adapter. The requested global input/output grid is **0.1°**, with 37 pressure levels. This is not a reproduction of the complete PARADIS architecture. Full-resolution training must pass the memory feasibility gate below before execution.
+This is a research implementation for two matched experiments: pretrained GraphCast fine-tuning and the same fine-tuning with a learned latent advection adapter. The active global input/output grid is **1°**, with the **normal GraphCast checkpoint, full mesh and 37 pressure levels**. This supersedes the original 0.1° target and the small-model fallback; GraphCast-small is not selected for the active experiment. This is not a reproduction of the complete PARADIS architecture. Every training configuration must pass the memory feasibility gate below before execution.
 
 ## Data and experiment protocol
 
@@ -9,7 +9,7 @@ This is a research implementation for two matched experiments: pretrained GraphC
 - Keep both historical input states, every forecast target, and each precipitation accumulation inside its split. Initialization times are six-hourly. No 2021/2022 weather values are used for development here.
 - Read the public WeatherBench 2 **hourly, 37-level, 0.25°** ERA5 store one window at a time. The commonly used preprocessed six-hourly store has only 13 levels and is not interchangeable with this checkpoint.
 - Sum the six hourly precipitation accumulations ending at each state time. Select the other variables at the state time. Generate calendar and solar forcings with the official GraphCast utilities.
-- Interpolate periodically in longitude onto 1801 × 3600 points. This is bilinearly interpolated ERA5, not independent native 0.1° information. It is not conservative regridding; wind components are interpolated as components. This limitation must accompany precipitation and small-scale interpretations.
+- Interpolate periodically in longitude onto **181 × 360 points (1°)** from the 0.25° ERA5 source. This changes the input/output grid while retaining all 37 pressure levels and the pretrained mesh. It is not conservative regridding; wind components are interpolated as components. This limitation must accompany precipitation and small-scale interpretations.
 - Retain the pretrained normalization files. Use the same data ordering, seed, optimization, rollout length, weighted MSE and validation dates for both variants.
 - Current defaults (10 updates, four validation dates, one forecast step) are **engineering pilot settings**, not an adequate training schedule or benchmark. Validation uses physical 2020 data, but the reported loss remains the normalized GraphCast training objective.
 - Freeze the schedule and model selection rule on 2020 before opening the 2021–2022 test evaluation. Planned final metrics: physical-unit latitude-weighted RMSE and ACC by variable/level/lead, training-period climatology, and spherical spectral amplitude/coherence. The diagnostic runner currently implements RMSE; ACC, climatology and spherical spectra remain to be implemented for the final benchmark.
@@ -18,11 +18,11 @@ This is a research implementation for two matched experiments: pretrained GraphC
 
 `finetuning/advection.py` inserts one residual transport adapter after the existing mesh processor. It compresses the 512-channel mesh state to 16 learned modes, predicts separate bounded east/north angular displacements for each mode, transfers modes to a regular helper grid, traces backwards on the sphere, and samples with differentiable bicubic interpolation. Longitude is periodic; interpolation stencils reflect across poles with a half-turn in longitude.
 
-The correction is the transported sample minus the zero-displacement sample. A zero-initialized projection lifts this difference back to 512 channels, making the adapter a mathematical identity at initialization. The small-model test matches exactly; separately compiled full-size BF16 runs can differ slightly through numerical rounding. Displacement-network gradients become active after the lift first changes. The helper grid defaults to 1°; this is internal to the adapter, while the requested model input/output grid remains 0.1°.
+The correction is the transported sample minus the zero-displacement sample. A zero-initialized projection lifts this difference back to 512 channels, making the adapter a mathematical identity at initialization. The small-model test matches exactly; separately compiled full-size BF16 runs can differ slightly through numerical rounding. Displacement-network gradients become active after the lift first changes. The helper grid defaults to 1°; this is internal to the adapter, while the active model input/output grid is also 1°.
 
 Project-specific choices include three-neighbor inverse-distance mesh transfer, the helper-grid resolution, one adapter after the processor, the displacement bound, and retaining GraphCast's loss. PARADIS instead composes dedicated advection, diffusion and reaction operators in its own architecture. Learned displacements here are latent transport parameters, not measured winds. This prototype does not establish physical conservation or long-rollout stability.
 
-The pretrained mesh remains unchanged when refining the latitude/longitude grid. More grid points feed each mesh neighborhood, changing aggregate statistics. A resolution-transfer ablation (including aggregation normalization) remains necessary before interpreting model quality; shape compatibility alone does not establish resolution invariance.
+The pretrained mesh remains unchanged when changing the latitude/longitude grid. The number of grid points feeding each mesh neighborhood changes, which changes aggregate statistics. A resolution-transfer ablation (including aggregation normalization) remains necessary before interpreting model quality; shape compatibility alone does not establish resolution invariance.
 
 ## Environment
 
@@ -40,6 +40,8 @@ JAX_PLATFORMS=cpu .venv/bin/python -m pytest -q tests/test_finetuning.py
 The server worktree is `/home/anwar/Weather_foundational_model_finetune`, branch `codex/finetune-0p1`. Its `data` symlink reuses the original checkout's downloaded checkpoint/statistics without modifying the original checkout. Select a free GPU explicitly; do not terminate unrelated processes.
 
 ## Memory feasibility
+
+The trainer and profiler now default to 1°. The explicit 0.1° command below reproduces the earlier memory investigation; it is not the active training configuration.
 
 `finetuning.profile` compiles a one-step, full-parameter update from synthetic array shapes. It reads only schema/coordinates from the existing sample, discards weather arrays, and executes no optimization. A 2022 filename used as schema does not constitute test-weather evaluation.
 
@@ -59,9 +61,9 @@ The implementation checkpoints each message-passing block, each graph embedding,
 
 BF16 computation is already enabled through the official `Bfloat16Cast` wrapper. Pretrained parameters and Adam moments remain float32. The trainer now also donates parameter and optimizer buffers to the compiled update, allowing XLA to reuse their storage. Weather arrays are not donated, so a pilot can reuse its batch. A two-update regression test checks numerical agreement with donation disabled and verifies the input batch remains usable. This saves parameter/optimizer storage; it does not remove the much larger grid and edge activations. Use `--no-donate` with `finetuning.profile` for a comparison.
 
-### GraphCast-small feasibility fallback
+### Historical GraphCast-small fallback checks
 
-The official `GraphCast_small - ERA5 1979-2015 - resolution 1.0 - pressure levels 13 - mesh 2to5 - precipitation input and output.npz` checkpoint can use the same trainer and profiler. Its mesh has 10,242 vertices and its task has 13 pressure levels, but it still has 512 latent channels and 16 message-passing steps. Switching its input/output grid to 0.1° therefore does not guarantee that it fits a 48 GiB GPU. Profile that exact configuration first. A native 1° pilot is an engineering fallback and does not satisfy the requested 0.1° experiment or the full checkpoint's 37-level task. The same checkpoint and task must be used for both baseline and adapter in any eventual comparison.
+The official `GraphCast_small - ERA5 1979-2015 - resolution 1.0 - pressure levels 13 - mesh 2to5 - precipitation input and output.npz` checkpoint can use the same trainer and profiler. Its mesh has 10,242 vertices and its task has 13 pressure levels, but it still has 512 latent channels and 16 message-passing steps. Switching its input/output grid to 0.1° therefore does not guarantee that it fits a 48 GiB GPU. Profile that exact configuration first. A native 1° pilot is an engineering fallback and did not satisfy the original 0.1° experiment or the full checkpoint's 37-level task. The same checkpoint and task must be used for both baseline and adapter in any eventual comparison.
 
 The downloaded checkpoint at `work/graphcast-small.npz` has SHA-256 `e9438d8ad31ca6e1d3397a33b2508f4bbb6ec16aed84629f9a64712bf756bc29`. Its checksum was verified against the official Cloud Storage object's MD5 metadata before transfer and against SHA-256 after transfer. Example native-grid engineering run:
 
@@ -78,14 +80,14 @@ Replace `baseline` with `advection` and use a new output directory for its match
 
 Compiler memory estimates are not measured training peak memory and exclude some runtime overhead. The trainer also checks free GPU memory before its first execution, reserving 2 GiB. A memory rejection must be resolved through implementation/compute changes; do not silently lower the required resolution. Merely having two 48 GiB cards does not pool their memory for the current single-device implementation.
 
-## Training commands after feasibility passes
+## Active full-model 1° training commands
 
 Run each variant into a new directory, using the same seed and schedule. The following is a pilot command, not a recommendation for final convergence:
 
 ```bash
 GRAPHCAST_GPU=2 bash scripts/run_finetune.sh \
   --checkpoint 'data/graphcast/params/GraphCast - ERA5 1979-2017 - resolution 0.25 - pressure levels 37 - mesh 2to6 - precipitation input and output.npz' \
-  --stats-dir data/graphcast/stats --resolution 0.1 \
+  --stats-dir data/graphcast/stats --resolution 1.0 \
   --variant baseline --updates 10 --seed 0 --output runs/baseline-pilot
 ```
 
@@ -107,7 +109,7 @@ The loader explicitly ignores one unused legacy checkpoint leaf, `mesh2grid_gnn/
 
 ## Measured status
 
-See [experiment-status.md](experiment-status.md) for completed engineering runs, test results and the measured 0.1° memory blocker.
+See [full-model-1deg-results.md](full-model-1deg-results.md) for the active full-model 1° check. [experiment-status.md](experiment-status.md) also preserves historical 0.1° memory results and small-model checks.
 
 ## References and reading scope
 

@@ -71,7 +71,7 @@ def read_window(source, initialization, split, steps, levels):
 
 
 def regrid(data, resolution):
-    """Periodic linear interpolation; 0.1 degree is interpolated ERA5, not native."""
+    """Periodic bilinear interpolation onto the requested global grid."""
     if not np.isfinite(resolution) or resolution <= 0:
         raise ValueError('Resolution must be positive and finite')
     nlat, nlon = round(180 / resolution) + 1, round(360 / resolution)

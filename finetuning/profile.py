@@ -22,7 +22,7 @@ def main():
     p.add_argument('--checkpoint',type=Path,required=True)
     p.add_argument('--stats-dir',type=Path,required=True)
     p.add_argument('--schema',type=Path,required=True)
-    p.add_argument('--resolution',type=float,default=.1)
+    p.add_argument('--resolution',type=float,default=1.0)
     p.add_argument('--variant',choices=['baseline','advection'],default='baseline')
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--no-donate',action='store_true',help='Disable buffer donation for comparison')

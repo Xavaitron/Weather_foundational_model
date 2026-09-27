@@ -1,10 +1,10 @@
 # Experiment status — 27 September 2026
 
-The requested 0.1° experiment is **not trained**. The baseline and learned-advection implementation is present, with strict 2016–2019 / 2020 / 2021–2022 chronology. Full-size memory profiling identifies the current blocker.
+The active experiment now uses **normal GraphCast at 1°, retaining the full mesh and 37 pressure levels**. The user explicitly selected 1° and requested the normal model. Both baseline and advection completed two engineering updates on separate A6000s, with compiler memory estimates of **10.77 and 10.98 GiB**. The original 0.1° target and small-model fallback are superseded. The year split remains 2016–2019 / 2020 / 2021–2022. See [the full-model 1° results](full-model-1deg-results.md).
 
-## Latest optimization follow-up
+## Historical optimization follow-up
 
-BF16 and activation checkpointing were already enabled. Parameter/optimizer buffer donation is now enabled and tested, lowering the full-model 0.1° estimate to **198.98 GiB**. The official GraphCast-small checkpoint was also checked: **180.81 GiB at 0.1°**, so it still cannot fit the available cards. At its native 1°/13-level task, the baseline and adapter each completed two real-data engineering updates, with estimates of **3.96 and 4.09 GiB** respectively. Both saved checkpoints passed finite-weight and parameter-change audits. Nine tests now pass. See [the optimization results](optimization-results.md) for exact scope, losses and evidence. These pilots do not replace the requested 0.1° experiment.
+BF16 and activation checkpointing were already enabled. Parameter/optimizer buffer donation is now enabled and tested, lowering the full-model 0.1° estimate to **198.98 GiB**. The official GraphCast-small checkpoint was also checked: **180.81 GiB at 0.1°**, so it still cannot fit the available cards. At its native 1°/13-level task, the baseline and adapter each completed two real-data engineering updates, with estimates of **3.96 and 4.09 GiB** respectively. Both saved checkpoints passed finite-weight and parameter-change audits. Nine tests now pass. See [the optimization results](optimization-results.md) for exact scope, losses and evidence. These were fallback checks before the user selected normal GraphCast at 1°.
 
 ## Verified results
 
@@ -12,7 +12,7 @@ BF16 and activation checkpointing were already enabled. Parameter/optimizer buff
 - Isolated the work in `/home/anwar/Weather_foundational_model_finetune`, branch `codex/finetune-0p1`; the original teammate inference checkout is preserved.
 - Downloaded one real 37-level training window: 2016-01-01 06:00, 12:00 and 18:00 UTC. It is an engineering sample, not the full dataset.
 - The original eight tests passed in 106.51 seconds on the server; the expanded nine-test suite subsequently passed in 95.88 seconds. They cover chronology, precipitation accumulation, periodic 0.1° regridding, spherical interpolation/gradients, identity initialization, an optimizer update, checkpoint round-trip prediction, physical RMSE alignment, and float32 equivalence of activation checkpointing to stock GraphCast.
-- The requested global grid has 6,483,600 nodes, about 6.245 times the pretrained 0.25° grid. No test-weather values have been used for training or model selection in this work.
+- The original 0.1° grid has 6,483,600 nodes, about 6.245 times the pretrained 0.25° grid. No test-weather values have been used for training or model selection in this work.
 
 ## Memory evidence
 
@@ -20,6 +20,8 @@ The 0.1° profiles below are for the baseline; the 0.1° adapter has not been co
 
 | Implementation | Grid | Estimated device memory |
 |---|---:|---:|
+| **Active normal GraphCast baseline** | **1°** | **10.77 GiB** |
+| **Active normal GraphCast + advection** | **1°** | **10.98 GiB** |
 | Checkpoint message-passing blocks | 0.1° | 303.72 GiB |
 | Also checkpoint graph embeddings and outputs | 0.1° | **199.38 GiB** |
 | Full model with buffer donation | 0.1° | **198.98 GiB** |
@@ -37,9 +39,9 @@ This is a limitation of the current implementation, not a theoretical lower boun
 
 ## Engineering runs and remaining work
 
-The 0.25° runs are explicitly native-grid smoke tests on one 2016 window. They do not replace the 0.1° research experiment, and their training losses must not be reported as validation or test skill. The baseline completed two full-parameter GPU updates and saved a checkpoint containing 36,348,131 active parameters. Reloading confirmed finite weights and changes in 258 parameter tensors. Its normalized training loss increased from 0.53912 to 0.80981; the pilot learning rate (1e-5) and schedule are not validated for training. This is evidence that execution works, not evidence of forecast improvement. The matched adapter checkpoint contains 36,380,947 finite parameters, including all three adapter modules and a nonzero lift projection. It also completed two updates, with losses 0.53924 and 0.80807. Both checkpoints are engineering artifacts only. The first losses differ by about 0.023%, consistent with BF16 compilation differences; zero initialization is a mathematical identity, not a promise of bitwise equivalence across large compiled programs.
+The 0.25° runs are explicitly native-grid smoke tests on one 2016 window. They preceded the current 1° configuration, and their training losses must not be reported as validation or test skill. The baseline completed two full-parameter GPU updates and saved a checkpoint containing 36,348,131 active parameters. Reloading confirmed finite weights and changes in 258 parameter tensors. Its normalized training loss increased from 0.53912 to 0.80981; the pilot learning rate (1e-5) and schedule are not validated for training. This is evidence that execution works, not evidence of forecast improvement. The matched adapter checkpoint contains 36,380,947 finite parameters, including all three adapter modules and a nonzero lift projection. It also completed two updates, with losses 0.53924 and 0.80807. Both checkpoints are engineering artifacts only. The first losses differ by about 0.023%, consistent with BF16 compilation differences; zero initialization is a mathematical identity, not a promise of bitwise equivalence across large compiled programs.
 
-Before the requested experiment can run: resolve single-example memory through additional implementation work or suitable compute; establish reliable access to the complete four-year training source; select the training/rollout schedule on 2020; then freeze the protocol and evaluate 2021–2022. The RMSE diagnostic runner is implemented, but full-checkpoint validation, ACC, training-only climatology and spherical spectra remain pending.
+For the active 1° experiment, the tested single-step memory issue is resolved. Remaining work: establish reliable access to the complete four-year training source; select the training/rollout schedule on 2020; then freeze the protocol and evaluate 2021–2022. The RMSE diagnostic runner is implemented, but full-checkpoint validation, ACC, training-only climatology and spherical spectra remain pending.
 
 Server DNS to Google Cloud failed intermittently. The one-window download succeeded with a process-local DNS override preserving HTTPS hostname/certificate validation; no system DNS settings were changed. A durable data-access setup is still needed for unattended full-source streaming.
 
@@ -56,3 +58,5 @@ Server branch: `codex/finetune-0p1`, initial implementation commit `02961d7f1532
 The experiment worktree is clean. The original checkout currently has inference-output modifications; those files were left in place. All jobs launched for these checks have finished.
 
 - [Optimization profiles, small-model manifests, checkpoint audit and nine-test log](optimization-evidence.tar.gz)
+
+- [Normal GraphCast 1° manifests, metrics, checkpoint audit and logs](full-model-1deg-evidence.tar.gz)

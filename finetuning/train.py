@@ -110,7 +110,7 @@ def arguments():
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--source', default=SOURCE)
     p.add_argument('--variant', choices=['baseline', 'advection'], required=True)
-    p.add_argument('--resolution', type=float, default=0.1)
+    p.add_argument('--resolution', type=float, default=1.0)
     p.add_argument('--steps', type=int, default=1)
     p.add_argument('--updates', type=int, default=10)
     p.add_argument('--learning-rate', type=float, default=1e-5)
@@ -135,7 +135,7 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     metadata = {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()}
     metadata.update(splits=SPLITS, status='preparing', devices=[str(d) for d in jax.devices()],
-                    regridding='periodic bilinear interpolation; not native 0.1 degree observations',
+                    regridding='periodic bilinear interpolation of ERA5; not conservative',
                     message_passing_checkpointing=True,
                     embedding_output_checkpointing=True,
                     parameter_optimizer_buffer_donation=True,
