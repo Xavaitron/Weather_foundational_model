@@ -1,6 +1,6 @@
 # GraphCast Workflows
 
-Run these commands on a Linux GPU server from the repository root, using an existing Python 3.11 or 3.12 environment. Select a GPU assigned to you. For inference, use its `nvidia-smi` index with `GRAPHCAST_GPU`. For direct fine-tuning and evaluation, resolve that index to its GPU UUID because CUDA device ordinals can differ from `nvidia-smi` indices.
+Run these commands on a Linux GPU server from the repository root, using an existing Python 3.11 or 3.12 environment. Select a GPU assigned to you. For inference, use its `nvidia-smi` index with `GRAPHCAST_GPU`. For direct fine-tuning and evaluation, set `CUDA_VISIBLE_DEVICES` to the GPU UUID reported by `nvidia-smi -L`; CUDA device ordinals can differ from `nvidia-smi` indices.
 
 ## Inference
 
@@ -35,11 +35,10 @@ If the four Zarr stores do not already exist, inspect the required space and sta
 "$PYTHON_BIN" scripts/finetuning/prepare_era5.py --yes
 ```
 
-Set `GPU_ID` to the GPU index displayed by `nvidia-smi`, then resolve its UUID before running direct fine-tuning or evaluation commands:
+Copy the UUID for your assigned GPU from `nvidia-smi -L`, then set it before running direct fine-tuning or evaluation commands:
 
 ```bash
-GPU_ID=<nvidia_smi_gpu_index>
-export CUDA_VISIBLE_DEVICES="$(nvidia-smi -i "$GPU_ID" --query-gpu=uuid --format=csv,noheader)"
+export CUDA_VISIBLE_DEVICES=GPU-<uuid_from_nvidia_smi>
 ```
 
 Start with a one-step smoke run. `target-steps=1` and `batch-size=1` are the lowest-memory training configuration. A successful run writes `training.json` and `graphcast_small_finetuned.npz`.
