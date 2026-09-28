@@ -30,6 +30,15 @@ def main():
                trained_changed_hidden_fraction=avg(trained,'scalars','changed_hidden_fraction'),
                trained_effective_correction_rms=avg(trained,'scalars','effective_correction_rms'),
                trained_raw_correction_rms=avg(trained,'scalars','correction_rms'))
+    repeats=json.loads((root/'repeatability.json').read_text())
+    repeat_summary={}
+    for case in ['baseline','advection','advection_off']:
+        rr=[r for r in repeats['records'] if r['model']==case and r['variable']=='2m_temperature']
+        values=np.array([r['rmse'] for r in rr])
+        repeat_summary[case]=dict(rmse_mean=float(values.mean()),rmse_std=float(values.std()),
+            rmse_min=float(values.min()),rmse_max=float(values.max()),
+            repeat_field_rms=float(np.mean([r['rms_difference_from_first'] for r in rr[1:]])))
+    stats['repeatability_2m_temperature']=repeat_summary
     (root/'summary.json').write_text(json.dumps(stats,indent=2)+'\n')
     rows=list(csv.DictReader((root/'scores.csv').open()))
     lookup={(r['model'],r['variable'],r['level_hpa']):r for r in rows}
@@ -78,7 +87,7 @@ def main():
         f'the vectors by **{100*current_control:.2f}%** in relative L2 norm.',
         '- Initial displacements are random and nonzero. The initial output projection is zero, so they initially add no latent correction.',
         f'- The trained correction RMS is **{100*stats["trained_correction_to_hidden_rms"]:.5f}%** of backbone feature RMS.',
-        f'- After the actual BF16 cast and addition, **{100*stats["trained_changed_hidden_fraction"]:.3f}%** of mesh-feature components change. '
+        f'- After materializing the actual BF16 decoder-input tensors, **{100*stats["trained_changed_hidden_fraction"]:.3f}%** of mesh-feature components change. '
         'This is the fraction of components whose represented value changes, not the fraction of correction energy retained.','',
         '![Displacement maps](displacement-maps.png)','',
         '## Direct fine-tuning and controlled forecast comparisons','',
@@ -96,6 +105,19 @@ def main():
                'The reset-displacement comparison retains that backbone, learned projection and learned lift, but restores '
                'the initial displacement linear weights/biases. These are evaluation-only ablations, not additional trained models.','',
                '![Validation learning curves](learning-curves.png)','',
+               '## Repeatability check','',
+               'Eight repetitions per case used identical 15 January 2020 inputs, weights and PRNG key. '
+               'The current GPU/BF16 execution shows numerical variation between repeats. This does not establish '
+               'BF16 casting alone as the cause; rounding itself is deterministic.','',
+               '| Case | Mean 2 m temperature RMSE (K) | Repeat standard deviation (K) | Range (K) |',
+               '|---|---:|---:|---:|']
+    for case,r in repeat_summary.items():
+        report.append(f'| {case} | {r["rmse_mean"]:.8f} | {r["rmse_std"]:.8f} | {r["rmse_min"]:.8f}–{r["rmse_max"]:.8f} |')
+    report += ['',
+               'The adapter-on/off RMSE gap is smaller than the per-date repeat variation measured here. '
+               'The sample does not establish a meaningful incremental advection benefit. The direct-fine-tuning improvement is much larger. '
+               'Recomputed baseline/advection scores differ slightly from the earlier benchmark, so the table above is the matched '
+               'diagnostic rerun; it does not replace the original benchmark record.','',
                '## Reproducibility and limits','',
                'No epoch-zero adapter checkpoint was retained. Its parameters were reconstructed from the original pretrained '
                'backbone, the recorded seed and the exact training initializer; the Haiku shape and traversal order were checked. '
