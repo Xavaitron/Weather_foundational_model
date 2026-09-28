@@ -12,7 +12,7 @@ This is a research implementation for two matched experiments: pretrained GraphC
 - Interpolate periodically in longitude onto **181 × 360 points (1°)** from the 0.25° ERA5 source. This changes the input/output grid while retaining all 37 pressure levels and the pretrained mesh. It is not conservative regridding; wind components are interpolated as components. This limitation must accompany precipitation and small-scale interpretations.
 - Retain the pretrained normalization files. Use the same data ordering, seed, optimization, rollout length, weighted MSE and validation dates for both variants.
 - Current defaults (10 updates, four validation dates, one forecast step) are **engineering pilot settings**, not an adequate training schedule or benchmark. Validation uses physical 2020 data, but the reported loss remains the normalized GraphCast training objective.
-- Freeze the schedule and model selection rule on 2020 before opening the 2021–2022 test evaluation. Planned final metrics: physical-unit latitude-weighted RMSE and ACC by variable/level/lead, training-period climatology, and spherical spectral amplitude/coherence. The diagnostic runner currently implements RMSE; ACC, climatology and spherical spectra remain to be implemented for the final benchmark.
+- Freeze the schedule and model selection rule on 2020 before evaluating 2021–2022. The paired benchmark now implements physical-unit, latitude-area-weighted RMSE and ACC by variable, level and lead. ACC uses the published 1990–2019 ERA5 climatology, excluding validation/test years. Spherical spectral diagnostics remain future work.
 
 ## Adapter
 
@@ -109,11 +109,15 @@ The shared `work/era5-1deg-window-cache` is capped at 32 GiB of completed NetCDF
 
 The run root contains one log and PID file per variant plus the source-code revision. Each variant's `run.json` records progress, the exact validation dates and loading state. `metrics.jsonl` records each training initialization, data-loading time, update time, loss and gradient norm. Both jobs use `nohup` and continue after SSH disconnects. No recurring monitor is installed.
 
-## Diagnostic evaluation
+## Paired RMSE and ACC evaluation
 
-`python -m finetuning.evaluate --checkpoint runs/VARIANT/best.npz --stats-dir data/graphcast/stats --split val --steps 4 --count 4 --output runs/VARIANT-validation` runs physical-unit, area-weighted RMSE by variable, pressure level and forecast lead. Select a GPU with `CUDA_VISIBLE_DEVICES` and disable JAX preallocation as above. This runner passes a zero target template into prediction; verification targets are not forecast inputs. Its RMSE aggregates squared errors across dates before taking the square root. The complete runner has not yet been exercised on a full checkpoint; its metric/alignment logic is tested.
+Both 1,000-update checkpoints have completed the frozen monthly benchmark: 12 dates per year in 2020, 2021 and 2022, with one six-hour forecast on the full-model 1° grid. See [results](evaluation-results.md) and [methodology](evaluation-methodology.md). This is a sampled benchmark, not continuous evaluation of every date.
 
-Use a new output directory on each run. Test evaluation additionally requires `--frozen-protocol PATH`, recording a hash of the protocol already chosen on validation. This does not prove the research choices were frozen: the team must actually preserve the protocol and avoid tuning on test results. No test evaluation has been launched.
+`finetuning.paired_evaluate freeze --protocol PATH` records exact dates, forecast leads, checkpoint hashes, grid, climatology and aggregation before reading evaluation weather. `finetuning.paired_evaluate run --protocol PATH` verifies checkpoint hashes, forecasts both models from identical inputs, and saves per-date MSE/ACC plus yearly and combined-test aggregates. Pass these module names to `.venv/bin/python -m`, and use the GPU environment documented above. Existing completed metrics can be resumed only with the same protocol hash. The evaluated protocol is `runs/paired-evaluation-20260928-frozen.json`; do not regenerate it when resuming.
+
+RMSE covers all 37 pressure levels; ACC covers the 13 available climatology levels and all five predicted surface variables. Forecasts receive zero target templates; verification weather is never supplied as future input. RMSE pools squared errors before taking the square root, while ACC averages per-initialization anomaly correlations. Undefined scores stop the run for inspection. See `tests/test_verification.py` for analytical formula, alignment, aggregation and calendar checks.
+
+The older `finetuning.evaluate` remains a standalone RMSE-only diagnostic runner. Use the paired runner for the completed RMSE/ACC benchmark. No test results were used for checkpoint selection or further tuning.
 
 Optional `GRAPHCAST_GEOMETRY_CACHE=work/geometry-cache` persists the immutable graph geometry between processes. The key includes coordinates, model configuration and the pinned upstream version. Only use a trusted local directory: these cache files use Python pickle. No weather fields or trainable parameters are stored in the geometry cache.
 
@@ -121,7 +125,7 @@ The loader explicitly ignores one unused legacy checkpoint leaf, `mesh2grid_gnn/
 
 ## Measured status
 
-See [full-model-1deg-results.md](full-model-1deg-results.md) for the active full-model 1° check. [experiment-status.md](experiment-status.md) also preserves historical 0.1° memory results and small-model checks.
+See [training-stage1.md](training-stage1.md) for completed training and [evaluation-results.md](evaluation-results.md) for RMSE/ACC scores. [full-model-1deg-results.md](full-model-1deg-results.md) records the earlier full-model 1° engineering check. [experiment-status.md](experiment-status.md) also preserves historical 0.1° memory results and small-model checks.
 
 ## References and reading scope
 
