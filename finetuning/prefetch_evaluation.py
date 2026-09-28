@@ -41,6 +41,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--protocol', required=True)
     parser.add_argument('--workers', type=int, default=3)
+    parser.add_argument('--reverse', action='store_true', help='Prepare late dates first alongside another worker pool')
     parser.add_argument('--weather-cache', default='work/era5-1deg-window-cache')
     parser.add_argument('--climatology-cache', default='work/era5-1deg-climatology-cache')
     args = parser.parse_args()
@@ -49,7 +50,10 @@ def main():
                              initializer=initialize,
                              initargs=(args.protocol, args.weather_cache, args.climatology_cache)) as pool:
         # The evaluator is already preparing the first date itself.
-        futures = {pool.submit(prepare, date): date for date in protocol['initializations'][1:]}
+        dates = protocol['initializations'][1:]
+        if args.reverse:
+            dates = dates[::-1]
+        futures = {pool.submit(prepare, date): date for date in dates}
         for future in as_completed(futures):
             date, seconds = future.result()
             print(f'Cached {date} in {seconds:.1f}s', flush=True)
