@@ -5,7 +5,7 @@ import numpy as np
 import xarray as xr
 from graphcast import graphcast
 from finetuning.checkpoints import MARKER
-from finetuning.diagnose_advection import initial_parameters, make_diagnostics, parameter_changes
+from finetuning.diagnose_advection import initial_parameters, make_diagnostics, parameter_changes, materialized_scalars
 from finetuning.train import transformed_loss
 from test_finetuning import tiny_case
 
@@ -21,7 +21,8 @@ def test_diagnostic_capture_zero_lift_and_active_bf16_correction():
     model = dataclasses.replace(model,params=initial)
     observe, _, _ = make_diagnostics(model,stats,initial['advection_velocity'])
     inputs, targets, forcings = batch
-    (scalars, fields), _ = observe(initial,{},jax.random.PRNGKey(0),inputs,xr.zeros_like(targets),forcings)
+    (scalars, fields, boundary), _ = observe(initial,{},jax.random.PRNGKey(0),inputs,xr.zeros_like(targets),forcings)
+    scalars = materialized_scalars(scalars, jax.device_get(boundary))
     assert float(scalars['correction_rms']) == 0
     assert float(scalars['changed_hidden_fraction']) == 0
     assert np.isfinite(fields['current']['distance_km']).all()
@@ -29,7 +30,8 @@ def test_diagnostic_capture_zero_lift_and_active_bf16_correction():
     np.testing.assert_allclose(fields['current']['east'], fields['initial_velocity_same_features']['east'], atol=1e-6)
     active = dict(initial)
     active['advection_lift'] = {'w':np.full_like(initial['advection_lift']['w'], .1)}
-    (scalars, _), _ = observe(active,{},jax.random.PRNGKey(0),inputs,xr.zeros_like(targets),forcings)
+    (scalars, _, boundary), _ = observe(active,{},jax.random.PRNGKey(0),inputs,xr.zeros_like(targets),forcings)
+    scalars = materialized_scalars(scalars, jax.device_get(boundary))
     assert float(scalars['correction_rms']) > 0
     assert float(scalars['changed_hidden_fraction']) > 0
     audit = parameter_changes(initial,active)

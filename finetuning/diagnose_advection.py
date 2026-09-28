@@ -80,6 +80,8 @@ def make_diagnostics(model, stats, initial_velocity):
             elif context.method_name == '__call__' and name == 'advection_lift':
                 captured['delta'] = args[0]
                 captured['correction'] = output
+            elif context.method_name == '__call__' and name == 'mesh2grid_gnn':
+                captured['summed'] = jnp.swapaxes(args[0].nodes['mesh_nodes'].features, 0, 1)
             return output
         with hk.intercept_methods(intercept):
             if template.sizes['time'] != 1:
@@ -89,10 +91,12 @@ def make_diagnostics(model, stats, initial_velocity):
             predictor(model, stats)._predictor(inputs, template, forcings)
         features = captured['features']
         correction = captured['correction']
-        # Reproduce the adapter's actual BF16 cast and addition, including its
-        # rounding at the mesh feature magnitude, rather than casting in FP32.
+        # Capture the actual decoder input. Return BF16 arrays themselves so
+        # host-side comparisons observe stored precision, not an XLA-widened
+        # intermediate feeding a fused scalar reduction.
         hidden_bf16 = features.astype(jnp.bfloat16)
-        summed = (hidden_bf16 + correction.astype(jnp.bfloat16)).astype(jnp.float32)
+        assert captured['summed'].dtype == jnp.bfloat16
+        summed = captured['summed'].astype(jnp.float32)
         effective = summed - features
         rms = lambda x: jnp.sqrt(jnp.mean(jnp.square(x.astype(jnp.float32))))
         scalars = dict(hidden_rms=rms(features), transport_delta_rms=rms(captured['delta']),
@@ -111,8 +115,17 @@ def make_diagnostics(model, stats, initial_velocity):
             hav = jnp.sin((latd-lat)/2)**2 + jnp.cos(lat)*jnp.cos(latd)*jnp.sin((lond-lon)/2)**2
             distance = 2*6371*jnp.arcsin(jnp.sqrt(jnp.clip(hav, 0, 1)))
             fields[label] = dict(east=east[0], north=north[0], distance_km=distance[0])
-        return scalars, fields
+        return scalars, fields, {'before':hidden_bf16, 'after':captured['summed']}
     return jax.jit(observe.apply), latitude, longitude
+
+
+def materialized_scalars(scalars, boundary):
+    before = np.asarray(boundary['before'], dtype=np.float32)
+    after = np.asarray(boundary['after'], dtype=np.float32)
+    result = {k:float(v) for k,v in scalars.items()}
+    result['changed_hidden_fraction'] = float(np.mean(before != after))
+    result['effective_correction_rms'] = float(np.sqrt(np.mean((after-before)**2, dtype=np.float64)))
+    return result
 
 
 def field_statistics(fields):
@@ -250,10 +263,10 @@ def main():
             if date in diagnostic_dates:
                 endpoints = {}
                 for label, model in [('initial', initial), ('trained', trained)]:
-                    (scalars, fields), _ = diagnose(model.params, {}, jax.random.PRNGKey(0), inputs, template, forcings)
-                    scalars, fields = jax.device_get((scalars, fields))
+                    (scalars, fields, boundary), _ = diagnose(model.params, {}, jax.random.PRNGKey(0), inputs, template, forcings)
+                    scalars, fields, boundary = jax.device_get((scalars, fields, boundary))
                     diagnostic_rows.append(dict(date=date, endpoint=label,
-                        scalars={k:float(v) for k,v in scalars.items()}, fields=field_statistics(fields)))
+                        scalars=materialized_scalars(scalars, boundary), fields=field_statistics(fields)))
                     endpoints[label] = fields['current']
                     if date == diagnostic_dates[0]:
                         np.savez_compressed(args.output/f'map-{label}.npz', latitude=lat, longitude=lon,
