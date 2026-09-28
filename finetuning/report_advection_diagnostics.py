@@ -67,11 +67,11 @@ def main():
     vmax=max(before.max(),after.max());delta=after-before;limit=max(abs(delta.min()),abs(delta.max()))
     fig,axes=plt.subplots(3,1,figsize=(11,9),constrained_layout=True)
     for ax,field,title,cmap,vmin,vmax_ in zip(axes,[before,after,delta],
-            ['Before training: random departure field','After 1,000 updates','After minus before'],
+            ['Before training: reconstructed random departure field','After 1,000 updates','After minus before'],
             ['viridis','viridis','RdBu_r'],[0,0,-limit],[vmax,vmax,limit]):
         sc=ax.scatter(lo,la,c=field,s=3,cmap=cmap,vmin=vmin,vmax=vmax_,rasterized=True)
         ax.set(xlim=(-180,180),ylim=(-90,90),xlabel='Longitude (degrees)',ylabel='Latitude (degrees)',title=title)
-        fig.colorbar(sc,ax=ax,label='Latent sampling distance (km equivalent)',shrink=.85)
+        fig.colorbar(sc,ax=ax,label='Change (km)' if title=='After minus before' else 'Distance (km)',shrink=.85)
     fig.suptitle('15 January 2020: mean departure distance across 16 latent modes\nSampling offsets are not physical wind speeds',fontsize=13)
     fig.savefig(root/'displacement-maps.png',dpi=160);plt.close(fig)
     report=['# Displacement and direct fine-tuning audit','',
