@@ -17,7 +17,7 @@ import numpy as np
 import xarray as xr
 from graphcast import checkpoint, graphcast
 from finetuning.checkpoints import configuration, predictor
-from finetuning.data import SOURCE, assert_window, open_source, read_window, model_batch
+from finetuning.data import SOURCE, assert_window, read_window, model_batch
 from finetuning.evaluate import spatial_mse
 from finetuning.verification import aggregate, spatial_acc, select_climatology
 from finetuning.window_cache import cached_window
@@ -46,6 +46,16 @@ def write_json(path, value):
 def load_model(path):
     with Path(path).open('rb') as f:
         return checkpoint.load(f, graphcast.CheckPoint)
+
+
+def open_evaluation_source(path):
+    # gcsfs otherwise passes timeout=None to aiohttp, permitting a stalled
+    # object request to block indefinitely. Its existing retry policy handles
+    # bounded request failures without changing the selected data.
+    options = {'storage_options': {'token': 'anon', 'requests_timeout': 60}} if path.startswith('gs://') else {}
+    source = xr.open_zarr(path, consolidated=True, chunks=None, **options)
+    source.attrs['source_store'] = path
+    return source
 
 
 def freeze(args):
@@ -186,11 +196,15 @@ def run(args):
     protocol_hash = digest(args.protocol)
     args.output.mkdir(parents=True, exist_ok=True)
     status_file = args.output / 'run.json'
-    if status_file.exists() and json.loads(status_file.read_text())['protocol_sha256'] != protocol_hash:
+    previous = json.loads(status_file.read_text()) if status_file.exists() else {}
+    if previous and previous['protocol_sha256'] != protocol_hash:
         raise ValueError('Output already belongs to another protocol')
     write_json(args.output / 'protocol.json', protocol)
     status = dict(status='running', protocol_sha256=protocol_hash, completed_initializations=[],
-                  requested_initializations=len(protocol['initializations']), started_at_utc=time.time())
+                  requested_initializations=len(protocol['initializations']),
+                  started_at_utc=previous.get('started_at_utc', time.time()),
+                  attempt=previous.get('attempt', 1 if previous else 0)+1,
+                  resumed_at_utc=time.time())
     write_json(status_file, status)
     models, predictions = {}, {}
     try:
@@ -204,8 +218,8 @@ def run(args):
                 raise ValueError('Variant mismatch')
             predictions[variant] = make_predict(model, stats)
         model = models['baseline']
-        source = open_source(protocol['source'])
-        climate = open_source(protocol['climatology'])
+        source = open_evaluation_source(protocol['source'])
+        climate = open_evaluation_source(protocol['climatology'])
         # Fail on unsupported variables or coordinates before forecast data access.
         select_climatology(climate, [np.datetime64(protocol['initializations'][0])],
                            protocol['climatology_pressure_levels'], [-90, 0, 90], [0],

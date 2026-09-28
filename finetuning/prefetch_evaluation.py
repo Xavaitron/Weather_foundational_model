@@ -6,8 +6,8 @@ import multiprocessing
 from pathlib import Path
 import time
 import numpy as np
-from finetuning.data import open_source, read_window, model_batch
-from finetuning.paired_evaluate import load_model, load_climatology
+from finetuning.data import read_window, model_batch
+from finetuning.paired_evaluate import load_model, load_climatology, open_evaluation_source
 from finetuning.window_cache import cached_window
 
 _STATE = None
@@ -17,7 +17,7 @@ def initialize(protocol_path, weather_cache, climatology_cache):
     global _STATE
     protocol = json.loads(Path(protocol_path).read_text())
     task = load_model(protocol['checkpoints']['baseline']['path']).task_config
-    _STATE = (protocol, task, open_source(protocol['source']), open_source(protocol['climatology']),
+    _STATE = (protocol, task, open_evaluation_source(protocol['source']), open_evaluation_source(protocol['climatology']),
               weather_cache, climatology_cache)
 
 
