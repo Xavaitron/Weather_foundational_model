@@ -1,0 +1,7010 @@
+[
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011443164727475693
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2262458740304485
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023068637917150175
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00020438608347805897
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.295273428277301e-10
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.48728785848337e-05,
+        0.00010893142451682963
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8893446617752413,
+        0.6405703188467842
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010691613737489189,
+        0.0004708012547135245
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001207904834076536,
+        0.0005175996974372524
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.52110884419231e-06,
+        6.024759928191588e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.017986843379402e-11,
+        1.0970706988840901e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011272056972284479
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2435925591304091
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021943055232005162
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00019775142543100664
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.3515766679388466e-10
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.327502396668047e-05,
+        0.0001087581571499486
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8876338204687139,
+        0.6306496914823111
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010607977310390416,
+        0.00045845848142720845
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011870842997669248,
+        0.000514228451427756
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.3993673317631725e-06,
+        5.928023709439233e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.9904439461856354e-11,
+        1.0704838392080001e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019580623065181582
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.743919876158427
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004273201349311913
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00043870529627865716
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      7.331429016595763e-10
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00010482284694682054,
+        0.00015509366263857902
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.3379921625747577,
+        1.3006600758572668
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015964016172818464,
+        0.0007312999895917678
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001575902183303755,
+        0.0006996855188429817
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.550015179134633e-06,
+        6.212625748505343e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.124103324371612e-11,
+        1.5412113291693967e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.430500780594456
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      157397.19174777312
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.512212788581493
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      12.116187817524414
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.0251794680826e-05
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.764464681687695,
+        6.346483263334262
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        63241.225486999094,
+        69831.03902573475
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        50.45980651136198,
+        28.87046907290289
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        35.71213004029594,
+        17.958200701666048
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03624822239431113,
+        0.03610405987994791
+      ]
+    ]
+  },
+  {
+    "date": "2020-01-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.147783181724072e-07,
+        3.8090510958549597e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013445198905856067
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.3694789579082238
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023937199279454435
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021367056405474403
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.43353658518006e-10
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.096671042233252e-05,
+        0.00011344225011143923
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9843177512632945,
+        0.6940241680171205
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011413372167169602,
+        0.0004891695432980799
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001253311184060537,
+        0.0005327920308009582
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.5081972865449506e-06,
+        6.271344043494453e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.101182565895163e-11,
+        1.1480175161184443e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013327335770190713
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2988379609889213
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023441893899573684
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00020716689932947032
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.3967875135839823e-10
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.892532539637545e-05,
+        0.00011375156642977643
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9221281009736783,
+        0.6333565829254794
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011359688026763089,
+        0.00048345131403049586
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00122003577257261,
+        0.0005148943698480284
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.3698938851222075e-06,
+        6.300001734971049e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.0316282648524638e-11,
+        1.1420436687252751e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00021140279200658008
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.714895807488195
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00043597932546582635
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004371855362645628
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      6.365266927164197e-10
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00010311222857635207,
+        0.0001582574679445173
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.2365395384825248,
+        1.2538182828441302
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0016404032164550368,
+        0.0007409460938489824
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0016112958513543466,
+        0.0007321522316651348
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.433329761285255e-06,
+        6.21824044652755e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.195972620359678e-11,
+        1.6068964489563143e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      5.163163486327663
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      175249.50098680166
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.477183751597723
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.463383190069555
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.0181519968473434e-05
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.608529559967447,
+        7.012066256796736
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        61391.428056633915,
+        72427.81919912215
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        52.84258727340289,
+        27.33877773863651
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        36.52757014188418,
+        18.768699140547543
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.035046249748088946,
+        0.036528377367025834
+      ]
+    ]
+  },
+  {
+    "date": "2020-02-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.369041398986744e-07,
+        4.297760176126206e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013236794128369193
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.469891064448288
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002598173746075212
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00022472639416811779
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.3113023106485486e-10
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.218701454859757e-05,
+        0.00011092979071889698
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.0039223056615105,
+        0.7370724726097577
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011059724100263933,
+        0.0004938802374027373
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012781379791113642,
+        0.0005641993253679116
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.224236870134753e-06,
+        6.651470939448442e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.9732622308282964e-11,
+        1.0610125660279384e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.0001293601787287831
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.4152729844849143
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002587226854729493
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021511640060672377
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.1823238455468686e-10
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.960050005452116e-05,
+        0.00010992347192499877
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9526530505173637,
+        0.6838742867002399
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001075852100736359,
+        0.0004898383004750951
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001253351321971004,
+        0.0005479777309076464
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.240276518294357e-06,
+        6.49992036079437e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.93474654604824e-11,
+        1.0520875399224467e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019904843563661506
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.5616261179658277
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00043304855886877467
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042321261743496585
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.45587249013204e-10
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00010084806229756894,
+        0.00014405049785290084
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.2787491509736642,
+        1.2365686052533786
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015360259843744783,
+        0.0007000038241852529
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001609986850519172,
+        0.0007076876366823236
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.412140708894232e-06,
+        6.325714003401153e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.013042759455637e-11,
+        1.472290030561581e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.5600537959892575
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      144133.84119299715
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.665929783782028
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.70967064284259
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.2874804247352028e-05
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.529134067773349,
+        5.694465670992941
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        69632.67612567284,
+        67058.51502017371
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        43.69040164234022,
+        24.001349649969768
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        44.98495417452998,
+        20.88705166634597
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03629825325485765,
+        0.04148526137492708
+      ]
+    ]
+  },
+  {
+    "date": "2020-03-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.918520526626363e-07,
+        3.5221174246103273e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013923358535950043
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2572868054324629
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00024683619657103723
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021370608663275422
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.5651960366461515e-10
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.545547046359492e-05,
+        0.00010740650775847878
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9216346096531906,
+        0.6478162840132391
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010456072352574783,
+        0.0004548892376439018
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012149302285971186,
+        0.0005096584591382209
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.255674381200217e-06,
+        6.4428095482902704e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.06554192779848e-11,
+        1.0647058320091576e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013616630854646898
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.170805242818261
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023769044587981924
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00020589440799266567
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.4330977051222532e-10
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.524727628165751e-05,
+        0.0001065916137820269
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8497713947885057,
+        0.5836742970065012
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010559435523746798,
+        0.0004501061146419562
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012036574318867908,
+        0.0005085703951083428
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.243869074908818e-06,
+        6.409127821874785e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.022226946623646e-11,
+        1.0521001473845074e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019618949430043594
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.213424924935282
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004138231101080741
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004075430307914486
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.471094879699355e-10
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.369266150553145e-05,
+        0.00014460842811433707
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.083764718847065,
+        1.049068414768684
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014958609696800267,
+        0.0006406294363498023
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015666121593057984,
+        0.0006668715493091675
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.181786123645358e-06,
+        6.071508263182115e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.7744184245208856e-11,
+        1.463758819346486e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.288171969163665
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      119479.19236798701
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.444164861505206
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.52214866391463
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.25486167257753e-05
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.9797910202028788,
+        5.505721562807181
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        55091.35767189119,
+        54179.16460806056
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        45.38225320647467,
+        19.571649499947537
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        40.140091197729284,
+        16.280337081945515
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03460317893949999,
+        0.03955309038423249
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.669847885740499e-07,
+        3.678542948653006e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013323505602541585
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.113272754254284
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023693294335228623
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021035698556121657
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.2372487556284112e-10
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.016762509326746e-05,
+        9.585383549353347e-05
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8057378322159708,
+        0.5762841936764389
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010427654337241362,
+        0.0004572130089480673
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011394915474109474,
+        0.0004929167218482619
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.352737265691096e-06,
+        6.4377403264414365e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.158639677339063e-11,
+        1.0558502117548671e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013145089324267687
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.0342734340364992
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00022761304366585337
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00020946643502891006
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.234555579378074e-10
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.958446018358346e-05,
+        9.515318401661613e-05
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.7510831765915843,
+        0.5191274537450815
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001028072729857503,
+        0.00044659620955048797
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011240091329619236,
+        0.0004852884746277778
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.257482165390622e-06,
+        6.415446896120659e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.0389697804574002e-11,
+        1.01372977009223e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019942530552715719
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.3338855424286598
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004239301739488465
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004337073606596064
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.766399103222355e-10
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.282987697590074e-05,
+        0.00014754882155608014
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.2599262765109833,
+        1.1399725170457728
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015105163913356771,
+        0.000706787776931651
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014496156291626552,
+        0.0006601149954737388
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.170843611790702e-06,
+        6.114897060412083e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.034506546828289e-11,
+        1.5330767093298438e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.756453011932746
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      101365.63922145213
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.135538619304192
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.052439480135154
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      9.095950178384865e-06
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.9564236993925157,
+        5.894643550473967
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        46600.57506069781,
+        44202.837718493814
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        46.18850949565995,
+        25.90751533566269
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        30.337188769807092,
+        14.274397569867679
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03653541651549042,
+        0.039938386353044704
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.836188495221765e-07,
+        3.8949113034301045e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00014116012800809025
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.389940469001305
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00025355019638561676
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021870646796550032
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.046030018805361e-10
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.429128347795932e-05,
+        0.0001071818056681159
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9818926717889574,
+        0.7064173889930809
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010644730817528163,
+        0.00048303271225643454
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012428148370857135,
+        0.0005458979139543178
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.2376715000482696e-06,
+        6.691843218321394e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.2803218853970338e-11,
+        1.096048604746181e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013610975609232233
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.3011220841836015
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.000253075445303774
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021482912139376658
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.9699697376271729e-10
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.363420437387975e-05,
+        0.00010451381981441654
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9176050921672892,
+        0.658237814803977
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010539133441321963,
+        0.00046833079523605044
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012082077350304386,
+        0.0005403247033490444
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.0898612860926654e-06,
+        6.497853047000802e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.147713021687673e-11,
+        1.0942674946906077e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00020912694153944666
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.309703129523778
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00043696648919266907
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042233044895749347
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.389590975126031e-10
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.751709822778098e-05,
+        0.0001567029850578176
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.139266667146113,
+        1.106345118010634
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014867781986500478,
+        0.0007025065875729364
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015941296308791004,
+        0.000719885010936293
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.313818997741474e-06,
+        6.131849970640692e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.3851251807674184e-11,
+        1.5996262119150564e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      5.288910615620041
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      144849.08768353547
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.938603275162313
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.95752259858108
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      7.859012877521598e-06
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.163261963238648,
+        7.155123953770773
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        62484.60774506384,
+        68597.84730620202
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        40.4522561918383,
+        25.522143195846542
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        43.6054948640808,
+        23.06236441383995
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03752262587576772,
+        0.038447691151899034
+      ]
+    ]
+  },
+  {
+    "date": "2020-06-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.183303874273739e-07,
+        3.878420254798624e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00012893112624026292
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2201373461070557
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023842107770319094
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002103662719140288
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.1557954685737436e-10
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.890167388219227e-05,
+        0.00010351292654861437
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8244883061451165,
+        0.6233429718779534
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010192647585617156,
+        0.0004567193168469
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011533764889216109,
+        0.0005010655123227747
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.742420650699841e-06,
+        6.243519877660493e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.2627897032373194e-11,
+        1.0898751763179228e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.0001286440382784696
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.129020959246222
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023117234457514302
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00020529137513328058
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.10614904414635e-10
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.890152614330486e-05,
+        0.00010356606834386968
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.7792009690805671,
+        0.5835946609166534
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010046583345085698,
+        0.00045177397040900894
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001144310593002961,
+        0.0005035635345794571
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.666542351290949e-06,
+        6.173398562369117e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.205580800869305e-11,
+        1.05661142558731e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.0002000866897452036
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.10932855057145
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00041482544026191727
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004159079413173818
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      7.328940578809419e-10
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.577891299984591e-05,
+        0.00015051255735081264
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.1416328122990003,
+        1.0328460264370793
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014637353698136843,
+        0.0006921311045833498
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015311275047034687,
+        0.0006785875537223843
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.112011109287653e-06,
+        5.984114781969073e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.3908132182253496e-11,
+        1.6719849087179852e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      5.499726645129881
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      104381.9517149255
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.026237056345051
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.830164386269052
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.1014922875230885e-05
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.129113317735257,
+        6.091421096472934
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        48100.69128809645,
+        48118.93861776591
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        41.07100851880544,
+        24.45029805415898
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        34.208221930940404,
+        17.929147669423717
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.03255511390910706,
+        0.035305689070717836
+      ]
+    ]
+  },
+  {
+    "date": "2020-07-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.692129144780944e-07,
+        4.283800650368936e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.0001258289441030739
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.2721476154020872
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002448820615723347
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002190322907051027
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.2572671562728053e-10
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.0036606509385e-05,
+        0.00010691132549445578
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.8496425592085437,
+        0.6577370430053493
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010417403079629219,
+        0.0004695231258365882
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011848999626642908,
+        0.0005262686187234712
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.278541736514413e-06,
+        6.597877817561415e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.184661110848755e-11,
+        1.1584594686777934e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00012615753493799614
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.1917392913288332
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023778914496330449
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002120010076031294
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.330407443050845e-10
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.019397643457966e-05,
+        0.0001050164362041884
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.7903912348944706,
+        0.6147389564373741
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001024234496665139,
+        0.0004602767488749397
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011396641095361632,
+        0.0005197382300830096
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.304316403047048e-06,
+        6.547586216538712e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.1303193860334223e-11,
+        1.1129792614853665e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019135987191582336
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.23595817597307
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042434511324710344
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042204693043869926
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      7.894943509422176e-10
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.603340999940241e-05,
+        0.0001520557711255469
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.176179781880927,
+        1.0965388194589438
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00144511651939433,
+        0.0006995082534249345
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015286335993404585,
+        0.0006959133666082746
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.1764419391592565e-06,
+        6.031808288740639e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.4606304879156916e-11,
+        1.7045467289133043e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      5.372888080028072
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      123404.50466579634
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.483764709958718
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.238960450220475
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.572846895911445e-05
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.0328662186242927,
+        6.571440901015724
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        52670.48757674781,
+        53804.14687301836
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        38.3979039171946,
+        25.34722219928475
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        39.04133694157384,
+        19.978553642136504
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.04043985578724801,
+        0.03959840012202473
+      ]
+    ]
+  },
+  {
+    "date": "2020-08-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.281926961134586e-07,
+        4.479154541618262e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013233826991124433
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.4712188241020903
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00026832442373798195
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00022502812501100123
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.346730380676724e-10
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.016117784570936e-05,
+        0.00011485378348049057
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.007234495047153,
+        0.7457184005212684
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001099440367953473,
+        0.0005029906511065819
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012878379464444213,
+        0.0005744596487801469
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.70737634912691e-06,
+        6.843004869895745e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.134241616783741e-11,
+        1.1329261179210441e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00013046181917483732
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.414071717294609
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002621211721213759
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00022205417379929195
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.207597732190956e-10
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.933139197864133e-05,
+        0.00011352277141547944
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.0039381297340033,
+        0.7270381582281447
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010899210256506454,
+        0.0004897961159515941
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012694490461820354,
+        0.0005738726309019017
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.907392014415208e-06,
+        6.7498004498638105e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.091038904705592e-11,
+        1.109169064229718e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00018826602651345672
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.465049353009623
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00043096333717012307
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00041998016015027897
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.38610914663949e-10
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.820858949988053e-05,
+        0.0001516620626500866
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.3100768908302949,
+        1.2267927255529294
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014526970021307701,
+        0.0007069413528297759
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015386758640751242,
+        0.0007078282457037431
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.214970050543135e-06,
+        6.130721696251804e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.196150055559228e-11,
+        1.6766012596306548e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.531328350973936
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      125887.80931251006
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.496227912187269
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.109904641062961
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.0003918973377937e-05
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.376385309672295,
+        6.286282922933366
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        62062.73103536602,
+        58040.651058059724
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        40.2039274045057,
+        25.36694009157649
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        41.1385924097935,
+        21.028460054999726
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.04250784193385821,
+        0.043774354199688705
+      ]
+    ]
+  },
+  {
+    "date": "2020-09-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.62134657550872e-07,
+        4.478807608467839e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.0001340126170945091
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.4967136754630237
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00026586379585399444
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021759677801428705
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.1018466539203275e-10
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.071799557017901e-05,
+        0.00011727659941736318
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.0153080464874105,
+        0.7580172650137048
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001106928509011683,
+        0.0004925582417106259
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012845711988560432,
+        0.0005634336985912364
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.1547544592595366e-06,
+        6.442189969448683e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.8960244309754382e-11,
+        1.1041682780955478e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00012931388075334603
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.3740704883872346
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00026302229470680173
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021370091321125137
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.8004535968344043e-10
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.916075817206696e-05,
+        0.00011398244919757206
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9833708862924072,
+        0.7010451291616359
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010739978636604404,
+        0.00048320577525951577
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012507591664321464,
+        0.0005509549531023845
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.9986923548892995e-06,
+        6.443447221412093e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.8443608667174163e-11,
+        1.0723345062731281e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00017779968024666756
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.1665151742434623
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042482848020158887
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00041773950591582066
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      5.011501272987077e-10
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00010007299855813078,
+        0.00014376255873534927
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.1650782346006558,
+        1.083829512665131
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0014910034839044914,
+        0.0007029112104135253
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015840019758951076,
+        0.0007017539413085121
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.2726664654845386e-06,
+        6.099088374812458e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        3.042541352286554e-11,
+        1.5770765949101445e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.513381846620529
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      128027.83135220956
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      11.295361841414419
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.562794720070235
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      8.278401426595104e-06
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.5833972359175905,
+        5.738420346150254
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        65230.695952584356,
+        62483.33039737731
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        42.94505181852226,
+        24.765164080532564
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        41.52486802916016,
+        19.434561827604462
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.038577781419271845,
+        0.040165126706529365
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.173519353417585e-07,
+        4.14340268137651e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011825630704442099
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.4297334401634103
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00025627579020674746
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00022396832873471388
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.2294631231413156e-10
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.762607799732438e-05,
+        0.00011707257757310095
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.0231219381447643,
+        0.72890687955548
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011038344028749235,
+        0.0004925297291025131
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0013044778488637732,
+        0.000558196999182596
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.322860478800139e-06,
+        6.519944754853281e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.8878241248269336e-11,
+        1.0704583874601955e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011393121881061953
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.379362354538961
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002479489410607197
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021969914149050671
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      2.049934815981993e-10
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.690020444399346e-05,
+        0.00011434057087284477
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9986432795805251,
+        0.7005576151005855
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0011031863355541163,
+        0.00048693819913895914
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012588957970962947,
+        0.0005403226886662778
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.044127038249355e-06,
+        6.494894194878661e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.8221142878289075e-11,
+        1.0436325390851175e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00016771926281756685
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.2833698768011343
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00042079163910779864
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004099799866476203
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      4.851946174045616e-10
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        9.501276200514153e-05,
+        0.00013977565246686656
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.119567712380325,
+        1.1142436771590294
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015208326552993616,
+        0.0006967719418844663
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.001513204463873218,
+        0.0006927181046356661
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.307924255101063e-06,
+        6.172585274286079e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.7708323085666907e-11,
+        1.476782543283604e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      3.492832727059628
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      145615.57536898198
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.997517234116263
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      10.959704379400847
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      7.4696143269656295e-06
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.324149937823435,
+        5.372597347439655
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        67799.31457696858,
+        71051.39941581605
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        47.68404173072132,
+        24.81641324350114
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        36.80727529112023,
+        18.974793560145358
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.04666994778668865,
+        0.04145746707879547
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.366284162777488e-07,
+        3.652411239668599e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011799115427636136
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.4124277420831062
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002450794850554658
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0002205182373015235
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.9181734892172817e-10
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.829530868358818e-05,
+        0.00011057221145201269
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.97983570407108,
+        0.7221405555288868
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010934835463363689,
+        0.0004985610266857127
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012224489714325888,
+        0.0005213898202487879
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.251916537957868e-06,
+        5.983496337329499e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_off",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.9174468221545927e-11,
+        1.0574523457305557e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00011577719609447383
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      1.3654246888824098
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00023583316599888628
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.00021796813790532342
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      1.9781991249211955e-10
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        8.653767495558825e-05,
+        0.00010832618761739949
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.9747411882342437,
+        0.7085278799795341
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0010571098694608747,
+        0.0004802444861903938
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0012053913756658442,
+        0.0005181003846353138
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        7.2520020900848066e-06,
+        5.836696057871358e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_trained",
+    "right": "advection_reset_velocity",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.85207730477977e-11,
+        1.023722744188651e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      0.00019957299902477113
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      2.711135798465105
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.0004268315138546081
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      0.000442696895429937
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      4.876509481792051e-10
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.00010052697638748773,
+        0.00014946410714445526
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        1.3202522139060926,
+        1.3295763361146393
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0016191885708457473,
+        0.0007631967846607207
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.0015286814598092118,
+        0.0007048358735272656
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        5.519656781187178e-06,
+        6.329453044880015e-06
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "advection_initial",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.8195995087078988e-11,
+        1.4707376423405824e-10
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "2m_temperature",
+    "levels": null,
+    "spatial_mse": [
+      4.611634285851682
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "mean_sea_level_pressure",
+    "levels": null,
+    "spatial_mse": [
+      179136.6772524081
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_v_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      9.915615311622208
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "10m_u_component_of_wind",
+    "levels": null,
+    "spatial_mse": [
+      12.859114461569419
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "total_precipitation_6hr",
+    "levels": null,
+    "spatial_mse": [
+      8.501860440352242e-06
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "temperature",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        2.531864260535882,
+        6.130249837868424
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "geopotential",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        75486.40797993535,
+        82636.83605800378
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "u_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        57.262428948332534,
+        30.918026542747338
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "v_component_of_wind",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        34.23109861842308,
+        17.04016214304742
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "vertical_velocity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        0.036581571331921664,
+        0.0369194238323907
+      ]
+    ]
+  },
+  {
+    "date": "2020-12-15T12",
+    "left": "baseline_trained",
+    "right": "pretrained",
+    "variable": "specific_humidity",
+    "levels": [
+      500,
+      850
+    ],
+    "spatial_mse": [
+      [
+        6.224277879681252e-07,
+        3.8018443908597906e-06
+      ]
+    ]
+  }
+]

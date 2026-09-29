@@ -1,0 +1,3992 @@
+{
+  "direct_finetuning": {
+    "parameters": 36348131,
+    "changed": 36346030,
+    "changed_modules": 130,
+    "modules": 131,
+    "delta_l2": 3.162296012252344,
+    "relative_delta": 0.018261409839410752,
+    "per_module": [
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 8.69774191525678,
+        "after_l2": 8.661512422738694,
+        "delta_l2": 0.10037883646058819,
+        "relative_delta": 0.011540792706726888,
+        "max_abs_delta": 0.00778217613697052
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 0.9762945053751598,
+        "after_l2": 0.905665226643369,
+        "delta_l2": 0.18321977649392662,
+        "relative_delta": 0.18766855235298177,
+        "max_abs_delta": 0.005733562380527246
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.113045568744126,
+        "after_l2": 5.014712479909312,
+        "delta_l2": 1.7325255023104236,
+        "relative_delta": 0.3388441348736051,
+        "max_abs_delta": 0.006418377161026001
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 27.168213386437216,
+        "after_l2": 27.182725927927414,
+        "delta_l2": 0.02979982640113913,
+        "relative_delta": 0.0010968636758431696,
+        "max_abs_delta": 0.0031142234802246094
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 243200,
+        "before_l2": 5.6828957589111555,
+        "after_l2": 5.686923885145095,
+        "delta_l2": 0.10517842009844365,
+        "relative_delta": 0.018507891849593925,
+        "max_abs_delta": 0.004557587206363678
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 14.497967153762458,
+        "after_l2": 14.507396737541052,
+        "delta_l2": 0.28632468703144803,
+        "relative_delta": 0.019749298918582674,
+        "max_abs_delta": 0.003913566470146179
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 2.997253314419886,
+        "after_l2": 2.999108008203833,
+        "delta_l2": 0.09522652695233602,
+        "relative_delta": 0.0317712642085332,
+        "max_abs_delta": 0.006101681727159303
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 243200,
+        "before_l2": 0.5119867774586312,
+        "after_l2": 0.5083227311715525,
+        "delta_l2": 0.028360924487011406,
+        "relative_delta": 0.0553938612004545,
+        "max_abs_delta": 0.0019952427243197235
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 4.593512977780772,
+        "after_l2": 4.697191493899921,
+        "delta_l2": 0.3738097342726191,
+        "relative_delta": 0.08137774641777867,
+        "max_abs_delta": 0.0024847706081345677
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 10.079745243179103,
+        "after_l2": 10.118002396838124,
+        "delta_l2": 0.09381371311390899,
+        "relative_delta": 0.009307151207754195,
+        "max_abs_delta": 0.0061360385407169815
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 12.765602292974759,
+        "after_l2": 12.739954417783848,
+        "delta_l2": 0.8865536759625439,
+        "relative_delta": 0.06944863670478262,
+        "max_abs_delta": 0.007088459795340896
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 17.97853092459732,
+        "after_l2": 17.903141592244054,
+        "delta_l2": 0.8057891723839997,
+        "relative_delta": 0.044819522560742696,
+        "max_abs_delta": 0.009403184056282043
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.204226479308538,
+        "after_l2": 19.20921624569209,
+        "delta_l2": 0.012443699073323796,
+        "relative_delta": 0.0006479666903913664,
+        "max_abs_delta": 0.002041459083557129
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 22.620495582094687,
+        "after_l2": 22.603319387515086,
+        "delta_l2": 0.24050051156382438,
+        "relative_delta": 0.01063197358744842,
+        "max_abs_delta": 0.0038610324263572693
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.833408177854098,
+        "after_l2": 6.8254021577743424,
+        "delta_l2": 0.16303690348251573,
+        "relative_delta": 0.023858797724229372,
+        "max_abs_delta": 0.0025200778618454933
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 22.749704217820145,
+        "after_l2": 22.765937819778447,
+        "delta_l2": 0.026906319272636602,
+        "relative_delta": 0.0011827107295557947,
+        "max_abs_delta": 0.003533482551574707
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.646954485726784,
+        "after_l2": 14.719316757598044,
+        "delta_l2": 1.0260953717878323,
+        "relative_delta": 0.07005520313371257,
+        "max_abs_delta": 0.007168218027800322
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.110081569202817,
+        "after_l2": 9.15309580867828,
+        "delta_l2": 0.5201942608776834,
+        "relative_delta": 0.05710094436873448,
+        "max_abs_delta": 0.007694246945902705
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262653,
+        "before_l2": 33.08216260880296,
+        "after_l2": 33.03244902065952,
+        "delta_l2": 0.2440405243796493,
+        "relative_delta": 0.007376800823617003,
+        "max_abs_delta": 0.004884690046310425
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 116451,
+        "changed": 116451,
+        "before_l2": 15.64125152268434,
+        "after_l2": 15.614282920013054,
+        "delta_l2": 0.15213584817451914,
+        "relative_delta": 0.009726577694494467,
+        "max_abs_delta": 0.007525044493377209
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.597577956476716,
+        "after_l2": 16.588594781124467,
+        "delta_l2": 0.01831853128073826,
+        "relative_delta": 0.0011036870155859092,
+        "max_abs_delta": 0.0021463632583618164
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 9.608047303218061,
+        "after_l2": 9.591249512515263,
+        "delta_l2": 0.026859373232212897,
+        "relative_delta": 0.0027955080137060506,
+        "max_abs_delta": 0.0021497607231140137
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.475007508407502,
+        "after_l2": 6.482989313704379,
+        "delta_l2": 0.3410038812382191,
+        "relative_delta": 0.05266463101323684,
+        "max_abs_delta": 0.001964148541446775
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 19.920873181104607,
+        "after_l2": 19.91846525151576,
+        "delta_l2": 0.009230379619241464,
+        "relative_delta": 0.0004633521600848644,
+        "max_abs_delta": 0.0017031431198120117
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 13.27546829435654,
+        "after_l2": 13.259020946566567,
+        "delta_l2": 0.27229196349440377,
+        "relative_delta": 0.020510912116761735,
+        "max_abs_delta": 0.0034863054752349854
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 18.25649708026549,
+        "after_l2": 18.23988014203541,
+        "delta_l2": 0.15022314162613848,
+        "relative_delta": 0.008228475647090231,
+        "max_abs_delta": 0.003486640751361847
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 47.40516097464427,
+        "after_l2": 47.40432255827817,
+        "delta_l2": 0.00917559175033422,
+        "relative_delta": 0.00019355681030683547,
+        "max_abs_delta": 0.0017709732055664062
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 15.194514597054678,
+        "after_l2": 15.186409914208834,
+        "delta_l2": 0.25405711540961157,
+        "relative_delta": 0.01672031796651525,
+        "max_abs_delta": 0.0036010779440402985
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.569896108403546,
+        "after_l2": 8.56543953158092,
+        "delta_l2": 0.12427137430020989,
+        "relative_delta": 0.01450091958271825,
+        "max_abs_delta": 0.0018229507841169834
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 0,
+        "before_l2": 22.627416997969522,
+        "after_l2": 22.627416997969522,
+        "delta_l2": 0.0,
+        "relative_delta": 0.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262144,
+        "before_l2": 6.076678773187434e-06,
+        "after_l2": 6.07060184748323e-06,
+        "delta_l2": 6.078818902477419e-09,
+        "relative_delta": 0.0010003521873328943,
+        "max_abs_delta": 2.6645352591003757e-11
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262144,
+        "before_l2": 6.093275796763594e-06,
+        "after_l2": 6.087181738006396e-06,
+        "delta_l2": 6.095943386514882e-09,
+        "relative_delta": 0.0010004377923862736,
+        "max_abs_delta": 2.6645352591003757e-11
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.060740836183006,
+        "after_l2": 12.057483911548674,
+        "delta_l2": 0.0084333921911562,
+        "relative_delta": 0.0006992432973814904,
+        "max_abs_delta": 0.0010898113250732422
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 3.1466667164745155,
+        "after_l2": 3.141110903724291,
+        "delta_l2": 0.0102503124336134,
+        "relative_delta": 0.0032575144930180964,
+        "max_abs_delta": 0.000579144023504341
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 11.697150981224665,
+        "after_l2": 11.66784574545371,
+        "delta_l2": 0.08592520898510873,
+        "relative_delta": 0.0073458237072453825,
+        "max_abs_delta": 0.0009659153874963522
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.87238146993626,
+        "after_l2": 16.871819941250127,
+        "delta_l2": 0.009958834567042883,
+        "relative_delta": 0.0005902447490763439,
+        "max_abs_delta": 0.0015277862548828125
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 15.840347621046856,
+        "after_l2": 15.837126157587104,
+        "delta_l2": 0.3841153909837112,
+        "relative_delta": 0.024249176859814762,
+        "max_abs_delta": 0.0043459495063871145
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.870948323248649,
+        "after_l2": 5.868194638353432,
+        "delta_l2": 0.1321290367067275,
+        "relative_delta": 0.022505569702172885,
+        "max_abs_delta": 0.002715718001127243
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.556965639055953,
+        "after_l2": 17.557769855733675,
+        "delta_l2": 0.006891465800729098,
+        "relative_delta": 0.00039252032170062706,
+        "max_abs_delta": 0.0010346174240112305
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 17.008161798789345,
+        "after_l2": 16.99783840537918,
+        "delta_l2": 0.3141264298874266,
+        "relative_delta": 0.018469158137347116,
+        "max_abs_delta": 0.004035443067550659
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.895245849348469,
+        "after_l2": 5.8914737719149475,
+        "delta_l2": 0.07965102797738903,
+        "relative_delta": 0.013511061287832788,
+        "max_abs_delta": 0.0011472180485725403
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.966297820163973,
+        "after_l2": 17.967845594689727,
+        "delta_l2": 0.006559956878258905,
+        "relative_delta": 0.0003651256894392856,
+        "max_abs_delta": 0.0010365843772888184
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 15.803023369598307,
+        "after_l2": 15.794084680607018,
+        "delta_l2": 0.2823275531064508,
+        "relative_delta": 0.017865413883370547,
+        "max_abs_delta": 0.00354887917637825
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 6.02556071741762,
+        "after_l2": 6.022058631165098,
+        "delta_l2": 0.07830532305365027,
+        "relative_delta": 0.012995524686573843,
+        "max_abs_delta": 0.0013110097497701645
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 18.980983149066994,
+        "after_l2": 18.98269901558266,
+        "delta_l2": 0.006534776929344671,
+        "relative_delta": 0.0003442802134127539,
+        "max_abs_delta": 0.0010315179824829102
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 15.142723332019981,
+        "after_l2": 15.134175761988734,
+        "delta_l2": 0.275002988809419,
+        "relative_delta": 0.018160735211209506,
+        "max_abs_delta": 0.003109340090304613
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262652,
+        "before_l2": 6.04201682279445,
+        "after_l2": 6.03832718398199,
+        "delta_l2": 0.08651202084519262,
+        "relative_delta": 0.014318401186638963,
+        "max_abs_delta": 0.0013606352731585503
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.594697752417726,
+        "after_l2": 21.59695679734523,
+        "delta_l2": 0.007581237264019276,
+        "relative_delta": 0.0003510693852230688,
+        "max_abs_delta": 0.001219332218170166
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 15.55989654012743,
+        "after_l2": 15.55404278907984,
+        "delta_l2": 0.3428619200783065,
+        "relative_delta": 0.022034974281101398,
+        "max_abs_delta": 0.004516321117989719
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.942499598940011,
+        "after_l2": 6.939321132051439,
+        "delta_l2": 0.07564707192158744,
+        "relative_delta": 0.010896229930375124,
+        "max_abs_delta": 0.0018506534397602081
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 17.825990159325038,
+        "after_l2": 17.827601863944345,
+        "delta_l2": 0.007045055035819943,
+        "relative_delta": 0.00039521255048682787,
+        "max_abs_delta": 0.0009653568267822266
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 14.5331918515511,
+        "after_l2": 14.52851652244118,
+        "delta_l2": 0.2692112233365026,
+        "relative_delta": 0.018523888357516605,
+        "max_abs_delta": 0.002277270541526377
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.837360830946708,
+        "after_l2": 6.832748501011095,
+        "delta_l2": 0.07791444587282229,
+        "relative_delta": 0.011395397697920555,
+        "max_abs_delta": 0.0011986721074208617
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.27605594816401,
+        "after_l2": 16.27751014650682,
+        "delta_l2": 0.008676594217223903,
+        "relative_delta": 0.0005330894809441012,
+        "max_abs_delta": 0.0013208389282226562
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 14.347208868476285,
+        "after_l2": 14.341691277194416,
+        "delta_l2": 0.2678191586258748,
+        "relative_delta": 0.018666986804264596,
+        "max_abs_delta": 0.005109153687953949
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.992003371623015,
+        "after_l2": 8.985499435568986,
+        "delta_l2": 0.10533244540468947,
+        "relative_delta": 0.0117140131127061,
+        "max_abs_delta": 0.0017899177764775231
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.702389686519545,
+        "after_l2": 12.70166979331609,
+        "delta_l2": 0.0096110515767838,
+        "relative_delta": 0.0007566333433293706,
+        "max_abs_delta": 0.0018538236618041992
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 19.598035258117406,
+        "after_l2": 19.583797782928908,
+        "delta_l2": 0.4295888927587492,
+        "relative_delta": 0.021919997953918142,
+        "max_abs_delta": 0.004728858824819326
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.876538731401812,
+        "after_l2": 5.872208466852703,
+        "delta_l2": 0.11787616091484104,
+        "relative_delta": 0.020058773761663342,
+        "max_abs_delta": 0.002588573843240738
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.039899361925892,
+        "after_l2": 15.040937737604914,
+        "delta_l2": 0.009785689388809176,
+        "relative_delta": 0.0006506485950020411,
+        "max_abs_delta": 0.0016794204711914062
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 19.8791982244722,
+        "after_l2": 19.866733736388678,
+        "delta_l2": 0.3701989557252302,
+        "relative_delta": 0.018622428910110587,
+        "max_abs_delta": 0.004235470667481422
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.854134439602457,
+        "after_l2": 5.849372071216729,
+        "delta_l2": 0.12341397784214134,
+        "relative_delta": 0.021081507286074923,
+        "max_abs_delta": 0.0021341778337955475
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 11.36829594174231,
+        "after_l2": 11.367164789581038,
+        "delta_l2": 0.008714679039812002,
+        "relative_delta": 0.0007665774258931181,
+        "max_abs_delta": 0.0013590008020401
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 20.97179611126088,
+        "after_l2": 20.95611143355403,
+        "delta_l2": 0.35759961751723107,
+        "relative_delta": 0.01705145403951437,
+        "max_abs_delta": 0.0045944880694150925
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.928346507611072,
+        "after_l2": 5.924092626573604,
+        "delta_l2": 0.11372080229295466,
+        "relative_delta": 0.019182549830202216,
+        "max_abs_delta": 0.002264156937599182
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.45069000762517,
+        "after_l2": 12.450536490219527,
+        "delta_l2": 0.009781836177531592,
+        "relative_delta": 0.0007856461104999729,
+        "max_abs_delta": 0.002269923686981201
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 21.45513853936875,
+        "after_l2": 21.438592621001,
+        "delta_l2": 0.37271753412691677,
+        "relative_delta": 0.017371947211760247,
+        "max_abs_delta": 0.0033685360103845596
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.111286246039418,
+        "after_l2": 6.105616850933997,
+        "delta_l2": 0.11957411178231381,
+        "relative_delta": 0.019566112102801108,
+        "max_abs_delta": 0.0018400279805064201
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.113391994973007,
+        "after_l2": 12.112175194610405,
+        "delta_l2": 0.007498544026265229,
+        "relative_delta": 0.0006190292553379833,
+        "max_abs_delta": 0.001332402229309082
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786940,
+        "before_l2": 20.08255782542261,
+        "after_l2": 20.065686201165704,
+        "delta_l2": 0.3760985857412373,
+        "relative_delta": 0.018727623692691785,
+        "max_abs_delta": 0.003951136954128742
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 6.2943830810838355,
+        "after_l2": 6.290195400009729,
+        "delta_l2": 0.10201299539529629,
+        "relative_delta": 0.016206988688354598,
+        "max_abs_delta": 0.0019095316529273987
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.494774643670299,
+        "after_l2": 12.49484042213717,
+        "delta_l2": 0.0073859775408575724,
+        "relative_delta": 0.0005911253104992349,
+        "max_abs_delta": 0.0011659860610961914
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 19.668467881900995,
+        "after_l2": 19.653783763998412,
+        "delta_l2": 0.3380883261502923,
+        "relative_delta": 0.01718935751276298,
+        "max_abs_delta": 0.004142208024859428
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.13397315872147,
+        "after_l2": 6.129438787352718,
+        "delta_l2": 0.10416120610905939,
+        "relative_delta": 0.01698103389333548,
+        "max_abs_delta": 0.001574063193402253
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.615259230228197,
+        "after_l2": 12.614818305325244,
+        "delta_l2": 0.006688666276977848,
+        "relative_delta": 0.0005302044258393615,
+        "max_abs_delta": 0.0010483860969543457
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 17.726564261152813,
+        "after_l2": 17.713121078085532,
+        "delta_l2": 0.3217092593349634,
+        "relative_delta": 0.018148427106090645,
+        "max_abs_delta": 0.00633357185870409
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.590658553635604,
+        "after_l2": 5.586072534080221,
+        "delta_l2": 0.08991933225910227,
+        "relative_delta": 0.016083853341504417,
+        "max_abs_delta": 0.0017118994146585464
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 13.418476805827027,
+        "after_l2": 13.41914728790024,
+        "delta_l2": 0.007049414959289738,
+        "relative_delta": 0.0005253513540544708,
+        "max_abs_delta": 0.0010620355606079102
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 17.830889380689033,
+        "after_l2": 17.818498826760184,
+        "delta_l2": 0.3160141549837106,
+        "relative_delta": 0.01772284871701105,
+        "max_abs_delta": 0.00412480701925233
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.677535532481685,
+        "after_l2": 5.673092109806098,
+        "delta_l2": 0.09528226479102901,
+        "relative_delta": 0.016782328220741324,
+        "max_abs_delta": 0.001771943410858512
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.191124012280978,
+        "after_l2": 15.191818058737043,
+        "delta_l2": 0.007277617792687158,
+        "relative_delta": 0.0004790703957655605,
+        "max_abs_delta": 0.001088857650756836
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786941,
+        "before_l2": 16.968209785110314,
+        "after_l2": 16.9569842327481,
+        "delta_l2": 0.3427327162512968,
+        "relative_delta": 0.020198519501570898,
+        "max_abs_delta": 0.003754749894142151
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.612661335925495,
+        "after_l2": 5.608538515971986,
+        "delta_l2": 0.0889477751868325,
+        "relative_delta": 0.015847700380120216,
+        "max_abs_delta": 0.0014823712408542633
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.790762548562128,
+        "after_l2": 12.788685868586661,
+        "delta_l2": 0.012250393416452508,
+        "relative_delta": 0.0009577531730373365,
+        "max_abs_delta": 0.0014209151268005371
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 20.77622882178196,
+        "after_l2": 20.768133385272673,
+        "delta_l2": 0.37863847958145624,
+        "relative_delta": 0.018224600952820115,
+        "max_abs_delta": 0.003988724201917648
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.701907050040113,
+        "after_l2": 9.697225428055855,
+        "delta_l2": 0.2119312573503269,
+        "relative_delta": 0.021844288577208194,
+        "max_abs_delta": 0.003369762562215328
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.483940794388648,
+        "after_l2": 19.4840155215302,
+        "delta_l2": 0.007571517804779513,
+        "relative_delta": 0.00038860299796025354,
+        "max_abs_delta": 0.0012133121490478516
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524798,
+        "before_l2": 15.104152481149233,
+        "after_l2": 15.097698028122574,
+        "delta_l2": 0.2382434645061401,
+        "relative_delta": 0.01577337522270649,
+        "max_abs_delta": 0.0018628179095685482
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.411677769565943,
+        "after_l2": 8.407903621723412,
+        "delta_l2": 0.11796201275133636,
+        "relative_delta": 0.014023600996477948,
+        "max_abs_delta": 0.0014009932056069374
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 20.247689680025726,
+        "after_l2": 20.24876109068105,
+        "delta_l2": 0.006789117553987041,
+        "relative_delta": 0.0003353033191082774,
+        "max_abs_delta": 0.0010927915573120117
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 13.836360608933875,
+        "after_l2": 13.831356811167348,
+        "delta_l2": 0.2227703703407027,
+        "relative_delta": 0.016100358803662874,
+        "max_abs_delta": 0.0032895002514123917
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262654,
+        "before_l2": 8.36821920548436,
+        "after_l2": 8.364372896929439,
+        "delta_l2": 0.11212347428463744,
+        "relative_delta": 0.013398725766069082,
+        "max_abs_delta": 0.001470409333705902
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.075816953861516,
+        "after_l2": 21.076501644177398,
+        "delta_l2": 0.007345458058635455,
+        "relative_delta": 0.0003485254248846386,
+        "max_abs_delta": 0.00112152099609375
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 13.242568285948005,
+        "after_l2": 13.236689614747998,
+        "delta_l2": 0.23156138688201616,
+        "relative_delta": 0.017486138782288274,
+        "max_abs_delta": 0.0024362895637750626
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.67834835014575,
+        "after_l2": 8.674190692397513,
+        "delta_l2": 0.1260308535159701,
+        "relative_delta": 0.014522446948543318,
+        "max_abs_delta": 0.001912526786327362
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 22.26981244022254,
+        "after_l2": 22.27068452877466,
+        "delta_l2": 0.007032791867293845,
+        "relative_delta": 0.00031579933087319556,
+        "max_abs_delta": 0.0009562969207763672
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.35096571263296,
+        "after_l2": 14.346325066345518,
+        "delta_l2": 0.24752764465773247,
+        "relative_delta": 0.017248152466829272,
+        "max_abs_delta": 0.002316683530807495
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.33900784664074,
+        "after_l2": 8.335468234667944,
+        "delta_l2": 0.1186456079496461,
+        "relative_delta": 0.014227784663548544,
+        "max_abs_delta": 0.00198789918795228
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.983078602265966,
+        "after_l2": 21.983302235905292,
+        "delta_l2": 0.007431609411707881,
+        "relative_delta": 0.0003380604485006867,
+        "max_abs_delta": 0.0012391209602355957
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524798,
+        "before_l2": 13.7175912545165,
+        "after_l2": 13.712786849118865,
+        "delta_l2": 0.216513704393452,
+        "relative_delta": 0.015783653294244724,
+        "max_abs_delta": 0.0022294982336461544
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.580054023478235,
+        "after_l2": 8.576091870678315,
+        "delta_l2": 0.11019066181175875,
+        "relative_delta": 0.01284265361386256,
+        "max_abs_delta": 0.0014797188341617584
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.70576440393014,
+        "after_l2": 21.706224392563026,
+        "delta_l2": 0.006581848702422936,
+        "relative_delta": 0.00030323044975237996,
+        "max_abs_delta": 0.0011249184608459473
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 15.57475339024767,
+        "after_l2": 15.566670413637864,
+        "delta_l2": 0.22442323635264244,
+        "relative_delta": 0.014409424709939092,
+        "max_abs_delta": 0.0021814191713929176
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.166501271255378,
+        "after_l2": 9.161943958672142,
+        "delta_l2": 0.10734186991703255,
+        "relative_delta": 0.011710233462099524,
+        "max_abs_delta": 0.0016091689467430115
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 14.376665033548107,
+        "after_l2": 14.375845341638943,
+        "delta_l2": 0.011647191202830705,
+        "relative_delta": 0.0008101455501433646,
+        "max_abs_delta": 0.0015721023082733154
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 17.634783480346396,
+        "after_l2": 17.625034174206053,
+        "delta_l2": 0.34498361923628346,
+        "relative_delta": 0.01956267961105168,
+        "max_abs_delta": 0.005210414528846741
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 10.189464914867637,
+        "after_l2": 10.183852458150762,
+        "delta_l2": 0.1742332282592722,
+        "relative_delta": 0.017099350134180773,
+        "max_abs_delta": 0.0032764337956905365
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.721274154264966,
+        "after_l2": 12.720419109757222,
+        "delta_l2": 0.011088797685189007,
+        "relative_delta": 0.0008716735093293582,
+        "max_abs_delta": 0.001420930027961731
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 20.10319589772842,
+        "after_l2": 20.08934389705355,
+        "delta_l2": 0.29926084592287816,
+        "relative_delta": 0.014886232390377962,
+        "max_abs_delta": 0.0029979869723320007
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 10.299621830741073,
+        "after_l2": 10.294646185670315,
+        "delta_l2": 0.17597754382605543,
+        "relative_delta": 0.017085825743700496,
+        "max_abs_delta": 0.0030663879588246346
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.553896397800838,
+        "after_l2": 15.553422920007804,
+        "delta_l2": 0.008851359132936467,
+        "relative_delta": 0.0005690766420552961,
+        "max_abs_delta": 0.001180887222290039
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 18.21207828740004,
+        "after_l2": 18.20094223994869,
+        "delta_l2": 0.2815331509280753,
+        "relative_delta": 0.015458595470833935,
+        "max_abs_delta": 0.0031847675563767552
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 10.07135539090787,
+        "after_l2": 10.06609361725629,
+        "delta_l2": 0.16308048391544888,
+        "relative_delta": 0.01619250613106884,
+        "max_abs_delta": 0.002375297830440104
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.674380662055187,
+        "after_l2": 15.673722641528267,
+        "delta_l2": 0.009217472335870143,
+        "relative_delta": 0.0005880597475971705,
+        "max_abs_delta": 0.0013221502304077148
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 18.914486452614067,
+        "after_l2": 18.901558165891394,
+        "delta_l2": 0.287659054797986,
+        "relative_delta": 0.015208398891434358,
+        "max_abs_delta": 0.0038787461817264557
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.943907479966262,
+        "after_l2": 9.938463132263895,
+        "delta_l2": 0.15832472295485134,
+        "relative_delta": 0.015921781580714035,
+        "max_abs_delta": 0.0027290298603475094
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.786372277350505,
+        "after_l2": 16.786056964945395,
+        "delta_l2": 0.008937425866934226,
+        "relative_delta": 0.0005324215214143264,
+        "max_abs_delta": 0.0011072158813476562
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 16.70619904158658,
+        "after_l2": 16.695054405201912,
+        "delta_l2": 0.2796655250128826,
+        "relative_delta": 0.01674022465054522,
+        "max_abs_delta": 0.004855334758758545
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.514829400807715,
+        "after_l2": 9.509323399432867,
+        "delta_l2": 0.15200362869385395,
+        "relative_delta": 0.015975444465767336,
+        "max_abs_delta": 0.0021313484758138657
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.165192558022387,
+        "after_l2": 17.164873930882493,
+        "delta_l2": 0.008269783344739358,
+        "relative_delta": 0.0004817763224493722,
+        "max_abs_delta": 0.0010175108909606934
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 16.91932904470296,
+        "after_l2": 16.90825431443606,
+        "delta_l2": 0.24856976739621733,
+        "relative_delta": 0.014691467181675189,
+        "max_abs_delta": 0.0029453709721565247
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 9.32784169551517,
+        "after_l2": 9.322987504757986,
+        "delta_l2": 0.1404599979633803,
+        "relative_delta": 0.015058145554819343,
+        "max_abs_delta": 0.0017604453023523092
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.92197174265179,
+        "after_l2": 17.921876187050238,
+        "delta_l2": 0.007637474788506765,
+        "relative_delta": 0.00042615148032683483,
+        "max_abs_delta": 0.0010281801223754883
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.984002042306951,
+        "after_l2": 14.974626915612797,
+        "delta_l2": 0.2360632214646,
+        "relative_delta": 0.015754350593258158,
+        "max_abs_delta": 0.002873143181204796
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.914829943110655,
+        "after_l2": 8.909526745202477,
+        "delta_l2": 0.1378720108294572,
+        "relative_delta": 0.015465467284208166,
+        "max_abs_delta": 0.001539524644613266
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 18.559697274212468,
+        "after_l2": 18.559363303826107,
+        "delta_l2": 0.007690171685279835,
+        "relative_delta": 0.0004143479051226145,
+        "max_abs_delta": 0.001017749309539795
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.480520944344489,
+        "after_l2": 14.471614564909169,
+        "delta_l2": 0.23945490430798513,
+        "relative_delta": 0.016536345980115212,
+        "max_abs_delta": 0.0032239165157079697
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.949599675476843,
+        "after_l2": 8.94434428557368,
+        "delta_l2": 0.13228023974548395,
+        "relative_delta": 0.014780576175708767,
+        "max_abs_delta": 0.0018330737948417664
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.33808595203881,
+        "after_l2": 19.338719018938473,
+        "delta_l2": 0.006660043606545043,
+        "relative_delta": 0.0003444003518788206,
+        "max_abs_delta": 0.000929415225982666
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524796,
+        "before_l2": 14.745671133240636,
+        "after_l2": 14.738271298714807,
+        "delta_l2": 0.2498321529703417,
+        "relative_delta": 0.016942745481903096,
+        "max_abs_delta": 0.0027230827836319804
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.60321514742036,
+        "after_l2": 8.599145731089479,
+        "delta_l2": 0.12316579650144162,
+        "relative_delta": 0.01431625205123138,
+        "max_abs_delta": 0.0014797304756939411
+      }
+    ]
+  },
+  "advection_training": {
+    "parameters": 36380947,
+    "changed": 36378849,
+    "changed_modules": 133,
+    "modules": 134,
+    "delta_l2": 3.1641558752489596,
+    "relative_delta": 0.01826677651489133,
+    "per_module": [
+      {
+        "module": "advection_lift",
+        "count": 8192,
+        "changed": 8192,
+        "before_l2": 0.0,
+        "after_l2": 0.03949812962272152,
+        "delta_l2": 0.03949812962272152,
+        "relative_delta": null,
+        "max_abs_delta": 0.0018289422150701284
+      },
+      {
+        "module": "advection_project",
+        "count": 8208,
+        "changed": 8208,
+        "before_l2": 4.003147903233445,
+        "after_l2": 4.0014200247898115,
+        "delta_l2": 0.05033222503784939,
+        "relative_delta": 0.01257316148553861,
+        "max_abs_delta": 0.0022716373205184937
+      },
+      {
+        "module": "advection_velocity",
+        "count": 16416,
+        "changed": 16415,
+        "before_l2": 1.2728232051432133,
+        "after_l2": 1.273975694387767,
+        "delta_l2": 0.057633852976436514,
+        "relative_delta": 0.045280328598308175,
+        "max_abs_delta": 0.0018965649651363492
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 8.69774191525678,
+        "after_l2": 8.661531219616126,
+        "delta_l2": 0.10044730722176623,
+        "relative_delta": 0.011548664952402277,
+        "max_abs_delta": 0.007780179381370544
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 0.9762945053751598,
+        "after_l2": 0.90563217471662,
+        "delta_l2": 0.18328397781245237,
+        "relative_delta": 0.18773431254949244,
+        "max_abs_delta": 0.005739941008840788
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.113045568744126,
+        "after_l2": 5.014943526724424,
+        "delta_l2": 1.7326349325141588,
+        "relative_delta": 0.3388655370305513,
+        "max_abs_delta": 0.006417883560061455
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 27.168213386437216,
+        "after_l2": 27.182723655264983,
+        "delta_l2": 0.029822525741408774,
+        "relative_delta": 0.0010976991868113283,
+        "max_abs_delta": 0.0031195878982543945
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 243200,
+        "before_l2": 5.6828957589111555,
+        "after_l2": 5.686917715543678,
+        "delta_l2": 0.1051743000903519,
+        "relative_delta": 0.018507166865665566,
+        "max_abs_delta": 0.0045704469084739685
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 14.497967153762458,
+        "after_l2": 14.507405350313627,
+        "delta_l2": 0.28632258011192413,
+        "relative_delta": 0.019749153593413872,
+        "max_abs_delta": 0.0039094313979148865
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 2.997253314419886,
+        "after_l2": 2.999113371349906,
+        "delta_l2": 0.09535411238763751,
+        "relative_delta": 0.03181383166010216,
+        "max_abs_delta": 0.006097291006881278
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 243200,
+        "before_l2": 0.5119867774586312,
+        "after_l2": 0.5083528222616422,
+        "delta_l2": 0.028487943600259837,
+        "relative_delta": 0.05564195181302642,
+        "max_abs_delta": 0.0019846102837846047
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 4.593512977780772,
+        "after_l2": 4.697243330397073,
+        "delta_l2": 0.37755181916067776,
+        "relative_delta": 0.08219239196382577,
+        "max_abs_delta": 0.0024870296474546194
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 10.079745243179103,
+        "after_l2": 10.118006949783457,
+        "delta_l2": 0.09375316755366916,
+        "relative_delta": 0.009301144551952968,
+        "max_abs_delta": 0.006123909461166477
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 12.765602292974759,
+        "after_l2": 12.740020881691631,
+        "delta_l2": 0.8866757790008617,
+        "relative_delta": 0.06945820170888625,
+        "max_abs_delta": 0.007102452451363206
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 17.97853092459732,
+        "after_l2": 17.903135880272945,
+        "delta_l2": 0.8056757232593015,
+        "relative_delta": 0.04481321230518433,
+        "max_abs_delta": 0.009405851364135742
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.204226479308538,
+        "after_l2": 19.209222488559202,
+        "delta_l2": 0.0124428752466563,
+        "relative_delta": 0.0006479237921955769,
+        "max_abs_delta": 0.0020380020141601562
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262653,
+        "before_l2": 22.620495582094687,
+        "after_l2": 22.6032818633731,
+        "delta_l2": 0.24052112226993633,
+        "relative_delta": 0.010632884739285794,
+        "max_abs_delta": 0.0038707777857780457
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.833408177854098,
+        "after_l2": 6.825402168191042,
+        "delta_l2": 0.16299708556445355,
+        "relative_delta": 0.023852970775651763,
+        "max_abs_delta": 0.002517586573958397
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 22.749704217820145,
+        "after_l2": 22.765942436807,
+        "delta_l2": 0.026927299886656406,
+        "relative_delta": 0.0011836329663382566,
+        "max_abs_delta": 0.0035293102264404297
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.646954485726784,
+        "after_l2": 14.719317372137343,
+        "delta_l2": 1.026085076023889,
+        "relative_delta": 0.07005450020506257,
+        "max_abs_delta": 0.007168520707637072
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.110081569202817,
+        "after_l2": 9.153107197291163,
+        "delta_l2": 0.5202592461247222,
+        "relative_delta": 0.05710807770190446,
+        "max_abs_delta": 0.007698290515691042
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 33.08216260880296,
+        "after_l2": 33.03241828577488,
+        "delta_l2": 0.24404813106056047,
+        "relative_delta": 0.007377030756617488,
+        "max_abs_delta": 0.0048989951610565186
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 116451,
+        "changed": 116451,
+        "before_l2": 15.64125152268434,
+        "after_l2": 15.614295984570033,
+        "delta_l2": 0.15216475484405223,
+        "relative_delta": 0.009728425799135658,
+        "max_abs_delta": 0.007516521029174328
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.597577956476716,
+        "after_l2": 16.588644369584866,
+        "delta_l2": 0.018215103735608158,
+        "relative_delta": 0.0010974555313656622,
+        "max_abs_delta": 0.0021392107009887695
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 9.608047303218061,
+        "after_l2": 9.59127029944803,
+        "delta_l2": 0.02683242782977779,
+        "relative_delta": 0.0027927035518227204,
+        "max_abs_delta": 0.0021494925022125244
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.475007508407502,
+        "after_l2": 6.483709732715108,
+        "delta_l2": 0.3409862912427329,
+        "relative_delta": 0.052661914414767516,
+        "max_abs_delta": 0.001955147134140134
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.920873181104607,
+        "after_l2": 19.9184660139368,
+        "delta_l2": 0.009228181207996816,
+        "relative_delta": 0.00046324180291203057,
+        "max_abs_delta": 0.0017004013061523438
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 13.27546829435654,
+        "after_l2": 13.259028651860195,
+        "delta_l2": 0.2722494555955352,
+        "relative_delta": 0.020507710128106718,
+        "max_abs_delta": 0.0034897513687610626
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 18.25649708026549,
+        "after_l2": 18.239894638764188,
+        "delta_l2": 0.15018047658044814,
+        "relative_delta": 0.008226138668342185,
+        "max_abs_delta": 0.0034793056547641754
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 47.40516097464427,
+        "after_l2": 47.404332858931326,
+        "delta_l2": 0.009170335881804497,
+        "relative_delta": 0.00019344593907632675,
+        "max_abs_delta": 0.0017731189727783203
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 15.194514597054678,
+        "after_l2": 15.186403242165339,
+        "delta_l2": 0.25409885070704596,
+        "relative_delta": 0.01672306470101393,
+        "max_abs_delta": 0.0035782717168331146
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.569896108403546,
+        "after_l2": 8.56543417330564,
+        "delta_l2": 0.12423819474480427,
+        "relative_delta": 0.014497047942387268,
+        "max_abs_delta": 0.001832230482250452
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 0,
+        "before_l2": 22.627416997969522,
+        "after_l2": 22.627416997969522,
+        "delta_l2": 0.0,
+        "relative_delta": 0.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262144,
+        "before_l2": 6.076678773187434e-06,
+        "after_l2": 6.07060184748323e-06,
+        "delta_l2": 6.078818902477419e-09,
+        "relative_delta": 0.0010003521873328943,
+        "max_abs_delta": 2.6645352591003757e-11
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262144,
+        "before_l2": 6.093275796763594e-06,
+        "after_l2": 6.087181738006396e-06,
+        "delta_l2": 6.095943386514882e-09,
+        "relative_delta": 0.0010004377923862736,
+        "max_abs_delta": 2.6645352591003757e-11
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.060740836183006,
+        "after_l2": 12.057486700335993,
+        "delta_l2": 0.008443313107496016,
+        "relative_delta": 0.0007000658767300204,
+        "max_abs_delta": 0.001102447509765625
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 3.1466667164745155,
+        "after_l2": 3.141089851558875,
+        "delta_l2": 0.010265856173443796,
+        "relative_delta": 0.0032624542407673628,
+        "max_abs_delta": 0.0005658864974975586
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262654,
+        "before_l2": 11.697150981224665,
+        "after_l2": 11.667430885298252,
+        "delta_l2": 0.08668151522774292,
+        "relative_delta": 0.007410481010878391,
+        "max_abs_delta": 0.0010034094157163054
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.87238146993626,
+        "after_l2": 16.871814189716304,
+        "delta_l2": 0.009949680600005284,
+        "relative_delta": 0.000589702207583081,
+        "max_abs_delta": 0.0015217065811157227
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 15.840347621046856,
+        "after_l2": 15.837153731020662,
+        "delta_l2": 0.38411233763574953,
+        "relative_delta": 0.024248984102178708,
+        "max_abs_delta": 0.004357582191005349
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.870948323248649,
+        "after_l2": 5.868193677962599,
+        "delta_l2": 0.13214905447946287,
+        "relative_delta": 0.022508979334081265,
+        "max_abs_delta": 0.002723541110754013
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.556965639055953,
+        "after_l2": 17.557765374983404,
+        "delta_l2": 0.0069173366282292035,
+        "relative_delta": 0.0003939938580754181,
+        "max_abs_delta": 0.0010274648666381836
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 17.008161798789345,
+        "after_l2": 16.99782722703093,
+        "delta_l2": 0.31421842692335306,
+        "relative_delta": 0.01847456713080654,
+        "max_abs_delta": 0.0040399543941020966
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.895245849348469,
+        "after_l2": 5.8914803825668205,
+        "delta_l2": 0.07962750221120682,
+        "relative_delta": 0.013507070654230152,
+        "max_abs_delta": 0.0011455947533249855
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.966297820163973,
+        "after_l2": 17.96783924615367,
+        "delta_l2": 0.006542363673013181,
+        "relative_delta": 0.0003641464556860758,
+        "max_abs_delta": 0.0010423660278320312
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 15.803023369598307,
+        "after_l2": 15.794084154378151,
+        "delta_l2": 0.2823933012505416,
+        "relative_delta": 0.01786957436219495,
+        "max_abs_delta": 0.0035560019314289093
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.02556071741762,
+        "after_l2": 6.022057107308015,
+        "delta_l2": 0.07824731989041625,
+        "relative_delta": 0.01298589850140134,
+        "max_abs_delta": 0.0013228058815002441
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 18.980983149066994,
+        "after_l2": 18.98271085118774,
+        "delta_l2": 0.006543442912969565,
+        "relative_delta": 0.000344736774780352,
+        "max_abs_delta": 0.0010595321655273438
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 15.142723332019981,
+        "after_l2": 15.134182924176388,
+        "delta_l2": 0.2750743386144414,
+        "relative_delta": 0.01816544703242277,
+        "max_abs_delta": 0.0031123836524784565
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.04201682279445,
+        "after_l2": 6.0383247057470735,
+        "delta_l2": 0.08650531941980096,
+        "relative_delta": 0.01431729204947695,
+        "max_abs_delta": 0.0013584941625595093
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.594697752417726,
+        "after_l2": 21.59695628056798,
+        "delta_l2": 0.0075797145736293614,
+        "relative_delta": 0.00035099887298865954,
+        "max_abs_delta": 0.0012184381484985352
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 15.55989654012743,
+        "after_l2": 15.5540408938121,
+        "delta_l2": 0.34288720621012175,
+        "relative_delta": 0.022036599364645495,
+        "max_abs_delta": 0.004528367309831083
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 6.942499598940011,
+        "after_l2": 6.939313688254248,
+        "delta_l2": 0.07562875040992927,
+        "relative_delta": 0.010893590893613641,
+        "max_abs_delta": 0.0018502268940210342
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.825990159325038,
+        "after_l2": 17.827597924844486,
+        "delta_l2": 0.007065267085888927,
+        "relative_delta": 0.0003963464033549341,
+        "max_abs_delta": 0.0009677410125732422
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 14.5331918515511,
+        "after_l2": 14.528523236094985,
+        "delta_l2": 0.2692772262143185,
+        "relative_delta": 0.01852842988414682,
+        "max_abs_delta": 0.002266239025630057
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.837360830946708,
+        "after_l2": 6.832743394223542,
+        "delta_l2": 0.0779113266860574,
+        "relative_delta": 0.0113949415004429,
+        "max_abs_delta": 0.0011864072876051068
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.27605594816401,
+        "after_l2": 16.27751023509732,
+        "delta_l2": 0.00867967394437935,
+        "relative_delta": 0.0005332786992145013,
+        "max_abs_delta": 0.0013117492198944092
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 14.347208868476285,
+        "after_l2": 14.341675665678268,
+        "delta_l2": 0.26781031778685527,
+        "relative_delta": 0.01866637059806724,
+        "max_abs_delta": 0.005115542560815811
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.992003371623015,
+        "after_l2": 8.985512936741337,
+        "delta_l2": 0.10525831056574807,
+        "relative_delta": 0.011705768582997031,
+        "max_abs_delta": 0.0017860236184787937
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.702389686519545,
+        "after_l2": 12.701669270823565,
+        "delta_l2": 0.009608870083980143,
+        "relative_delta": 0.000756461604557573,
+        "max_abs_delta": 0.0018594861030578613
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 19.598035258117406,
+        "after_l2": 19.583801375818304,
+        "delta_l2": 0.4294917042362578,
+        "relative_delta": 0.021915038858722563,
+        "max_abs_delta": 0.004730669315904379
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262654,
+        "before_l2": 5.876538731401812,
+        "after_l2": 5.872212827781993,
+        "delta_l2": 0.11788658677812623,
+        "relative_delta": 0.020060547912019822,
+        "max_abs_delta": 0.002592310309410095
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.039899361925892,
+        "after_l2": 15.040935649330532,
+        "delta_l2": 0.009783236234231203,
+        "relative_delta": 0.0006504854852285686,
+        "max_abs_delta": 0.0016802549362182617
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 19.8791982244722,
+        "after_l2": 19.866717791101994,
+        "delta_l2": 0.37025780628991894,
+        "relative_delta": 0.018625389319480434,
+        "max_abs_delta": 0.004234641790390015
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.854134439602457,
+        "after_l2": 5.849370025493114,
+        "delta_l2": 0.12346101254073881,
+        "relative_delta": 0.0210895417272178,
+        "max_abs_delta": 0.0021458975970745087
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 11.36829594174231,
+        "after_l2": 11.367158223063985,
+        "delta_l2": 0.008716611866911746,
+        "relative_delta": 0.0007667474449627878,
+        "max_abs_delta": 0.0013500005006790161
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 20.97179611126088,
+        "after_l2": 20.95611284909773,
+        "delta_l2": 0.35769158056415445,
+        "relative_delta": 0.017055839121575798,
+        "max_abs_delta": 0.004610469564795494
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.928346507611072,
+        "after_l2": 5.924091735298187,
+        "delta_l2": 0.11372151438346347,
+        "relative_delta": 0.019182669946411327,
+        "max_abs_delta": 0.0022778287529945374
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.45069000762517,
+        "after_l2": 12.450532569984189,
+        "delta_l2": 0.009789724018686453,
+        "relative_delta": 0.0007862796369270248,
+        "max_abs_delta": 0.002282559871673584
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 21.45513853936875,
+        "after_l2": 21.438595972487402,
+        "delta_l2": 0.37276234363570204,
+        "relative_delta": 0.017374035732824936,
+        "max_abs_delta": 0.003358343616127968
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.111286246039418,
+        "after_l2": 6.105622163115136,
+        "delta_l2": 0.1196046717046302,
+        "relative_delta": 0.019571112674053388,
+        "max_abs_delta": 0.001835692673921585
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.113391994973007,
+        "after_l2": 12.112157285931483,
+        "delta_l2": 0.007512261451648895,
+        "relative_delta": 0.0006201616735235219,
+        "max_abs_delta": 0.0013277530670166016
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 20.08255782542261,
+        "after_l2": 20.065674866361892,
+        "delta_l2": 0.3762561526109396,
+        "relative_delta": 0.01873546964892266,
+        "max_abs_delta": 0.003944540396332741
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.2943830810838355,
+        "after_l2": 6.2901887740157365,
+        "delta_l2": 0.10205113644284321,
+        "relative_delta": 0.016213048225414164,
+        "max_abs_delta": 0.001914791762828827
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.494774643670299,
+        "after_l2": 12.494838227116364,
+        "delta_l2": 0.007396743220000964,
+        "relative_delta": 0.0005919869250101333,
+        "max_abs_delta": 0.0011563599109649658
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786944,
+        "before_l2": 19.668467881900995,
+        "after_l2": 19.653767481364575,
+        "delta_l2": 0.338125909953184,
+        "relative_delta": 0.017191268378577106,
+        "max_abs_delta": 0.004143906757235527
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 6.13397315872147,
+        "after_l2": 6.1294351461101835,
+        "delta_l2": 0.10419323316880047,
+        "relative_delta": 0.016986255151875806,
+        "max_abs_delta": 0.0015784336574142799
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.615259230228197,
+        "after_l2": 12.614819449908518,
+        "delta_l2": 0.006714474412031328,
+        "relative_delta": 0.0005322502129755973,
+        "max_abs_delta": 0.0010358691215515137
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 17.726564261152813,
+        "after_l2": 17.71311923012661,
+        "delta_l2": 0.3217882137693841,
+        "relative_delta": 0.01815288112398478,
+        "max_abs_delta": 0.006341327913105488
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.590658553635604,
+        "after_l2": 5.586075173066309,
+        "delta_l2": 0.08996235304544627,
+        "relative_delta": 0.016091548461127852,
+        "max_abs_delta": 0.0017138924449682236
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 13.418476805827027,
+        "after_l2": 13.41914183191138,
+        "delta_l2": 0.00706405918789907,
+        "relative_delta": 0.000526442702112916,
+        "max_abs_delta": 0.0010605454444885254
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786942,
+        "before_l2": 17.830889380689033,
+        "after_l2": 17.81849027690529,
+        "delta_l2": 0.3160154662502528,
+        "relative_delta": 0.017722922256054124,
+        "max_abs_delta": 0.004127059248276055
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.677535532481685,
+        "after_l2": 5.673087166958914,
+        "delta_l2": 0.09524471540152452,
+        "relative_delta": 0.016775714543153634,
+        "max_abs_delta": 0.0017745879013091326
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.191124012280978,
+        "after_l2": 15.191828215965597,
+        "delta_l2": 0.007268801074479596,
+        "relative_delta": 0.00047849000960055823,
+        "max_abs_delta": 0.0010852217674255371
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786943,
+        "before_l2": 16.968209785110314,
+        "after_l2": 16.956983745824356,
+        "delta_l2": 0.3428356360607545,
+        "relative_delta": 0.02020458495047571,
+        "max_abs_delta": 0.00375252403318882
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 5.612661335925495,
+        "after_l2": 5.608529790910265,
+        "delta_l2": 0.08896769161040975,
+        "relative_delta": 0.01585124886138164,
+        "max_abs_delta": 0.001465529203414917
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.790762548562128,
+        "after_l2": 12.788691326396659,
+        "delta_l2": 0.012257318521441041,
+        "relative_delta": 0.0009582945875903971,
+        "max_abs_delta": 0.0014112591743469238
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 20.77622882178196,
+        "after_l2": 20.7681516613901,
+        "delta_l2": 0.37867505500068843,
+        "relative_delta": 0.01822636139835361,
+        "max_abs_delta": 0.003994744271039963
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 9.701907050040113,
+        "after_l2": 9.697218127481294,
+        "delta_l2": 0.21196840442683273,
+        "relative_delta": 0.02184811741996192,
+        "max_abs_delta": 0.003384052775800228
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 19.483940794388648,
+        "after_l2": 19.484007995782726,
+        "delta_l2": 0.007571516548426485,
+        "relative_delta": 0.00038860293347878954,
+        "max_abs_delta": 0.0012259483337402344
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 15.104152481149233,
+        "after_l2": 15.097718950234636,
+        "delta_l2": 0.23829605648405114,
+        "relative_delta": 0.01577685717761768,
+        "max_abs_delta": 0.001857016235589981
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.411677769565943,
+        "after_l2": 8.407901711877148,
+        "delta_l2": 0.11793256052011782,
+        "relative_delta": 0.014020099646090384,
+        "max_abs_delta": 0.0013880431652069092
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 20.247689680025726,
+        "after_l2": 20.248758750063164,
+        "delta_l2": 0.006769866898393788,
+        "relative_delta": 0.0003343525609774748,
+        "max_abs_delta": 0.0010941028594970703
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 13.836360608933875,
+        "after_l2": 13.831362931758383,
+        "delta_l2": 0.2227757252116497,
+        "relative_delta": 0.016100745818073553,
+        "max_abs_delta": 0.003287423402070999
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.36821920548436,
+        "after_l2": 8.364355977215517,
+        "delta_l2": 0.11212028194728602,
+        "relative_delta": 0.013398344282592964,
+        "max_abs_delta": 0.0014788787811994553
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.075816953861516,
+        "after_l2": 21.076521056406275,
+        "delta_l2": 0.0073442589956259794,
+        "relative_delta": 0.00034846853204807145,
+        "max_abs_delta": 0.0011169910430908203
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 13.242568285948005,
+        "after_l2": 13.236692632132256,
+        "delta_l2": 0.23152247630361758,
+        "relative_delta": 0.017483200486818815,
+        "max_abs_delta": 0.002426047809422016
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.67834835014575,
+        "after_l2": 8.674188889168265,
+        "delta_l2": 0.1260085014215072,
+        "relative_delta": 0.014519871332359104,
+        "max_abs_delta": 0.0019257310777902603
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 22.26981244022254,
+        "after_l2": 22.270666157835752,
+        "delta_l2": 0.007040276343062068,
+        "relative_delta": 0.00031613541254376705,
+        "max_abs_delta": 0.0009583234786987305
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.35096571263296,
+        "after_l2": 14.346330962440643,
+        "delta_l2": 0.24748266529323312,
+        "relative_delta": 0.01724501822726658,
+        "max_abs_delta": 0.002320021390914917
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.33900784664074,
+        "after_l2": 8.335461140247613,
+        "delta_l2": 0.11861458111826632,
+        "relative_delta": 0.014224063977352971,
+        "max_abs_delta": 0.0019958666525781155
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.983078602265966,
+        "after_l2": 21.98330023079144,
+        "delta_l2": 0.007428664366954422,
+        "relative_delta": 0.000337926479787444,
+        "max_abs_delta": 0.0012525320053100586
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 13.7175912545165,
+        "after_l2": 13.71277066627602,
+        "delta_l2": 0.21650405668158093,
+        "relative_delta": 0.015782949984772088,
+        "max_abs_delta": 0.0022410263773053885
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.580054023478235,
+        "after_l2": 8.576082348530928,
+        "delta_l2": 0.11017333801718208,
+        "relative_delta": 0.012840634536298565,
+        "max_abs_delta": 0.0014733057469129562
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 21.70576440393014,
+        "after_l2": 21.706223703238784,
+        "delta_l2": 0.006585822085205911,
+        "relative_delta": 0.00030341350632247043,
+        "max_abs_delta": 0.0011262893676757812
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 15.57475339024767,
+        "after_l2": 15.566672279087994,
+        "delta_l2": 0.22445757708251465,
+        "relative_delta": 0.014411629607121845,
+        "max_abs_delta": 0.002177115762606263
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.166501271255378,
+        "after_l2": 9.16195276621802,
+        "delta_l2": 0.10731468120967687,
+        "relative_delta": 0.011707267367779444,
+        "max_abs_delta": 0.001592237502336502
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 14.376665033548107,
+        "after_l2": 14.375850007268106,
+        "delta_l2": 0.011654024883641746,
+        "relative_delta": 0.0008106208815776781,
+        "max_abs_delta": 0.0015582442283630371
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 17.634783480346396,
+        "after_l2": 17.6250355398273,
+        "delta_l2": 0.34498215963056433,
+        "relative_delta": 0.019562596842486887,
+        "max_abs_delta": 0.005228474736213684
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 10.189464914867637,
+        "after_l2": 10.18385618638363,
+        "delta_l2": 0.17432339979676628,
+        "relative_delta": 0.017108199621199714,
+        "max_abs_delta": 0.0032618511468172073
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.721274154264966,
+        "after_l2": 12.72042359778519,
+        "delta_l2": 0.011087816834492873,
+        "relative_delta": 0.0008715964061489504,
+        "max_abs_delta": 0.0014023631811141968
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 20.10319589772842,
+        "after_l2": 20.08933639196601,
+        "delta_l2": 0.2993060307973087,
+        "relative_delta": 0.014888480036705462,
+        "max_abs_delta": 0.0030156634747982025
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 10.299621830741073,
+        "after_l2": 10.294641237961534,
+        "delta_l2": 0.17605282798404492,
+        "relative_delta": 0.017093135153621236,
+        "max_abs_delta": 0.003070920705795288
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 15.553896397800838,
+        "after_l2": 15.553421033118639,
+        "delta_l2": 0.008876204743961133,
+        "relative_delta": 0.0005706740302845361,
+        "max_abs_delta": 0.0011768937110900879
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 18.21207828740004,
+        "after_l2": 18.200938494323623,
+        "delta_l2": 0.2815805094640272,
+        "relative_delta": 0.015461195862464397,
+        "max_abs_delta": 0.003182312590070069
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 10.07135539090787,
+        "after_l2": 10.066093482255168,
+        "delta_l2": 0.16318741479199828,
+        "relative_delta": 0.016203123458369783,
+        "max_abs_delta": 0.0023778200848028064
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 15.674380662055187,
+        "after_l2": 15.67372094132972,
+        "delta_l2": 0.009213760027721608,
+        "relative_delta": 0.000587822908373435,
+        "max_abs_delta": 0.0013219714164733887
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524798,
+        "before_l2": 18.914486452614067,
+        "after_l2": 18.901559029266938,
+        "delta_l2": 0.28775827976271456,
+        "relative_delta": 0.015213644868636921,
+        "max_abs_delta": 0.0038756113499403
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.943907479966262,
+        "after_l2": 9.938455248759128,
+        "delta_l2": 0.15833229856814948,
+        "relative_delta": 0.0159225434153664,
+        "max_abs_delta": 0.002710541244596243
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.786372277350505,
+        "after_l2": 16.786054371228303,
+        "delta_l2": 0.008931742183200675,
+        "relative_delta": 0.0005320829322516625,
+        "max_abs_delta": 0.0011199116706848145
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 16.70619904158658,
+        "after_l2": 16.695054173658527,
+        "delta_l2": 0.279809140765846,
+        "relative_delta": 0.01674882120518975,
+        "max_abs_delta": 0.004867184907197952
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.514829400807715,
+        "after_l2": 9.509314825827593,
+        "delta_l2": 0.15200944135666544,
+        "relative_delta": 0.01597605537139335,
+        "max_abs_delta": 0.002110079862177372
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 17.165192558022387,
+        "after_l2": 17.164878547449355,
+        "delta_l2": 0.008265330052948288,
+        "relative_delta": 0.00048151688511559245,
+        "max_abs_delta": 0.0010273456573486328
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 16.91932904470296,
+        "after_l2": 16.908253970712032,
+        "delta_l2": 0.2486119637051331,
+        "relative_delta": 0.014693961152257845,
+        "max_abs_delta": 0.0029444098472595215
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 9.32784169551517,
+        "after_l2": 9.322986784971716,
+        "delta_l2": 0.14046297524294876,
+        "relative_delta": 0.01505846473686227,
+        "max_abs_delta": 0.0017725421348586679
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.92197174265179,
+        "after_l2": 17.921874609287233,
+        "delta_l2": 0.007643183413204161,
+        "relative_delta": 0.00042647000692532346,
+        "max_abs_delta": 0.0010161995887756348
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 14.984002042306951,
+        "after_l2": 14.974633081273295,
+        "delta_l2": 0.23614497969081968,
+        "relative_delta": 0.015759806961055552,
+        "max_abs_delta": 0.002871992066502571
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 8.914829943110655,
+        "after_l2": 8.909516754031202,
+        "delta_l2": 0.1378957656277736,
+        "relative_delta": 0.015468131922621685,
+        "max_abs_delta": 0.0015360647812485695
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 18.559697274212468,
+        "after_l2": 18.559374699317388,
+        "delta_l2": 0.00768073324932933,
+        "relative_delta": 0.0004138393604081693,
+        "max_abs_delta": 0.0009973645210266113
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524800,
+        "before_l2": 14.480520944344489,
+        "after_l2": 14.471617373549545,
+        "delta_l2": 0.23946953673641244,
+        "relative_delta": 0.01653735647058607,
+        "max_abs_delta": 0.003233823925256729
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.949599675476843,
+        "after_l2": 8.944346152055452,
+        "delta_l2": 0.13227213817417363,
+        "relative_delta": 0.014779670931719752,
+        "max_abs_delta": 0.001842147670686245
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.33808595203881,
+        "after_l2": 19.33871293381438,
+        "delta_l2": 0.006663291159514962,
+        "relative_delta": 0.00034456828747378963,
+        "max_abs_delta": 0.0009301900863647461
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524799,
+        "before_l2": 14.745671133240636,
+        "after_l2": 14.73827857999153,
+        "delta_l2": 0.24989191243478664,
+        "relative_delta": 0.016946798160408196,
+        "max_abs_delta": 0.002735771588049829
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262656,
+        "before_l2": 8.60321514742036,
+        "after_l2": 8.599144467760096,
+        "delta_l2": 0.12317519852966512,
+        "relative_delta": 0.014317344901760209,
+        "max_abs_delta": 0.001479149330407381
+      }
+    ]
+  },
+  "trained_backbones_difference": {
+    "parameters": 36348131,
+    "changed": 35578489,
+    "changed_modules": 128,
+    "modules": 131,
+    "delta_l2": 0.16649451622631956,
+    "relative_delta": 0.0009617710594789413,
+    "per_module": [
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 8.661512422738694,
+        "after_l2": 8.661531219616126,
+        "delta_l2": 0.00017440694088973586,
+        "relative_delta": 2.013585299859097e-05,
+        "max_abs_delta": 1.753866672515869e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2560,
+        "before_l2": 0.905665226643369,
+        "after_l2": 0.90563217471662,
+        "delta_l2": 0.01820480626334555,
+        "relative_delta": 0.020101032619765362,
+        "max_abs_delta": 0.011138317175209522
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_edges_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262655,
+        "before_l2": 5.014712479909312,
+        "after_l2": 5.014943526724424,
+        "delta_l2": 0.15447643814804174,
+        "relative_delta": 0.030804645085222387,
+        "max_abs_delta": 0.011379851028323174
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 27.182725927927414,
+        "after_l2": 27.182723655264983,
+        "delta_l2": 0.0001728530390463097,
+        "relative_delta": 6.358929546087989e-06,
+        "max_abs_delta": 2.5987625122070312e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 243189,
+        "before_l2": 5.686923885145095,
+        "after_l2": 5.686917715543678,
+        "delta_l2": 0.001919253258783,
+        "relative_delta": 0.00033748530797050267,
+        "max_abs_delta": 3.053780528716743e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262636,
+        "before_l2": 14.507396737541052,
+        "after_l2": 14.507405350313627,
+        "delta_l2": 0.003608633426995429,
+        "relative_delta": 0.00024874438138562123,
+        "max_abs_delta": 6.212480366230011e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 2.999108008203833,
+        "after_l2": 2.999113371349906,
+        "delta_l2": 0.0009636659227067191,
+        "relative_delta": 0.00032131751176372574,
+        "max_abs_delta": 0.00031729700276628137
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_0",
+        "count": 243200,
+        "changed": 2048,
+        "before_l2": 0.5083227311715525,
+        "after_l2": 0.5083528222616422,
+        "delta_l2": 0.0019762280005797155,
+        "relative_delta": 0.0038877427260138866,
+        "max_abs_delta": 0.0008951422933023423
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/encoder_nodes_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262640,
+        "before_l2": 4.697191493899921,
+        "after_l2": 4.697243330397073,
+        "delta_l2": 0.025914170966295558,
+        "relative_delta": 0.005516950075369375,
+        "max_abs_delta": 0.001460645620682044
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 10.118002396838124,
+        "after_l2": 10.118006949783457,
+        "delta_l2": 0.00040045647895378325,
+        "relative_delta": 3.95786108015675e-05,
+        "max_abs_delta": 0.00018189731054008007
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786914,
+        "before_l2": 12.739954417783848,
+        "after_l2": 12.740020881691631,
+        "delta_l2": 0.009117465861938387,
+        "relative_delta": 0.0007156592216068852,
+        "max_abs_delta": 0.00047283759340643883
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_edges_0_grid2mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262634,
+        "before_l2": 17.903141592244054,
+        "after_l2": 17.903135880272945,
+        "delta_l2": 0.0038268793156768875,
+        "relative_delta": 0.00021375462490531586,
+        "max_abs_delta": 6.323680281639099e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 19.20921624569209,
+        "after_l2": 19.209222488559202,
+        "delta_l2": 0.00014215403381630568,
+        "relative_delta": 7.400303687464892e-06,
+        "max_abs_delta": 1.8030405044555664e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262613,
+        "before_l2": 22.603319387515086,
+        "after_l2": 22.6032818633731,
+        "delta_l2": 0.003504123354699032,
+        "relative_delta": 0.00015502693629301765,
+        "max_abs_delta": 4.295865073800087e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262637,
+        "before_l2": 6.8254021577743424,
+        "after_l2": 6.825402168191042,
+        "delta_l2": 0.0025857170303137137,
+        "relative_delta": 0.0003788373154493912,
+        "max_abs_delta": 4.1736289858818054e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 22.765937819778447,
+        "after_l2": 22.765942436807,
+        "delta_l2": 0.0002014997665920118,
+        "relative_delta": 8.850931957520946e-06,
+        "max_abs_delta": 4.0590763092041016e-05
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524776,
+        "before_l2": 14.719316757598044,
+        "after_l2": 14.719317372137343,
+        "delta_l2": 0.008607711532520856,
+        "relative_delta": 0.0005847901552955978,
+        "max_abs_delta": 0.0006521262694150209
+      },
+      {
+        "module": "grid2mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262638,
+        "before_l2": 9.15309580867828,
+        "after_l2": 9.153107197291163,
+        "delta_l2": 0.003668550705807316,
+        "relative_delta": 0.00040079889716975,
+        "max_abs_delta": 5.611497908830643e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 262608,
+        "before_l2": 33.03244902065952,
+        "after_l2": 33.03241828577488,
+        "delta_l2": 0.004872994135835019,
+        "relative_delta": 0.00014752143060259615,
+        "max_abs_delta": 9.629130363464355e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/decoder_nodes_grid_nodes_mlp/~/linear_1",
+        "count": 116451,
+        "changed": 116441,
+        "before_l2": 15.614282920013054,
+        "after_l2": 15.614295984570033,
+        "delta_l2": 0.0024978217480775655,
+        "relative_delta": 0.00015997031441489196,
+        "max_abs_delta": 0.00010461732745170593
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 16.588594781124467,
+        "after_l2": 16.588644369584866,
+        "delta_l2": 0.00021541524695293995,
+        "relative_delta": 1.298574410884114e-05,
+        "max_abs_delta": 4.6759843826293945e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2558,
+        "before_l2": 9.591249512515263,
+        "after_l2": 9.59127029944803,
+        "delta_l2": 0.00013499015200952547,
+        "relative_delta": 1.4074303023123512e-05,
+        "max_abs_delta": 1.9030776456929743e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/encoder_edges_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262645,
+        "before_l2": 6.482989313704379,
+        "after_l2": 6.483709732715108,
+        "delta_l2": 0.0030838505004311518,
+        "relative_delta": 0.0004756834156601502,
+        "max_abs_delta": 4.692515358328819e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 19.91846525151576,
+        "after_l2": 19.9184660139368,
+        "delta_l2": 0.000145867184379845,
+        "relative_delta": 7.323214039733546e-06,
+        "max_abs_delta": 5.961794522590935e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786910,
+        "before_l2": 13.259020946566567,
+        "after_l2": 13.259028651860195,
+        "delta_l2": 0.006845677290828769,
+        "relative_delta": 0.0005163033770303728,
+        "max_abs_delta": 0.0002865414135158062
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_edges_0_mesh2grid_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262636,
+        "before_l2": 18.23988014203541,
+        "after_l2": 18.239894638764188,
+        "delta_l2": 0.002985251214085156,
+        "relative_delta": 0.0001636661639681163,
+        "max_abs_delta": 4.8586633056402206e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 47.40432255827817,
+        "after_l2": 47.404332858931326,
+        "delta_l2": 0.00017820823372313295,
+        "relative_delta": 3.759324553241878e-06,
+        "max_abs_delta": 3.039836883544922e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524774,
+        "before_l2": 15.186409914208834,
+        "after_l2": 15.186403242165339,
+        "delta_l2": 0.005491160516116135,
+        "relative_delta": 0.00036158384681678126,
+        "max_abs_delta": 0.00014201310114003718
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_grid_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262625,
+        "before_l2": 8.56543953158092,
+        "after_l2": 8.56543417330564,
+        "delta_l2": 0.0027694201844298046,
+        "relative_delta": 0.000323324935541125,
+        "max_abs_delta": 4.555843770503998e-05
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 0,
+        "before_l2": 22.627416997969522,
+        "after_l2": 22.627416997969522,
+        "delta_l2": 0.0,
+        "relative_delta": 0.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 262656,
+        "changed": 0,
+        "before_l2": 6.07060184748323e-06,
+        "after_l2": 6.07060184748323e-06,
+        "delta_l2": 0.0,
+        "relative_delta": 0.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "module": "mesh2grid_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 0,
+        "before_l2": 6.087181738006396e-06,
+        "after_l2": 6.087181738006396e-06,
+        "delta_l2": 0.0,
+        "relative_delta": 0.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 12.057483911548674,
+        "after_l2": 12.057486700335993,
+        "delta_l2": 0.00019009546851049975,
+        "relative_delta": 1.5765765884906225e-05,
+        "max_abs_delta": 4.3636420741677284e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_0",
+        "count": 2560,
+        "changed": 2559,
+        "before_l2": 3.141110903724291,
+        "after_l2": 3.141089851558875,
+        "delta_l2": 0.001212039767010677,
+        "relative_delta": 0.00038586341079953893,
+        "max_abs_delta": 0.0006246310585993342
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/encoder_edges_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262634,
+        "before_l2": 11.66784574545371,
+        "after_l2": 11.667430885298252,
+        "delta_l2": 0.009936483842701634,
+        "relative_delta": 0.0008516125478067202,
+        "max_abs_delta": 0.0010156467906199396
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.871819941250127,
+        "after_l2": 16.871814189716304,
+        "delta_l2": 0.00015754721520840244,
+        "relative_delta": 9.33789097779625e-06,
+        "max_abs_delta": 1.9609928131103516e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786889,
+        "before_l2": 15.837126157587104,
+        "after_l2": 15.837153731020662,
+        "delta_l2": 0.006633135710908425,
+        "relative_delta": 0.0004188345565291013,
+        "max_abs_delta": 0.00025534722954034805
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_0_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262636,
+        "before_l2": 5.868194638353432,
+        "after_l2": 5.868193677962599,
+        "delta_l2": 0.002661222724542113,
+        "relative_delta": 0.0004534993960747066,
+        "max_abs_delta": 3.890041261911392e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 17.557769855733675,
+        "after_l2": 17.557765374983404,
+        "delta_l2": 0.00021143998594789872,
+        "relative_delta": 1.2042530895736213e-05,
+        "max_abs_delta": 3.165006637573242e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786905,
+        "before_l2": 16.99783840537918,
+        "after_l2": 16.99782722703093,
+        "delta_l2": 0.008892641574716028,
+        "relative_delta": 0.0005231630847779939,
+        "max_abs_delta": 6.548594683408737e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_10_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262638,
+        "before_l2": 5.8914737719149475,
+        "after_l2": 5.8914803825668205,
+        "delta_l2": 0.0027433972857919607,
+        "relative_delta": 0.00046565552050319235,
+        "max_abs_delta": 3.540702164173126e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 17.967845594689727,
+        "after_l2": 17.96783924615367,
+        "delta_l2": 0.0002035348134693072,
+        "relative_delta": 1.1327724984984315e-05,
+        "max_abs_delta": 3.045797348022461e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786912,
+        "before_l2": 15.794084680607018,
+        "after_l2": 15.794084154378151,
+        "delta_l2": 0.00838943444254241,
+        "relative_delta": 0.0005311757289008012,
+        "max_abs_delta": 6.113946437835693e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_11_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262648,
+        "before_l2": 6.022058631165098,
+        "after_l2": 6.022057107308015,
+        "delta_l2": 0.0027960595650590374,
+        "relative_delta": 0.00046430294626973416,
+        "max_abs_delta": 3.408361226320267e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 18.98269901558266,
+        "after_l2": 18.98271085118774,
+        "delta_l2": 0.00019219243525141623,
+        "relative_delta": 1.0124610577960902e-05,
+        "max_abs_delta": 2.8014183044433594e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786898,
+        "before_l2": 15.134175761988734,
+        "after_l2": 15.134182924176388,
+        "delta_l2": 0.00807765438697803,
+        "relative_delta": 0.0005337359968599024,
+        "max_abs_delta": 8.092820644378662e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_12_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262634,
+        "before_l2": 6.03832718398199,
+        "after_l2": 6.0383247057470735,
+        "delta_l2": 0.0028480367107550798,
+        "relative_delta": 0.0004716598859217388,
+        "max_abs_delta": 4.398752935230732e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 21.59695679734523,
+        "after_l2": 21.59695628056798,
+        "delta_l2": 0.00023405906537896497,
+        "relative_delta": 1.083759473963185e-05,
+        "max_abs_delta": 3.4749507904052734e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786907,
+        "before_l2": 15.55404278907984,
+        "after_l2": 15.5540408938121,
+        "delta_l2": 0.009374612008927603,
+        "relative_delta": 0.000602712242473019,
+        "max_abs_delta": 6.479863077402115e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_13_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262637,
+        "before_l2": 6.939321132051439,
+        "after_l2": 6.939313688254248,
+        "delta_l2": 0.0025416287662412655,
+        "relative_delta": 0.0003662647567212235,
+        "max_abs_delta": 3.589130938053131e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 17.827601863944345,
+        "after_l2": 17.827597924844486,
+        "delta_l2": 0.00020785523269256938,
+        "relative_delta": 1.1659180762441682e-05,
+        "max_abs_delta": 3.129243850708008e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786905,
+        "before_l2": 14.52851652244118,
+        "after_l2": 14.528523236094985,
+        "delta_l2": 0.008384678293025614,
+        "relative_delta": 0.0005771186810487078,
+        "max_abs_delta": 6.172014400362968e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_14_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262640,
+        "before_l2": 6.832748501011095,
+        "after_l2": 6.832743394223542,
+        "delta_l2": 0.0027351278060004096,
+        "relative_delta": 0.00040029686525059005,
+        "max_abs_delta": 3.55057418346405e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 16.27751014650682,
+        "after_l2": 16.27751023509732,
+        "delta_l2": 0.00021598947912777956,
+        "relative_delta": 1.3269196405577499e-05,
+        "max_abs_delta": 3.790855407714844e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786909,
+        "before_l2": 14.341691277194416,
+        "after_l2": 14.341675665678268,
+        "delta_l2": 0.007960400403034541,
+        "relative_delta": 0.000555053113972189,
+        "max_abs_delta": 7.249787449836731e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_15_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262641,
+        "before_l2": 8.985499435568986,
+        "after_l2": 8.985512936741337,
+        "delta_l2": 0.003092099324713621,
+        "relative_delta": 0.0003441210304319407,
+        "max_abs_delta": 3.993324935436249e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 12.70166979331609,
+        "after_l2": 12.701669270823565,
+        "delta_l2": 0.00019012442380179277,
+        "relative_delta": 1.4968459021178507e-05,
+        "max_abs_delta": 3.0428171157836914e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786882,
+        "before_l2": 19.583797782928908,
+        "after_l2": 19.583801375818304,
+        "delta_l2": 0.007448676593037809,
+        "relative_delta": 0.0003803489331130033,
+        "max_abs_delta": 6.864499300718307e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_1_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262633,
+        "before_l2": 5.872208466852703,
+        "after_l2": 5.872212827781993,
+        "delta_l2": 0.002736635978807007,
+        "relative_delta": 0.0004660318165226426,
+        "max_abs_delta": 3.868713974952698e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 15.040937737604914,
+        "after_l2": 15.040935649330532,
+        "delta_l2": 0.0001941204759426034,
+        "relative_delta": 1.2906141846280572e-05,
+        "max_abs_delta": 2.5391578674316406e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786891,
+        "before_l2": 19.866733736388678,
+        "after_l2": 19.866717791101994,
+        "delta_l2": 0.0076509460822001265,
+        "relative_delta": 0.00038511343554106016,
+        "max_abs_delta": 6.688013672828674e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_2_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262639,
+        "before_l2": 5.849372071216729,
+        "after_l2": 5.849370025493114,
+        "delta_l2": 0.003000227869971523,
+        "relative_delta": 0.000512914520301227,
+        "max_abs_delta": 3.88631597161293e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 11.367164789581038,
+        "after_l2": 11.367158223063985,
+        "delta_l2": 0.00020959735511100717,
+        "relative_delta": 1.8438841961992207e-05,
+        "max_abs_delta": 3.075599670410156e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786897,
+        "before_l2": 20.95611143355403,
+        "after_l2": 20.95611284909773,
+        "delta_l2": 0.008187707206447379,
+        "relative_delta": 0.00039070737108877804,
+        "max_abs_delta": 7.209926843643188e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_3_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262642,
+        "before_l2": 5.924092626573604,
+        "after_l2": 5.924091735298187,
+        "delta_l2": 0.0030682217514167347,
+        "relative_delta": 0.0005179226499014656,
+        "max_abs_delta": 4.229688784107566e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.450536490219527,
+        "after_l2": 12.450532569984189,
+        "delta_l2": 0.00019491538151004693,
+        "relative_delta": 1.5655179330076418e-05,
+        "max_abs_delta": 2.6285648345947266e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786894,
+        "before_l2": 21.438592621001,
+        "after_l2": 21.438595972487402,
+        "delta_l2": 0.008682999610958128,
+        "relative_delta": 0.00040501723991211814,
+        "max_abs_delta": 7.417239248752594e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_4_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262644,
+        "before_l2": 6.105616850933997,
+        "after_l2": 6.105622163115136,
+        "delta_l2": 0.0030500387922302074,
+        "relative_delta": 0.0004995463794560958,
+        "max_abs_delta": 3.78098338842392e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.112175194610405,
+        "after_l2": 12.112157285931483,
+        "delta_l2": 0.00022309779215981104,
+        "relative_delta": 1.841930029703365e-05,
+        "max_abs_delta": 3.975629806518555e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786904,
+        "before_l2": 20.065686201165704,
+        "after_l2": 20.065674866361892,
+        "delta_l2": 0.00883552410258921,
+        "relative_delta": 0.0004403300248000448,
+        "max_abs_delta": 7.162801921367645e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_5_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262643,
+        "before_l2": 6.290195400009729,
+        "after_l2": 6.2901887740157365,
+        "delta_l2": 0.00298246900012787,
+        "relative_delta": 0.0004741456839517668,
+        "max_abs_delta": 4.185456782579422e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.49484042213717,
+        "after_l2": 12.494838227116364,
+        "delta_l2": 0.0002095411905910347,
+        "relative_delta": 1.6770217426689944e-05,
+        "max_abs_delta": 2.5600194931030273e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786901,
+        "before_l2": 19.653783763998412,
+        "after_l2": 19.653767481364575,
+        "delta_l2": 0.00887654922081788,
+        "relative_delta": 0.00045164581677538585,
+        "max_abs_delta": 6.896140985190868e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_6_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262641,
+        "before_l2": 6.129438787352718,
+        "after_l2": 6.1294351461101835,
+        "delta_l2": 0.003179170976061187,
+        "relative_delta": 0.0005186724407169191,
+        "max_abs_delta": 4.051295036333613e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 12.614818305325244,
+        "after_l2": 12.614819449908518,
+        "delta_l2": 0.00021462991450407428,
+        "relative_delta": 1.701411065218989e-05,
+        "max_abs_delta": 3.316998481750488e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786892,
+        "before_l2": 17.713121078085532,
+        "after_l2": 17.71311923012661,
+        "delta_l2": 0.008445181497475012,
+        "relative_delta": 0.0004767754626779632,
+        "max_abs_delta": 7.09332525730133e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_7_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262638,
+        "before_l2": 5.586072534080221,
+        "after_l2": 5.586075173066309,
+        "delta_l2": 0.0029703362122590242,
+        "relative_delta": 0.0005317396425014569,
+        "max_abs_delta": 3.658793866634369e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 13.41914728790024,
+        "after_l2": 13.41914183191138,
+        "delta_l2": 0.0002118672798841737,
+        "relative_delta": 1.5788430914325678e-05,
+        "max_abs_delta": 3.147125244140625e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786896,
+        "before_l2": 17.818498826760184,
+        "after_l2": 17.81849027690529,
+        "delta_l2": 0.00857610548230426,
+        "relative_delta": 0.00048130347936070183,
+        "max_abs_delta": 7.923692464828491e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_8_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262647,
+        "before_l2": 5.673092109806098,
+        "after_l2": 5.673087166958914,
+        "delta_l2": 0.0031579358576758407,
+        "relative_delta": 0.0005566516101893111,
+        "max_abs_delta": 4.4461339712142944e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 15.191818058737043,
+        "after_l2": 15.191828215965597,
+        "delta_l2": 0.00022233372222239123,
+        "relative_delta": 1.46350964290626e-05,
+        "max_abs_delta": 2.6881694793701172e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_0",
+        "count": 786944,
+        "changed": 786904,
+        "before_l2": 16.9569842327481,
+        "after_l2": 16.956983745824356,
+        "delta_l2": 0.009322392738580694,
+        "relative_delta": 0.0005497671408207637,
+        "max_abs_delta": 7.059518247842789e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_edges_9_mesh_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262643,
+        "before_l2": 5.608538515971986,
+        "after_l2": 5.608529790910265,
+        "delta_l2": 0.002944668126759659,
+        "relative_delta": 0.0005250330577874857,
+        "max_abs_delta": 3.663543611764908e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 12.788685868586661,
+        "after_l2": 12.788691326396659,
+        "delta_l2": 0.0001957053842556208,
+        "relative_delta": 1.530300972802369e-05,
+        "max_abs_delta": 2.6553869247436523e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524771,
+        "before_l2": 20.768133385272673,
+        "after_l2": 20.7681516613901,
+        "delta_l2": 0.007120442989371792,
+        "relative_delta": 0.0003428542593250638,
+        "max_abs_delta": 6.132200360298157e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_0_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262643,
+        "before_l2": 9.697225428055855,
+        "after_l2": 9.697218127481294,
+        "delta_l2": 0.004267065961476835,
+        "relative_delta": 0.000440029572699365,
+        "max_abs_delta": 6.477907299995422e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 19.4840155215302,
+        "after_l2": 19.484007995782726,
+        "delta_l2": 0.00023691965568396707,
+        "relative_delta": 1.2159693438047535e-05,
+        "max_abs_delta": 3.5822391510009766e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524776,
+        "before_l2": 15.097698028122574,
+        "after_l2": 15.097718950234636,
+        "delta_l2": 0.007428225317081617,
+        "relative_delta": 0.0004920104577032219,
+        "max_abs_delta": 6.750412285327911e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_10_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262644,
+        "before_l2": 8.407903621723412,
+        "after_l2": 8.407901711877148,
+        "delta_l2": 0.003783735100149026,
+        "relative_delta": 0.000450021226500864,
+        "max_abs_delta": 5.347235128283501e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 20.24876109068105,
+        "after_l2": 20.248758750063164,
+        "delta_l2": 0.00021643964175206847,
+        "relative_delta": 1.0689031332967774e-05,
+        "max_abs_delta": 3.7550926208496094e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524776,
+        "before_l2": 13.831356811167348,
+        "after_l2": 13.831362931758383,
+        "delta_l2": 0.0072093333811369415,
+        "relative_delta": 0.000521231104045857,
+        "max_abs_delta": 8.021853864192963e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_11_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262642,
+        "before_l2": 8.364372896929439,
+        "after_l2": 8.364355977215517,
+        "delta_l2": 0.0038056314271174563,
+        "relative_delta": 0.00045498108154820593,
+        "max_abs_delta": 5.080713162897155e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 21.076501644177398,
+        "after_l2": 21.076521056406275,
+        "delta_l2": 0.00022531764931436809,
+        "relative_delta": 1.0690467190346764e-05,
+        "max_abs_delta": 3.3736228942871094e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524774,
+        "before_l2": 13.236689614747998,
+        "after_l2": 13.236692632132256,
+        "delta_l2": 0.007124140955822211,
+        "relative_delta": 0.0005382116800476054,
+        "max_abs_delta": 5.870498716831207e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_12_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262644,
+        "before_l2": 8.674190692397513,
+        "after_l2": 8.674188889168265,
+        "delta_l2": 0.0038619124803850216,
+        "relative_delta": 0.00044521876649193236,
+        "max_abs_delta": 4.829280078411102e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 22.27068452877466,
+        "after_l2": 22.270666157835752,
+        "delta_l2": 0.00022219348156251884,
+        "relative_delta": 9.976948902286122e-06,
+        "max_abs_delta": 3.3974647521972656e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524768,
+        "before_l2": 14.346325066345518,
+        "after_l2": 14.346330962440643,
+        "delta_l2": 0.0075729809455889075,
+        "relative_delta": 0.0005278690473391034,
+        "max_abs_delta": 6.230920553207397e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_13_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262645,
+        "before_l2": 8.335468234667944,
+        "after_l2": 8.335461140247613,
+        "delta_l2": 0.003740438121272372,
+        "relative_delta": 0.0004487376132891445,
+        "max_abs_delta": 6.663415115326643e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 21.983302235905292,
+        "after_l2": 21.98330023079144,
+        "delta_l2": 0.00021541960249521434,
+        "relative_delta": 9.799237629702869e-06,
+        "max_abs_delta": 3.981590270996094e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524780,
+        "before_l2": 13.712786849118865,
+        "after_l2": 13.71277066627602,
+        "delta_l2": 0.007190995403573775,
+        "relative_delta": 0.0005244007277802792,
+        "max_abs_delta": 5.679577589035034e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_14_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262638,
+        "before_l2": 8.576091870678315,
+        "after_l2": 8.576082348530928,
+        "delta_l2": 0.0036743140266153737,
+        "relative_delta": 0.0004284368780117509,
+        "max_abs_delta": 5.094631342217326e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 21.706224392563026,
+        "after_l2": 21.706223703238784,
+        "delta_l2": 0.00019345705051630548,
+        "relative_delta": 8.912515001115884e-06,
+        "max_abs_delta": 3.826618194580078e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524769,
+        "before_l2": 15.566670413637864,
+        "after_l2": 15.566672279087994,
+        "delta_l2": 0.0070088479147599235,
+        "relative_delta": 0.0004502470810083777,
+        "max_abs_delta": 0.00011404855467844754
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_15_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262635,
+        "before_l2": 9.161943958672142,
+        "after_l2": 9.16195276621802,
+        "delta_l2": 0.0034181247191312565,
+        "relative_delta": 0.00037307854474441163,
+        "max_abs_delta": 5.180295556783676e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 14.375845341638943,
+        "after_l2": 14.375850007268106,
+        "delta_l2": 0.0002197983369537303,
+        "relative_delta": 1.5289419977070497e-05,
+        "max_abs_delta": 2.950429916381836e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524767,
+        "before_l2": 17.625034174206053,
+        "after_l2": 17.6250355398273,
+        "delta_l2": 0.0066365600424051025,
+        "relative_delta": 0.0003765416836534478,
+        "max_abs_delta": 0.00014188775094226003
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_1_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262643,
+        "before_l2": 10.183852458150762,
+        "after_l2": 10.18385618638363,
+        "delta_l2": 0.0038542354790021623,
+        "relative_delta": 0.00037846536905759875,
+        "max_abs_delta": 4.978105425834656e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 12.720419109757222,
+        "after_l2": 12.72042359778519,
+        "delta_l2": 0.00022931419155765504,
+        "relative_delta": 1.8027251270499347e-05,
+        "max_abs_delta": 3.814697265625e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524764,
+        "before_l2": 20.08934389705355,
+        "after_l2": 20.08933639196601,
+        "delta_l2": 0.007622172911355694,
+        "relative_delta": 0.0003794137305038428,
+        "max_abs_delta": 8.311029523611069e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_2_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262637,
+        "before_l2": 10.294646185670315,
+        "after_l2": 10.294641237961534,
+        "delta_l2": 0.004300885537884764,
+        "relative_delta": 0.000417778859060878,
+        "max_abs_delta": 5.5592041462659836e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 15.553422920007804,
+        "after_l2": 15.553421033118639,
+        "delta_l2": 0.00022812243272074306,
+        "relative_delta": 1.4667024351744984e-05,
+        "max_abs_delta": 3.5703182220458984e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524752,
+        "before_l2": 18.20094223994869,
+        "after_l2": 18.200938494323623,
+        "delta_l2": 0.007486519139708853,
+        "relative_delta": 0.00041132591054967037,
+        "max_abs_delta": 8.509354665875435e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_3_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262640,
+        "before_l2": 10.06609361725629,
+        "after_l2": 10.066093482255168,
+        "delta_l2": 0.0043156262727184,
+        "relative_delta": 0.00042872900221394017,
+        "max_abs_delta": 6.540119647979736e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1021,
+        "before_l2": 15.673722641528267,
+        "after_l2": 15.67372094132972,
+        "delta_l2": 0.000228748143438415,
+        "relative_delta": 1.4594372292408444e-05,
+        "max_abs_delta": 3.403425216674805e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524772,
+        "before_l2": 18.901558165891394,
+        "after_l2": 18.901559029266938,
+        "delta_l2": 0.007806880326640352,
+        "relative_delta": 0.0004130283999934024,
+        "max_abs_delta": 7.486413232982159e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_4_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262638,
+        "before_l2": 9.938463132263895,
+        "after_l2": 9.938455248759128,
+        "delta_l2": 0.004230489976180147,
+        "relative_delta": 0.0004256684277920623,
+        "max_abs_delta": 5.46963419765234e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1024,
+        "before_l2": 16.786056964945395,
+        "after_l2": 16.786054371228303,
+        "delta_l2": 0.00024205740285251318,
+        "relative_delta": 1.4420146634674583e-05,
+        "max_abs_delta": 3.725290298461914e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524773,
+        "before_l2": 16.695054405201912,
+        "after_l2": 16.695054173658527,
+        "delta_l2": 0.007423850224571138,
+        "relative_delta": 0.00044467361677228106,
+        "max_abs_delta": 7.071217987686396e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_5_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262641,
+        "before_l2": 9.509323399432867,
+        "after_l2": 9.509314825827593,
+        "delta_l2": 0.004373576012840309,
+        "relative_delta": 0.00045992504714911136,
+        "max_abs_delta": 4.888512194156647e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1022,
+        "before_l2": 17.164873930882493,
+        "after_l2": 17.164878547449355,
+        "delta_l2": 0.00022818379804913412,
+        "relative_delta": 1.3293648352324517e-05,
+        "max_abs_delta": 3.319978713989258e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524771,
+        "before_l2": 16.90825431443606,
+        "after_l2": 16.908253970712032,
+        "delta_l2": 0.007820286520547396,
+        "relative_delta": 0.00046251294634659776,
+        "max_abs_delta": 6.038788706064224e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_6_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262643,
+        "before_l2": 9.322987504757986,
+        "after_l2": 9.322986784971716,
+        "delta_l2": 0.004303060819764496,
+        "relative_delta": 0.00046155385465961735,
+        "max_abs_delta": 5.2731018513441086e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 17.921876187050238,
+        "after_l2": 17.921874609287233,
+        "delta_l2": 0.0002467773907078718,
+        "relative_delta": 1.376961809870024e-05,
+        "max_abs_delta": 3.4928321838378906e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524767,
+        "before_l2": 14.974626915612797,
+        "after_l2": 14.974633081273295,
+        "delta_l2": 0.007391832471174936,
+        "relative_delta": 0.0004936238153264498,
+        "max_abs_delta": 7.700920104980469e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_7_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262644,
+        "before_l2": 8.909526745202477,
+        "after_l2": 8.909516754031202,
+        "delta_l2": 0.004332419870934419,
+        "relative_delta": 0.00048626823790245673,
+        "max_abs_delta": 5.8259814977645874e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1023,
+        "before_l2": 18.559363303826107,
+        "after_l2": 18.559374699317388,
+        "delta_l2": 0.0002415149340678928,
+        "relative_delta": 1.3013104496860799e-05,
+        "max_abs_delta": 3.629922866821289e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524775,
+        "before_l2": 14.471614564909169,
+        "after_l2": 14.471617373549545,
+        "delta_l2": 0.007455451855902678,
+        "relative_delta": 0.000515177613559491,
+        "max_abs_delta": 7.899291813373566e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_8_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262637,
+        "before_l2": 8.94434428557368,
+        "after_l2": 8.944346152055452,
+        "delta_l2": 0.004239415591092382,
+        "relative_delta": 0.00047397723698204796,
+        "max_abs_delta": 5.0731003284454346e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_layer_norm",
+        "count": 1024,
+        "changed": 1020,
+        "before_l2": 19.338719018938473,
+        "after_l2": 19.33871293381438,
+        "delta_l2": 0.00022175391851683962,
+        "relative_delta": 1.146683595225078e-05,
+        "max_abs_delta": 3.063678741455078e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_0",
+        "count": 524800,
+        "changed": 524782,
+        "before_l2": 14.738271298714807,
+        "after_l2": 14.73827857999153,
+        "delta_l2": 0.007670068570969937,
+        "relative_delta": 0.0005204184680491514,
+        "max_abs_delta": 6.359070539474487e-05
+      },
+      {
+        "module": "mesh_gnn/~_networks_builder/processor_nodes_9_mesh_nodes_mlp/~/linear_1",
+        "count": 262656,
+        "changed": 262650,
+        "before_l2": 8.599145731089479,
+        "after_l2": 8.599144467760096,
+        "delta_l2": 0.003970495574982204,
+        "relative_delta": 0.00046173139741395656,
+        "max_abs_delta": 5.092006176710129e-05
+      }
+    ]
+  }
+}

@@ -1,6 +1,15 @@
-# GraphCast Inference
+# GraphCast inference and fine-tuning
 
-The experimental baseline/advection fine-tuning implementation is documented in [docs/finetuning.md](docs/finetuning.md). Its feasibility checks and pilot runs must not be confused with a completed 0.1° training experiment.
+This repository includes pretrained GraphCast inference and matched **1° fine-tuning experiments with and without a learned latent advection adapter**, using the normal GraphCast model with 37 pressure levels. Both variants completed 1,000 updates with ERA5 training windows from 2016–2019, validation in 2020, and a sampled test benchmark in 2021–2022. The active experiment uses 1°, superseding the initial 0.1° target.
+
+- [Fine-tuning setup and commands](docs/finetuning.md)
+- [Completed training run](docs/training-stage1.md)
+- [RMSE and ACC results](docs/evaluation-results.md) and [evaluation methodology](docs/evaluation-methodology.md)
+- [Displacement before/after training and direct fine-tuning comparison](docs/advection-diagnostics.md)
+
+Direct fine-tuning improves substantially over the pretrained model evaluated at 1°. The current six-hour benchmark does not establish a meaningful additional benefit from the adapter. The adapter is inspired by PARADIS; this is not a reproduction of its complete architecture. Small result tables and figures are included under `docs/results/`; ERA5 data, downloaded weights, trained checkpoints, caches, and optimizer state remain outside Git.
+
+## Pretrained inference
 
 Run the original pretrained GraphCast model on an official ERA5 sample. This does not train or fine-tune the model. Run these Bash commands on the Linux GPU server, not in Windows PowerShell.
 
@@ -46,6 +55,6 @@ The selected diagnostics are 2-metre temperature and mean sea-level pressure at 
 
 ## Limits
 
-- This does not train or fine-tune GraphCast.
+- The inference commands above do not train or fine-tune GraphCast; use the linked fine-tuning workflow for training.
 - January 2022 is a smoke-test sample, not a benchmark. It falls within the planned 2021-2022 test period; do not use this sample's RMSE to tune the model or claim benchmark performance.
 - Supplied samples support forecasts up to 72 hours. This does not test ten-day forecasting or the proposed 0.1-degree/advection changes.

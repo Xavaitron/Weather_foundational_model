@@ -11,7 +11,7 @@ Six forecast cases were compared on the same 12 monthly 2020 validation dates, a
 - The trained correction RMS is **0.13411%** of backbone feature RMS.
 - After materializing the actual BF16 decoder-input tensors, **41.917%** of mesh-feature components change. This is the fraction of components whose represented value changes, not the fraction of correction energy retained.
 
-![Displacement maps](../runs/advection-diagnostics-20260928/displacement-maps.png)
+![Displacement maps](results/advection-diagnostics/displacement-maps.png)
 
 ## Direct fine-tuning and controlled forecast comparisons
 
@@ -52,7 +52,7 @@ Direct fine-tuning changed 36,346,030 of 36,348,131 active parameter values (1.8
 
 The adapter-off comparison retains the trained advection backbone and zeros only the final lift matrix. The reset-displacement comparison retains that backbone, learned projection and learned lift, but restores the initial displacement linear weights/biases. These are evaluation-only ablations, not additional trained models.
 
-![Validation learning curves](../runs/advection-diagnostics-20260928/learning-curves.png)
+![Validation learning curves](results/advection-diagnostics/learning-curves.png)
 
 ## Repeatability check
 
@@ -72,4 +72,4 @@ No epoch-zero adapter checkpoint was retained. Its parameters were reconstructed
 
 Only initial and final adapter parameters are available, so the plots do not establish the displacement trajectory at intermediate updates. The learning curves use the actual saved validation logs at every 50 updates. Latent capture calls the same normalized single-step network inside the autoregressive wrapper; all physical forecast comparisons use the unchanged production rollout. Checkpoint hashes were checked against the frozen evaluation.
 
-[All validation scores](../runs/advection-diagnostics-20260928/scores.csv) · [Displacement statistics](../runs/advection-diagnostics-20260928/displacement.json) · [Parameter changes](../runs/advection-diagnostics-20260928/parameter_changes.json) · [Forecast differences](../runs/advection-diagnostics-20260928/prediction_effects.json)
+[All validation scores](results/advection-diagnostics/scores.csv) · [Displacement statistics](results/advection-diagnostics/displacement.json) · [Parameter changes](results/advection-diagnostics/parameter_changes.json) · [Forecast differences](results/advection-diagnostics/prediction_effects.json)

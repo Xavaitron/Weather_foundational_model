@@ -1,0 +1,632 @@
+{
+  "date": "2020-01-15T12",
+  "repeats": 8,
+  "records": [
+    {
+      "repeat": 0,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.626894760766547,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3543559115302558,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.53055020583782,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6271483251811657,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.354640064877645,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.608160390315827,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6271293696190985,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3544604905398257,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 0,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.57538279025832,
+      "rms_difference_from_first": 0
+    },
+    {
+      "repeat": 1,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.626917981508834,
+      "rms_difference_from_first": 0.010948433016904758
+    },
+    {
+      "repeat": 1,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3543284305684624,
+      "rms_difference_from_first": 0.01038191135348503
+    },
+    {
+      "repeat": 1,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.545240571281898,
+      "rms_difference_from_first": 0.9606247125726581
+    },
+    {
+      "repeat": 1,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.627212707688438,
+      "rms_difference_from_first": 0.010812136894636375
+    },
+    {
+      "repeat": 1,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.35451477545938054,
+      "rms_difference_from_first": 0.01039301787848158
+    },
+    {
+      "repeat": 1,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.586432844006403,
+      "rms_difference_from_first": 0.9653385562411437
+    },
+    {
+      "repeat": 1,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.627256267678879,
+      "rms_difference_from_first": 0.010714875521823035
+    },
+    {
+      "repeat": 1,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3545736299985238,
+      "rms_difference_from_first": 0.010292632774721144
+    },
+    {
+      "repeat": 1,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.571558276807103,
+      "rms_difference_from_first": 0.9457799287729132
+    },
+    {
+      "repeat": 2,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.627003542511756,
+      "rms_difference_from_first": 0.010686275447604763
+    },
+    {
+      "repeat": 2,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3543767536884846,
+      "rms_difference_from_first": 0.010435328504552283
+    },
+    {
+      "repeat": 2,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.563765947263878,
+      "rms_difference_from_first": 0.9601273732777141
+    },
+    {
+      "repeat": 2,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6272231990057856,
+      "rms_difference_from_first": 0.01060742619130463
+    },
+    {
+      "repeat": 2,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.35456371536650555,
+      "rms_difference_from_first": 0.010343067985163962
+    },
+    {
+      "repeat": 2,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.589937905720454,
+      "rms_difference_from_first": 0.946230171864241
+    },
+    {
+      "repeat": 2,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6272805242962454,
+      "rms_difference_from_first": 0.01059594706945477
+    },
+    {
+      "repeat": 2,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.35454314494056793,
+      "rms_difference_from_first": 0.01031621378998643
+    },
+    {
+      "repeat": 2,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.62743511127985,
+      "rms_difference_from_first": 0.9601309947266787
+    },
+    {
+      "repeat": 3,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.6268821453888024,
+      "rms_difference_from_first": 0.010676965847423423
+    },
+    {
+      "repeat": 3,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3542439393155684,
+      "rms_difference_from_first": 0.01044190642927918
+    },
+    {
+      "repeat": 3,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.534185824229034,
+      "rms_difference_from_first": 0.9412261933650455
+    },
+    {
+      "repeat": 3,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6273374030283969,
+      "rms_difference_from_first": 0.010803553422266621
+    },
+    {
+      "repeat": 3,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.3544776975862153,
+      "rms_difference_from_first": 0.01030636617110191
+    },
+    {
+      "repeat": 3,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.61846432097526,
+      "rms_difference_from_first": 0.9440351943055847
+    },
+    {
+      "repeat": 3,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6271874389453979,
+      "rms_difference_from_first": 0.01066874492587513
+    },
+    {
+      "repeat": 3,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3545583196789784,
+      "rms_difference_from_first": 0.010387817260690014
+    },
+    {
+      "repeat": 3,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.60880416955271,
+      "rms_difference_from_first": 0.9484256942825129
+    },
+    {
+      "repeat": 4,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.6268125559581709,
+      "rms_difference_from_first": 0.010886479666513587
+    },
+    {
+      "repeat": 4,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3543817548627878,
+      "rms_difference_from_first": 0.010396567611146807
+    },
+    {
+      "repeat": 4,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.522704874934497,
+      "rms_difference_from_first": 0.946575277281175
+    },
+    {
+      "repeat": 4,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6271432535488881,
+      "rms_difference_from_first": 0.010612896680576913
+    },
+    {
+      "repeat": 4,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.35455531316362265,
+      "rms_difference_from_first": 0.010452334926139164
+    },
+    {
+      "repeat": 4,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.588119445033914,
+      "rms_difference_from_first": 0.9553824688441633
+    },
+    {
+      "repeat": 4,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.627180596982904,
+      "rms_difference_from_first": 0.010636403069698559
+    },
+    {
+      "repeat": 4,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3544808477886762,
+      "rms_difference_from_first": 0.010415017751073851
+    },
+    {
+      "repeat": 4,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.5807307811229,
+      "rms_difference_from_first": 0.9342421294821126
+    },
+    {
+      "repeat": 5,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.6268940083540238,
+      "rms_difference_from_first": 0.010842520874075612
+    },
+    {
+      "repeat": 5,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.35436361445741077,
+      "rms_difference_from_first": 0.010429197429738695
+    },
+    {
+      "repeat": 5,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.513782623004122,
+      "rms_difference_from_first": 0.9519309231878849
+    },
+    {
+      "repeat": 5,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6272323554212379,
+      "rms_difference_from_first": 0.010659774695037828
+    },
+    {
+      "repeat": 5,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.35455269874352846,
+      "rms_difference_from_first": 0.010430126245878172
+    },
+    {
+      "repeat": 5,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.582506514066605,
+      "rms_difference_from_first": 0.9675097790409511
+    },
+    {
+      "repeat": 5,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6272880802632335,
+      "rms_difference_from_first": 0.010541316485001133
+    },
+    {
+      "repeat": 5,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.35456946408488066,
+      "rms_difference_from_first": 0.010312482450506718
+    },
+    {
+      "repeat": 5,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.615123636917094,
+      "rms_difference_from_first": 0.9264070812705653
+    },
+    {
+      "repeat": 6,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.6268640860861703,
+      "rms_difference_from_first": 0.01078181432932958
+    },
+    {
+      "repeat": 6,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.35434997980533306,
+      "rms_difference_from_first": 0.010449741806149267
+    },
+    {
+      "repeat": 6,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.54514511807828,
+      "rms_difference_from_first": 0.9493382308056496
+    },
+    {
+      "repeat": 6,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6271653750970011,
+      "rms_difference_from_first": 0.010749622984054831
+    },
+    {
+      "repeat": 6,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.3545305755439512,
+      "rms_difference_from_first": 0.010342688477284997
+    },
+    {
+      "repeat": 6,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.60892830653228,
+      "rms_difference_from_first": 0.9655572324683623
+    },
+    {
+      "repeat": 6,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6273753324582791,
+      "rms_difference_from_first": 0.01062088674898312
+    },
+    {
+      "repeat": 6,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3544888782944696,
+      "rms_difference_from_first": 0.01038718672410326
+    },
+    {
+      "repeat": 6,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.54842145815395,
+      "rms_difference_from_first": 0.9341492067964154
+    },
+    {
+      "repeat": 7,
+      "model": "baseline",
+      "variable": "2m_temperature",
+      "rmse": 0.6269749587430758,
+      "rms_difference_from_first": 0.010719025219761048
+    },
+    {
+      "repeat": 7,
+      "model": "baseline",
+      "variable": "temperature_850",
+      "rmse": 0.3544008281298828,
+      "rms_difference_from_first": 0.010404518396111893
+    },
+    {
+      "repeat": 7,
+      "model": "baseline",
+      "variable": "geopotential_500",
+      "rmse": 20.534425273312976,
+      "rms_difference_from_first": 0.948044200363386
+    },
+    {
+      "repeat": 7,
+      "model": "advection",
+      "variable": "2m_temperature",
+      "rmse": 0.6273192104170328,
+      "rms_difference_from_first": 0.010691433025117247
+    },
+    {
+      "repeat": 7,
+      "model": "advection",
+      "variable": "temperature_850",
+      "rmse": 0.3544336476139286,
+      "rms_difference_from_first": 0.010452876954576768
+    },
+    {
+      "repeat": 7,
+      "model": "advection",
+      "variable": "geopotential_500",
+      "rmse": 20.6031075529153,
+      "rms_difference_from_first": 0.9354512296561664
+    },
+    {
+      "repeat": 7,
+      "model": "advection_off",
+      "variable": "2m_temperature",
+      "rmse": 0.6272670829412251,
+      "rms_difference_from_first": 0.010659596259046717
+    },
+    {
+      "repeat": 7,
+      "model": "advection_off",
+      "variable": "temperature_850",
+      "rmse": 0.3545877556971404,
+      "rms_difference_from_first": 0.010306275062991891
+    },
+    {
+      "repeat": 7,
+      "model": "advection_off",
+      "variable": "geopotential_500",
+      "rmse": 20.60107028732581,
+      "rms_difference_from_first": 0.9252619957060568
+    }
+  ],
+  "on_off_pairs": [
+    {
+      "repeat": 0,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010688823066300583
+    },
+    {
+      "repeat": 0,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010426349246836128
+    },
+    {
+      "repeat": 0,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9497846618199711
+    },
+    {
+      "repeat": 1,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010881134362151523
+    },
+    {
+      "repeat": 1,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010364792889251944
+    },
+    {
+      "repeat": 1,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9874667569016409
+    },
+    {
+      "repeat": 2,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010711069579802553
+    },
+    {
+      "repeat": 2,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010418479248634364
+    },
+    {
+      "repeat": 2,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9792710978253392
+    },
+    {
+      "repeat": 3,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010852557722912218
+    },
+    {
+      "repeat": 3,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010474178718340662
+    },
+    {
+      "repeat": 3,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9750945965274714
+    },
+    {
+      "repeat": 4,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.01073719394442438
+    },
+    {
+      "repeat": 4,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.01042366491002542
+    },
+    {
+      "repeat": 4,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9568954403886054
+    },
+    {
+      "repeat": 5,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010880128862711494
+    },
+    {
+      "repeat": 5,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.01042770689002653
+    },
+    {
+      "repeat": 5,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9445888621131708
+    },
+    {
+      "repeat": 6,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010932425655162701
+    },
+    {
+      "repeat": 6,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010460761097761494
+    },
+    {
+      "repeat": 6,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9798079177511344
+    },
+    {
+      "repeat": 7,
+      "variable": "2m_temperature",
+      "on_off_rms_difference": 0.010826085501713175
+    },
+    {
+      "repeat": 7,
+      "variable": "temperature_850",
+      "on_off_rms_difference": 0.010457404340956643
+    },
+    {
+      "repeat": 7,
+      "variable": "geopotential_500",
+      "on_off_rms_difference": 0.9468333594285088
+    }
+  ]
+}

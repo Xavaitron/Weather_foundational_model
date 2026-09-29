@@ -58,4 +58,4 @@ RMSE covers all 37 pressure levels. ACC uses the published 1990–2019 ERA5 clim
 
 The models have small, variable-dependent differences. This short-horizon monthly sample does not establish an overall advection advantage or multi-day skill. No statistical significance claim is made.
 
-[All variables and levels (CSV)](../runs/paired-evaluation-20260928/scores.csv) · [Frozen protocol](../runs/paired-evaluation-20260928/protocol.json) · [Methodology](evaluation-methodology.md)
+[All variables and levels (CSV)](results/evaluation/scores.csv) · [Frozen protocol](results/evaluation/protocol.json) · [Methodology](evaluation-methodology.md)
