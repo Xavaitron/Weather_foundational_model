@@ -1,0 +1,66 @@
+# Experiment status — 27 September 2026
+
+The active experiment now uses **normal GraphCast at 1°, retaining the full mesh and 37 pressure levels**. The user explicitly selected 1° and requested the normal model. Both baseline and advection completed two engineering updates on separate A6000s, with compiler memory estimates of **10.77 and 10.98 GiB**. The original 0.1° target and small-model fallback are superseded. The year split remains 2016–2019 / 2020 / 2021–2022. See [the full-model 1° results](full-model-1deg-results.md).
+
+## Active fine-tuning stage
+
+Normal GraphCast fine-tuning is now launched on the server: baseline on GPU 2 and advection on GPU 6, using real windows sampled from 2016–2019 and fixed 2020 validation windows. The initial stage is 1,000 updates per variant at 1°, with 37 levels, batch size one and a six-hour forecast step. It starts from the original pretrained checkpoint and does not reuse the repeated-window pilot weights. See [the current run status and protocol](training-stage1.md). The final 2021–2022 test period remains reserved.
+
+## Historical optimization follow-up
+
+BF16 and activation checkpointing were already enabled. Parameter/optimizer buffer donation is now enabled and tested, lowering the full-model 0.1° estimate to **198.98 GiB**. The official GraphCast-small checkpoint was also checked: **180.81 GiB at 0.1°**, so it still cannot fit the available cards. At its native 1°/13-level task, the baseline and adapter each completed two real-data engineering updates, with estimates of **3.96 and 4.09 GiB** respectively. Both saved checkpoints passed finite-weight and parameter-change audits. Nine tests now pass. See [the optimization results](optimization-results.md) for exact scope, losses and evidence. These were fallback checks before the user selected normal GraphCast at 1°.
+
+## Verified results
+
+- Read the GraphCast v2 paper and supplement and the advection/PARADIS v3 paper and appendices, and checked the relevant official implementations. Version-specific sources and design differences are in `finetuning.md`.
+- Isolated the work in `/home/anwar/Weather_foundational_model_finetune`, branch `codex/finetune-0p1`; the original teammate inference checkout is preserved.
+- Downloaded one real 37-level training window: 2016-01-01 06:00, 12:00 and 18:00 UTC. It is an engineering sample, not the full dataset.
+- The original eight tests passed in 106.51 seconds on the server; the expanded nine-test suite subsequently passed in 95.88 seconds. They cover chronology, precipitation accumulation, periodic 0.1° regridding, spherical interpolation/gradients, identity initialization, an optimizer update, checkpoint round-trip prediction, physical RMSE alignment, and float32 equivalence of activation checkpointing to stock GraphCast.
+- The original 0.1° grid has 6,483,600 nodes, about 6.245 times the pretrained 0.25° grid. No test-weather values have been used for training or model selection in this work.
+
+## Memory evidence
+
+The 0.1° profiles below are for the baseline; the 0.1° adapter has not been compiled or trained. All numbers are compiler estimates for one six-hour full-parameter update, batch size one, with BF16 activations and AdamW. They are not measured peak usage. Autotuning was disabled for the completed 0.1° profiles to avoid allocating large GPU benchmarking buffers during compilation.
+
+| Implementation | Grid | Estimated device memory |
+|---|---:|---:|
+| **Active normal GraphCast baseline** | **1°** | **10.77 GiB** |
+| **Active normal GraphCast + advection** | **1°** | **10.98 GiB** |
+| Checkpoint message-passing blocks | 0.1° | 303.72 GiB |
+| Also checkpoint graph embeddings and outputs | 0.1° | **199.38 GiB** |
+| Full model with buffer donation | 0.1° | **198.98 GiB** |
+| GraphCast-small with buffer donation | 0.1° | **180.81 GiB** |
+| GraphCast-small baseline, native grid | 1° | **3.96 GiB** |
+| GraphCast-small advection, native grid | 1° | **4.09 GiB** |
+| Same final checkpointing, native-grid baseline | 0.25° | 33.82 GiB |
+| Native-grid advection adapter | 0.25° | 34.10 GiB |
+
+The pre-donation 0.1° breakdown was 18,227,262,400 bytes of arguments, 436,184,028 bytes of outputs, and 195,417,022,640 temporary bytes, with no buffer aliases: **214,080,469,068 bytes total**. The profile is `work/memory-0p1-full-remat.json` on the server.
+
+The server has two 48 GB RTX A6000s, already shared with other workloads. The current implementation runs on one device. Merely selecting two devices does not combine their memory, and their combined capacity is below this estimate anyway. A larger node would still require explicit model sharding unless a single device has sufficient memory.
+
+This is a limitation of the current implementation, not a theoretical lower bound for GraphCast. Further work could stream/chunk grid-to-mesh and mesh-to-grid edge computations, recompute their activations, and/or offload or shard tensors. Ordinary data parallelism and gradient accumulation do not solve the memory required for one global example. Such changes need numerical-equivalence and gradient tests before long training runs.
+
+## Engineering runs and remaining work
+
+The 0.25° runs are explicitly native-grid smoke tests on one 2016 window. They preceded the current 1° configuration, and their training losses must not be reported as validation or test skill. The baseline completed two full-parameter GPU updates and saved a checkpoint containing 36,348,131 active parameters. Reloading confirmed finite weights and changes in 258 parameter tensors. Its normalized training loss increased from 0.53912 to 0.80981; the pilot learning rate (1e-5) and schedule are not validated for training. This is evidence that execution works, not evidence of forecast improvement. The matched adapter checkpoint contains 36,380,947 finite parameters, including all three adapter modules and a nonzero lift projection. It also completed two updates, with losses 0.53924 and 0.80807. Both checkpoints are engineering artifacts only. The first losses differ by about 0.023%, consistent with BF16 compilation differences; zero initialization is a mathematical identity, not a promise of bitwise equivalence across large compiled programs.
+
+For the active 1° experiment, the tested single-step memory issue is resolved and bounded access to the full training source is working. A matched 1,000-update stage has been launched. Further training/rollout choices still need 2020 validation; then freeze the protocol and evaluate 2021–2022. The RMSE diagnostic runner is implemented, but full-checkpoint validation, ACC, training-only climatology and spherical spectra remain pending.
+
+Server DNS to Google Cloud failed intermittently. The one-window download succeeded with a process-local DNS override preserving HTTPS hostname/certificate validation; no system DNS settings were changed. Cloud access later recovered; the active runs use normal anonymous access, bounded backend reads and a shared window cache. No DNS override is active in the current trainer.
+
+There are no trained 0.1° model weights, final benchmark scores, or evidence yet that this adapter improves forecasting.
+
+## Saved code and evidence
+
+Server branch: `codex/finetune-0p1`, initial implementation commit `02961d7f1532d9ed2f34958efaee5c81cdc27336`, followed by the data-symlink ignore fix and the memory-optimization follow-up. Changes are committed on the server and have not been pushed to GitHub.
+
+- [Review/apply the patch](finetuning.patch)
+- [Reproduction guide](finetuning-guide.md)
+- [Run manifests, memory profiles, checkpoint audits and test log](experiment-evidence.tar.gz)
+
+The experiment worktree is clean. The original checkout currently has inference-output modifications; those files were left in place. All jobs launched for these checks have finished.
+
+- [Optimization profiles, small-model manifests, checkpoint audit and nine-test log](optimization-evidence.tar.gz)
+
+- [Normal GraphCast 1° manifests, metrics, checkpoint audit and logs](full-model-1deg-evidence.tar.gz)

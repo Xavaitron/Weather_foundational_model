@@ -1,0 +1,33 @@
+{
+  "initial_mean_displacement_km": 215.39321296245186,
+  "trained_mean_displacement_km": 263.08165791139623,
+  "endpoint_relative_vector_change": 1.4981605340272215,
+  "learned_velocity_effect_same_features_relative": 0.06640722753987684,
+  "trained_correction_to_hidden_rms": 0.0013410928659141064,
+  "trained_changed_hidden_fraction": 0.41916819914646497,
+  "trained_effective_correction_rms": 0.0021237355343212507,
+  "trained_raw_correction_rms": 0.0013788869546260685,
+  "repeatability_2m_temperature": {
+    "baseline": {
+      "rmse_mean": 0.6269055049146726,
+      "rmse_std": 5.6722100044292244e-05,
+      "rmse_min": 0.6268125559581709,
+      "rmse_max": 0.627003542511756,
+      "repeat_field_rms": 0.01079164491451611
+    },
+    "advection": {
+      "rmse_mean": 0.6272227286734933,
+      "rmse_std": 6.873305061345658e-05,
+      "rmse_min": 0.6271432535488881,
+      "rmse_max": 0.6273374030283969,
+      "repeat_field_rms": 0.010705263413284918
+    },
+    "advection_off": {
+      "rmse_mean": 0.6272455866481579,
+      "rmse_std": 7.206568758992968e-05,
+      "rmse_min": 0.6271293696190985,
+      "rmse_max": 0.6273753324582791,
+      "repeat_field_rms": 0.010633967154268923
+    }
+  }
+}

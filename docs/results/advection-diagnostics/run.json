@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "completed_dates": [
+    "2020-01-15T12",
+    "2020-02-15T12",
+    "2020-03-15T12",
+    "2020-04-15T12",
+    "2020-05-15T12",
+    "2020-06-15T12",
+    "2020-07-15T12",
+    "2020-08-15T12",
+    "2020-09-15T12",
+    "2020-10-15T12",
+    "2020-11-15T12",
+    "2020-12-15T12"
+  ],
+  "started_at_utc": 1790595672.6443048,
+  "settings": "12 frozen 2020 dates, 6h; no test data or optimization",
+  "initial_parameters": "Reconstructed from original pretrained backbone, seed=0 and train.py initializer",
+  "checkpoints": {
+    "baseline": "ab2096b2e647e05337ecb286c08f1b046cbd29a24f5f5bea53d540304c6d9008",
+    "advection": "88829a142e752a132f40392f87fcb3ecb20bc2ee73636856c5f961e8a4625fc7"
+  },
+  "initial_loss_recorded": 14.84814453125,
+  "initial_loss_reproduced": 14.84619140625,
+  "current_date": "2020-12-15T12",
+  "finished_at_utc": 1790595895.975506
+}

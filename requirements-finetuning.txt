@@ -1,0 +1,5 @@
+# Install in a separate environment with the pinned inference dependencies.
+optax==0.2.4
+zarr==2.18.3
+numcodecs==0.12.1
+gcsfs==2024.6.1
