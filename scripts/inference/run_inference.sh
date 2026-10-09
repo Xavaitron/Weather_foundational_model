@@ -9,4 +9,4 @@ export CUDA_VISIBLE_DEVICES="$GPU_UUID"
 export XLA_PYTHON_CLIENT_PREALLOCATE=false
 export JAX_PLATFORMS=cuda
 export MPLBACKEND=Agg
-exec "$PYTHON_BIN" -u scripts/infer_graphcast.py "$@"
+exec "$PYTHON_BIN" -u scripts/inference/infer_graphcast.py "$@"

@@ -9,52 +9,90 @@ This repository includes pretrained GraphCast inference and matched **1° fine-t
 
 Direct fine-tuning improves substantially over the pretrained model evaluated at 1°. The current six-hour benchmark does not establish a meaningful additional benefit from the adapter. The adapter is inspired by PARADIS; this is not a reproduction of its complete architecture. Small result tables and figures are included under `docs/results/`; ERA5 data, downloaded weights, trained checkpoints, caches, and optimizer state remain outside Git.
 
-## Pretrained inference
+Run these commands on a Linux GPU server from the repository root, using an existing Python 3.11 or 3.12 environment. Select a GPU assigned to you. For inference, use its `nvidia-smi` index with `GRAPHCAST_GPU`. For direct fine-tuning and evaluation, set `CUDA_VISIBLE_DEVICES` to the GPU UUID reported by `nvidia-smi -L`; CUDA device ordinals can differ from `nvidia-smi` indices.
 
-Run the original pretrained GraphCast model on an official ERA5 sample. This does not train or fine-tune the model. Run these Bash commands on the Linux GPU server, not in Windows PowerShell.
+## Inference
 
-## Run
+This uses the official pretrained GraphCast model at 0.25-degree resolution with 37 pressure levels and the published January 2022 sample. It is a smoke test for the inference setup, not the GraphCast_small fine-tuning baseline.
 
-Use your existing Python 3.11 or 3.12 environment. Setup installs packages into it, so it may change existing package versions.
+```bash
+bash scripts/inference/setup_inference.sh
+GRAPHCAST_GPU=<nvidia_smi_gpu_index> bash scripts/inference/run_inference.sh --check-device
+GRAPHCAST_GPU=<nvidia_smi_gpu_index> bash scripts/inference/run_inference.sh --steps 1 --cache-dir data/graphcast
+```
+
+The final-lead diagnostics are 2 m temperature, mean sea-level pressure, 850 hPa temperature and 500 hPa geopotential, compared with ERA5 using cosine-latitude-weighted RMSE. The January 2022 sample falls within the planned test years; do not use it to select settings or claim benchmark skill.
+
+Each step is a six-hour forecast and `--steps` accepts 1 to 12 (up to 72 hours). Downloads are cached in `data/graphcast/`; predictions, plots, and the run manifest are saved under `outputs/inference/`.
+
+The 0.25-degree / 37-level model requires substantially more GPU memory than GraphCast_small. Confirm available memory before running it.
+
+## Fine-tuning
+
+### Full GraphCast: baseline and learned advection
+
+The completed experiment uses the normal GraphCast checkpoint, its full mesh and 37 pressure levels, adapted to a 1-degree input/output grid. Baseline and advection variants use the same 2016–2019 training, 2020 validation, and 2021–2022 test split. The original checkpoint was pretrained through 2017, overlapping the first two fine-tuning years.
+
+Use the [full-model reproduction guide](docs/finetuning.md) for environment setup, individual training commands, adapter-aware checkpoint loading, and paired evaluation. Its older setup command `scripts/setup_inference.sh` now resides at `scripts/inference/setup_inference.sh`. Keep this workflow's `requirements-finetuning.txt` environment separate from the small-model `requirements-training.txt` environment because their dependency versions differ.
+
+Both variants completed 1,000 updates. The recorded evaluation covers 36 monthly initializations at a six-hour lead. Direct fine-tuning improves substantially over the pretrained model evaluated at 1 degree; an additional advection benefit is not established. See the linked training, evaluation and displacement reports above.
+
+### GraphCast_small: staged-data workflow
+
+
+Fine-tuning uses the official **GraphCast_small** checkpoint at 1-degree resolution and 13 pressure levels. ERA5 is split into train (2016-2019), validation (2020), and test (2021-2022). The pretrained checkpoint ends in 2015.
+
+Set the staged dataset location and install the dependencies once. The staged dataset is stored at `/media/data_dump/Anwar/era5_graphcast_small_1deg`; it must contain `train.zarr`, `validation.zarr`, `test.zarr`, and `climatology.zarr`.
 
 ```bash
 export PYTHON_BIN="$(command -v python)"
-"$PYTHON_BIN" --version
-bash scripts/setup_inference.sh
-bash scripts/run_inference.sh --check-device
-bash scripts/run_inference.sh --steps 1
+export ERA5_DATA_DIR="/media/data_dump/Anwar/era5_graphcast_small_1deg"
+bash scripts/finetuning/setup_finetuning.sh --skip-data
 ```
 
-The launcher defaults to GPU index 6. To select another GPU assigned to you, set `GRAPHCAST_GPU`, for example:
+If the four Zarr stores do not already exist, inspect the required space and stage them. Do not rerun staging into a nonempty partial directory.
 
 ```bash
-GRAPHCAST_GPU=2 bash scripts/run_inference.sh --steps 1
+"$PYTHON_BIN" scripts/finetuning/prepare_era5.py --estimate-only
+"$PYTHON_BIN" scripts/finetuning/prepare_era5.py --yes
 ```
 
-`--steps 1` forecasts six hours. Each step is six hours; `--steps 4` forecasts 24 hours and `--steps 12` forecasts 72 hours.
+Copy the UUID for your assigned GPU from `nvidia-smi -L`, then set it before running direct fine-tuning or evaluation commands:
 
-## What It Loads
+```bash
+export CUDA_VISIBLE_DEVICES=GPU-<uuid_from_nvidia_smi>
+```
 
-- **Model:** pretrained 0.25-degree, 37-pressure-level GraphCast checkpoint, trained on ERA5 from 1979-2017. It downloads from DeepMind's public `dm_graphcast` bucket.
-- **Normalization:** three statistics files matched to the checkpoint, from the same bucket.
-- **Weather data:** DeepMind's prepared global ERA5 sample for January 1, 2022, at 0.25-degree resolution and 37 pressure levels. The runner downloads the smallest available sample that covers the requested forecast length. Downloads are cached in `data/` and checked by size and MD5.
+Start with a one-step smoke run. `target-steps=1` and `batch-size=1` are the lowest-memory training configuration. A successful run writes `training.json` and `graphcast_small_finetuned.npz`.
 
-For a forecast, the model gets two weather states six hours apart and predicts the next state. The runner compares predictions with ERA5 references; future weather values are not passed to the model, though known time and radiation forcings are.
+```bash
+"$PYTHON_BIN" scripts/finetuning/finetune_graphcast.py \
+  --data-dir "$ERA5_DATA_DIR" \
+  --output-dir outputs/finetuning/smoke_test \
+  --epochs 1 --steps-per-epoch 1 --batch-size 1 --target-steps 1
+```
 
-## What It Checks
+For a longer run, use a new output directory. Increase `target-steps` from 1 to 2 only after confirming the smoke run has memory headroom. If JAX reports an out-of-memory error, keep `batch-size=1` and `target-steps=1`, or use a GPU with more memory.
 
-`--check-device` runs a small JAX calculation on the selected GPU. It checks GPU access but does not load the model or weather data. `--steps 1` is the actual inference smoke test: it loads the checkpoint, compiles and runs GraphCast on the GPU. For longer runs, a NetCDF forecast is written at each lead; four plots and four area-weighted RMSE metrics are produced for the final requested lead. The output folder uses the forecast initialization time (latest input time) and requested number of steps, for example `graphcast_20220101_0000Z_1step` for a 00:00 initialization and one-step forecast to 06:00. Forecast files include their valid time and lead. The folder contains:
+```bash
+"$PYTHON_BIN" scripts/finetuning/finetune_graphcast.py \
+  --data-dir "$ERA5_DATA_DIR" \
+  --output-dir outputs/finetuning/run_1 \
+  --epochs 1 --steps-per-epoch 1000 --batch-size 1 --target-steps 1
+```
 
-- `prediction_<valid-time>_lead_<hours>.nc`: forecast weather fields at that lead.
-- `<field>_<valid-time>_lead_<hours>.png`: ERA5 reference, prediction, and difference for each selected field.
-- `run.json`: model and data identifiers, initialization and valid times, device, run status, and four RMSE metrics (including units).
+Evaluate validation first, then test after you have fixed the training settings. Replace the checkpoint path if you use a different output directory.
 
-The `.nc` forecasts are ignored by Git because they are large. The four plots and `run.json` are not ignored and can be committed.
+```bash
+CHECKPOINT=outputs/finetuning/run_1/graphcast_small_finetuned.npz
+"$PYTHON_BIN" scripts/finetuning/evaluate_graphcast.py \
+  --split validation --data-dir "$ERA5_DATA_DIR" \
+  --finetuned-checkpoint "$CHECKPOINT" --num-initializations 4 \
+  --output outputs/finetuning/validation.json
+"$PYTHON_BIN" scripts/finetuning/evaluate_graphcast.py \
+  --split test --data-dir "$ERA5_DATA_DIR" \
+  --finetuned-checkpoint "$CHECKPOINT" --num-initializations 4 \
+  --output outputs/finetuning/test.json
+```
 
-The selected diagnostics are 2-metre temperature and mean sea-level pressure at the surface, plus temperature at 850 hPa and geopotential at 500 hPa. Each RMSE is cosine-latitude-weighted and compares the final forecast lead with the corresponding ERA5 sample.
-
-## Limits
-
-- The inference commands above do not train or fine-tune GraphCast; use the linked fine-tuning workflow for training.
-- January 2022 is a smoke-test sample, not a benchmark. It falls within the planned 2021-2022 test period; do not use this sample's RMSE to tune the model or claim benchmark performance.
-- Supplied samples support forecasts up to 72 hours. This does not test ten-day forecasting or the proposed 0.1-degree/advection changes.
+Evaluation saves area-weighted RMSE and anomaly correlation coefficient for 69 non-precipitation targets at 12-hour leads through 240 hours.

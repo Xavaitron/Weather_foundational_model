@@ -1,0 +1,6 @@
+# Training extensions for the existing GraphCast inference environment.
+-r requirements-inference.txt
+optax==0.2.4
+gcsfs==2024.10.0
+zarr==2.18.7
+numcodecs==0.13.1
