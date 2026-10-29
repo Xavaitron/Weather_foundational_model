@@ -1,0 +1,13 @@
+# Install a CUDA-compatible torch + torchvision first; see README.md.
+torch>=2.6,<2.9
+torchvision>=0.21,<0.24
+numpy>=1.26,<3
+scipy>=1.13,<2
+pandas>=2.2,<3
+xarray>=2024.10,<2026
+zarr>=2.18,<3
+dask[array]>=2024.10,<2026
+netCDF4>=1.7,<2
+gcsfs>=2024.10
+pytest>=8,<9
+microsoft-aurora @ git+https://github.com/microsoft/aurora.git@7179f501b9f1a66e0444b782ecd06aa07062c8bc
