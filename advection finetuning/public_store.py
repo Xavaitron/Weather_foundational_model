@@ -1,5 +1,6 @@
 """Read public GCS Zarr objects over HTTPS, without credentials or bucket listing."""
 from collections.abc import MutableMapping
+import http.client
 import time
 import urllib.error
 import urllib.parse
@@ -23,7 +24,7 @@ class PublicGCSStore(MutableMapping):
                     raise KeyError(key) from error
                 if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
                     raise
-            except (urllib.error.URLError, TimeoutError):
+            except (urllib.error.URLError, TimeoutError, http.client.IncompleteRead, ConnectionError):
                 if attempt == 3:
                     raise
             time.sleep(2 ** attempt)
