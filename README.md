@@ -8,6 +8,15 @@ This repository studies whether explicit horizontal transport improves forecasts
 | Aurora cyclone tracking | 1.5° HRES-T0 weather forecasts, verified against 2022 IBTrACS storm positions | [Theory and commands](aurora-cyclone-tracking/README.md) | [Track MAE, RMSE, basin results and failure rates](aurora-cyclone-tracking/results/README.md) |
 | Aurora air pollution | 1.5° CAMS EAC4 and planned CAMS forecast lead zero, twelve-hour pollutant fields | [Theory and commands](aurora-air-pollution/README.md) | [January EAC4 pilot and persistence scores](aurora-air-pollution/results/README.md) |
 
+## Submission files
+
+- [Project report (PDF)](report/Weather_Foundation_Model_Report.pdf)
+- [Editable report LaTeX](report/latex/main.tex)
+- [Overleaf project (ZIP)](report/Weather_Foundation_Model_Overleaf.zip)
+- [Source code snapshot (ZIP)](report/Weather_Foundation_Model_Code.zip)
+
+The ZIP contains the tracked files at commit e348e2a, the experiment snapshot cited in the report.
+
 ## What the experiments test
 
 Advection changes the location of a field. A pull operator traces a destination backwards and samples nearby source values. A push operator moves source content forward and distributes it among destination cells. Mixing, diffusion, and reaction or source terms model changes beyond translation. The learned feature channels in these experiments do not have a direct interpretation as conserved physical quantities.
