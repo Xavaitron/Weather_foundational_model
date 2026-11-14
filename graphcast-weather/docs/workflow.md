@@ -7,9 +7,9 @@ This repository includes pretrained GraphCast inference and matched **1° fine-t
 - [RMSE and ACC results](evaluation-results.md) and [evaluation methodology](evaluation-methodology.md)
 - [Displacement before/after training and direct fine-tuning comparison](advection-diagnostics.md)
 
-Direct fine-tuning improves substantially over the pretrained model evaluated at 1°. The current six-hour benchmark does not establish a meaningful additional benefit from the adapter. The adapter is inspired by PARADIS; this is not a reproduction of its complete architecture. Small result tables and figures are included under `docs/graphcast/results/`; ERA5 data, downloaded weights, trained checkpoints, caches, and optimizer state remain outside Git.
+Direct fine-tuning improves substantially over the pretrained model evaluated at 1°. The current six-hour benchmark does not establish a meaningful additional benefit from the adapter. The adapter is inspired by PARADIS; this is not a reproduction of its complete architecture. Small result tables and figures are included under `docs/results/`; ERA5 data, downloaded weights, trained checkpoints, caches, and optimizer state remain outside Git.
 
-Run these commands on a Linux GPU server from the repository root, using an existing Python 3.11 or 3.12 environment. Select a GPU assigned to you. For inference, use its `nvidia-smi` index with `GRAPHCAST_GPU`. For direct fine-tuning and evaluation, set `CUDA_VISIBLE_DEVICES` to the GPU UUID reported by `nvidia-smi -L`; CUDA device ordinals can differ from `nvidia-smi` indices.
+Run these commands on a Linux GPU server from the graphcast-weather directory, using an existing Python 3.11 or 3.12 environment. Select a GPU assigned to you. For inference, use its `nvidia-smi` index with `GRAPHCAST_GPU`. For direct fine-tuning and evaluation, set `CUDA_VISIBLE_DEVICES` to the GPU UUID reported by `nvidia-smi -L`; CUDA device ordinals can differ from `nvidia-smi` indices.
 
 ## Inference
 
@@ -33,7 +33,7 @@ The 0.25-degree / 37-level model requires substantially more GPU memory than Gra
 
 The completed experiment uses the normal GraphCast checkpoint, its full mesh and 37 pressure levels, adapted to a 1-degree input/output grid. Baseline and advection variants use the same 2016–2019 training, 2020 validation, and 2021–2022 test split. The original checkpoint was pretrained through 2017, overlapping the first two fine-tuning years.
 
-Use the [full-model reproduction guide](finetuning.md) for environment setup, individual training commands, adapter-aware checkpoint loading, and paired evaluation. Its older setup command `scripts/setup_inference.sh` now resides at `scripts/inference/setup_inference.sh`. Keep this workflow's `requirements-finetuning.txt` environment separate from the small-model `requirements-training.txt` environment because their dependency versions differ.
+Use the [full-model reproduction guide](finetuning.md) for environment setup, individual training commands, adapter-aware checkpoint loading, and paired evaluation. Keep this workflow's `requirements-finetuning.txt` environment separate from the small-model `requirements-training.txt` environment because their dependency versions differ.
 
 Both variants completed 1,000 updates. The recorded evaluation covers 36 monthly initializations at a six-hour lead. Direct fine-tuning improves substantially over the pretrained model evaluated at 1 degree; an additional advection benefit is not established. See the linked training, evaluation and displacement reports above.
 
@@ -99,7 +99,7 @@ Evaluation saves area-weighted RMSE and anomaly correlation coefficient for 69 n
 
 ## Saved inference examples
 
-The checked-in examples contain plots and run metadata from the January 2022 smoke test. Commands in this guide run from the repository root.
+The checked-in examples contain plots and run metadata from the January 2022 smoke test. Commands in this guide run from the graphcast-weather directory.
 
 - [Six-hour forecast](results/inference/graphcast_20220101_0600Z_1step/)
 - [24-hour forecast](results/inference/graphcast_20220101_0600Z_4step/)

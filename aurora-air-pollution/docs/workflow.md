@@ -4,7 +4,7 @@ Air-pollution fine-tuning of Aurora at **1.5 degrees**, with baseline and paper-
 
 **Last verified results: 9 November 2026.** The January 2003 baseline completed 200 updates and held-out evaluation. Only two forecast origins were evaluated; PM2.5 often trails persistence, and negative predictions remain a limitation. No held-out advection improvement has been demonstrated. The full historical data pipeline stopped on 4 November following an ADS TLS certificate error; the EAC4 store reached January 2013, and the full CAMS stage is incomplete. This is a dated status, not a live server check.
 
-All six variants previously passed two real EAC4 optimizer steps. These are integration checks, not comparative training results. See [results and limitations](docs/RESULTS_2026-11-09.txt), [training history](docs/TRAINING_RUN.md), and [GPU setup](docs/GPU_UPLOAD.md). Datasets, model weights, credentials, and operational logs are excluded.
+All six variants previously passed two real EAC4 optimizer steps. These are integration checks, not comparative training results. See [results and limitations](RESULTS_2026-11-09.txt), [training history](TRAINING_RUN.md), and [GPU setup](GPU_UPLOAD.md). Datasets, model weights, credentials, and operational logs are excluded.
 
 ## Implemented experiments
 
@@ -17,7 +17,7 @@ All six variants previously passed two real EAC4 optimizer steps. These are inte
 | `wind_pull` | Aurora plus a fixed wind-driven pull increment |
 | `column_push` | Aurora plus an area-conservative transport increment for five total columns |
 
-The three learned branches are **paper-inspired adaptations**, with intentional architecture changes documented in [METHODS.md](docs/METHODS.md). Full NowcastNet GAN training and original-paper benchmark reproduction are not implemented. GraphCast and GenCast integrations are subsequent work.
+The three learned branches are **paper-inspired adaptations**, with intentional architecture changes documented in [METHODS.md](METHODS.md). Full NowcastNet GAN training and original-paper benchmark reproduction are not implemented. GraphCast and GenCast integrations are subsequent work.
 
 ## What is ready
 
@@ -38,13 +38,13 @@ python -m pytest -q
 python scripts/smoke.py --full-grid
 ```
 
-The smoke test uses the actual Aurora implementation with a tiny random configuration. It validates integration on the requested grid without downloading 5 GB weights. See [VALIDATION.md](validation/VALIDATION.md) for precisely what was checked.
+The smoke test uses the actual Aurora implementation with a tiny random configuration. It validates integration on the requested grid without downloading 5 GB weights. See [VALIDATION.md](../validation/VALIDATION.md) for precisely what was checked.
 
 ## Main experiment decision
 
 The main comparison starts from `Aurora12hPretrained`, which has a public checkpoint. New pollution embeddings and outputs are trained along with the backbone. All methods share the same starting weights, data, splits, loss, steps and seed. The released `AuroraAirPollution` is also supported, but it was already fine-tuned on historical CAMS data; its use is explicitly guarded because an April–May 2022 validation set would be pre-exposed.
 
-The default protocol uses the same **dataset families** as Aurora's pollution work, with an explicit validation holdout and coarser grid. It is not an exact recreation of the published training schedule or split. [DATA_PROTOCOL.md](docs/DATA_PROTOCOL.md) records every distinction.
+The default protocol uses the same **dataset families** as Aurora's pollution work, with an explicit validation holdout and coarser grid. It is not an exact recreation of the published training schedule or split. [DATA_PROTOCOL.md](DATA_PROTOCOL.md) records every distinction.
 
 ## Files
 

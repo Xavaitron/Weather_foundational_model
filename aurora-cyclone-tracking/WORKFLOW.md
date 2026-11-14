@@ -1,4 +1,4 @@
-# Aurora advection fine-tuning at 1.5 degrees
+# Aurora cyclone tracking
 
 Five independent training entry points share the same data, weather loss, rollout engine, checkpoint format and cyclone evaluator:
 
@@ -12,15 +12,15 @@ Five independent training entry points share the same data, weather loss, rollou
 
 The default cyclone model is **original Aurora 0.25-degree Pretrained**, fine-tuned here on a **1.5-degree output grid**. Aurora 1.5 (the model version) is a different model interface and is not selected by these scripts. Full fine-tuning is the default for all five experiments. The adapter weights start from new initialization; the Aurora weights come from Microsoft's checkpoint.
 
-These are implementations of the papers' transport ideas adapted to Aurora, not reproductions of the original authors' architectures/results. Read `METHODS.md` for exact differences. No trained advection adapters, atmospheric datasets or IBTrACS downloads are included. Local tests use a tiny random instance of the actual Aurora architecture. GPU training, released-weight inference, DDP performance and forecast skill must be established on your server.
+These are implementations of the papers' transport ideas adapted to Aurora, not reproductions of the original authors' architectures/results. Read `[methods](METHODS.md)` for exact differences. No trained advection adapters, atmospheric datasets or IBTrACS downloads are included. Local tests use a tiny random instance of the actual Aurora architecture. GPU training, released-weight inference, DDP performance and forecast skill must be established on your server.
 
 ## 1. Copy and set up on the SSH GPU
 
-Copy the supplied `advection_finetuning.zip`, or copy the source directory while excluding the local `.venv`, caches, data and runs. Keep the directory name quoted because it contains a space:
+Copy the supplied `aurora_cyclone_tracking.zip`, or copy the source directory while excluding the local `.venv`, caches, data and runs.
 
 ```bash
-unzip advection_finetuning.zip
-cd "advection finetuning"
+unzip aurora_cyclone_tracking.zip
+cd aurora-cyclone-tracking
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -261,7 +261,7 @@ Copy `advection_results.zip` back to this workspace. It contains configs, manife
 To make a new source bundle after editing:
 
 ```bash
-python package_project.py --output ../advection_finetuning.zip
+python package_project.py --output ../aurora_cyclone_tracking.zip
 ```
 
 The source bundle excludes `.venv`, data and runs. The package refuses to overwrite existing training/evaluation/result directories by default so an earlier experiment is not lost.

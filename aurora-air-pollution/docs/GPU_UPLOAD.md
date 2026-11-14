@@ -33,7 +33,7 @@ Upload **`aurora_airpollution_gpu_bundle.zip`** and unzip it in your GPU workspa
 If data are prepared on another machine, also transfer the two Zarr directories, their manifests, both statistics JSON files, and `data/assets/`. Keep their relative paths as below. Otherwise download and prepare data directly on a machine with access to the GPU's storage.
 
 ```text
-aurora_airpollution/
+aurora-air-pollution/
   data/assets/aurora-0.25-12h-pretrained.ckpt
   data/assets/aurora-0.4-air-pollution-static.pickle
   data/processed/eac4_1p5.zarr/

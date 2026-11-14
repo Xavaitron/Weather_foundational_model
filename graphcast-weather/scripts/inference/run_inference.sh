@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/../.."
 PYTHON_BIN="${PYTHON_BIN:-python}"
 # Resolve the nvidia-smi index to a UUID to avoid CUDA enumeration ambiguity.
 GRAPHCAST_GPU="${GRAPHCAST_GPU:-6}"

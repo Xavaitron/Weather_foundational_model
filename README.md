@@ -1,15 +1,17 @@
 # Weather foundation model experiments
 
-| Experiment | Setup and commands | Results |
+This repository tests advection adapters for weather forecasting, cyclone tracking, and air pollution. Each workflow has its own code, environment, and evaluation guide.
+
+| Workflow | Data and task | Results |
 |---|---|---|
-| **GraphCast weather forecasting** | [GraphCast guide](docs/graphcast/README.md) | [RMSE and ACC](docs/graphcast/evaluation-results.md), [advection diagnostics](docs/graphcast/advection-diagnostics.md) |
-| **Aurora cyclone tracking** | [Aurora fine-tuning guide](advection%20finetuning/README.md) | [IBTrACS track errors and plots](advection%20finetuning/cyclone_report_20261106/Aurora_Cyclone_Results.md) |
-| **Aurora air pollution** | [Air pollution guide](aurora_airpollution/README.md) | [January 2003 pilot](aurora_airpollution/docs/RESULTS_2026-11-09.txt) |
+| [GraphCast weather](graphcast-weather/README.md) | ERA5 weather forecasting at 1° | [RMSE and ACC](graphcast-weather/docs/evaluation-results.md) |
+| [Aurora cyclone tracking](aurora-cyclone-tracking/README.md) | HRES-T0 forecasts at 1.5°, verified with IBTrACS | [Track errors and plots](aurora-cyclone-tracking/cyclone_report_20261106/Aurora_Cyclone_Results.md) |
+| [Aurora air pollution](aurora-air-pollution/README.md) | CAMS EAC4 and CAMS lead-zero data at 1.5° | [January 2003 pilot](aurora-air-pollution/docs/RESULTS_2026-11-09.txt) |
 
-## Where things live
+## Running an experiment
 
-- **GraphCast** uses `scripts/` for entry points, `finetuning/` for the Python package, and `requirements-*.txt` for its environments. Notes, benchmark evidence, and the checked-in inference examples are in [docs/graphcast](docs/graphcast/).
-- **Aurora cyclone tracking** lives in [advection finetuning](advection%20finetuning/), including its configs, scripts, and results. Quote the directory name when using it in a shell.
-- **Aurora air pollution** lives in [aurora_airpollution](aurora_airpollution/) and uses its own Python environment.
+Open the workflow's README and run its commands from that folder. Create a separate Python environment for each workflow. Keep downloaded data, virtual environments, and checkpoints outside Git.
 
-Use each guide's working directory when running its commands. GraphCast writes new inference runs under `outputs/inference/`. Each Aurora workflow has its own `data/` and `runs/` directories.
+## Migrating an existing checkout
+
+The old `advection finetuning/` and `aurora_airpollution/` paths are now `aurora-cyclone-tracking/` and `aurora-air-pollution/`. GraphCast scripts and requirements moved from the repository root into `graphcast-weather/`. In an existing GPU checkout, point the new folders at your existing data, runs, and model caches, or pass their absolute paths. Git does not move ignored files when you pull. Recreate a virtual environment if its old path changed.

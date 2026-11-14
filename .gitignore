@@ -11,3 +11,10 @@ data/
 /work/
 /runs/
 /setup-finetune.log
+
+# GraphCast runtime artifacts
+/graphcast-weather/data
+/graphcast-weather/outputs/
+/graphcast-weather/runs/
+/graphcast-weather/work/
+/graphcast-weather/setup-finetune.log

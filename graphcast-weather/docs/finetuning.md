@@ -32,7 +32,7 @@ For a clean environment:
 
 ```bash
 python3.12 -m venv .venv
-PYTHON_BIN=.venv/bin/python bash scripts/setup_inference.sh
+PYTHON_BIN=.venv/bin/python bash scripts/inference/setup_inference.sh
 .venv/bin/python -m pip install -r requirements-finetuning.txt pytest
 JAX_PLATFORMS=cpu .venv/bin/python -m pytest -q tests/test_finetuning.py
 ```
