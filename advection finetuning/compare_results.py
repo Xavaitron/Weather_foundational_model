@@ -17,7 +17,7 @@ def main():
     args = p.parse_args()
     reference_dir = Path(args.reference)
     ref_meta = json.loads((reference_dir/"evaluation.json").read_text())
-    reference = pd.read_csv(reference_dir/"tracks.csv")
+    reference = pd.read_csv(reference_dir/"tracks.csv", keep_default_na=False)
     all_results = []
     for path in args.candidate:
         directory = Path(path)
@@ -31,7 +31,7 @@ def main():
                     "learning_rate", "weight_decay", "loss", "area_weighted_loss", "loss_overrides"):
             if metadata["config"].get(key) != ref_meta["config"].get(key):
                 raise ValueError(f"Comparison checkpoint/data mismatch: {key}")
-        result = paired_comparison(pd.read_csv(directory/"tracks.csv"), reference,
+        result = paired_comparison(pd.read_csv(directory/"tracks.csv", keep_default_na=False), reference,
                                   ref_meta["leads"], args.bootstrap, args.seed)
         result.insert(0, "approach", metadata["approach"])
         all_results.append(result)

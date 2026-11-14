@@ -19,7 +19,7 @@ def main():
     if not required.issubset(raw):
         raise ValueError(f"Missing IBTrACS columns: {required-set(raw)}")
     if "TRACK_TYPE" in raw:
-        raw = raw[raw.TRACK_TYPE.isin(["MAIN", "PROVISIONAL"])]
+        raw = raw[raw.TRACK_TYPE.str.upper().isin(["MAIN", "PROVISIONAL"])]
     out = pd.DataFrame({"sid": raw.SID, "time": pd.to_datetime(raw.ISO_TIME, utc=True, errors="coerce"),
                         "lat": pd.to_numeric(raw.LAT, errors="coerce"),
                         "lon": pd.to_numeric(raw.LON, errors="coerce"), "basin": raw.BASIN, "nature": raw.NATURE})

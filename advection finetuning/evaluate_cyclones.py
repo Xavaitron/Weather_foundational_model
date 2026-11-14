@@ -34,17 +34,8 @@ def main():
         config["store"] = args.store
     if any(lead <= 0 or lead % 6 for lead in args.leads):
         raise ValueError("Lead times must be positive multiples of 6 hours.")
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    if device.type == "cpu":
-        config["precision"] = "fp32"
-        torch.set_num_threads(2)
-    config["activation_checkpointing"] = False
-    seed_all(config["seed"])
-    model = build_model(config, approach, load_weights=False).to(device)
-    model.load_state_dict(checkpoint["model"], strict=True)
-    model.eval()
     data = WeatherDataset(config["store"], "cyclone", config["test_start"], config["test_end"], rollout_steps=1)
-    truth = pd.read_csv(args.ibtracs)
+    truth = pd.read_csv(args.ibtracs, keep_default_na=False)
     truth["time"] = pd.to_datetime(truth.time, utc=True)
     truth = truth.sort_values(["sid", "time"])
     start, end = pd.Timestamp(config["test_start"], tz="UTC"), pd.Timestamp(config["test_end"], tz="UTC")+pd.Timedelta(days=1)
@@ -55,13 +46,24 @@ def main():
     eligible = truth[(truth.time >= start) & (truth.time < end) & truth.nature.isin(args.nature)]
     eligible = eligible[eligible.time.isin(available)]
     final_time = truth.groupby("sid").time.max()
-    eligible = eligible[[final_time[sid] >= t+pd.Timedelta(hours=24)
-                         for sid, t in zip(eligible.sid, eligible.time)]]
+    eligible = eligible.loc[np.asarray([
+        final_time[sid] >= t + pd.Timedelta(hours=24)
+        for sid, t in zip(eligible.sid, eligible.time)
+    ], dtype=bool)]
     initializations = sorted(eligible.time.unique())
     if args.max_inits:
         initializations = initializations[:args.max_inits]
     if not initializations:
         raise ValueError("No IBTrACS initializations overlap the prepared test data.")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if device.type == "cpu":
+        config["precision"] = "fp32"
+        torch.set_num_threads(2)
+    config["activation_checkpointing"] = False
+    seed_all(config["seed"])
+    model = build_model(config, approach, load_weights=False).to(device)
+    model.load_state_dict(checkpoint["model"], strict=True)
+    model.eval()
     output = Path(args.output or Path(args.checkpoint).parent/"cyclone_evaluation")
     if output.exists() and any(output.iterdir()):
         raise FileExistsError(f"Refusing to overwrite evaluation {output}")

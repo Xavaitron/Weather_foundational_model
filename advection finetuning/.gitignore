@@ -7,3 +7,17 @@ runs/
 *.pt
 *.zip
 vendor/
+
+# Local report exports and duplicate review files
+/cyclone_results_review_20261106/
+/cyclone_report_20261106/Aurora_Cyclone_Advection_Report.md
+/cyclone_report_20261106/Aurora_Cyclone_Advection_Report.pdf
+/cyclone_report_20261106/README.txt
+/cyclone_report_20261106/data/audit.json
+!/cyclone_report_20261106/data/
+/cyclone_report_20261106/data/*
+!/cyclone_report_20261106/data/global_scores.csv
+!/cyclone_report_20261106/data/paired_comparisons.csv
+!/cyclone_report_20261106/data/track_mae_km.csv
+!/cyclone_report_20261106/data/track_rmse_km.csv
+!/cyclone_report_20261106/data/training_summary.csv
