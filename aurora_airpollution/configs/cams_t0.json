@@ -1,0 +1,39 @@
+{
+  "model": {
+    "initialisation": "pretrained12h",
+    "method": "baseline",
+    "amp": true,
+    "checkpointing": true,
+    "trainable": "all",
+    "width": 32,
+    "checkpoint_path": "data/assets/aurora-0.25-12h-pretrained.ckpt"
+  },
+  "data": {
+    "path": "data/processed/cams_t0_1p5.zarr",
+    "stats": "data/processed/cams_t0_stats.json",
+    "product": "cams_forecast_t0",
+    "train_start": "2017-10-01",
+    "train_end": "2022-04-01",
+    "val_start": "2022-04-01",
+    "val_end": "2022-06-01",
+    "test_start": "2022-06-01",
+    "test_end": "2022-12-01"
+  },
+  "training": {
+    "device": "cuda",
+    "seed": 42,
+    "steps": 5000,
+    "lr": 5e-05,
+    "weight_decay": 0.0,
+    "warmup": 100,
+    "grad_accum": 4,
+    "clip": 1.0,
+    "validate_every": 100,
+    "val_samples": 64,
+    "rollout_steps": 1,
+    "max_memory_gib": 28.0,
+    "reserve_gib": 4.0,
+    "min_free_disk_gib": 200.0
+  },
+  "output": "runs/cams_t0_baseline_seed42"
+}

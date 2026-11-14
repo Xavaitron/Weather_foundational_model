@@ -96,3 +96,7 @@ CHECKPOINT=outputs/finetuning/run_1/graphcast_small_finetuned.npz
 ```
 
 Evaluation saves area-weighted RMSE and anomaly correlation coefficient for 69 non-precipitation targets at 12-hour leads through 240 hours.
+
+## Aurora air-pollution experiments
+
+The separate [Aurora air-pollution project](aurora_airpollution/README.md) includes 1.5° data preparation, full fine-tuning, paper-inspired advection branches, evaluation, and tests. The January pilot completed 200 baseline updates; broader historical training and advection comparisons remain unfinished. See its dated results and limitations before interpreting the pilot. Use its own Python environment.

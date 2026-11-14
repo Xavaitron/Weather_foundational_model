@@ -1,0 +1,7 @@
+{
+  "model": {"initialisation": "pretrained12h", "method": "baseline", "amp": true, "checkpointing": true, "trainable": "all", "width": 32, "checkpoint_path": "data/assets/aurora-0.25-12h-pretrained.ckpt"},
+  "data": {"path": "data/processed/cams_analysis_1p5.zarr", "stats": "data/processed/analysis_stats.json", "product": "cams_analysis", "train_start": "2017-10-01", "train_end": "2022-04-01", "val_start": "2022-04-01", "val_end": "2022-06-01", "test_start": "2022-06-01", "test_end": "2022-12-01"},
+  "training": {"device": "cuda", "seed": 42, "steps": 5000, "lr": 0.00005, "weight_decay": 0.0, "warmup": 100, "grad_accum": 4, "clip": 1.0, "validate_every": 100, "val_samples": 64, "rollout_steps": 1},
+  "output": "runs/analysis_baseline_seed42"
+}
+

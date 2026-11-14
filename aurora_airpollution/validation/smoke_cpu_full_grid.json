@@ -1,0 +1,53 @@
+{
+  "data": "SYNTHETIC_ONLY",
+  "weights": "RANDOM_TINY_AURORA",
+  "device": "cpu",
+  "grid": [
+    120,
+    240
+  ],
+  "results": [
+    {
+      "method": "baseline",
+      "loss_synthetic": 0.3594551086425781,
+      "seconds": 0.38095683301799,
+      "finite_gradients": true,
+      "parameters": 789888
+    },
+    {
+      "method": "nowcast_evolution",
+      "loss_synthetic": 0.35945630073547363,
+      "seconds": 0.768043750023935,
+      "finite_gradients": true,
+      "parameters": 819420
+    },
+    {
+      "method": "adr_latent",
+      "loss_synthetic": 0.3594551086425781,
+      "seconds": 0.5593971249763854,
+      "finite_gradients": true,
+      "parameters": 795529
+    },
+    {
+      "method": "debezenac_gaussian",
+      "loss_synthetic": 0.35945630073547363,
+      "seconds": 2.510468333028257,
+      "finite_gradients": true,
+      "parameters": 818836
+    },
+    {
+      "method": "wind_pull",
+      "loss_synthetic": 0.35956358909606934,
+      "seconds": 0.5417608339921571,
+      "finite_gradients": true,
+      "parameters": 789888
+    },
+    {
+      "method": "column_push",
+      "loss_synthetic": 0.35951685905456543,
+      "seconds": 0.4738112909835763,
+      "finite_gradients": true,
+      "parameters": 789888
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+AIR-POLLUTION RESULTS AND CONCLUSIONS
+Verified from the GPU server on 9 November 2026
+Snapshot UTC: 2026-11-09T14:57:28.281147+00:00
+
+MAIN CONCLUSION
+The January 2003 Aurora baseline completed 200 real-data optimizer updates,
+saved best/last checkpoints and completed a held-out evaluation. This establishes
+that the training and evaluation pipeline works. It does not establish a useful
+air-pollution forecast advantage: PM2.5 performance is mixed and often worse than
+persistence, and raw forecasts contain negative concentrations. No completed
+advection-versus-baseline forecasting comparison exists in the inspected runs.
+
+COMPLETED EXPERIMENT
+Model: official 12-hour Aurora weather checkpoint extended with pollutant inputs
+and outputs; ordinary full fine-tuning, no additional advection branch.
+Trainable parameters: 1,256,857,440. Seed: 42.
+Data: CAMS EAC4 reanalysis, global 1.5-degree 120 x 240 grid, 12-hour intervals.
+Training: 1–20 January 2003 (38 valid windows).
+Validation: 21–24 January 2003 (6 valid windows).
+Held-out test interval: 25–31 January 2003. All dates UTC and inclusive here.
+Two past states predict the next state; four microbatches per optimizer update.
+Training objective: equal-channel area-weighted MAE divided by each channel's
+training-period 12-hour persistence MAE, averaged across all 142 weather and
+pollution channels. It is not a pollutant-only physical RMSE.
+Validation objective at steps 50/100/150/200: 2.8825, 2.1317, 1.9421, 1.8197.
+Best and latest checkpoints were both saved at step 200 (see training.log).
+Validation selects the best checkpoint; test data are used for evaluation.
+
+HELD-OUT EVALUATION AND ITS LIMITS
+Only two forecast origins were evaluated: 25 January 2003 12:00 UTC and
+26 January 2003 12:00 UTC. Requiring two input states plus a full 120-hour
+rollout within the short test interval, with stride two, leaves these two cases.
+The forecasts overlap heavily; they are not independent samples of seasonal skill.
+Leads: 12, 24, ..., 120 hours. Metrics: area-weighted MAE, RMSE, signed bias,
+and area-weighted negative-prediction fraction. Predictions are not clipped.
+India means a 6–38 N, 68–98 E bounding box, not a national land-only mask.
+Ground truth is EAC4 reanalysis, not independent station observations.
+No unfine-tuned Aurora evaluation, confidence intervals, multiple seeds,
+extreme-event analysis or broad seasonal evaluation is present.
+
+PM2.5 RESULTS
+RMSE values below are in micrograms per cubic metre (original kg/m3 x 1e9).
+Negative area is the area-weighted fraction of raw model predictions below zero.
+Region   Lead  Aurora RMSE  Fixed persist.  Diurnal persist.  Negative area
+global    12h      24.251         17.207            18.828         15.52%
+global    24h      24.595         19.555            19.555         17.96%
+global    72h      26.026         24.599            24.599         20.20%
+global   120h      20.888         22.530            22.530         19.74%
+india     12h      50.785         38.981            19.199          5.07%
+india     24h      30.950         13.293            13.293          8.72%
+india     72h      24.710         20.193            20.193          8.21%
+india    120h      25.933         21.321            21.321          7.98%
+
+At 12 and 24 hours globally, the baseline is worse than both persistence controls.
+At 120 hours globally it is better for these two cases, but this isolated result
+does not establish general skill. India PM2.5 RMSE is worse than both controls
+at every horizon shown in the table. Negative concentrations are a material
+physical limitation. Small training/validation objectives alone cannot establish
+forecast value. Other pollutants and all leads are retained in evaluation.json;
+the PM2.5 table must not be presented as a summary of every pollutant.
+
+ADVECTION STATUS
+NowCastNet-inspired motion/source evolution, ADRNet-inspired latent dynamics,
+and de Bezenac-inspired Gaussian transport branches are implemented. Alongside
+the baseline and two fixed-transport controls, all six variants passed two real
+EAC4 optimizer updates in earlier integration checks. Those trial weights were
+discarded. The two-step losses are software checks, not a model ranking.
+The approaches are paper-inspired adaptations, not exact paper reproductions.
+No held-out superiority, new best method, or advection benefit can be claimed.
+
+DATA AND JOB STATUS AT THIS CHECK
+January starter: complete, 62 frames.
+Historical EAC4 store: 7,368 frames, 1 January 2003 through 31 January 2013.
+Full planned EAC4 interval ends December 2021, so it is incomplete.
+Only the two-frame CAMS forecast-lead-zero pilot is present; no full CAMS store.
+The historical worker failed during the February 2013 request due to a TLS
+certificate-verification failure. The training supervisor then failed because
+the full EAC4 dataset was not ready. Both recorded worker PIDs are no longer alive.
+Failure time: 4 November 2026, approximately 21:48 IST.
+This packaging task did not restart jobs or submit new ADS requests.
+
+NEXT WORK
+1. Diagnose the recurring certificate-chain failure, retaining TLS verification,
+   and resume retrieval from the first incomplete month.
+2. Complete and validate the historical EAC4 and CAMS lead-zero datasets.
+3. Train the baseline and each learned branch with matched data and budgets.
+4. Evaluate many more independent forecast origins, regional/seasonal cases,
+   negative concentrations and high-pollution events; repeat across seeds.
+5. Keep the final test split fixed and use validation for design decisions.
+

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aurora-airpollution-advection"
+version = "0.1.0"
+description = "Auditable 1.5 degree air-pollution advection experiments with Aurora"
+requires-python = ">=3.10"
+dependencies = ["microsoft-aurora==2.0.1", "torch==2.8.0", "torchvision==0.23.0", "numpy==2.2.6", "scipy==1.15.3", "pandas==2.3.1", "xarray==2025.6.1", "zarr==2.18.7", "dask[array]==2025.5.1", "netCDF4==1.7.2", "h5netcdf==1.6.1", "h5py==3.14.0", "huggingface-hub==0.34.4", "timm==1.0.19"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.1"]
+download = ["cdsapi>=0.7.6,<0.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

@@ -1,0 +1,44 @@
+{
+  "model": {
+    "initialisation": "pretrained12h",
+    "method": "baseline",
+    "amp": true,
+    "checkpointing": true,
+    "trainable": "all",
+    "width": 32,
+    "checkpoint_path": "data/assets/aurora-0.25-12h-pretrained.ckpt"
+  },
+  "data": {
+    "path": "data/processed/eac4_jan2003_1p5.zarr",
+    "stats": "data/processed/eac4_jan2003_stats.json",
+    "product": "eac4",
+    "train_start": "2003-01-01",
+    "train_end": "2003-01-21",
+    "val_start": "2003-01-21",
+    "val_end": "2003-01-25",
+    "test_start": "2003-01-25",
+    "test_end": "2003-02-01"
+  },
+  "training": {
+    "device": "cuda",
+    "seed": 42,
+    "steps": 200,
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "warmup": 50,
+    "grad_accum": 4,
+    "clip": 1.0,
+    "validate_every": 50,
+    "val_samples": 6,
+    "rollout_steps": 1,
+    "max_memory_gib": 28.0,
+    "reserve_gib": 4.0,
+    "min_free_disk_gib": 200.0
+  },
+  "output": "runs/starter_eac4_jan2003_baseline_seed42",
+  "experiment": {
+    "label": "preliminary_january_2003",
+    "purpose": "First saved real-data fine-tuning run; not the full historical benchmark",
+    "full_historical_protocol": "configs/eac4.json"
+  }
+}

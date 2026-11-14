@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-29",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "python": "3.12.14",
+  "packages": {
+    "torch": "2.8.0",
+    "microsoft-aurora": "2.0.1",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "xarray": "2025.6.1",
+    "pandas": "2.3.1",
+    "zarr": "2.18.7",
+    "h5py": "3.14.0",
+    "h5netcdf": "1.6.1",
+    "netCDF4": "1.7.2",
+    "pytest": "8.4.1"
+  },
+  "checks": [
+    {
+      "check": "pytest",
+      "exit_code": 0
+    },
+    {
+      "check": "smoke",
+      "exit_code": 0
+    },
+    {
+      "check": "compile",
+      "exit_code": 0
+    },
+    {
+      "check": "shell",
+      "exit_code": 0
+    },
+    {
+      "check": "dependencies",
+      "exit_code": 0
+    },
+    {
+      "check": "evaluation_cli",
+      "exit_code": 0
+    },
+    {
+      "check": "comparison_cli",
+      "exit_code": 0
+    }
+  ],
+  "data": "synthetic only",
+  "checkpoint": "tiny random Aurora only",
+  "full_pretrained_checkpoint_tested": false,
+  "cuda_tested": false,
+  "ads_retrieval_executed": false,
+  "forecast_skill_measured": false
+}
