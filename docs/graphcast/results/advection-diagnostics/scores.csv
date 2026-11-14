@@ -1,0 +1,1363 @@
+model,period,initializations,variable,level_hpa,lead_hours,rmse,units,acc
+pretrained,2020,12,2m_temperature,,6,2.2399443408164217,K,0.6790606079976157
+pretrained,2020,12,mean_sea_level_pressure,,6,373.0630952643105,Pa,0.8598538225551051
+pretrained,2020,12,10m_v_component_of_wind,,6,3.314284616680079,m s-1,0.5878563583929116
+pretrained,2020,12,10m_u_component_of_wind,,6,3.329320144563145,m s-1,0.5621341520578517
+pretrained,2020,12,total_precipitation_6hr,,6,0.003391143243272161,m,0.29119153680254933
+pretrained,2020,12,temperature,1,6,3.806395579916088,K,
+pretrained,2020,12,temperature,2,6,3.081906521017927,K,
+pretrained,2020,12,temperature,3,6,2.9490345420093402,K,
+pretrained,2020,12,temperature,5,6,2.3890766535462817,K,
+pretrained,2020,12,temperature,7,6,1.8767079434526774,K,
+pretrained,2020,12,temperature,10,6,1.631527009585839,K,
+pretrained,2020,12,temperature,20,6,2.039106000259485,K,
+pretrained,2020,12,temperature,30,6,3.456361488628169,K,
+pretrained,2020,12,temperature,50,6,2.3945746934465513,K,0.7841367309298684
+pretrained,2020,12,temperature,70,6,2.5536114277060813,K,
+pretrained,2020,12,temperature,100,6,1.8544958800283216,K,0.8514385793401251
+pretrained,2020,12,temperature,125,6,2.0127923805576717,K,
+pretrained,2020,12,temperature,150,6,1.7460132273255837,K,0.8579510530172572
+pretrained,2020,12,temperature,175,6,2.0841452449776,K,
+pretrained,2020,12,temperature,200,6,2.2510189594529146,K,0.8275568001144609
+pretrained,2020,12,temperature,225,6,2.1616797622392063,K,
+pretrained,2020,12,temperature,250,6,2.037311207878623,K,0.765542404662526
+pretrained,2020,12,temperature,300,6,1.601159836909436,K,0.7998857026178968
+pretrained,2020,12,temperature,350,6,1.4478898295371503,K,
+pretrained,2020,12,temperature,400,6,1.6020045118736177,K,0.8561328645987453
+pretrained,2020,12,temperature,450,6,1.6039075571435197,K,
+pretrained,2020,12,temperature,500,6,1.5322311530518167,K,0.883378232883488
+pretrained,2020,12,temperature,550,6,1.613612636208499,K,
+pretrained,2020,12,temperature,600,6,1.554749021106538,K,0.8774699547248822
+pretrained,2020,12,temperature,650,6,1.6962254932204601,K,
+pretrained,2020,12,temperature,700,6,1.6885480958565393,K,0.8494114067164474
+pretrained,2020,12,temperature,750,6,1.859904755263539,K,
+pretrained,2020,12,temperature,775,6,1.976636472572692,K,
+pretrained,2020,12,temperature,800,6,2.1074591143556196,K,
+pretrained,2020,12,temperature,825,6,2.2896877557665243,K,
+pretrained,2020,12,temperature,850,6,2.5180056738022127,K,0.7050125515755054
+pretrained,2020,12,temperature,875,6,2.741871235606767,K,
+pretrained,2020,12,temperature,900,6,2.941161891430129,K,
+pretrained,2020,12,temperature,925,6,3.007894215918818,K,0.5773620159598926
+pretrained,2020,12,temperature,950,6,2.9467802659372655,K,
+pretrained,2020,12,temperature,975,6,2.920784731461855,K,
+pretrained,2020,12,temperature,1000,6,2.858412720371901,K,0.5699754344361628
+pretrained,2020,12,geopotential,1,6,749.930018214892,m2 s-2,
+pretrained,2020,12,geopotential,2,6,511.08177547303507,m2 s-2,
+pretrained,2020,12,geopotential,3,6,459.74361561330727,m2 s-2,
+pretrained,2020,12,geopotential,5,6,323.55037147813306,m2 s-2,
+pretrained,2020,12,geopotential,7,6,262.93939831772,m2 s-2,
+pretrained,2020,12,geopotential,10,6,231.01054486751113,m2 s-2,
+pretrained,2020,12,geopotential,20,6,320.398052076746,m2 s-2,
+pretrained,2020,12,geopotential,30,6,279.9434062145546,m2 s-2,
+pretrained,2020,12,geopotential,50,6,218.75035721260704,m2 s-2,0.984669704700627
+pretrained,2020,12,geopotential,70,6,244.0215122067492,m2 s-2,
+pretrained,2020,12,geopotential,100,6,319.6446067836236,m2 s-2,0.9541995812472023
+pretrained,2020,12,geopotential,125,6,294.77539762394116,m2 s-2,
+pretrained,2020,12,geopotential,150,6,286.667854635328,m2 s-2,0.9658410411090604
+pretrained,2020,12,geopotential,175,6,287.24314731202355,m2 s-2,
+pretrained,2020,12,geopotential,200,6,289.42047974390425,m2 s-2,0.9671668420085298
+pretrained,2020,12,geopotential,225,6,299.0307789802078,m2 s-2,
+pretrained,2020,12,geopotential,250,6,308.10819397349906,m2 s-2,0.9640266156511115
+pretrained,2020,12,geopotential,300,6,312.9239393094201,m2 s-2,0.9608472191316655
+pretrained,2020,12,geopotential,350,6,300.6742699675536,m2 s-2,
+pretrained,2020,12,geopotential,400,6,281.0529215386382,m2 s-2,0.9576985777245115
+pretrained,2020,12,geopotential,450,6,262.21333312069925,m2 s-2,
+pretrained,2020,12,geopotential,500,6,247.26359581183425,m2 s-2,0.9543545347796033
+pretrained,2020,12,geopotential,550,6,236.14657400399713,m2 s-2,
+pretrained,2020,12,geopotential,600,6,229.25090321419168,m2 s-2,0.9471523414454168
+pretrained,2020,12,geopotential,650,6,227.67663537403286,m2 s-2,
+pretrained,2020,12,geopotential,700,6,229.81678091735245,m2 s-2,0.9319716140416188
+pretrained,2020,12,geopotential,750,6,233.35344718642935,m2 s-2,
+pretrained,2020,12,geopotential,775,6,236.6127487349291,m2 s-2,
+pretrained,2020,12,geopotential,800,6,240.9445691179534,m2 s-2,
+pretrained,2020,12,geopotential,825,6,245.99109415655352,m2 s-2,
+pretrained,2020,12,geopotential,850,6,251.52292131091806,m2 s-2,0.897057933836972
+pretrained,2020,12,geopotential,875,6,257.6272315899277,m2 s-2,
+pretrained,2020,12,geopotential,900,6,264.5899929579899,m2 s-2,
+pretrained,2020,12,geopotential,925,6,271.9276124884323,m2 s-2,0.8772073046590442
+pretrained,2020,12,geopotential,950,6,279.5676588173204,m2 s-2,
+pretrained,2020,12,geopotential,975,6,287.2803178950454,m2 s-2,
+pretrained,2020,12,geopotential,1000,6,294.79779758672737,m2 s-2,0.859632164620241
+pretrained,2020,12,u_component_of_wind,1,6,8.108876041259931,m s-1,
+pretrained,2020,12,u_component_of_wind,2,6,6.078341152383752,m s-1,
+pretrained,2020,12,u_component_of_wind,3,6,4.451513093451225,m s-1,
+pretrained,2020,12,u_component_of_wind,5,6,3.535871510706902,m s-1,
+pretrained,2020,12,u_component_of_wind,7,6,3.1986242049691365,m s-1,
+pretrained,2020,12,u_component_of_wind,10,6,3.289803114187436,m s-1,
+pretrained,2020,12,u_component_of_wind,20,6,3.0977387749793333,m s-1,
+pretrained,2020,12,u_component_of_wind,30,6,2.9924888910856557,m s-1,
+pretrained,2020,12,u_component_of_wind,50,6,4.557390909444706,m s-1,0.8376548019614662
+pretrained,2020,12,u_component_of_wind,70,6,5.2894595650914304,m s-1,
+pretrained,2020,12,u_component_of_wind,100,6,6.279367065541765,m s-1,0.6196056467569567
+pretrained,2020,12,u_component_of_wind,125,6,8.969418487929829,m s-1,
+pretrained,2020,12,u_component_of_wind,150,6,9.999289843405801,m s-1,0.49353751606764645
+pretrained,2020,12,u_component_of_wind,175,6,10.073892893241156,m s-1,
+pretrained,2020,12,u_component_of_wind,200,6,10.60778165372605,m s-1,0.5438131403489245
+pretrained,2020,12,u_component_of_wind,225,6,11.275793154554416,m s-1,
+pretrained,2020,12,u_component_of_wind,250,6,11.133074608733276,m s-1,0.542575127473798
+pretrained,2020,12,u_component_of_wind,300,6,10.428848668899741,m s-1,0.5552787026111237
+pretrained,2020,12,u_component_of_wind,350,6,9.544164601128237,m s-1,
+pretrained,2020,12,u_component_of_wind,400,6,8.293958559975097,m s-1,0.5967860755683628
+pretrained,2020,12,u_component_of_wind,450,6,7.668920200660619,m s-1,
+pretrained,2020,12,u_component_of_wind,500,6,6.799360531156417,m s-1,0.603470406262409
+pretrained,2020,12,u_component_of_wind,550,6,6.210725348269275,m s-1,
+pretrained,2020,12,u_component_of_wind,600,6,5.886442473316259,m s-1,0.5943697188063496
+pretrained,2020,12,u_component_of_wind,650,6,5.612594455372107,m s-1,
+pretrained,2020,12,u_component_of_wind,700,6,5.36266383095769,m s-1,0.5726194587914605
+pretrained,2020,12,u_component_of_wind,750,6,5.150841397825733,m s-1,
+pretrained,2020,12,u_component_of_wind,775,6,5.099270013631259,m s-1,
+pretrained,2020,12,u_component_of_wind,800,6,5.078533975234912,m s-1,
+pretrained,2020,12,u_component_of_wind,825,6,5.066263592419377,m s-1,
+pretrained,2020,12,u_component_of_wind,850,6,5.082956282289046,m s-1,0.5154739797485813
+pretrained,2020,12,u_component_of_wind,875,6,5.135127399099911,m s-1,
+pretrained,2020,12,u_component_of_wind,900,6,5.176696311378831,m s-1,
+pretrained,2020,12,u_component_of_wind,925,6,5.104131604521295,m s-1,0.4902483316365103
+pretrained,2020,12,u_component_of_wind,950,6,4.808297661545429,m s-1,
+pretrained,2020,12,u_component_of_wind,975,6,4.3220209720276275,m s-1,
+pretrained,2020,12,u_component_of_wind,1000,6,3.7109904258940145,m s-1,0.5649380670661398
+pretrained,2020,12,v_component_of_wind,1,6,7.412908605129328,m s-1,
+pretrained,2020,12,v_component_of_wind,2,6,5.462999340962915,m s-1,
+pretrained,2020,12,v_component_of_wind,3,6,4.739961157600381,m s-1,
+pretrained,2020,12,v_component_of_wind,5,6,3.6344753687188085,m s-1,
+pretrained,2020,12,v_component_of_wind,7,6,3.2982161101088794,m s-1,
+pretrained,2020,12,v_component_of_wind,10,6,3.0821049281320327,m s-1,
+pretrained,2020,12,v_component_of_wind,20,6,2.9156194794701205,m s-1,
+pretrained,2020,12,v_component_of_wind,30,6,2.919713309523665,m s-1,
+pretrained,2020,12,v_component_of_wind,50,6,4.309635908866734,m s-1,0.6703453037529026
+pretrained,2020,12,v_component_of_wind,70,6,4.039767766044988,m s-1,
+pretrained,2020,12,v_component_of_wind,100,6,4.71239358786477,m s-1,0.7540697039180942
+pretrained,2020,12,v_component_of_wind,125,6,6.037729022109861,m s-1,
+pretrained,2020,12,v_component_of_wind,150,6,7.058802451474123,m s-1,0.6412292564124144
+pretrained,2020,12,v_component_of_wind,175,6,7.780084160363719,m s-1,
+pretrained,2020,12,v_component_of_wind,200,6,8.552332528226774,m s-1,0.7136813255985118
+pretrained,2020,12,v_component_of_wind,225,6,9.230998418059393,m s-1,
+pretrained,2020,12,v_component_of_wind,250,6,9.515069721491951,m s-1,0.7186414632082393
+pretrained,2020,12,v_component_of_wind,300,6,9.086214839976115,m s-1,0.7718426795836312
+pretrained,2020,12,v_component_of_wind,350,6,8.411570949980756,m s-1,
+pretrained,2020,12,v_component_of_wind,400,6,7.607631902093508,m s-1,0.7865683190506448
+pretrained,2020,12,v_component_of_wind,450,6,6.850140144704373,m s-1,
+pretrained,2020,12,v_component_of_wind,500,6,6.175115620004358,m s-1,0.7797219304564682
+pretrained,2020,12,v_component_of_wind,550,6,5.632256823141923,m s-1,
+pretrained,2020,12,v_component_of_wind,600,6,5.22509291631498,m s-1,0.7618428949456754
+pretrained,2020,12,v_component_of_wind,650,6,4.898978684538646,m s-1,
+pretrained,2020,12,v_component_of_wind,700,6,4.632667423249091,m s-1,0.7332029182806755
+pretrained,2020,12,v_component_of_wind,750,6,4.476304096655879,m s-1,
+pretrained,2020,12,v_component_of_wind,775,6,4.395655765659008,m s-1,
+pretrained,2020,12,v_component_of_wind,800,6,4.351028129105968,m s-1,
+pretrained,2020,12,v_component_of_wind,825,6,4.3592253662490705,m s-1,
+pretrained,2020,12,v_component_of_wind,850,6,4.387129919512547,m s-1,0.6643360248151886
+pretrained,2020,12,v_component_of_wind,875,6,4.442165486181761,m s-1,
+pretrained,2020,12,v_component_of_wind,900,6,4.540977018115356,m s-1,
+pretrained,2020,12,v_component_of_wind,925,6,4.619797829726308,m s-1,0.6171068512683702
+pretrained,2020,12,v_component_of_wind,950,6,4.550157437668067,m s-1,
+pretrained,2020,12,v_component_of_wind,975,6,4.226713528453154,m s-1,
+pretrained,2020,12,v_component_of_wind,1000,6,3.666431709207819,m s-1,0.6162961471769011
+pretrained,2020,12,vertical_velocity,1,6,0.001279530939608716,Pa s-1,
+pretrained,2020,12,vertical_velocity,2,6,0.004074596100639945,Pa s-1,
+pretrained,2020,12,vertical_velocity,3,6,0.00360204417511618,Pa s-1,
+pretrained,2020,12,vertical_velocity,5,6,0.0030730986648545818,Pa s-1,
+pretrained,2020,12,vertical_velocity,7,6,0.004004639423219258,Pa s-1,
+pretrained,2020,12,vertical_velocity,10,6,0.004944319824609924,Pa s-1,
+pretrained,2020,12,vertical_velocity,20,6,0.010559633068184669,Pa s-1,
+pretrained,2020,12,vertical_velocity,30,6,0.010628893106594633,Pa s-1,
+pretrained,2020,12,vertical_velocity,50,6,0.014461442544456414,Pa s-1,0.08900212740144893
+pretrained,2020,12,vertical_velocity,70,6,0.017860287508166702,Pa s-1,
+pretrained,2020,12,vertical_velocity,100,6,0.029903525448821355,Pa s-1,0.09627161951473552
+pretrained,2020,12,vertical_velocity,125,6,0.04488785533276724,Pa s-1,
+pretrained,2020,12,vertical_velocity,150,6,0.06438797195199436,Pa s-1,0.0779297333198354
+pretrained,2020,12,vertical_velocity,175,6,0.08394974568700653,Pa s-1,
+pretrained,2020,12,vertical_velocity,200,6,0.10303219746304616,Pa s-1,0.07566053203995658
+pretrained,2020,12,vertical_velocity,225,6,0.12181477234936736,Pa s-1,
+pretrained,2020,12,vertical_velocity,250,6,0.14108054876225268,Pa s-1,0.07108465553125326
+pretrained,2020,12,vertical_velocity,300,6,0.17554480593505264,Pa s-1,0.05762469051307492
+pretrained,2020,12,vertical_velocity,350,6,0.2000902912498247,Pa s-1,
+pretrained,2020,12,vertical_velocity,400,6,0.21895729567924796,Pa s-1,0.07768907637001529
+pretrained,2020,12,vertical_velocity,450,6,0.23236196183014635,Pa s-1,
+pretrained,2020,12,vertical_velocity,500,6,0.2424282279432298,Pa s-1,0.07333928843465089
+pretrained,2020,12,vertical_velocity,550,6,0.2479430740961175,Pa s-1,
+pretrained,2020,12,vertical_velocity,600,6,0.2543875737562548,Pa s-1,0.0758769223431822
+pretrained,2020,12,vertical_velocity,650,6,0.2589936382526971,Pa s-1,
+pretrained,2020,12,vertical_velocity,700,6,0.2613742963455359,Pa s-1,0.08693259675438379
+pretrained,2020,12,vertical_velocity,750,6,0.26104687128786586,Pa s-1,
+pretrained,2020,12,vertical_velocity,775,6,0.25689605074485816,Pa s-1,
+pretrained,2020,12,vertical_velocity,800,6,0.25144125976919823,Pa s-1,
+pretrained,2020,12,vertical_velocity,825,6,0.24477369257270543,Pa s-1,
+pretrained,2020,12,vertical_velocity,850,6,0.2363627808034879,Pa s-1,0.13404618646939626
+pretrained,2020,12,vertical_velocity,875,6,0.22532927573238662,Pa s-1,
+pretrained,2020,12,vertical_velocity,900,6,0.20869660610549343,Pa s-1,
+pretrained,2020,12,vertical_velocity,925,6,0.18540720547359718,Pa s-1,0.15519754047414355
+pretrained,2020,12,vertical_velocity,950,6,0.15471469541581576,Pa s-1,
+pretrained,2020,12,vertical_velocity,975,6,0.12097422107100489,Pa s-1,
+pretrained,2020,12,vertical_velocity,1000,6,0.09736202691658233,Pa s-1,0.24588970355723336
+pretrained,2020,12,specific_humidity,1,6,4.487248635508822e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,2,6,3.177734890097914e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,3,6,3.368683988833732e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,5,6,3.4264857202265856e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,7,6,3.53153331107977e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,10,6,3.4230480724219824e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,20,6,3.616811719164853e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,30,6,4.9715298533051394e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,50,6,7.271080117172062e-08,kg kg-1,0.9242063848639964
+pretrained,2020,12,specific_humidity,70,6,9.431036719130653e-08,kg kg-1,
+pretrained,2020,12,specific_humidity,100,6,4.1818872973061336e-07,kg kg-1,0.4043988738014883
+pretrained,2020,12,specific_humidity,125,6,9.626694711185518e-07,kg kg-1,
+pretrained,2020,12,specific_humidity,150,6,2.61171708836072e-06,kg kg-1,0.30124859693414374
+pretrained,2020,12,specific_humidity,175,6,7.950189375564961e-06,kg kg-1,
+pretrained,2020,12,specific_humidity,200,6,1.7301637150430776e-05,kg kg-1,0.2543615966808717
+pretrained,2020,12,specific_humidity,225,6,3.679821387553867e-05,kg kg-1,
+pretrained,2020,12,specific_humidity,250,6,6.138734141139304e-05,kg kg-1,0.25558812570832773
+pretrained,2020,12,specific_humidity,300,6,0.00014012098303666559,kg kg-1,0.3228472578487022
+pretrained,2020,12,specific_humidity,350,6,0.0002698634588961135,kg kg-1,
+pretrained,2020,12,specific_humidity,400,6,0.0004324950661316704,kg kg-1,0.32064100349591457
+pretrained,2020,12,specific_humidity,450,6,0.0005993734864883806,kg kg-1,
+pretrained,2020,12,specific_humidity,500,6,0.0008506743804074297,kg kg-1,0.3524512257409714
+pretrained,2020,12,specific_humidity,550,6,0.0010449173340937065,kg kg-1,
+pretrained,2020,12,specific_humidity,600,6,0.001170938076044251,kg kg-1,0.4181974637927297
+pretrained,2020,12,specific_humidity,650,6,0.0013708746879863298,kg kg-1,
+pretrained,2020,12,specific_humidity,700,6,0.001522124617997556,kg kg-1,0.42638507237194484
+pretrained,2020,12,specific_humidity,750,6,0.0017397066775295539,kg kg-1,
+pretrained,2020,12,specific_humidity,775,6,0.0018322799271873321,kg kg-1,
+pretrained,2020,12,specific_humidity,800,6,0.0019046956188093602,kg kg-1,
+pretrained,2020,12,specific_humidity,825,6,0.0019838580317059723,kg kg-1,
+pretrained,2020,12,specific_humidity,850,6,0.0020468499491404896,kg kg-1,0.3479496903177888
+pretrained,2020,12,specific_humidity,875,6,0.002014217582025992,kg kg-1,
+pretrained,2020,12,specific_humidity,900,6,0.0019621182170316766,kg kg-1,
+pretrained,2020,12,specific_humidity,925,6,0.0019841161383069256,kg kg-1,0.29899497208707154
+pretrained,2020,12,specific_humidity,950,6,0.001949631016867497,kg kg-1,
+pretrained,2020,12,specific_humidity,975,6,0.0018797205712462785,kg kg-1,
+pretrained,2020,12,specific_humidity,1000,6,0.0018059361491152713,kg kg-1,0.4284590221498185
+baseline_trained,2020,12,2m_temperature,,6,0.5836084883304348,K,0.9745794300635405
+baseline_trained,2020,12,mean_sea_level_pressure,,6,32.50243730654958,Pa,0.9989991761032
+baseline_trained,2020,12,10m_v_component_of_wind,,6,0.49763314319285507,m s-1,0.992510759609614
+baseline_trained,2020,12,10m_u_component_of_wind,,6,0.48727312675644485,m s-1,0.9924123602700193
+baseline_trained,2020,12,total_precipitation_6hr,,6,0.0011600873128180982,m,0.879832912993694
+baseline_trained,2020,12,temperature,1,6,3.3238706826274194,K,
+baseline_trained,2020,12,temperature,2,6,2.928654374945141,K,
+baseline_trained,2020,12,temperature,3,6,2.510193231596915,K,
+baseline_trained,2020,12,temperature,5,6,1.9455614506222412,K,
+baseline_trained,2020,12,temperature,7,6,1.688532208358146,K,
+baseline_trained,2020,12,temperature,10,6,1.4752514382065909,K,
+baseline_trained,2020,12,temperature,20,6,1.1730244556780587,K,
+baseline_trained,2020,12,temperature,30,6,0.9261471714697679,K,
+baseline_trained,2020,12,temperature,50,6,0.6647421772557319,K,0.9800102428785312
+baseline_trained,2020,12,temperature,70,6,0.6118628604845396,K,
+baseline_trained,2020,12,temperature,100,6,0.44456256522170295,K,0.9916113707089931
+baseline_trained,2020,12,temperature,125,6,0.3442084804588717,K,
+baseline_trained,2020,12,temperature,150,6,0.3143265130500561,K,0.9958077183637237
+baseline_trained,2020,12,temperature,175,6,0.3098044936092075,K,
+baseline_trained,2020,12,temperature,200,6,0.319144584934888,K,0.9966524535815674
+baseline_trained,2020,12,temperature,225,6,0.3116677525311508,K,
+baseline_trained,2020,12,temperature,250,6,0.29545634491997985,K,0.9954790702936692
+baseline_trained,2020,12,temperature,300,6,0.25971827827946464,K,0.9952184057014275
+baseline_trained,2020,12,temperature,350,6,0.24602401811668378,K,
+baseline_trained,2020,12,temperature,400,6,0.24743259213215896,K,0.9967790974463888
+baseline_trained,2020,12,temperature,450,6,0.2570635411571653,K,
+baseline_trained,2020,12,temperature,500,6,0.2410299008262224,K,0.9971699958438736
+baseline_trained,2020,12,temperature,550,6,0.2473470647306554,K,
+baseline_trained,2020,12,temperature,600,6,0.2560431928106402,K,0.9967982902723551
+baseline_trained,2020,12,temperature,650,6,0.26025884657174103,K,
+baseline_trained,2020,12,temperature,700,6,0.2683729181460637,K,0.9964821179637289
+baseline_trained,2020,12,temperature,750,6,0.27673061252439857,K,
+baseline_trained,2020,12,temperature,775,6,0.2862555059154719,K,
+baseline_trained,2020,12,temperature,800,6,0.30277726761454127,K,
+baseline_trained,2020,12,temperature,825,6,0.32835366939750227,K,
+baseline_trained,2020,12,temperature,850,6,0.3398053973453506,K,0.9950519222178064
+baseline_trained,2020,12,temperature,875,6,0.34321778310227435,K,
+baseline_trained,2020,12,temperature,900,6,0.3551156869526845,K,
+baseline_trained,2020,12,temperature,925,6,0.35829324068888146,K,0.9935275855958974
+baseline_trained,2020,12,temperature,950,6,0.36863021647959265,K,
+baseline_trained,2020,12,temperature,975,6,0.38610121161146116,K,
+baseline_trained,2020,12,temperature,1000,6,0.3928338793951668,K,0.9897784306777658
+baseline_trained,2020,12,geopotential,1,6,681.6750004975264,m2 s-2,
+baseline_trained,2020,12,geopotential,2,6,457.39799754351935,m2 s-2,
+baseline_trained,2020,12,geopotential,3,6,353.0590731654997,m2 s-2,
+baseline_trained,2020,12,geopotential,5,6,257.27363845803507,m2 s-2,
+baseline_trained,2020,12,geopotential,7,6,213.37613943078503,m2 s-2,
+baseline_trained,2020,12,geopotential,10,6,175.44564913339192,m2 s-2,
+baseline_trained,2020,12,geopotential,20,6,114.88135132427855,m2 s-2,
+baseline_trained,2020,12,geopotential,30,6,85.87809873733597,m2 s-2,
+baseline_trained,2020,12,geopotential,50,6,60.39912033592183,m2 s-2,0.9986950416651084
+baseline_trained,2020,12,geopotential,70,6,47.678207315394374,m2 s-2,
+baseline_trained,2020,12,geopotential,100,6,38.125886921055404,m2 s-2,0.9993421907229704
+baseline_trained,2020,12,geopotential,125,6,33.58996516315482,m2 s-2,
+baseline_trained,2020,12,geopotential,150,6,31.41786681202917,m2 s-2,0.9995511899165561
+baseline_trained,2020,12,geopotential,175,6,30.176385097658393,m2 s-2,
+baseline_trained,2020,12,geopotential,200,6,29.44679456611315,m2 s-2,0.9996461830329547
+baseline_trained,2020,12,geopotential,225,6,29.03149062243084,m2 s-2,
+baseline_trained,2020,12,geopotential,250,6,29.09953967841569,m2 s-2,0.9996844961812462
+baseline_trained,2020,12,geopotential,300,6,28.6346133042296,m2 s-2,0.9996800447649968
+baseline_trained,2020,12,geopotential,350,6,26.967524005545748,m2 s-2,
+baseline_trained,2020,12,geopotential,400,6,25.30959959022347,m2 s-2,0.9996676769953007
+baseline_trained,2020,12,geopotential,450,6,23.74236952628546,m2 s-2,
+baseline_trained,2020,12,geopotential,500,6,22.65514632266511,m2 s-2,0.9996292280451544
+baseline_trained,2020,12,geopotential,550,6,21.98431925912156,m2 s-2,
+baseline_trained,2020,12,geopotential,600,6,21.563138992127854,m2 s-2,0.9995472934989528
+baseline_trained,2020,12,geopotential,650,6,21.475333876242413,m2 s-2,
+baseline_trained,2020,12,geopotential,700,6,21.6007206109483,m2 s-2,0.9994203919892651
+baseline_trained,2020,12,geopotential,750,6,21.799758962674577,m2 s-2,
+baseline_trained,2020,12,geopotential,775,6,21.945256198532988,m2 s-2,
+baseline_trained,2020,12,geopotential,800,6,22.129473287117627,m2 s-2,
+baseline_trained,2020,12,geopotential,825,6,22.362042408165898,m2 s-2,
+baseline_trained,2020,12,geopotential,850,6,22.665248414373952,m2 s-2,0.9992044919902424
+baseline_trained,2020,12,geopotential,875,6,23.025593508529795,m2 s-2,
+baseline_trained,2020,12,geopotential,900,6,23.45519709384066,m2 s-2,
+baseline_trained,2020,12,geopotential,925,6,23.946982228507327,m2 s-2,0.9990997233461584
+baseline_trained,2020,12,geopotential,950,6,24.46090953955664,m2 s-2,
+baseline_trained,2020,12,geopotential,975,6,25.036831150482872,m2 s-2,
+baseline_trained,2020,12,geopotential,1000,6,25.691092015380438,m2 s-2,0.9989983078743813
+baseline_trained,2020,12,u_component_of_wind,1,6,7.650928996931115,m s-1,
+baseline_trained,2020,12,u_component_of_wind,2,6,5.483145831679923,m s-1,
+baseline_trained,2020,12,u_component_of_wind,3,6,4.364986975112379,m s-1,
+baseline_trained,2020,12,u_component_of_wind,5,6,3.4198512529404907,m s-1,
+baseline_trained,2020,12,u_component_of_wind,7,6,3.027153324417006,m s-1,
+baseline_trained,2020,12,u_component_of_wind,10,6,2.760823881447625,m s-1,
+baseline_trained,2020,12,u_component_of_wind,20,6,2.247391080647185,m s-1,
+baseline_trained,2020,12,u_component_of_wind,30,6,1.9005293902021898,m s-1,
+baseline_trained,2020,12,u_component_of_wind,50,6,1.44303893531483,m s-1,0.9844249215928998
+baseline_trained,2020,12,u_component_of_wind,70,6,1.1887483461196393,m s-1,
+baseline_trained,2020,12,u_component_of_wind,100,6,1.09392523458613,m s-1,0.9901752510531949
+baseline_trained,2020,12,u_component_of_wind,125,6,1.0262552574513224,m s-1,
+baseline_trained,2020,12,u_component_of_wind,150,6,1.0515270220657835,m s-1,0.9946625105956475
+baseline_trained,2020,12,u_component_of_wind,175,6,1.0636105848785329,m s-1,
+baseline_trained,2020,12,u_component_of_wind,200,6,1.1010417207160756,m s-1,0.9957152208591485
+baseline_trained,2020,12,u_component_of_wind,225,6,1.1631322480843265,m s-1,
+baseline_trained,2020,12,u_component_of_wind,250,6,1.1863964398025344,m s-1,0.9956708030291809
+baseline_trained,2020,12,u_component_of_wind,300,6,1.1561278492201648,m s-1,0.9955757802190575
+baseline_trained,2020,12,u_component_of_wind,350,6,1.0626482247483209,m s-1,
+baseline_trained,2020,12,u_component_of_wind,400,6,0.9606166016849428,m s-1,0.9956301955651746
+baseline_trained,2020,12,u_component_of_wind,450,6,0.8757955110917597,m s-1,
+baseline_trained,2020,12,u_component_of_wind,500,6,0.8044905942953383,m s-1,0.9955023478329165
+baseline_trained,2020,12,u_component_of_wind,550,6,0.7813542133583947,m s-1,
+baseline_trained,2020,12,u_component_of_wind,600,6,0.7428482039309626,m s-1,0.9948164076286891
+baseline_trained,2020,12,u_component_of_wind,650,6,0.7168706947670164,m s-1,
+baseline_trained,2020,12,u_component_of_wind,700,6,0.6819787320008269,m s-1,0.9945431089103652
+baseline_trained,2020,12,u_component_of_wind,750,6,0.6642153260974735,m s-1,
+baseline_trained,2020,12,u_component_of_wind,775,6,0.6585531427010675,m s-1,
+baseline_trained,2020,12,u_component_of_wind,800,6,0.6568607126701339,m s-1,
+baseline_trained,2020,12,u_component_of_wind,825,6,0.6576481739469209,m s-1,
+baseline_trained,2020,12,u_component_of_wind,850,6,0.6577331956559431,m s-1,0.9936993537034855
+baseline_trained,2020,12,u_component_of_wind,875,6,0.6535765722457347,m s-1,
+baseline_trained,2020,12,u_component_of_wind,900,6,0.6411000833568712,m s-1,
+baseline_trained,2020,12,u_component_of_wind,925,6,0.6318385907907018,m s-1,0.9939292977472389
+baseline_trained,2020,12,u_component_of_wind,950,6,0.60880914953582,m s-1,
+baseline_trained,2020,12,u_component_of_wind,975,6,0.5751420056330323,m s-1,
+baseline_trained,2020,12,u_component_of_wind,1000,6,0.5301428366718564,m s-1,0.9928593246709986
+baseline_trained,2020,12,v_component_of_wind,1,6,7.024807814572778,m s-1,
+baseline_trained,2020,12,v_component_of_wind,2,6,5.438477562299407,m s-1,
+baseline_trained,2020,12,v_component_of_wind,3,6,4.51579064295404,m s-1,
+baseline_trained,2020,12,v_component_of_wind,5,6,3.595119202730612,m s-1,
+baseline_trained,2020,12,v_component_of_wind,7,6,3.1898295376248984,m s-1,
+baseline_trained,2020,12,v_component_of_wind,10,6,2.9006237698453057,m s-1,
+baseline_trained,2020,12,v_component_of_wind,20,6,2.4619350533039626,m s-1,
+baseline_trained,2020,12,v_component_of_wind,30,6,2.098911341783568,m s-1,
+baseline_trained,2020,12,v_component_of_wind,50,6,1.4609061644538208,m s-1,0.9621701038103532
+baseline_trained,2020,12,v_component_of_wind,70,6,1.220516602137896,m s-1,
+baseline_trained,2020,12,v_component_of_wind,100,6,1.074544278039594,m s-1,0.9875188288196782
+baseline_trained,2020,12,v_component_of_wind,125,6,1.0410488150448383,m s-1,
+baseline_trained,2020,12,v_component_of_wind,150,6,1.043079658017964,m s-1,0.9934962160122233
+baseline_trained,2020,12,v_component_of_wind,175,6,1.0625886449846942,m s-1,
+baseline_trained,2020,12,v_component_of_wind,200,6,1.1073893888617103,m s-1,0.9953588077331504
+baseline_trained,2020,12,v_component_of_wind,225,6,1.1695892583759324,m s-1,
+baseline_trained,2020,12,v_component_of_wind,250,6,1.1951986146297606,m s-1,0.9955407777993633
+baseline_trained,2020,12,v_component_of_wind,300,6,1.1878464279976348,m s-1,0.9953315286451785
+baseline_trained,2020,12,v_component_of_wind,350,6,1.0883179925155504,m s-1,
+baseline_trained,2020,12,v_component_of_wind,400,6,0.9875323477717095,m s-1,0.9953526735786968
+baseline_trained,2020,12,v_component_of_wind,450,6,0.8853481754008296,m s-1,
+baseline_trained,2020,12,v_component_of_wind,500,6,0.8061846866298411,m s-1,0.9953616517650672
+baseline_trained,2020,12,v_component_of_wind,550,6,0.773141993188045,m s-1,
+baseline_trained,2020,12,v_component_of_wind,600,6,0.7358948023429797,m s-1,0.9945911743355381
+baseline_trained,2020,12,v_component_of_wind,650,6,0.6992381104368964,m s-1,
+baseline_trained,2020,12,v_component_of_wind,700,6,0.6785701337265717,m s-1,0.9940502713535762
+baseline_trained,2020,12,v_component_of_wind,750,6,0.6567686324647753,m s-1,
+baseline_trained,2020,12,v_component_of_wind,775,6,0.6517186278188464,m s-1,
+baseline_trained,2020,12,v_component_of_wind,800,6,0.6482793056482676,m s-1,
+baseline_trained,2020,12,v_component_of_wind,825,6,0.652532700733064,m s-1,
+baseline_trained,2020,12,v_component_of_wind,850,6,0.6617710366088426,m s-1,0.993046525149968
+baseline_trained,2020,12,v_component_of_wind,875,6,0.6626837485480679,m s-1,
+baseline_trained,2020,12,v_component_of_wind,900,6,0.6526734934642071,m s-1,
+baseline_trained,2020,12,v_component_of_wind,925,6,0.640251009971448,m s-1,0.9938098787070828
+baseline_trained,2020,12,v_component_of_wind,950,6,0.6213784726480073,m s-1,
+baseline_trained,2020,12,v_component_of_wind,975,6,0.5889517295645464,m s-1,
+baseline_trained,2020,12,v_component_of_wind,1000,6,0.5371236405014735,m s-1,0.9932312333498429
+baseline_trained,2020,12,vertical_velocity,1,6,0.001251483344795172,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,2,6,0.0018057454006348134,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,3,6,0.002252397456414414,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,5,6,0.0029793849657882908,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,7,6,0.0037492518483870914,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,10,6,0.004632262359622425,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,20,6,0.0066867493936169035,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,30,6,0.007924612726795163,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,50,6,0.009678552254683927,Pa s-1,0.63928747154133
+baseline_trained,2020,12,vertical_velocity,70,6,0.011795461077826553,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,100,6,0.018897696946234256,Pa s-1,0.7431039492014074
+baseline_trained,2020,12,vertical_velocity,125,6,0.029883388752956538,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,150,6,0.042680390919090004,Pa s-1,0.736095693757877
+baseline_trained,2020,12,vertical_velocity,175,6,0.05536933579537715,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,200,6,0.06686550695156074,Pa s-1,0.752057777335876
+baseline_trained,2020,12,vertical_velocity,225,6,0.07731825164579094,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,250,6,0.08678911449318363,Pa s-1,0.7757049173647707
+baseline_trained,2020,12,vertical_velocity,300,6,0.10418214955221618,Pa s-1,0.7903187142151237
+baseline_trained,2020,12,vertical_velocity,350,6,0.11898642323112733,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,400,6,0.1298089056004446,Pa s-1,0.8005162016003915
+baseline_trained,2020,12,vertical_velocity,450,6,0.13669973730297566,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,500,6,0.1417044980389261,Pa s-1,0.8031295606217581
+baseline_trained,2020,12,vertical_velocity,550,6,0.1467849843993933,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,600,6,0.15110665059974204,Pa s-1,0.7965870796501213
+baseline_trained,2020,12,vertical_velocity,650,6,0.15301326550482253,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,700,6,0.1517285803085616,Pa s-1,0.8025003643560752
+baseline_trained,2020,12,vertical_velocity,750,6,0.14901016892093122,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,775,6,0.14635267053075576,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,800,6,0.14281774512985884,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,825,6,0.13785054178710332,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,850,6,0.13107468778754414,Pa s-1,0.8185740135746199
+baseline_trained,2020,12,vertical_velocity,875,6,0.12248344219921087,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,900,6,0.1111267350444305,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,925,6,0.09589057303520435,Pa s-1,0.8291522334827474
+baseline_trained,2020,12,vertical_velocity,950,6,0.07668149821164734,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,975,6,0.05498943654247043,Pa s-1,
+baseline_trained,2020,12,vertical_velocity,1000,6,0.037860138432308885,Pa s-1,0.8633414960642497
+baseline_trained,2020,12,specific_humidity,1,6,4.457765237338838e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,2,6,3.1510295209459694e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,3,6,3.22166443248121e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,5,6,3.362249023877005e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,7,6,3.4147953106449765e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,10,6,3.4008117959588085e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,20,6,3.1573540723056104e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,30,6,2.2950862121044307e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,50,6,1.9019512642258898e-08,kg kg-1,0.9948409372219772
+baseline_trained,2020,12,specific_humidity,70,6,3.554549622180315e-08,kg kg-1,
+baseline_trained,2020,12,specific_humidity,100,6,1.0443046070406008e-07,kg kg-1,0.969375450081906
+baseline_trained,2020,12,specific_humidity,125,6,2.9538228566153667e-07,kg kg-1,
+baseline_trained,2020,12,specific_humidity,150,6,8.330676433445384e-07,kg kg-1,0.9495365771476535
+baseline_trained,2020,12,specific_humidity,175,6,2.2245042354925597e-06,kg kg-1,
+baseline_trained,2020,12,specific_humidity,200,6,5.074115375486981e-06,kg kg-1,0.9559090353971461
+baseline_trained,2020,12,specific_humidity,225,6,1.0153298995877694e-05,kg kg-1,
+baseline_trained,2020,12,specific_humidity,250,6,1.6952392537061205e-05,kg kg-1,0.9613601996746312
+baseline_trained,2020,12,specific_humidity,300,6,3.400525525301276e-05,kg kg-1,0.9722001664373471
+baseline_trained,2020,12,specific_humidity,350,6,5.704973995262951e-05,kg kg-1,
+baseline_trained,2020,12,specific_humidity,400,6,8.546465178351442e-05,kg kg-1,0.9814601209210599
+baseline_trained,2020,12,specific_humidity,450,6,0.00012357410360894073,kg kg-1,
+baseline_trained,2020,12,specific_humidity,500,6,0.00015835957721528724,kg kg-1,0.9833063293704551
+baseline_trained,2020,12,specific_humidity,550,6,0.0001971564811137275,kg kg-1,
+baseline_trained,2020,12,specific_humidity,600,6,0.00022078937605863098,kg kg-1,0.9846498757609651
+baseline_trained,2020,12,specific_humidity,650,6,0.00025880292909288073,kg kg-1,
+baseline_trained,2020,12,specific_humidity,700,6,0.00029056652546000913,kg kg-1,0.9843502195218491
+baseline_trained,2020,12,specific_humidity,750,6,0.00032877821661471174,kg kg-1,
+baseline_trained,2020,12,specific_humidity,775,6,0.0003369555188958458,kg kg-1,
+baseline_trained,2020,12,specific_humidity,800,6,0.00035066659389727274,kg kg-1,
+baseline_trained,2020,12,specific_humidity,825,6,0.0003651002386229319,kg kg-1,
+baseline_trained,2020,12,specific_humidity,850,6,0.0003764383061801171,kg kg-1,0.9805957423812797
+baseline_trained,2020,12,specific_humidity,875,6,0.0003733191329997481,kg kg-1,
+baseline_trained,2020,12,specific_humidity,900,6,0.00036747532461838765,kg kg-1,
+baseline_trained,2020,12,specific_humidity,925,6,0.00036267111030406765,kg kg-1,0.9724394198456472
+baseline_trained,2020,12,specific_humidity,950,6,0.00033602455473826214,kg kg-1,
+baseline_trained,2020,12,specific_humidity,975,6,0.00030779169420606115,kg kg-1,
+baseline_trained,2020,12,specific_humidity,1000,6,0.0002946681139498275,kg kg-1,0.9814232030590012
+advection_initial,2020,12,2m_temperature,,6,2.2398898844560544,K,0.6790692580300326
+advection_initial,2020,12,mean_sea_level_pressure,,6,373.00929855639464,Pa,0.8598969784621491
+advection_initial,2020,12,10m_v_component_of_wind,,6,3.3141431902985476,m s-1,0.5879084685348784
+advection_initial,2020,12,10m_u_component_of_wind,,6,3.3292328993465086,m s-1,0.562161900521566
+advection_initial,2020,12,total_precipitation_6hr,,6,0.0033910721275817626,m,0.29115862362343703
+advection_initial,2020,12,temperature,1,6,3.8064589842947623,K,
+advection_initial,2020,12,temperature,2,6,3.0818287321512767,K,
+advection_initial,2020,12,temperature,3,6,2.9492149326532076,K,
+advection_initial,2020,12,temperature,5,6,2.3891544734697403,K,
+advection_initial,2020,12,temperature,7,6,1.8767502329763357,K,
+advection_initial,2020,12,temperature,10,6,1.6314568299077958,K,
+advection_initial,2020,12,temperature,20,6,2.039589978383922,K,
+advection_initial,2020,12,temperature,30,6,3.456227555735273,K,
+advection_initial,2020,12,temperature,50,6,2.3946513110197536,K,0.7841262572791474
+advection_initial,2020,12,temperature,70,6,2.5536359187985793,K,
+advection_initial,2020,12,temperature,100,6,1.8545415533353606,K,0.8514300159345866
+advection_initial,2020,12,temperature,125,6,2.0128043446046235,K,
+advection_initial,2020,12,temperature,150,6,1.7460572603724909,K,0.8579460589018004
+advection_initial,2020,12,temperature,175,6,2.084191841573048,K,
+advection_initial,2020,12,temperature,200,6,2.2510437788742466,K,0.8275536360734311
+advection_initial,2020,12,temperature,225,6,2.1616758913224943,K,
+advection_initial,2020,12,temperature,250,6,2.0373579248029943,K,0.7655333176030278
+advection_initial,2020,12,temperature,300,6,1.601199140437591,K,0.7998742303273115
+advection_initial,2020,12,temperature,350,6,1.4478519314497853,K,
+advection_initial,2020,12,temperature,400,6,1.6019895817081944,K,0.8561356435007799
+advection_initial,2020,12,temperature,450,6,1.60390017792091,K,
+advection_initial,2020,12,temperature,500,6,1.5322262796160673,K,0.8833783192858564
+advection_initial,2020,12,temperature,550,6,1.6136023498848222,K,
+advection_initial,2020,12,temperature,600,6,1.554784246588831,K,0.8774635599313899
+advection_initial,2020,12,temperature,650,6,1.6962664942586703,K,
+advection_initial,2020,12,temperature,700,6,1.688596530472956,K,0.8494024934598126
+advection_initial,2020,12,temperature,750,6,1.8599130162201645,K,
+advection_initial,2020,12,temperature,775,6,1.9766376510392507,K,
+advection_initial,2020,12,temperature,800,6,2.107413569184749,K,
+advection_initial,2020,12,temperature,825,6,2.2896367387660392,K,
+advection_initial,2020,12,temperature,850,6,2.517937516464964,K,0.7050297155088766
+advection_initial,2020,12,temperature,875,6,2.741837837555931,K,
+advection_initial,2020,12,temperature,900,6,2.9411509284412833,K,
+advection_initial,2020,12,temperature,925,6,3.0078875589310754,K,0.577369570565546
+advection_initial,2020,12,temperature,950,6,2.94678131900568,K,
+advection_initial,2020,12,temperature,975,6,2.9207810478429623,K,
+advection_initial,2020,12,temperature,1000,6,2.858434242362259,K,0.5699697999608366
+advection_initial,2020,12,geopotential,1,6,749.94395115584,m2 s-2,
+advection_initial,2020,12,geopotential,2,6,511.0981173152535,m2 s-2,
+advection_initial,2020,12,geopotential,3,6,459.7404832432156,m2 s-2,
+advection_initial,2020,12,geopotential,5,6,323.54068130383524,m2 s-2,
+advection_initial,2020,12,geopotential,7,6,262.9236770167833,m2 s-2,
+advection_initial,2020,12,geopotential,10,6,230.98918039434537,m2 s-2,
+advection_initial,2020,12,geopotential,20,6,320.3701509682572,m2 s-2,
+advection_initial,2020,12,geopotential,30,6,279.9647706800056,m2 s-2,
+advection_initial,2020,12,geopotential,50,6,218.7713735614738,m2 s-2,0.9846703936073848
+advection_initial,2020,12,geopotential,70,6,244.0205137528587,m2 s-2,
+advection_initial,2020,12,geopotential,100,6,319.6225192330073,m2 s-2,0.9542089992079634
+advection_initial,2020,12,geopotential,125,6,294.75434268672905,m2 s-2,
+advection_initial,2020,12,geopotential,150,6,286.65216643849175,m2 s-2,0.9658472681393576
+advection_initial,2020,12,geopotential,175,6,287.2320185659,m2 s-2,
+advection_initial,2020,12,geopotential,200,6,289.40812212910447,m2 s-2,0.9671714547398226
+advection_initial,2020,12,geopotential,225,6,299.01564087221243,m2 s-2,
+advection_initial,2020,12,geopotential,250,6,308.0900348976655,m2 s-2,0.9640315620698042
+advection_initial,2020,12,geopotential,300,6,312.9035222725274,m2 s-2,0.9608524572160526
+advection_initial,2020,12,geopotential,350,6,300.65351527132276,m2 s-2,
+advection_initial,2020,12,geopotential,400,6,281.03149099160566,m2 s-2,0.957705201699119
+advection_initial,2020,12,geopotential,450,6,262.1903763196683,m2 s-2,
+advection_initial,2020,12,geopotential,500,6,247.2398978962472,m2 s-2,0.9543639200196491
+advection_initial,2020,12,geopotential,550,6,236.12039130650297,m2 s-2,
+advection_initial,2020,12,geopotential,600,6,229.22219731060883,m2 s-2,0.947166869888478
+advection_initial,2020,12,geopotential,650,6,227.64676550150764,m2 s-2,
+advection_initial,2020,12,geopotential,700,6,229.78719151780433,m2 s-2,0.931990882418579
+advection_initial,2020,12,geopotential,750,6,233.32311485801907,m2 s-2,
+advection_initial,2020,12,geopotential,775,6,236.5810742433092,m2 s-2,
+advection_initial,2020,12,geopotential,800,6,240.9126946787199,m2 s-2,
+advection_initial,2020,12,geopotential,825,6,245.95548708063308,m2 s-2,
+advection_initial,2020,12,geopotential,850,6,251.4889491567257,m2 s-2,0.8970872814900108
+advection_initial,2020,12,geopotential,875,6,257.5896461019516,m2 s-2,
+advection_initial,2020,12,geopotential,900,6,264.5522310770488,m2 s-2,
+advection_initial,2020,12,geopotential,925,6,271.8887958898303,m2 s-2,0.8772436069041124
+advection_initial,2020,12,geopotential,950,6,279.52671710825905,m2 s-2,
+advection_initial,2020,12,geopotential,975,6,287.2367549491524,m2 s-2,
+advection_initial,2020,12,geopotential,1000,6,294.75636584381874,m2 s-2,0.8596740431448847
+advection_initial,2020,12,u_component_of_wind,1,6,8.108764052650157,m s-1,
+advection_initial,2020,12,u_component_of_wind,2,6,6.0785205421432,m s-1,
+advection_initial,2020,12,u_component_of_wind,3,6,4.451409168110193,m s-1,
+advection_initial,2020,12,u_component_of_wind,5,6,3.535799936672627,m s-1,
+advection_initial,2020,12,u_component_of_wind,7,6,3.198434192201306,m s-1,
+advection_initial,2020,12,u_component_of_wind,10,6,3.2899007142598817,m s-1,
+advection_initial,2020,12,u_component_of_wind,20,6,3.0976161945052088,m s-1,
+advection_initial,2020,12,u_component_of_wind,30,6,2.9923151233714727,m s-1,
+advection_initial,2020,12,u_component_of_wind,50,6,4.557356915108776,m s-1,0.8376548888523546
+advection_initial,2020,12,u_component_of_wind,70,6,5.289229476627873,m s-1,
+advection_initial,2020,12,u_component_of_wind,100,6,6.278994171890275,m s-1,0.6196475050004276
+advection_initial,2020,12,u_component_of_wind,125,6,8.969308440731377,m s-1,
+advection_initial,2020,12,u_component_of_wind,150,6,9.999380759540951,m s-1,0.4935221970109715
+advection_initial,2020,12,u_component_of_wind,175,6,10.074104652110707,m s-1,
+advection_initial,2020,12,u_component_of_wind,200,6,10.607870980988091,m s-1,0.5438041737568825
+advection_initial,2020,12,u_component_of_wind,225,6,11.275899798909416,m s-1,
+advection_initial,2020,12,u_component_of_wind,250,6,11.133342148951124,m s-1,0.5425580813818333
+advection_initial,2020,12,u_component_of_wind,300,6,10.42925156875925,m s-1,0.5552444806676039
+advection_initial,2020,12,u_component_of_wind,350,6,9.54438676373477,m s-1,
+advection_initial,2020,12,u_component_of_wind,400,6,8.294086340792486,m s-1,0.5967734723525355
+advection_initial,2020,12,u_component_of_wind,450,6,7.6689646186202545,m s-1,
+advection_initial,2020,12,u_component_of_wind,500,6,6.799445393008886,m s-1,0.6034612953719768
+advection_initial,2020,12,u_component_of_wind,550,6,6.210807858699901,m s-1,
+advection_initial,2020,12,u_component_of_wind,600,6,5.88656904889217,m s-1,0.5943516751609023
+advection_initial,2020,12,u_component_of_wind,650,6,5.612683192279785,m s-1,
+advection_initial,2020,12,u_component_of_wind,700,6,5.362750524225139,m s-1,0.5726072153037932
+advection_initial,2020,12,u_component_of_wind,750,6,5.150811055270733,m s-1,
+advection_initial,2020,12,u_component_of_wind,775,6,5.099247650640441,m s-1,
+advection_initial,2020,12,u_component_of_wind,800,6,5.078515871929334,m s-1,
+advection_initial,2020,12,u_component_of_wind,825,6,5.066198755363092,m s-1,
+advection_initial,2020,12,u_component_of_wind,850,6,5.082880311229101,m s-1,0.5154937329752639
+advection_initial,2020,12,u_component_of_wind,875,6,5.1350779174235734,m s-1,
+advection_initial,2020,12,u_component_of_wind,900,6,5.176559814990917,m s-1,
+advection_initial,2020,12,u_component_of_wind,925,6,5.103983630194727,m s-1,0.4902838977313347
+advection_initial,2020,12,u_component_of_wind,950,6,4.8081299361513,m s-1,
+advection_initial,2020,12,u_component_of_wind,975,6,4.321887957741694,m s-1,
+advection_initial,2020,12,u_component_of_wind,1000,6,3.710860405224868,m s-1,0.5649745891064429
+advection_initial,2020,12,v_component_of_wind,1,6,7.412903414870543,m s-1,
+advection_initial,2020,12,v_component_of_wind,2,6,5.462466149791594,m s-1,
+advection_initial,2020,12,v_component_of_wind,3,6,4.740068538160818,m s-1,
+advection_initial,2020,12,v_component_of_wind,5,6,3.6342314286948776,m s-1,
+advection_initial,2020,12,v_component_of_wind,7,6,3.298263148342721,m s-1,
+advection_initial,2020,12,v_component_of_wind,10,6,3.0821023823921894,m s-1,
+advection_initial,2020,12,v_component_of_wind,20,6,2.915519701532531,m s-1,
+advection_initial,2020,12,v_component_of_wind,30,6,2.919497349542837,m s-1,
+advection_initial,2020,12,v_component_of_wind,50,6,4.309315442252495,m s-1,0.6703929813110782
+advection_initial,2020,12,v_component_of_wind,70,6,4.039665835227463,m s-1,
+advection_initial,2020,12,v_component_of_wind,100,6,4.712298611295452,m s-1,0.7540847634958817
+advection_initial,2020,12,v_component_of_wind,125,6,6.037679714651409,m s-1,
+advection_initial,2020,12,v_component_of_wind,150,6,7.058797680541214,m s-1,0.6412301694152626
+advection_initial,2020,12,v_component_of_wind,175,6,7.780035321304066,m s-1,
+advection_initial,2020,12,v_component_of_wind,200,6,8.552223487899193,m s-1,0.7136867204363128
+advection_initial,2020,12,v_component_of_wind,225,6,9.23092513800723,m s-1,
+advection_initial,2020,12,v_component_of_wind,250,6,9.515037079122061,m s-1,0.71863884274863
+advection_initial,2020,12,v_component_of_wind,300,6,9.086086861800625,m s-1,0.7718438323906164
+advection_initial,2020,12,v_component_of_wind,350,6,8.411673574578426,m s-1,
+advection_initial,2020,12,v_component_of_wind,400,6,7.607618723592316,m s-1,0.7865568168202546
+advection_initial,2020,12,v_component_of_wind,450,6,6.850038888886637,m s-1,
+advection_initial,2020,12,v_component_of_wind,500,6,6.175036194283051,m s-1,0.7797218093749468
+advection_initial,2020,12,v_component_of_wind,550,6,5.632213874535073,m s-1,
+advection_initial,2020,12,v_component_of_wind,600,6,5.22504288349964,m s-1,0.7618398416496195
+advection_initial,2020,12,v_component_of_wind,650,6,4.898983424172972,m s-1,
+advection_initial,2020,12,v_component_of_wind,700,6,4.632695909138011,m s-1,0.7331891964776496
+advection_initial,2020,12,v_component_of_wind,750,6,4.47628660126419,m s-1,
+advection_initial,2020,12,v_component_of_wind,775,6,4.395600296533792,m s-1,
+advection_initial,2020,12,v_component_of_wind,800,6,4.350967828940264,m s-1,
+advection_initial,2020,12,v_component_of_wind,825,6,4.359150271355066,m s-1,
+advection_initial,2020,12,v_component_of_wind,850,6,4.386973714926447,m s-1,0.6643808638146412
+advection_initial,2020,12,v_component_of_wind,875,6,4.4420869238618845,m s-1,
+advection_initial,2020,12,v_component_of_wind,900,6,4.540803200157432,m s-1,
+advection_initial,2020,12,v_component_of_wind,925,6,4.619631201315212,m s-1,0.6171557659101833
+advection_initial,2020,12,v_component_of_wind,950,6,4.54999277457766,m s-1,
+advection_initial,2020,12,v_component_of_wind,975,6,4.226616927138533,m s-1,
+advection_initial,2020,12,v_component_of_wind,1000,6,3.6663458018615627,m s-1,0.6163269778852167
+advection_initial,2020,12,vertical_velocity,1,6,0.0012795755016599937,Pa s-1,
+advection_initial,2020,12,vertical_velocity,2,6,0.004074613958175729,Pa s-1,
+advection_initial,2020,12,vertical_velocity,3,6,0.0036021500461418774,Pa s-1,
+advection_initial,2020,12,vertical_velocity,5,6,0.0030729409527584816,Pa s-1,
+advection_initial,2020,12,vertical_velocity,7,6,0.004004609564003627,Pa s-1,
+advection_initial,2020,12,vertical_velocity,10,6,0.004944344710362407,Pa s-1,
+advection_initial,2020,12,vertical_velocity,20,6,0.010559684327547954,Pa s-1,
+advection_initial,2020,12,vertical_velocity,30,6,0.010627505328619476,Pa s-1,
+advection_initial,2020,12,vertical_velocity,50,6,0.014460971022130745,Pa s-1,0.08901315380290305
+advection_initial,2020,12,vertical_velocity,70,6,0.017860347478424906,Pa s-1,
+advection_initial,2020,12,vertical_velocity,100,6,0.029904239940854498,Pa s-1,0.09623095838979423
+advection_initial,2020,12,vertical_velocity,125,6,0.04488595363112032,Pa s-1,
+advection_initial,2020,12,vertical_velocity,150,6,0.06438489516627444,Pa s-1,0.078095074394549
+advection_initial,2020,12,vertical_velocity,175,6,0.08394709995095376,Pa s-1,
+advection_initial,2020,12,vertical_velocity,200,6,0.10303134927071368,Pa s-1,0.07569729607949241
+advection_initial,2020,12,vertical_velocity,225,6,0.12181377662941748,Pa s-1,
+advection_initial,2020,12,vertical_velocity,250,6,0.14107987512432635,Pa s-1,0.07111496531042759
+advection_initial,2020,12,vertical_velocity,300,6,0.17554507974575795,Pa s-1,0.057633604741042156
+advection_initial,2020,12,vertical_velocity,350,6,0.20009420653837656,Pa s-1,
+advection_initial,2020,12,vertical_velocity,400,6,0.21896051515542433,Pa s-1,0.07763330688308014
+advection_initial,2020,12,vertical_velocity,450,6,0.2323689765679505,Pa s-1,
+advection_initial,2020,12,vertical_velocity,500,6,0.2424377766300758,Pa s-1,0.0731988528711587
+advection_initial,2020,12,vertical_velocity,550,6,0.24794982115683195,Pa s-1,
+advection_initial,2020,12,vertical_velocity,600,6,0.25438682383461153,Pa s-1,0.07588118760158928
+advection_initial,2020,12,vertical_velocity,650,6,0.25899406338108844,Pa s-1,
+advection_initial,2020,12,vertical_velocity,700,6,0.26137764534654,Pa s-1,0.08690194553263476
+advection_initial,2020,12,vertical_velocity,750,6,0.2610461674500464,Pa s-1,
+advection_initial,2020,12,vertical_velocity,775,6,0.2568931494279196,Pa s-1,
+advection_initial,2020,12,vertical_velocity,800,6,0.2514403202122693,Pa s-1,
+advection_initial,2020,12,vertical_velocity,825,6,0.24477282148048884,Pa s-1,
+advection_initial,2020,12,vertical_velocity,850,6,0.23636078417002734,Pa s-1,0.13405876103317355
+advection_initial,2020,12,vertical_velocity,875,6,0.2253284906447059,Pa s-1,
+advection_initial,2020,12,vertical_velocity,900,6,0.20869663875356587,Pa s-1,
+advection_initial,2020,12,vertical_velocity,925,6,0.18540905604994098,Pa s-1,0.15517036891083244
+advection_initial,2020,12,vertical_velocity,950,6,0.1547167722763009,Pa s-1,
+advection_initial,2020,12,vertical_velocity,975,6,0.12097612336417572,Pa s-1,
+advection_initial,2020,12,vertical_velocity,1000,6,0.09736412424639201,Pa s-1,0.2458980950679027
+advection_initial,2020,12,specific_humidity,1,6,4.487251421874075e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,2,6,3.177771784649112e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,3,6,3.3686674584112866e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,5,6,3.4265425049009104e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,7,6,3.5313751297018884e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,10,6,3.4230226730991824e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,20,6,3.6168474350729e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,30,6,4.9718439353707975e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,50,6,7.270796007916398e-08,kg kg-1,0.9242135482453837
+advection_initial,2020,12,specific_humidity,70,6,9.430689451078704e-08,kg kg-1,
+advection_initial,2020,12,specific_humidity,100,6,4.181945628097934e-07,kg kg-1,0.40438370316026934
+advection_initial,2020,12,specific_humidity,125,6,9.626423785436396e-07,kg kg-1,
+advection_initial,2020,12,specific_humidity,150,6,2.6116057923260996e-06,kg kg-1,0.3013278413771962
+advection_initial,2020,12,specific_humidity,175,6,7.950105163298913e-06,kg kg-1,
+advection_initial,2020,12,specific_humidity,200,6,1.7301674561665e-05,kg kg-1,0.25435244411080044
+advection_initial,2020,12,specific_humidity,225,6,3.679796620514546e-05,kg kg-1,
+advection_initial,2020,12,specific_humidity,250,6,6.138596449493713e-05,kg kg-1,0.25560806888962456
+advection_initial,2020,12,specific_humidity,300,6,0.0001401217252267352,kg kg-1,0.32281677990741187
+advection_initial,2020,12,specific_humidity,350,6,0.00026985733730301844,kg kg-1,
+advection_initial,2020,12,specific_humidity,400,6,0.000432492538314249,kg kg-1,0.3206521450979642
+advection_initial,2020,12,specific_humidity,450,6,0.0005993611153412143,kg kg-1,
+advection_initial,2020,12,specific_humidity,500,6,0.0008506552115321327,kg kg-1,0.35248210036372196
+advection_initial,2020,12,specific_humidity,550,6,0.00104489939991526,kg kg-1,
+advection_initial,2020,12,specific_humidity,600,6,0.0011709176263964072,kg kg-1,0.41822616623436054
+advection_initial,2020,12,specific_humidity,650,6,0.0013708667341877003,kg kg-1,
+advection_initial,2020,12,specific_humidity,700,6,0.001522129924299636,kg kg-1,0.42638600778209906
+advection_initial,2020,12,specific_humidity,750,6,0.001739712813936853,kg kg-1,
+advection_initial,2020,12,specific_humidity,775,6,0.0018323347024468118,kg kg-1,
+advection_initial,2020,12,specific_humidity,800,6,0.0019047471912060421,kg kg-1,
+advection_initial,2020,12,specific_humidity,825,6,0.001983935952203873,kg kg-1,
+advection_initial,2020,12,specific_humidity,850,6,0.0020469502351279103,kg kg-1,0.3479136340491556
+advection_initial,2020,12,specific_humidity,875,6,0.002014271410894094,kg kg-1,
+advection_initial,2020,12,specific_humidity,900,6,0.001962111643132156,kg kg-1,
+advection_initial,2020,12,specific_humidity,925,6,0.001984110815214919,kg kg-1,0.29901289445180707
+advection_initial,2020,12,specific_humidity,950,6,0.0019496213794438762,kg kg-1,
+advection_initial,2020,12,specific_humidity,975,6,0.001879700681368335,kg kg-1,
+advection_initial,2020,12,specific_humidity,1000,6,0.0018059072332948245,kg kg-1,0.42847519025270503
+advection_trained,2020,12,2m_temperature,,6,0.5837683946788585,K,0.9745621597513793
+advection_trained,2020,12,mean_sea_level_pressure,,6,32.482312007367,Pa,0.9990004356018707
+advection_trained,2020,12,10m_v_component_of_wind,,6,0.49718550988162175,m s-1,0.9925242643880873
+advection_trained,2020,12,10m_u_component_of_wind,,6,0.4871513790102641,m s-1,0.9924153890130846
+advection_trained,2020,12,total_precipitation_6hr,,6,0.0011604709062710452,m,0.8798192061820869
+advection_trained,2020,12,temperature,1,6,3.3250163777420276,K,
+advection_trained,2020,12,temperature,2,6,2.9285418880932252,K,
+advection_trained,2020,12,temperature,3,6,2.5146626469458524,K,
+advection_trained,2020,12,temperature,5,6,1.9463498548926457,K,
+advection_trained,2020,12,temperature,7,6,1.688650540957159,K,
+advection_trained,2020,12,temperature,10,6,1.4750692019456488,K,
+advection_trained,2020,12,temperature,20,6,1.1792798663551485,K,
+advection_trained,2020,12,temperature,30,6,0.9280276811176784,K,
+advection_trained,2020,12,temperature,50,6,0.6655436001145885,K,0.9799688202262606
+advection_trained,2020,12,temperature,70,6,0.6086937160386522,K,
+advection_trained,2020,12,temperature,100,6,0.44557986003522126,K,0.9915671900161053
+advection_trained,2020,12,temperature,125,6,0.3434951858388213,K,
+advection_trained,2020,12,temperature,150,6,0.31411751848954356,K,0.9958141867594116
+advection_trained,2020,12,temperature,175,6,0.3093651392405768,K,
+advection_trained,2020,12,temperature,200,6,0.3235234550738226,K,0.9965620879776312
+advection_trained,2020,12,temperature,225,6,0.314495212159094,K,
+advection_trained,2020,12,temperature,250,6,0.2951509617273139,K,0.9954917598790868
+advection_trained,2020,12,temperature,300,6,0.25887294942328315,K,0.9952487910678839
+advection_trained,2020,12,temperature,350,6,0.24505258741487954,K,
+advection_trained,2020,12,temperature,400,6,0.24576674039602744,K,0.9968204107545136
+advection_trained,2020,12,temperature,450,6,0.2563268387470838,K,
+advection_trained,2020,12,temperature,500,6,0.24160081721191654,K,0.9971584094019285
+advection_trained,2020,12,temperature,550,6,0.24600753659046853,K,
+advection_trained,2020,12,temperature,600,6,0.25511914145131376,K,0.9968206648115318
+advection_trained,2020,12,temperature,650,6,0.259837159308803,K,
+advection_trained,2020,12,temperature,700,6,0.267237350837219,K,0.9965081280452863
+advection_trained,2020,12,temperature,750,6,0.2774188317301609,K,
+advection_trained,2020,12,temperature,775,6,0.28688434705327964,K,
+advection_trained,2020,12,temperature,800,6,0.30247151740807454,K,
+advection_trained,2020,12,temperature,825,6,0.32678536236697014,K,
+advection_trained,2020,12,temperature,850,6,0.33982176516968343,K,0.9950517376832538
+advection_trained,2020,12,temperature,875,6,0.3434502680139808,K,
+advection_trained,2020,12,temperature,900,6,0.35607726992329586,K,
+advection_trained,2020,12,temperature,925,6,0.35798073800389413,K,0.9935368821069067
+advection_trained,2020,12,temperature,950,6,0.36864676185963513,K,
+advection_trained,2020,12,temperature,975,6,0.3861165554026775,K,
+advection_trained,2020,12,temperature,1000,6,0.393290928351914,K,0.9897536624037936
+advection_trained,2020,12,geopotential,1,6,681.6310554417342,m2 s-2,
+advection_trained,2020,12,geopotential,2,6,457.40744585485294,m2 s-2,
+advection_trained,2020,12,geopotential,3,6,352.7218467985417,m2 s-2,
+advection_trained,2020,12,geopotential,5,6,257.07439217980743,m2 s-2,
+advection_trained,2020,12,geopotential,7,6,213.3404091988127,m2 s-2,
+advection_trained,2020,12,geopotential,10,6,175.3739475640301,m2 s-2,
+advection_trained,2020,12,geopotential,20,6,114.82461294763968,m2 s-2,
+advection_trained,2020,12,geopotential,30,6,85.92019185993583,m2 s-2,
+advection_trained,2020,12,geopotential,50,6,60.570648648967214,m2 s-2,0.9986903419672569
+advection_trained,2020,12,geopotential,70,6,48.06074182636968,m2 s-2,
+advection_trained,2020,12,geopotential,100,6,38.31562561697731,m2 s-2,0.9993364723905266
+advection_trained,2020,12,geopotential,125,6,33.72558683866605,m2 s-2,
+advection_trained,2020,12,geopotential,150,6,31.49883122832736,m2 s-2,0.9995494128497558
+advection_trained,2020,12,geopotential,175,6,30.238973603418458,m2 s-2,
+advection_trained,2020,12,geopotential,200,6,29.396144265047198,m2 s-2,0.9996473714709557
+advection_trained,2020,12,geopotential,225,6,28.901705763096874,m2 s-2,
+advection_trained,2020,12,geopotential,250,6,28.896063167096468,m2 s-2,0.9996889559412993
+advection_trained,2020,12,geopotential,300,6,28.40142170003741,m2 s-2,0.9996852465375725
+advection_trained,2020,12,geopotential,350,6,26.786674231350275,m2 s-2,
+advection_trained,2020,12,geopotential,400,6,25.210979852257747,m2 s-2,0.9996702336190303
+advection_trained,2020,12,geopotential,450,6,23.67815984405485,m2 s-2,
+advection_trained,2020,12,geopotential,500,6,22.62512059271161,m2 s-2,0.9996302415120164
+advection_trained,2020,12,geopotential,550,6,21.988511544489242,m2 s-2,
+advection_trained,2020,12,geopotential,600,6,21.578554858138887,m2 s-2,0.9995467247964848
+advection_trained,2020,12,geopotential,650,6,21.48226127725296,m2 s-2,
+advection_trained,2020,12,geopotential,700,6,21.589053362781268,m2 s-2,0.9994210887457119
+advection_trained,2020,12,geopotential,750,6,21.753528854769666,m2 s-2,
+advection_trained,2020,12,geopotential,775,6,21.89949015797901,m2 s-2,
+advection_trained,2020,12,geopotential,800,6,22.10063859140626,m2 s-2,
+advection_trained,2020,12,geopotential,825,6,22.341487911287718,m2 s-2,
+advection_trained,2020,12,geopotential,850,6,22.659956476115415,m2 s-2,0.9992049869109727
+advection_trained,2020,12,geopotential,875,6,23.016093078239514,m2 s-2,
+advection_trained,2020,12,geopotential,900,6,23.453084998069677,m2 s-2,
+advection_trained,2020,12,geopotential,925,6,23.947613165350774,m2 s-2,0.9990997728627614
+advection_trained,2020,12,geopotential,950,6,24.45436622514664,m2 s-2,
+advection_trained,2020,12,geopotential,975,6,25.024552930472325,m2 s-2,
+advection_trained,2020,12,geopotential,1000,6,25.675537646701514,m2 s-2,0.9989995838009058
+advection_trained,2020,12,u_component_of_wind,1,6,7.6517398444508995,m s-1,
+advection_trained,2020,12,u_component_of_wind,2,6,5.488288544155439,m s-1,
+advection_trained,2020,12,u_component_of_wind,3,6,4.36611461932831,m s-1,
+advection_trained,2020,12,u_component_of_wind,5,6,3.4209134324493222,m s-1,
+advection_trained,2020,12,u_component_of_wind,7,6,3.028521748235197,m s-1,
+advection_trained,2020,12,u_component_of_wind,10,6,2.768785282401843,m s-1,
+advection_trained,2020,12,u_component_of_wind,20,6,2.246722387958428,m s-1,
+advection_trained,2020,12,u_component_of_wind,30,6,1.8971966117736445,m s-1,
+advection_trained,2020,12,u_component_of_wind,50,6,1.4400911262663958,m s-1,0.9844955916662116
+advection_trained,2020,12,u_component_of_wind,70,6,1.2012224372484623,m s-1,
+advection_trained,2020,12,u_component_of_wind,100,6,1.086218654234559,m s-1,0.9903077729447216
+advection_trained,2020,12,u_component_of_wind,125,6,1.0228550850982254,m s-1,
+advection_trained,2020,12,u_component_of_wind,150,6,1.0507180259166844,m s-1,0.9946689929631747
+advection_trained,2020,12,u_component_of_wind,175,6,1.062307521958003,m s-1,
+advection_trained,2020,12,u_component_of_wind,200,6,1.1016660598297447,m s-1,0.9957109058291792
+advection_trained,2020,12,u_component_of_wind,225,6,1.1626432289267636,m s-1,
+advection_trained,2020,12,u_component_of_wind,250,6,1.189124012818233,m s-1,0.9956503375921316
+advection_trained,2020,12,u_component_of_wind,300,6,1.15524110264671,m s-1,0.9955816952069143
+advection_trained,2020,12,u_component_of_wind,350,6,1.0627418963493604,m s-1,
+advection_trained,2020,12,u_component_of_wind,400,6,0.9601973351265318,m s-1,0.9956342198755325
+advection_trained,2020,12,u_component_of_wind,450,6,0.8747302234703607,m s-1,
+advection_trained,2020,12,u_component_of_wind,500,6,0.7999713030629685,m s-1,0.9955544337970067
+advection_trained,2020,12,u_component_of_wind,550,6,0.7720556587007398,m s-1,
+advection_trained,2020,12,u_component_of_wind,600,6,0.7395344573078432,m s-1,0.9948647429284218
+advection_trained,2020,12,u_component_of_wind,650,6,0.7206112367716531,m s-1,
+advection_trained,2020,12,u_component_of_wind,700,6,0.6855495689396112,m s-1,0.9944851214926497
+advection_trained,2020,12,u_component_of_wind,750,6,0.6676490302290711,m s-1,
+advection_trained,2020,12,u_component_of_wind,775,6,0.6620903670666772,m s-1,
+advection_trained,2020,12,u_component_of_wind,800,6,0.6595949444301679,m s-1,
+advection_trained,2020,12,u_component_of_wind,825,6,0.6595401049830902,m s-1,
+advection_trained,2020,12,u_component_of_wind,850,6,0.658971084378024,m s-1,0.9936729218728684
+advection_trained,2020,12,u_component_of_wind,875,6,0.653828923912443,m s-1,
+advection_trained,2020,12,u_component_of_wind,900,6,0.6404273279761458,m s-1,
+advection_trained,2020,12,u_component_of_wind,925,6,0.6308532424552946,m s-1,0.9939470065760032
+advection_trained,2020,12,u_component_of_wind,950,6,0.6080193132744188,m s-1,
+advection_trained,2020,12,u_component_of_wind,975,6,0.5745508896828173,m s-1,
+advection_trained,2020,12,u_component_of_wind,1000,6,0.5295495387415283,m s-1,0.9928749972555767
+advection_trained,2020,12,v_component_of_wind,1,6,7.027016548910696,m s-1,
+advection_trained,2020,12,v_component_of_wind,2,6,5.439650353894684,m s-1,
+advection_trained,2020,12,v_component_of_wind,3,6,4.518099771654506,m s-1,
+advection_trained,2020,12,v_component_of_wind,5,6,3.5954268774659903,m s-1,
+advection_trained,2020,12,v_component_of_wind,7,6,3.1913208570487073,m s-1,
+advection_trained,2020,12,v_component_of_wind,10,6,2.900336131013898,m s-1,
+advection_trained,2020,12,v_component_of_wind,20,6,2.461720047751964,m s-1,
+advection_trained,2020,12,v_component_of_wind,30,6,2.0991006062954316,m s-1,
+advection_trained,2020,12,v_component_of_wind,50,6,1.4645231675804247,m s-1,0.9620034397427973
+advection_trained,2020,12,v_component_of_wind,70,6,1.2283740211522212,m s-1,
+advection_trained,2020,12,v_component_of_wind,100,6,1.0701487578889988,m s-1,0.9876199469839574
+advection_trained,2020,12,v_component_of_wind,125,6,1.0344579286844124,m s-1,
+advection_trained,2020,12,v_component_of_wind,150,6,1.0367626549763789,m s-1,0.993574744807446
+advection_trained,2020,12,v_component_of_wind,175,6,1.0599020045770022,m s-1,
+advection_trained,2020,12,v_component_of_wind,200,6,1.1106449994182692,m s-1,0.9953377107265373
+advection_trained,2020,12,v_component_of_wind,225,6,1.167366720111098,m s-1,
+advection_trained,2020,12,v_component_of_wind,250,6,1.191953153038113,m s-1,0.9955677634121942
+advection_trained,2020,12,v_component_of_wind,300,6,1.1884250336660864,m s-1,0.9953288900031847
+advection_trained,2020,12,v_component_of_wind,350,6,1.086884129955647,m s-1,
+advection_trained,2020,12,v_component_of_wind,400,6,0.9861226348863056,m s-1,0.9953672999472768
+advection_trained,2020,12,v_component_of_wind,450,6,0.8840918354774273,m s-1,
+advection_trained,2020,12,v_component_of_wind,500,6,0.805072381155417,m s-1,0.9953741818320613
+advection_trained,2020,12,v_component_of_wind,550,6,0.7672141260827895,m s-1,
+advection_trained,2020,12,v_component_of_wind,600,6,0.7356390682168025,m s-1,0.9945954027186733
+advection_trained,2020,12,v_component_of_wind,650,6,0.7030362773030455,m s-1,
+advection_trained,2020,12,v_component_of_wind,700,6,0.6796237347162004,m s-1,0.9940323460898027
+advection_trained,2020,12,v_component_of_wind,750,6,0.658096439261355,m s-1,
+advection_trained,2020,12,v_component_of_wind,775,6,0.6535657506839097,m s-1,
+advection_trained,2020,12,v_component_of_wind,800,6,0.6494317588717977,m s-1,
+advection_trained,2020,12,v_component_of_wind,825,6,0.6528620067803599,m s-1,
+advection_trained,2020,12,v_component_of_wind,850,6,0.6620038741179375,m s-1,0.9930423324740293
+advection_trained,2020,12,v_component_of_wind,875,6,0.6625897788093814,m s-1,
+advection_trained,2020,12,v_component_of_wind,900,6,0.6522268971367735,m s-1,
+advection_trained,2020,12,v_component_of_wind,925,6,0.6395738177011838,m s-1,0.9938238111163095
+advection_trained,2020,12,v_component_of_wind,950,6,0.6210757038531736,m s-1,
+advection_trained,2020,12,v_component_of_wind,975,6,0.5886254458322548,m s-1,
+advection_trained,2020,12,v_component_of_wind,1000,6,0.5367683791484492,m s-1,0.9932405514275561
+advection_trained,2020,12,vertical_velocity,1,6,0.0012516299560098902,Pa s-1,
+advection_trained,2020,12,vertical_velocity,2,6,0.0018062023988874157,Pa s-1,
+advection_trained,2020,12,vertical_velocity,3,6,0.0022526300392687057,Pa s-1,
+advection_trained,2020,12,vertical_velocity,5,6,0.002979372373181316,Pa s-1,
+advection_trained,2020,12,vertical_velocity,7,6,0.0037514529045643815,Pa s-1,
+advection_trained,2020,12,vertical_velocity,10,6,0.004631354338429527,Pa s-1,
+advection_trained,2020,12,vertical_velocity,20,6,0.00668444207985555,Pa s-1,
+advection_trained,2020,12,vertical_velocity,30,6,0.007924257988557273,Pa s-1,
+advection_trained,2020,12,vertical_velocity,50,6,0.009678159068138948,Pa s-1,0.6393361515706907
+advection_trained,2020,12,vertical_velocity,70,6,0.011784670599219626,Pa s-1,
+advection_trained,2020,12,vertical_velocity,100,6,0.01889407912382535,Pa s-1,0.7432162022902284
+advection_trained,2020,12,vertical_velocity,125,6,0.02988951778855994,Pa s-1,
+advection_trained,2020,12,vertical_velocity,150,6,0.04268680428285835,Pa s-1,0.7359886199922694
+advection_trained,2020,12,vertical_velocity,175,6,0.055361108154332185,Pa s-1,
+advection_trained,2020,12,vertical_velocity,200,6,0.06683063188570183,Pa s-1,0.7523573197511743
+advection_trained,2020,12,vertical_velocity,225,6,0.07729385596102,Pa s-1,
+advection_trained,2020,12,vertical_velocity,250,6,0.08675507577615346,Pa s-1,0.7759129124265204
+advection_trained,2020,12,vertical_velocity,300,6,0.10412887379653213,Pa s-1,0.7905752785034378
+advection_trained,2020,12,vertical_velocity,350,6,0.11889157406741001,Pa s-1,
+advection_trained,2020,12,vertical_velocity,400,6,0.12971947440283693,Pa s-1,0.8008399452693734
+advection_trained,2020,12,vertical_velocity,450,6,0.13664595592326145,Pa s-1,
+advection_trained,2020,12,vertical_velocity,500,6,0.1416794816281648,Pa s-1,0.8032129044531978
+advection_trained,2020,12,vertical_velocity,550,6,0.14676841196672732,Pa s-1,
+advection_trained,2020,12,vertical_velocity,600,6,0.15109748339800394,Pa s-1,0.7966230655950383
+advection_trained,2020,12,vertical_velocity,650,6,0.1530258870185049,Pa s-1,
+advection_trained,2020,12,vertical_velocity,700,6,0.15176616384514066,Pa s-1,0.802405165310193
+advection_trained,2020,12,vertical_velocity,750,6,0.1490425068691178,Pa s-1,
+advection_trained,2020,12,vertical_velocity,775,6,0.1463614467238478,Pa s-1,
+advection_trained,2020,12,vertical_velocity,800,6,0.14280532317854466,Pa s-1,
+advection_trained,2020,12,vertical_velocity,825,6,0.13783242721262756,Pa s-1,
+advection_trained,2020,12,vertical_velocity,850,6,0.13104448394381377,Pa s-1,0.8186986127604642
+advection_trained,2020,12,vertical_velocity,875,6,0.12244413266539551,Pa s-1,
+advection_trained,2020,12,vertical_velocity,900,6,0.11109029024257179,Pa s-1,
+advection_trained,2020,12,vertical_velocity,925,6,0.09585531004238819,Pa s-1,0.8292983234909452
+advection_trained,2020,12,vertical_velocity,950,6,0.07665211231934614,Pa s-1,
+advection_trained,2020,12,vertical_velocity,975,6,0.05497385562378211,Pa s-1,
+advection_trained,2020,12,vertical_velocity,1000,6,0.03785644583620563,Pa s-1,0.8633544449729021
+advection_trained,2020,12,specific_humidity,1,6,4.457749723534836e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,2,6,3.150904702134822e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,3,6,3.221966183571908e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,5,6,3.3631598605252015e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,7,6,3.4144659089728714e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,10,6,3.4026113254707766e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,20,6,3.158427178554107e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,30,6,2.2964860754040743e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,50,6,1.9100075515785552e-08,kg kg-1,0.9948022851211257
+advection_trained,2020,12,specific_humidity,70,6,3.548506322944926e-08,kg kg-1,
+advection_trained,2020,12,specific_humidity,100,6,1.040901109851037e-07,kg kg-1,0.9695562478472032
+advection_trained,2020,12,specific_humidity,125,6,2.94737672456868e-07,kg kg-1,
+advection_trained,2020,12,specific_humidity,150,6,8.327406420998311e-07,kg kg-1,0.9495676047522262
+advection_trained,2020,12,specific_humidity,175,6,2.2276175427266035e-06,kg kg-1,
+advection_trained,2020,12,specific_humidity,200,6,5.075219184131562e-06,kg kg-1,0.955909757339
+advection_trained,2020,12,specific_humidity,225,6,1.0148447604956456e-05,kg kg-1,
+advection_trained,2020,12,specific_humidity,250,6,1.694707811853821e-05,kg kg-1,0.9613842447814861
+advection_trained,2020,12,specific_humidity,300,6,3.401225119016657e-05,kg kg-1,0.9721886628849535
+advection_trained,2020,12,specific_humidity,350,6,5.712590294210458e-05,kg kg-1,
+advection_trained,2020,12,specific_humidity,400,6,8.546955302807417e-05,kg kg-1,0.9814594634151489
+advection_trained,2020,12,specific_humidity,450,6,0.00012349321381633388,kg kg-1,
+advection_trained,2020,12,specific_humidity,500,6,0.00015805119756151175,kg kg-1,0.9833734754392655
+advection_trained,2020,12,specific_humidity,550,6,0.0001968581565617293,kg kg-1,
+advection_trained,2020,12,specific_humidity,600,6,0.00022117288776140985,kg kg-1,0.9845951388457929
+advection_trained,2020,12,specific_humidity,650,6,0.00025934131629221937,kg kg-1,
+advection_trained,2020,12,specific_humidity,700,6,0.00029096312536109763,kg kg-1,0.9843104884421078
+advection_trained,2020,12,specific_humidity,750,6,0.0003290977891834003,kg kg-1,
+advection_trained,2020,12,specific_humidity,775,6,0.0003369652522724733,kg kg-1,
+advection_trained,2020,12,specific_humidity,800,6,0.0003508161322925082,kg kg-1,
+advection_trained,2020,12,specific_humidity,825,6,0.0003650495850534242,kg kg-1,
+advection_trained,2020,12,specific_humidity,850,6,0.00037638523262585583,kg kg-1,0.9806017081545048
+advection_trained,2020,12,specific_humidity,875,6,0.00037315159893783624,kg kg-1,
+advection_trained,2020,12,specific_humidity,900,6,0.0003675978155785053,kg kg-1,
+advection_trained,2020,12,specific_humidity,925,6,0.00036329136667550204,kg kg-1,0.9723504931119312
+advection_trained,2020,12,specific_humidity,950,6,0.0003359478335202981,kg kg-1,
+advection_trained,2020,12,specific_humidity,975,6,0.00030742265791011697,kg kg-1,
+advection_trained,2020,12,specific_humidity,1000,6,0.00029425093384924264,kg kg-1,0.9814733855456529
+advection_off,2020,12,2m_temperature,,6,0.5837830715847033,K,0.9745617902625328
+advection_off,2020,12,mean_sea_level_pressure,,6,32.477507043485,Pa,0.9990004732677985
+advection_off,2020,12,10m_v_component_of_wind,,6,0.4971946214464475,m s-1,0.9925240450281168
+advection_off,2020,12,10m_u_component_of_wind,,6,0.48720471222562467,m s-1,0.992413659871865
+advection_off,2020,12,total_precipitation_6hr,,6,0.001160290900827225,m,0.8798541817527076
+advection_off,2020,12,temperature,1,6,3.3250563327894596,K,
+advection_off,2020,12,temperature,2,6,2.9286514144408042,K,
+advection_off,2020,12,temperature,3,6,2.5146967074632025,K,
+advection_off,2020,12,temperature,5,6,1.9463960939345448,K,
+advection_off,2020,12,temperature,7,6,1.6886018763319073,K,
+advection_off,2020,12,temperature,10,6,1.4750883157964603,K,
+advection_off,2020,12,temperature,20,6,1.1792644935869074,K,
+advection_off,2020,12,temperature,30,6,0.9279296101911606,K,
+advection_off,2020,12,temperature,50,6,0.6655328386938344,K,0.979968700029636
+advection_off,2020,12,temperature,70,6,0.6086849026075153,K,
+advection_off,2020,12,temperature,100,6,0.445644790807953,K,0.9915655753345827
+advection_off,2020,12,temperature,125,6,0.34347000746298306,K,
+advection_off,2020,12,temperature,150,6,0.31409606978548393,K,0.9958147581471364
+advection_off,2020,12,temperature,175,6,0.3093507283078558,K,
+advection_off,2020,12,temperature,200,6,0.32348238042918837,K,0.9965627334953115
+advection_off,2020,12,temperature,225,6,0.3144949049480338,K,
+advection_off,2020,12,temperature,250,6,0.2951252186571655,K,0.9954924855140669
+advection_off,2020,12,temperature,300,6,0.25890412578281896,K,0.9952476784961153
+advection_off,2020,12,temperature,350,6,0.24504840218776772,K,
+advection_off,2020,12,temperature,400,6,0.24577320102985536,K,0.9968202479009554
+advection_off,2020,12,temperature,450,6,0.25629632144596604,K,
+advection_off,2020,12,temperature,500,6,0.24160913226633657,K,0.9971582285174078
+advection_off,2020,12,temperature,550,6,0.24599671415882793,K,
+advection_off,2020,12,temperature,600,6,0.2551210811394375,K,0.9968204528113528
+advection_off,2020,12,temperature,650,6,0.25981338757103484,K,
+advection_off,2020,12,temperature,700,6,0.26720403598427206,K,0.9965089373781396
+advection_off,2020,12,temperature,750,6,0.2773804734392802,K,
+advection_off,2020,12,temperature,775,6,0.2868762211572674,K,
+advection_off,2020,12,temperature,800,6,0.3024624991280724,K,
+advection_off,2020,12,temperature,825,6,0.3267507639883581,K,
+advection_off,2020,12,temperature,850,6,0.33977934174024554,K,0.9950530742743027
+advection_off,2020,12,temperature,875,6,0.3434698888278728,K,
+advection_off,2020,12,temperature,900,6,0.3560844570687759,K,
+advection_off,2020,12,temperature,925,6,0.35797912377285634,K,0.9935370205285445
+advection_off,2020,12,temperature,950,6,0.3686414465575353,K,
+advection_off,2020,12,temperature,975,6,0.38611250479650017,K,
+advection_off,2020,12,temperature,1000,6,0.3933198050830102,K,0.989751956983405
+advection_off,2020,12,geopotential,1,6,681.6768133333766,m2 s-2,
+advection_off,2020,12,geopotential,2,6,457.4301208835671,m2 s-2,
+advection_off,2020,12,geopotential,3,6,352.7455938959595,m2 s-2,
+advection_off,2020,12,geopotential,5,6,257.0899408844198,m2 s-2,
+advection_off,2020,12,geopotential,7,6,213.35628146681728,m2 s-2,
+advection_off,2020,12,geopotential,10,6,175.3809204559068,m2 s-2,
+advection_off,2020,12,geopotential,20,6,114.8298092794613,m2 s-2,
+advection_off,2020,12,geopotential,30,6,85.91942547151791,m2 s-2,
+advection_off,2020,12,geopotential,50,6,60.57331367685929,m2 s-2,0.9986898239535704
+advection_off,2020,12,geopotential,70,6,48.06046197188949,m2 s-2,
+advection_off,2020,12,geopotential,100,6,38.31733231575732,m2 s-2,0.999336006925177
+advection_off,2020,12,geopotential,125,6,33.728571873334964,m2 s-2,
+advection_off,2020,12,geopotential,150,6,31.50224056257812,m2 s-2,0.9995491823896075
+advection_off,2020,12,geopotential,175,6,30.24521921255574,m2 s-2,
+advection_off,2020,12,geopotential,200,6,29.403519197766744,m2 s-2,0.99964715264781
+advection_off,2020,12,geopotential,225,6,28.90788727274573,m2 s-2,
+advection_off,2020,12,geopotential,250,6,28.899393232518438,m2 s-2,0.9996888385860658
+advection_off,2020,12,geopotential,300,6,28.403342860965832,m2 s-2,0.9996851450563738
+advection_off,2020,12,geopotential,350,6,26.790701630724538,m2 s-2,
+advection_off,2020,12,geopotential,400,6,25.214224882983164,m2 s-2,0.9996700769948349
+advection_off,2020,12,geopotential,450,6,23.68113600187711,m2 s-2,
+advection_off,2020,12,geopotential,500,6,22.626089561393428,m2 s-2,0.9996301174169581
+advection_off,2020,12,geopotential,550,6,21.989428557986592,m2 s-2,
+advection_off,2020,12,geopotential,600,6,21.577302442811558,m2 s-2,0.9995466578332503
+advection_off,2020,12,geopotential,650,6,21.482749994850977,m2 s-2,
+advection_off,2020,12,geopotential,700,6,21.586633666569206,m2 s-2,0.9994210551196612
+advection_off,2020,12,geopotential,750,6,21.750511273342234,m2 s-2,
+advection_off,2020,12,geopotential,775,6,21.8975415489773,m2 s-2,
+advection_off,2020,12,geopotential,800,6,22.099870109525618,m2 s-2,
+advection_off,2020,12,geopotential,825,6,22.340349324491804,m2 s-2,
+advection_off,2020,12,geopotential,850,6,22.658158858707274,m2 s-2,0.9992048810674161
+advection_off,2020,12,geopotential,875,6,23.01457965222594,m2 s-2,
+advection_off,2020,12,geopotential,900,6,23.449491908456213,m2 s-2,
+advection_off,2020,12,geopotential,925,6,23.945430142853024,m2 s-2,0.9990996703881447
+advection_off,2020,12,geopotential,950,6,24.452258835400503,m2 s-2,
+advection_off,2020,12,geopotential,975,6,25.021179964378064,m2 s-2,
+advection_off,2020,12,geopotential,1000,6,25.674642912838017,m2 s-2,0.9989993772831386
+advection_off,2020,12,u_component_of_wind,1,6,7.651717757530064,m s-1,
+advection_off,2020,12,u_component_of_wind,2,6,5.488269034508618,m s-1,
+advection_off,2020,12,u_component_of_wind,3,6,4.365990139312345,m s-1,
+advection_off,2020,12,u_component_of_wind,5,6,3.4208612930856908,m s-1,
+advection_off,2020,12,u_component_of_wind,7,6,3.0285483720763233,m s-1,
+advection_off,2020,12,u_component_of_wind,10,6,2.768799460502827,m s-1,
+advection_off,2020,12,u_component_of_wind,20,6,2.246729924609098,m s-1,
+advection_off,2020,12,u_component_of_wind,30,6,1.8972384375024234,m s-1,
+advection_off,2020,12,u_component_of_wind,50,6,1.4401784460689506,m s-1,0.9844936339321246
+advection_off,2020,12,u_component_of_wind,70,6,1.2013646186117164,m s-1,
+advection_off,2020,12,u_component_of_wind,100,6,1.0864578893463064,m s-1,0.9903030506001879
+advection_off,2020,12,u_component_of_wind,125,6,1.0228224598982127,m s-1,
+advection_off,2020,12,u_component_of_wind,150,6,1.0508897312796295,m s-1,0.9946673417049113
+advection_off,2020,12,u_component_of_wind,175,6,1.0623780680960189,m s-1,
+advection_off,2020,12,u_component_of_wind,200,6,1.101620710642965,m s-1,0.9957112664139697
+advection_off,2020,12,u_component_of_wind,225,6,1.1626692881501008,m s-1,
+advection_off,2020,12,u_component_of_wind,250,6,1.1891349465472663,m s-1,0.9956503036582759
+advection_off,2020,12,u_component_of_wind,300,6,1.1552367374391879,m s-1,0.9955817132009496
+advection_off,2020,12,u_component_of_wind,350,6,1.0626637923036004,m s-1,
+advection_off,2020,12,u_component_of_wind,400,6,0.9603029892077772,m s-1,0.995633272006156
+advection_off,2020,12,u_component_of_wind,450,6,0.8748007766838349,m s-1,
+advection_off,2020,12,u_component_of_wind,500,6,0.8000687091326285,m s-1,0.9955534516960656
+advection_off,2020,12,u_component_of_wind,550,6,0.7721364257521788,m s-1,
+advection_off,2020,12,u_component_of_wind,600,6,0.7396540978158698,m s-1,0.9948631219480201
+advection_off,2020,12,u_component_of_wind,650,6,0.7206514417588786,m s-1,
+advection_off,2020,12,u_component_of_wind,700,6,0.6856907427500992,m s-1,0.9944828845602576
+advection_off,2020,12,u_component_of_wind,750,6,0.6676777300237593,m s-1,
+advection_off,2020,12,u_component_of_wind,775,6,0.6620987709920083,m s-1,
+advection_off,2020,12,u_component_of_wind,800,6,0.6596463176984458,m s-1,
+advection_off,2020,12,u_component_of_wind,825,6,0.6595813834422117,m s-1,
+advection_off,2020,12,u_component_of_wind,850,6,0.659030422953934,m s-1,0.9936716481358016
+advection_off,2020,12,u_component_of_wind,875,6,0.6538660941253333,m s-1,
+advection_off,2020,12,u_component_of_wind,900,6,0.6405022700754135,m s-1,
+advection_off,2020,12,u_component_of_wind,925,6,0.630926490785788,m s-1,0.9939456076046017
+advection_off,2020,12,u_component_of_wind,950,6,0.6080868037061861,m s-1,
+advection_off,2020,12,u_component_of_wind,975,6,0.5746410394214082,m s-1,
+advection_off,2020,12,u_component_of_wind,1000,6,0.5295972576970246,m s-1,0.9928737315676325
+advection_off,2020,12,v_component_of_wind,1,6,7.026967698855919,m s-1,
+advection_off,2020,12,v_component_of_wind,2,6,5.439662939741142,m s-1,
+advection_off,2020,12,v_component_of_wind,3,6,4.518177892579383,m s-1,
+advection_off,2020,12,v_component_of_wind,5,6,3.5953730988577153,m s-1,
+advection_off,2020,12,v_component_of_wind,7,6,3.191359273764628,m s-1,
+advection_off,2020,12,v_component_of_wind,10,6,2.900393628051816,m s-1,
+advection_off,2020,12,v_component_of_wind,20,6,2.4617953534390704,m s-1,
+advection_off,2020,12,v_component_of_wind,30,6,2.099241807607889,m s-1,
+advection_off,2020,12,v_component_of_wind,50,6,1.4647573237842946,m s-1,0.9619916972408142
+advection_off,2020,12,v_component_of_wind,70,6,1.2283992244429682,m s-1,
+advection_off,2020,12,v_component_of_wind,100,6,1.0701947781978776,m s-1,0.9876188954866825
+advection_off,2020,12,v_component_of_wind,125,6,1.034450477995232,m s-1,
+advection_off,2020,12,v_component_of_wind,150,6,1.0367579610275082,m s-1,0.9935747785062906
+advection_off,2020,12,v_component_of_wind,175,6,1.0598675003606473,m s-1,
+advection_off,2020,12,v_component_of_wind,200,6,1.1106215170212426,m s-1,0.995337887847826
+advection_off,2020,12,v_component_of_wind,225,6,1.1672508793162715,m s-1,
+advection_off,2020,12,v_component_of_wind,250,6,1.1919753128022,m s-1,0.9955674389860204
+advection_off,2020,12,v_component_of_wind,300,6,1.1884559429799164,m s-1,0.9953284789071407
+advection_off,2020,12,v_component_of_wind,350,6,1.0867943940247888,m s-1,
+advection_off,2020,12,v_component_of_wind,400,6,0.986098025351739,m s-1,0.9953673207705575
+advection_off,2020,12,v_component_of_wind,450,6,0.8841880326992004,m s-1,
+advection_off,2020,12,v_component_of_wind,500,6,0.805134756823168,m s-1,0.9953730913273424
+advection_off,2020,12,v_component_of_wind,550,6,0.7672449154401327,m s-1,
+advection_off,2020,12,v_component_of_wind,600,6,0.7356451763707115,m s-1,0.9945952480619452
+advection_off,2020,12,v_component_of_wind,650,6,0.7030718590719317,m s-1,
+advection_off,2020,12,v_component_of_wind,700,6,0.679689337564445,m s-1,0.9940313162052502
+advection_off,2020,12,v_component_of_wind,750,6,0.6581226407785044,m s-1,
+advection_off,2020,12,v_component_of_wind,775,6,0.6535716454467179,m s-1,
+advection_off,2020,12,v_component_of_wind,800,6,0.6494214528772574,m s-1,
+advection_off,2020,12,v_component_of_wind,825,6,0.6529493837429284,m s-1,
+advection_off,2020,12,v_component_of_wind,850,6,0.6620427247572935,m s-1,0.9930415270067875
+advection_off,2020,12,v_component_of_wind,875,6,0.6626311621635449,m s-1,
+advection_off,2020,12,v_component_of_wind,900,6,0.6522541205731547,m s-1,
+advection_off,2020,12,v_component_of_wind,925,6,0.6396115415097559,m s-1,0.993823220247973
+advection_off,2020,12,v_component_of_wind,950,6,0.6210600834714759,m s-1,
+advection_off,2020,12,v_component_of_wind,975,6,0.5886227354932911,m s-1,
+advection_off,2020,12,v_component_of_wind,1000,6,0.5367610521308219,m s-1,0.9932407329688063
+advection_off,2020,12,vertical_velocity,1,6,0.0012516442814186988,Pa s-1,
+advection_off,2020,12,vertical_velocity,2,6,0.0018061287748456368,Pa s-1,
+advection_off,2020,12,vertical_velocity,3,6,0.0022527580777518493,Pa s-1,
+advection_off,2020,12,vertical_velocity,5,6,0.0029793257724494487,Pa s-1,
+advection_off,2020,12,vertical_velocity,7,6,0.0037516691758676854,Pa s-1,
+advection_off,2020,12,vertical_velocity,10,6,0.004631524135758166,Pa s-1,
+advection_off,2020,12,vertical_velocity,20,6,0.006685482749043156,Pa s-1,
+advection_off,2020,12,vertical_velocity,30,6,0.007925692432886504,Pa s-1,
+advection_off,2020,12,vertical_velocity,50,6,0.00967992889391079,Pa s-1,0.6392132039103933
+advection_off,2020,12,vertical_velocity,70,6,0.011787401551810205,Pa s-1,
+advection_off,2020,12,vertical_velocity,100,6,0.01889615437506318,Pa s-1,0.7431571682126262
+advection_off,2020,12,vertical_velocity,125,6,0.029895694691366353,Pa s-1,
+advection_off,2020,12,vertical_velocity,150,6,0.042690320397805306,Pa s-1,0.7359571943642961
+advection_off,2020,12,vertical_velocity,175,6,0.055367451098518095,Pa s-1,
+advection_off,2020,12,vertical_velocity,200,6,0.06684248814545135,Pa s-1,0.752274927258984
+advection_off,2020,12,vertical_velocity,225,6,0.07730196989776297,Pa s-1,
+advection_off,2020,12,vertical_velocity,250,6,0.08676105957744296,Pa s-1,0.7758893745531338
+advection_off,2020,12,vertical_velocity,300,6,0.10412303142250594,Pa s-1,0.7906088370414693
+advection_off,2020,12,vertical_velocity,350,6,0.11888804672455366,Pa s-1,
+advection_off,2020,12,vertical_velocity,400,6,0.1297160578352116,Pa s-1,0.8008570092400679
+advection_off,2020,12,vertical_velocity,450,6,0.13663695516287847,Pa s-1,
+advection_off,2020,12,vertical_velocity,500,6,0.14166666418967339,Pa s-1,0.8032602897868375
+advection_off,2020,12,vertical_velocity,550,6,0.14677311338890844,Pa s-1,
+advection_off,2020,12,vertical_velocity,600,6,0.15110542846307623,Pa s-1,0.7966048190142517
+advection_off,2020,12,vertical_velocity,650,6,0.15302735016521427,Pa s-1,
+advection_off,2020,12,vertical_velocity,700,6,0.15175937370815748,Pa s-1,0.8024243170266705
+advection_off,2020,12,vertical_velocity,750,6,0.14904322820125526,Pa s-1,
+advection_off,2020,12,vertical_velocity,775,6,0.14635933016637925,Pa s-1,
+advection_off,2020,12,vertical_velocity,800,6,0.14281006361431928,Pa s-1,
+advection_off,2020,12,vertical_velocity,825,6,0.1378400051498637,Pa s-1,
+advection_off,2020,12,vertical_velocity,850,6,0.13105627163940545,Pa s-1,0.8186621203514205
+advection_off,2020,12,vertical_velocity,875,6,0.12245431816931174,Pa s-1,
+advection_off,2020,12,vertical_velocity,900,6,0.11109829909643171,Pa s-1,
+advection_off,2020,12,vertical_velocity,925,6,0.0958635957078262,Pa s-1,0.8292643114967532
+advection_off,2020,12,vertical_velocity,950,6,0.07665949632444995,Pa s-1,
+advection_off,2020,12,vertical_velocity,975,6,0.05497458935115715,Pa s-1,
+advection_off,2020,12,vertical_velocity,1000,6,0.03785996860218422,Pa s-1,0.8633170320159489
+advection_off,2020,12,specific_humidity,1,6,4.457759012249544e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,2,6,3.150904058947238e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,3,6,3.222008925290015e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,5,6,3.3631106031353413e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,7,6,3.414464115592796e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,10,6,3.402610568484643e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,20,6,3.158570960661498e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,30,6,2.2960126806537138e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,50,6,1.9104744994282156e-08,kg kg-1,0.9947998104272401
+advection_off,2020,12,specific_humidity,70,6,3.548802883767147e-08,kg kg-1,
+advection_off,2020,12,specific_humidity,100,6,1.04093581679109e-07,kg kg-1,0.9695546774174472
+advection_off,2020,12,specific_humidity,125,6,2.947169006942003e-07,kg kg-1,
+advection_off,2020,12,specific_humidity,150,6,8.32644086168018e-07,kg kg-1,0.9495795466884452
+advection_off,2020,12,specific_humidity,175,6,2.2277818006762094e-06,kg kg-1,
+advection_off,2020,12,specific_humidity,200,6,5.0742902224278145e-06,kg kg-1,0.9559238167116199
+advection_off,2020,12,specific_humidity,225,6,1.0148370073972403e-05,kg kg-1,
+advection_off,2020,12,specific_humidity,250,6,1.6947912406157604e-05,kg kg-1,0.9613803779780324
+advection_off,2020,12,specific_humidity,300,6,3.401095525569626e-05,kg kg-1,0.9721910755046842
+advection_off,2020,12,specific_humidity,350,6,5.712483145795336e-05,kg kg-1,
+advection_off,2020,12,specific_humidity,400,6,8.547309390522305e-05,kg kg-1,0.9814578327120311
+advection_off,2020,12,specific_humidity,450,6,0.00012349662737722405,kg kg-1,
+advection_off,2020,12,specific_humidity,500,6,0.00015808027888344848,kg kg-1,0.9833671313555875
+advection_off,2020,12,specific_humidity,550,6,0.00019685935463995745,kg kg-1,
+advection_off,2020,12,specific_humidity,600,6,0.0002212004124308037,kg kg-1,0.9845910551013722
+advection_off,2020,12,specific_humidity,650,6,0.00025936483217024124,kg kg-1,
+advection_off,2020,12,specific_humidity,700,6,0.0002909360299959725,kg kg-1,0.9843127491540087
+advection_off,2020,12,specific_humidity,750,6,0.00032908411665019444,kg kg-1,
+advection_off,2020,12,specific_humidity,775,6,0.0003369604540744332,kg kg-1,
+advection_off,2020,12,specific_humidity,800,6,0.0003507814327028798,kg kg-1,
+advection_off,2020,12,specific_humidity,825,6,0.00036507663335516273,kg kg-1,
+advection_off,2020,12,specific_humidity,850,6,0.0003763918833468508,kg kg-1,0.9806013634914427
+advection_off,2020,12,specific_humidity,875,6,0.00037316785626567765,kg kg-1,
+advection_off,2020,12,specific_humidity,900,6,0.0003676170134579404,kg kg-1,
+advection_off,2020,12,specific_humidity,925,6,0.00036329676038080713,kg kg-1,0.9723492426398526
+advection_off,2020,12,specific_humidity,950,6,0.0003359361880451614,kg kg-1,
+advection_off,2020,12,specific_humidity,975,6,0.00030743247835710047,kg kg-1,
+advection_off,2020,12,specific_humidity,1000,6,0.00029424449839170235,kg kg-1,0.9814736235047415
+advection_reset_velocity,2020,12,2m_temperature,,6,0.5838150714314484,K,0.974559061690945
+advection_reset_velocity,2020,12,mean_sea_level_pressure,,6,32.48521006381883,Pa,0.9990001626683066
+advection_reset_velocity,2020,12,10m_v_component_of_wind,,6,0.4972138605258439,m s-1,0.9925233484903716
+advection_reset_velocity,2020,12,10m_u_component_of_wind,,6,0.487231564598034,m s-1,0.9924128892602897
+advection_reset_velocity,2020,12,total_precipitation_6hr,,6,0.0011603432658707897,m,0.8798490708637147
+advection_reset_velocity,2020,12,temperature,1,6,3.3250550881220025,K,
+advection_reset_velocity,2020,12,temperature,2,6,2.9285871932659355,K,
+advection_reset_velocity,2020,12,temperature,3,6,2.5147456364860536,K,
+advection_reset_velocity,2020,12,temperature,5,6,1.9463497226327715,K,
+advection_reset_velocity,2020,12,temperature,7,6,1.6886919582931825,K,
+advection_reset_velocity,2020,12,temperature,10,6,1.4751280880962991,K,
+advection_reset_velocity,2020,12,temperature,20,6,1.1793285031614869,K,
+advection_reset_velocity,2020,12,temperature,30,6,0.9280443925089148,K,
+advection_reset_velocity,2020,12,temperature,50,6,0.6655660713989036,K,0.9799678120984573
+advection_reset_velocity,2020,12,temperature,70,6,0.6086517294053699,K,
+advection_reset_velocity,2020,12,temperature,100,6,0.44557128497739973,K,0.9915682538771017
+advection_reset_velocity,2020,12,temperature,125,6,0.34345578114608016,K,
+advection_reset_velocity,2020,12,temperature,150,6,0.31410623598769133,K,0.9958145475648758
+advection_reset_velocity,2020,12,temperature,175,6,0.30932298293590693,K,
+advection_reset_velocity,2020,12,temperature,200,6,0.3235155848114761,K,0.9965622595075031
+advection_reset_velocity,2020,12,temperature,225,6,0.31450904269738733,K,
+advection_reset_velocity,2020,12,temperature,250,6,0.2951434674461748,K,0.9954919236431848
+advection_reset_velocity,2020,12,temperature,300,6,0.25887615494187904,K,0.9952486901107404
+advection_reset_velocity,2020,12,temperature,350,6,0.24506337558318989,K,
+advection_reset_velocity,2020,12,temperature,400,6,0.2457420381157706,K,0.9968211898276448
+advection_reset_velocity,2020,12,temperature,450,6,0.2563290652573492,K,
+advection_reset_velocity,2020,12,temperature,500,6,0.24161014741193723,K,0.9971582281077914
+advection_reset_velocity,2020,12,temperature,550,6,0.2459980444414983,K,
+advection_reset_velocity,2020,12,temperature,600,6,0.25511315375323945,K,0.9968207087026645
+advection_reset_velocity,2020,12,temperature,650,6,0.25982176316595684,K,
+advection_reset_velocity,2020,12,temperature,700,6,0.26723127580966555,K,0.9965083007364587
+advection_reset_velocity,2020,12,temperature,750,6,0.2774147408766412,K,
+advection_reset_velocity,2020,12,temperature,775,6,0.28690942404506,K,
+advection_reset_velocity,2020,12,temperature,800,6,0.30249732549559183,K,
+advection_reset_velocity,2020,12,temperature,825,6,0.326770935022749,K,
+advection_reset_velocity,2020,12,temperature,850,6,0.3398078214101254,K,0.9950522228336823
+advection_reset_velocity,2020,12,temperature,875,6,0.3434499638076728,K,
+advection_reset_velocity,2020,12,temperature,900,6,0.3560896450609617,K,
+advection_reset_velocity,2020,12,temperature,925,6,0.3580049327789741,K,0.9935360590472572
+advection_reset_velocity,2020,12,temperature,950,6,0.3686499041927188,K,
+advection_reset_velocity,2020,12,temperature,975,6,0.38611566703202965,K,
+advection_reset_velocity,2020,12,temperature,1000,6,0.39331890946902426,K,0.9897523578309247
+advection_reset_velocity,2020,12,geopotential,1,6,681.6322328480708,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,2,6,457.4186994533857,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,3,6,352.7364988373343,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,5,6,257.0932699136524,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,7,6,213.3580095735052,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,10,6,175.38599005066382,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,20,6,114.82329527035746,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,30,6,85.91942724512468,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,50,6,60.567530407006295,m2 s-2,0.9986903327175604
+advection_reset_velocity,2020,12,geopotential,70,6,48.056822734311346,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,100,6,38.30785843627817,m2 s-2,0.9993367065497395
+advection_reset_velocity,2020,12,geopotential,125,6,33.720878968488464,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,150,6,31.498861865719558,m2 s-2,0.9995494261068733
+advection_reset_velocity,2020,12,geopotential,175,6,30.241660458161014,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,200,6,29.398364251831275,m2 s-2,0.9996473217716114
+advection_reset_velocity,2020,12,geopotential,225,6,28.90156608962062,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,250,6,28.89150202132922,m2 s-2,0.9996890491616829
+advection_reset_velocity,2020,12,geopotential,300,6,28.3947760657843,m2 s-2,0.9996853853924973
+advection_reset_velocity,2020,12,geopotential,350,6,26.778800461933454,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,400,6,25.20633126266925,m2 s-2,0.9996703471924082
+advection_reset_velocity,2020,12,geopotential,450,6,23.67515412758214,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,500,6,22.62221383997485,m2 s-2,0.9996303166492172
+advection_reset_velocity,2020,12,geopotential,550,6,21.98584810255708,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,600,6,21.57624676899373,m2 s-2,0.9995467837071669
+advection_reset_velocity,2020,12,geopotential,650,6,21.484350055676558,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,700,6,21.591996025063892,m2 s-2,0.9994208574133037
+advection_reset_velocity,2020,12,geopotential,750,6,21.755125402011917,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,775,6,21.90226389380943,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,800,6,22.103175282427777,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,825,6,22.342943102981337,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,850,6,22.6611608975457,m2 s-2,0.9992047753768659
+advection_reset_velocity,2020,12,geopotential,875,6,23.018156251319844,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,900,6,23.455196339841724,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,925,6,23.951288875265707,m2 s-2,0.999099369327388
+advection_reset_velocity,2020,12,geopotential,950,6,24.458519819542996,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,975,6,25.027246339633823,m2 s-2,
+advection_reset_velocity,2020,12,geopotential,1000,6,25.67909740948578,m2 s-2,0.9989991964238992
+advection_reset_velocity,2020,12,u_component_of_wind,1,6,7.651797643036058,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,2,6,5.488368461005534,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,3,6,4.365973648187588,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,5,6,3.420909899697128,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,7,6,3.028451455078695,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,10,6,2.768721216459359,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,20,6,2.246727439703089,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,30,6,1.8971661732060212,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,50,6,1.4400224448282695,m s-1,0.9844973586940582
+advection_reset_velocity,2020,12,u_component_of_wind,70,6,1.2012364216551457,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,100,6,1.086137166957456,m s-1,0.9903095686567562
+advection_reset_velocity,2020,12,u_component_of_wind,125,6,1.022780897938452,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,150,6,1.0507081698751448,m s-1,0.9946691006730665
+advection_reset_velocity,2020,12,u_component_of_wind,175,6,1.0623893568967149,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,200,6,1.1016239632770073,m s-1,0.9957112241479834
+advection_reset_velocity,2020,12,u_component_of_wind,225,6,1.1627354129400043,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,250,6,1.1891992422322668,m s-1,0.9956498429313521
+advection_reset_velocity,2020,12,u_component_of_wind,300,6,1.1552328755439398,m s-1,0.9955817514398838
+advection_reset_velocity,2020,12,u_component_of_wind,350,6,1.0626651998828418,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,400,6,0.9603008334035371,m s-1,0.9956332894465052
+advection_reset_velocity,2020,12,u_component_of_wind,450,6,0.8747247466316813,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,500,6,0.8000543989790211,m s-1,0.9955535379784971
+advection_reset_velocity,2020,12,u_component_of_wind,550,6,0.7720855138191077,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,600,6,0.7396268199633512,m s-1,0.9948634761663055
+advection_reset_velocity,2020,12,u_component_of_wind,650,6,0.720729251992099,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,700,6,0.6857219634279638,m s-1,0.9944824119603899
+advection_reset_velocity,2020,12,u_component_of_wind,750,6,0.667687033819668,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,775,6,0.6621360729571228,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,800,6,0.6596664310964354,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,825,6,0.6595781116336898,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,850,6,0.6589846221163286,m s-1,0.9936726283091568
+advection_reset_velocity,2020,12,u_component_of_wind,875,6,0.6538243119483469,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,900,6,0.6404430374362471,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,925,6,0.6309043482677694,m s-1,0.993946099964747
+advection_reset_velocity,2020,12,u_component_of_wind,950,6,0.6081302055750563,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,975,6,0.5746488967579537,m s-1,
+advection_reset_velocity,2020,12,u_component_of_wind,1000,6,0.5296338834045446,m s-1,0.9928727992738754
+advection_reset_velocity,2020,12,v_component_of_wind,1,6,7.027034455105668,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,2,6,5.439670250349641,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,3,6,4.518200722742274,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,5,6,3.5953784109895004,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,7,6,3.1913463574329146,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,10,6,2.9003335550369256,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,20,6,2.461775917838989,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,30,6,2.0992112121435906,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,50,6,1.464771714176463,m s-1,0.9619929041782368
+advection_reset_velocity,2020,12,v_component_of_wind,70,6,1.2283693754017373,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,100,6,1.0702743353068846,m s-1,0.9876170880380744
+advection_reset_velocity,2020,12,v_component_of_wind,125,6,1.0344369195114258,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,150,6,1.036801144311025,m s-1,0.9935742714673051
+advection_reset_velocity,2020,12,v_component_of_wind,175,6,1.0599190044416302,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,200,6,1.1106847287998314,m s-1,0.9953373731206833
+advection_reset_velocity,2020,12,v_component_of_wind,225,6,1.1671655704229176,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,250,6,1.1920680925233285,m s-1,0.995566925833569
+advection_reset_velocity,2020,12,v_component_of_wind,300,6,1.1883450324480918,m s-1,0.9953296844057912
+advection_reset_velocity,2020,12,v_component_of_wind,350,6,1.0868785959407317,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,400,6,0.9862262410201739,m s-1,0.9953663682088184
+advection_reset_velocity,2020,12,v_component_of_wind,450,6,0.8842245511008477,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,500,6,0.8051336942454128,m s-1,0.9953733007965965
+advection_reset_velocity,2020,12,v_component_of_wind,550,6,0.7672240058440201,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,600,6,0.7357128240278532,m s-1,0.9945942071968096
+advection_reset_velocity,2020,12,v_component_of_wind,650,6,0.703067106672689,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,700,6,0.6796565913630721,m s-1,0.9940317814150877
+advection_reset_velocity,2020,12,v_component_of_wind,750,6,0.6580798646858158,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,775,6,0.653530476110552,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,800,6,0.6493998834654489,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,825,6,0.6528916804520581,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,850,6,0.6620342354730303,m s-1,0.9930416687562281
+advection_reset_velocity,2020,12,v_component_of_wind,875,6,0.6626287925133805,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,900,6,0.652240623283254,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,925,6,0.6395721536250668,m s-1,0.993823845873724
+advection_reset_velocity,2020,12,v_component_of_wind,950,6,0.6210567059590898,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,975,6,0.5886594163407107,m s-1,
+advection_reset_velocity,2020,12,v_component_of_wind,1000,6,0.536812372475635,m s-1,0.9932393466714836
+advection_reset_velocity,2020,12,vertical_velocity,1,6,0.001251653921644273,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,2,6,0.001806172347751934,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,3,6,0.0022527447537512013,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,5,6,0.002979352549679127,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,7,6,0.0037515535614558435,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,10,6,0.004631385195868351,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,20,6,0.006684305529667836,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,30,6,0.007924789889265453,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,50,6,0.009679490243576887,Pa s-1,0.6392202058275119
+advection_reset_velocity,2020,12,vertical_velocity,70,6,0.0117862984067262,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,100,6,0.018896244993749752,Pa s-1,0.7431580066958346
+advection_reset_velocity,2020,12,vertical_velocity,125,6,0.029896206574894044,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,150,6,0.04269270359700582,Pa s-1,0.7359188576408148
+advection_reset_velocity,2020,12,vertical_velocity,175,6,0.055369460627061245,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,200,6,0.06684231152325089,Pa s-1,0.7522720409248342
+advection_reset_velocity,2020,12,vertical_velocity,225,6,0.07730263495494552,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,250,6,0.08675765775731184,Pa s-1,0.775906230353233
+advection_reset_velocity,2020,12,vertical_velocity,300,6,0.10412408266531578,Pa s-1,0.7905982535114356
+advection_reset_velocity,2020,12,vertical_velocity,350,6,0.11889112791371245,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,400,6,0.1297215870987022,Pa s-1,0.80083524909627
+advection_reset_velocity,2020,12,vertical_velocity,450,6,0.1366509783057581,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,500,6,0.14168590313464582,Pa s-1,0.8031973834562841
+advection_reset_velocity,2020,12,vertical_velocity,550,6,0.14677641495078428,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,600,6,0.15110593801613917,Pa s-1,0.7966010587203011
+advection_reset_velocity,2020,12,vertical_velocity,650,6,0.15302025641893355,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,700,6,0.15175905867509917,Pa s-1,0.8024254766057721
+advection_reset_velocity,2020,12,vertical_velocity,750,6,0.14904282712042297,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,775,6,0.1463607632390903,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,800,6,0.14281124580193655,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,825,6,0.13783405287664846,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,850,6,0.13104842875643372,Pa s-1,0.818689844348594
+advection_reset_velocity,2020,12,vertical_velocity,875,6,0.12245107579292062,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,900,6,0.11109253101447546,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,925,6,0.09585981134044158,Pa s-1,0.8292822804297795
+advection_reset_velocity,2020,12,vertical_velocity,950,6,0.07665406541118445,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,975,6,0.05497385413482451,Pa s-1,
+advection_reset_velocity,2020,12,vertical_velocity,1000,6,0.037852369864825826,Pa s-1,0.8633791281635667
+advection_reset_velocity,2020,12,specific_humidity,1,6,4.45780603020134e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,2,6,3.150834702261211e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,3,6,3.2219939746149845e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,5,6,3.363108779819802e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,7,6,3.4145140781094566e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,10,6,3.402611992911534e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,20,6,3.158649929720624e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,30,6,2.2959199991373957e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,50,6,1.910599986172097e-08,kg kg-1,0.9948004370507575
+advection_reset_velocity,2020,12,specific_humidity,70,6,3.548998610548054e-08,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,100,6,1.0407683647529136e-07,kg kg-1,0.9695646457822514
+advection_reset_velocity,2020,12,specific_humidity,125,6,2.947491623540876e-07,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,150,6,8.327257738640381e-07,kg kg-1,0.9495713092759656
+advection_reset_velocity,2020,12,specific_humidity,175,6,2.227643288897125e-06,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,200,6,5.075461546874902e-06,kg kg-1,0.9559041078560696
+advection_reset_velocity,2020,12,specific_humidity,225,6,1.014818625344608e-05,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,250,6,1.694857254414833e-05,kg kg-1,0.961374804104112
+advection_reset_velocity,2020,12,specific_humidity,300,6,3.4012617788135704e-05,kg kg-1,0.9721876422393722
+advection_reset_velocity,2020,12,specific_humidity,350,6,5.713048019922508e-05,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,400,6,8.546407065351833e-05,kg kg-1,0.9814614314709766
+advection_reset_velocity,2020,12,specific_humidity,450,6,0.00012349590254330726,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,500,6,0.00015808249214675364,kg kg-1,0.9833673511514217
+advection_reset_velocity,2020,12,specific_humidity,550,6,0.00019687718051391423,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,600,6,0.00022117916022702707,kg kg-1,0.9845941903350276
+advection_reset_velocity,2020,12,specific_humidity,650,6,0.00025933105513054245,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,700,6,0.00029096836877831513,kg kg-1,0.984309848225562
+advection_reset_velocity,2020,12,specific_humidity,750,6,0.000329094861511148,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,775,6,0.0003369646307086712,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,800,6,0.00035079194791304996,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,825,6,0.0003650591130456526,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,850,6,0.00037637637514686517,kg kg-1,0.9806027445217258
+advection_reset_velocity,2020,12,specific_humidity,875,6,0.00037314115065344334,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,900,6,0.0003675807959201701,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,925,6,0.0003632880430751391,kg kg-1,0.9723504036378362
+advection_reset_velocity,2020,12,specific_humidity,950,6,0.00033595404868363987,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,975,6,0.00030741949750098737,kg kg-1,
+advection_reset_velocity,2020,12,specific_humidity,1000,6,0.00029423692562295265,kg kg-1,0.9814749896174453

@@ -1,4 +1,4 @@
-"""GraphCast fine-tuning with bounded ERA5 windows; see docs/finetuning.md."""
+"""GraphCast fine-tuning with bounded ERA5 windows; see docs/graphcast/finetuning.md."""
 import argparse
 import dataclasses
 import json

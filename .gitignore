@@ -6,8 +6,7 @@ __pycache__/
 data/
 # Reused data can also be a local symlink.
 /data
-/outputs/**/*.nc
-/outputs/**/*.npz
+/outputs/
 *.log
 /work/
 /runs/
