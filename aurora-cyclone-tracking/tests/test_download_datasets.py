@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 import xarray as xr
 
-import download_datasets as downloader
+from scripts import download_datasets as downloader
 from advection_ft.schema import LEVELS, canonical_names
 
 

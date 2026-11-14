@@ -4,9 +4,9 @@ This repository tests advection adapters for weather forecasting, cyclone tracki
 
 | Workflow | Data and task | Results |
 |---|---|---|
-| [GraphCast weather](graphcast-weather/README.md) | ERA5 weather forecasting at 1° | [RMSE and ACC](graphcast-weather/docs/evaluation-results.md) |
-| [Aurora cyclone tracking](aurora-cyclone-tracking/README.md) | HRES-T0 forecasts at 1.5°, verified with IBTrACS | [Track errors and plots](aurora-cyclone-tracking/cyclone_report_20261106/Aurora_Cyclone_Results.md) |
-| [Aurora air pollution](aurora-air-pollution/README.md) | CAMS EAC4 and CAMS lead-zero data at 1.5° | [January 2003 pilot](aurora-air-pollution/docs/RESULTS_2026-11-09.txt) |
+| [GraphCast weather](graphcast-weather/README.md) | ERA5 weather forecasting at 1° | [RMSE and ACC](graphcast-weather/results/README.md) |
+| [Aurora cyclone tracking](aurora-cyclone-tracking/README.md) | HRES-T0 forecasts at 1.5°, verified with IBTrACS | [Track errors and plots](aurora-cyclone-tracking/results/README.md) |
+| [Aurora air pollution](aurora-air-pollution/README.md) | CAMS EAC4 and CAMS lead-zero data at 1.5° | [January 2003 pilot](aurora-air-pollution/results/README.md) |
 
 ## Running an experiment
 

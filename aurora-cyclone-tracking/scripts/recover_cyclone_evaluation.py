@@ -1,6 +1,6 @@
 """Recover a completed cyclone evaluation after the NA-basin parsing failure.
 
-Run from advection finetuning. Requires confirmation that all initializations
+Run from aurora-cyclone-tracking. Requires confirmation that all initializations
 finished; this script cannot resume partially completed forecasting.
 """
 import argparse
@@ -26,7 +26,7 @@ def patch_csv_readers(root):
     }
     staged = []
     for filename, replacements in fixes.items():
-        path = root / filename
+        path = root / "scripts" / filename
         source = path.read_text()
         for old, new in replacements:
             if old in source:

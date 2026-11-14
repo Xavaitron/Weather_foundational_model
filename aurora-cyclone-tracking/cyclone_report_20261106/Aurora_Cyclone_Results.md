@@ -117,8 +117,8 @@ All five completed runs used two autoregressive six-hour training steps, supervi
 The [four-step config](../configs/cyclone_4step.json) keeps the original split and training settings while extending supervision to +24 hours. Use the same configuration for both approaches and separate output directories.
 
 ```bash
-python finetune_standard.py --config configs/cyclone_4step.json --output runs/cyclone/standard_4step_seed42
-python finetune_nowcastnet.py --config configs/cyclone_4step.json --output runs/cyclone/nowcastnet_4step_seed42
+python scripts/finetune_standard.py --config configs/cyclone_4step.json --output runs/cyclone/standard_4step_seed42
+python scripts/finetune_nowcastnet.py --config configs/cyclone_4step.json --output runs/cyclone/nowcastnet_4step_seed42
 ```
 
 ## Ten-day follow-up plan

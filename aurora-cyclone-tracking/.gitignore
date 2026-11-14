@@ -21,3 +21,4 @@ vendor/
 !/cyclone_report_20261106/data/track_mae_km.csv
 !/cyclone_report_20261106/data/track_rmse_km.csv
 !/cyclone_report_20261106/data/training_summary.csv
+/local-artifacts/

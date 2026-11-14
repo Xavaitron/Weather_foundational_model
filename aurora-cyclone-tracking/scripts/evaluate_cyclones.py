@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import torch
 
+import _bootstrap  # Make the project package importable when run as a script.
 from advection_ft.data import WeatherDataset
 from advection_ft.metrics import haversine_km, summarise_tracks
 from advection_ft.model import advance, build_model

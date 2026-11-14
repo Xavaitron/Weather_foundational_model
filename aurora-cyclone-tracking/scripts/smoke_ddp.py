@@ -8,6 +8,7 @@ import torch.distributed as dist
 import torch.multiprocessing as mp
 from torch.nn.parallel import DistributedDataParallel
 
+import _bootstrap  # Make the project package importable when run as a script.
 from advection_ft.model import build_model
 from tests.test_integration import config, synthetic_batch
 

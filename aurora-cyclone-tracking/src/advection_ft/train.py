@@ -37,9 +37,9 @@ def write_json(path, payload):
 
 
 def code_hash():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[2]
     h = hashlib.sha256()
-    files = list(root.glob("*.py")) + list((root/"advection_ft").glob("*.py"))
+    files = list((root / "scripts").glob("*.py")) + list((root / "advection_ft").glob("*.py")) + list(Path(__file__).parent.glob("*.py"))
     for p in sorted(files):
         h.update(p.relative_to(root).as_posix().encode())
         h.update(p.read_bytes())

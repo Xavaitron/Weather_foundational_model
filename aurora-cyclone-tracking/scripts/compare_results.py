@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import _bootstrap  # Make the project package importable when run as a script.
 from advection_ft.metrics import paired_comparison
 
 

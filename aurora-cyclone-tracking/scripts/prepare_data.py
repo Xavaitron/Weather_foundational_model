@@ -12,8 +12,10 @@ from pathlib import Path
 import numpy as np
 import xarray as xr
 
+if not __package__:
+    import _bootstrap
 from advection_ft.schema import ALIASES, LEVELS, canonical_names, interface
-from public_store import PublicGCSStore
+from scripts.public_store import PublicGCSStore
 
 
 def open_source(path):

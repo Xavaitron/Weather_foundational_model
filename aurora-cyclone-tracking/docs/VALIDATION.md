@@ -16,10 +16,10 @@ Test environment:
 Checks completed:
 
 - `python -m pytest -q tests`: **22 passed**, final run 41.83 seconds.
-- `python smoke_ddp.py`: two CPU/Gloo processes completed two multistep optimizer updates, checked synchronized motion gradients, and ran validation.
+- `python scripts/smoke_ddp.py`: two CPU/Gloo processes completed two multistep optimizer updates, checked synchronized motion gradients, and ran validation.
 - `ruff check --select F,E9`: passed.
 - Python compilation: passed.
-- `bash -n run_all.sh`: passed.
+- `bash -n scripts/run_all.sh`: passed.
 
 The tests cover each of the five approaches through the actual tiny Aurora encoder/backbone/decoder at the global 120×240 1.5-degree grid, with backward propagation and nonzero finite motion gradients. They also cover the specialized air-pollution class, two-step gradient flow with activation checkpointing, the exact zero-gain baseline path, transport identity/constant fields, seam/pole coordinates, area-integral preservation of the push operation, stable implicit grid diffusion, conservative regridding, chronology/gap filtering, spherical distance, paired storm resampling and failed-track accounting.
 

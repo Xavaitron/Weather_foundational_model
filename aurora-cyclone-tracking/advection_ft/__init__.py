@@ -1,4 +1,8 @@
-"""Controlled Aurora fine-tuning experiments with explicit transport adapters."""
+"""Expose the src package to the existing standalone cyclone commands."""
 
-AURORA_COMMIT = "7179f501b9f1a66e0444b782ecd06aa07062c8bc"
-APPROACHES = ("standard", "paradis", "nowcastnet", "adrnet", "de_bezenac")
+from pathlib import Path
+
+_source = Path(__file__).resolve().parents[1] / "src" / "advection_ft"
+__path__.insert(0, str(_source))
+_init = _source / "__init__.py"
+exec(compile(_init.read_bytes(), str(_init), "exec"))

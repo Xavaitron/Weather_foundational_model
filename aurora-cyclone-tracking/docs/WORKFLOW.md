@@ -4,15 +4,15 @@ Five independent training entry points share the same data, weather loss, rollou
 
 | Script | Experiment |
 |---|---|
-| `finetune_standard.py` | Standard Aurora fine-tuning |
-| `finetune_paradis.py` | PARADIS-inspired spherical backward transport, learned mixing and reaction |
-| `finetune_nowcastnet.py` | NowcastNet-inspired nearest transport, source update and a separately supervised bilinear path |
-| `finetune_adrnet.py` | ADRNet-inspired forward push, implicit grid diffusion and reaction; optional backward-color variant |
-| `finetune_de_bezenac.py` | de Bezenac-inspired Gaussian-kernel backward warping |
+| `scripts/finetune_standard.py` | Standard Aurora fine-tuning |
+| `scripts/finetune_paradis.py` | PARADIS-inspired spherical backward transport, learned mixing and reaction |
+| `scripts/finetune_nowcastnet.py` | NowcastNet-inspired nearest transport, source update and a separately supervised bilinear path |
+| `scripts/finetune_adrnet.py` | ADRNet-inspired forward push, implicit grid diffusion and reaction; optional backward-color variant |
+| `scripts/finetune_de_bezenac.py` | de Bezenac-inspired Gaussian-kernel backward warping |
 
 The default cyclone model is **original Aurora 0.25-degree Pretrained**, fine-tuned here on a **1.5-degree output grid**. Aurora 1.5 (the model version) is a different model interface and is not selected by these scripts. Full fine-tuning is the default for all five experiments. The adapter weights start from new initialization; the Aurora weights come from Microsoft's checkpoint.
 
-These are implementations of the papers' transport ideas adapted to Aurora, not reproductions of the original authors' architectures/results. Read `[methods](METHODS.md)` for exact differences. No trained advection adapters, atmospheric datasets or IBTrACS downloads are included. Local tests use a tiny random instance of the actual Aurora architecture. GPU training, released-weight inference, DDP performance and forecast skill must be established on your server.
+These are implementations of the papers' transport ideas adapted to Aurora, not reproductions of the original authors' architectures/results. Read [methods](METHODS.md) for exact differences. No trained advection adapters, atmospheric datasets or IBTrACS downloads are included. Local tests use a tiny random instance of the actual Aurora architecture. GPU training, released-weight inference, DDP performance and forecast skill must be established on your server.
 
 ## 1. Copy and set up on the SSH GPU
 
@@ -28,10 +28,10 @@ python -m pip install --upgrade pip
 # Tested torch/torchvision pair. Select a wheel compatible with your GPU driver.
 python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu124
 python -m pip install -r requirements.txt
-python smoke_test.py
+python scripts/smoke_test.py
 
 # Optional two-process CPU check, without a GPU or weight downloads:
-python smoke_ddp.py
+python scripts/smoke_ddp.py
 ```
 
 Python 3.10–3.12 and Git are required. The Aurora source is pinned to commit `7179f501b9f1a66e0444b782ecd06aa07062c8bc`, which was used to test the integration. Its checkpoint revision is controlled by the corresponding official model class. `pip-freeze.txt`, the source hash, initial checkpoint configuration, GPU information and training settings are saved with each run. Checkpoint downloads use Hugging Face's normal cache; for an offline machine, pre-stage the checkpoint and set `initial_checkpoint` in the JSON configuration to that file.
@@ -42,13 +42,13 @@ For multi-GPU runs each process holds the full model and optimizer (DDP, not FSD
 
 ```bash
 # Downloads/prepares data automatically, then trains all five approaches:
-NPROC_PER_NODE=4 bash run_all.sh cyclone
+NPROC_PER_NODE=4 bash scripts/run_all.sh cyclone
 
 # Or prepare the data separately before running individual training scripts:
-python download_datasets.py
+python scripts/download_datasets.py
 
 # Optional metadata-only connectivity/schema/date check:
-python download_datasets.py --check-only
+python scripts/download_datasets.py --check-only
 ```
 
 The downloader anonymously reads public WeatherBench2 HRES-T0 surface/pressure-level
@@ -70,12 +70,12 @@ HRES-T0 availability. This is a coarse-grid research experiment, not a full
 reproduction of Aurora's published cyclone evaluation. Existing experiments and
 checkpoints using the previous split must retain their saved configuration.
 Use a distinct config/store path for ERA5-only experiments and run
-`python download_datasets.py --source era5 --config YOUR_CONFIG.json` first.
+`python scripts/download_datasets.py --source era5 --config YOUR_CONFIG.json` first.
 For the runner to use ERA5, set DATA_SOURCE=era5 and edit configs/cyclone.json to point to that ERA5 store. The downloader refuses to mix sources or date ranges in an existing managed store.
 
 This automatic downloader covers **cyclone data only**. Air pollution still
 requires CAMS pollutant fields and emission inputs; WeatherBench ERA5/HRES cannot
-supply those. `run_all.sh air_pollution` retains the manual preparation workflow.
+supply those. `scripts/run_all.sh air_pollution` retains the manual preparation workflow.
 
 ### Manual sources and preparation
 
@@ -101,7 +101,7 @@ Required interface:
 Use Aurora/ECMWF physical units: temperature K, pressure Pa, wind m/s, geopotential m²/s² (not geopotential height), specific humidity kg/kg. The preparer does not guess conversions or fill missing values. Fields below terrain must follow the source product's documented extrapolation policy. All variables need the same valid timestamps. Select a single member/experiment before preparation.
 
 ```bash
-python prepare_data.py \
+python scripts/prepare_data.py \
   --task cyclone \
   --source /data/hres_pressure_levels.zarr \
   --source /data/hres_surface.zarr \
@@ -133,7 +133,7 @@ Aurora retains its original patch size 4 for cyclone runs. Therefore the transpo
 Download the global CSV `ibtracs.ALL.list.v04r01.csv` from the [official NOAA v04r01 CSV directory](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/), then run:
 
 ```bash
-python prepare_ibtracs.py \
+python scripts/prepare_ibtracs.py \
   --input /data/ibtracs.ALL.list.v04r01.csv \
   --output data/ibtracs.csv
 ```
@@ -145,24 +145,24 @@ This keeps main/provisional tracks, checks duplicates and valid coordinates, and
 Review `configs/cyclone.json` first. The five commands are:
 
 ```bash
-python finetune_standard.py   --config configs/cyclone.json
-python finetune_paradis.py    --config configs/cyclone.json
-python finetune_nowcastnet.py --config configs/cyclone.json
-python finetune_adrnet.py     --config configs/cyclone.json
-python finetune_de_bezenac.py --config configs/cyclone.json
+python scripts/finetune_standard.py   --config configs/cyclone.json
+python scripts/finetune_paradis.py    --config configs/cyclone.json
+python scripts/finetune_nowcastnet.py --config configs/cyclone.json
+python scripts/finetune_adrnet.py     --config configs/cyclone.json
+python scripts/finetune_de_bezenac.py --config configs/cyclone.json
 ```
 
 Run a short pilot with `--max-steps 10 --output runs/pilot_paradis` before committing to a long run. A production run with different settings needs a new output directory. To run all five sequentially:
 
 ```bash
-bash run_all.sh cyclone
+bash scripts/run_all.sh cyclone
 
 # Or use all four GPUs for each approach, sequentially:
-NPROC_PER_NODE=4 bash run_all.sh cyclone
+NPROC_PER_NODE=4 bash scripts/run_all.sh cyclone
 
 # One approach with torchrun:
 python -m torch.distributed.run --standalone --nproc_per_node=4 \
-  finetune_paradis.py --config configs/cyclone.json
+  scripts/finetune_paradis.py --config configs/cyclone.json
 ```
 
 The default objective is Aurora-style variable-weighted normalized MAE, two six-hour rollout steps, and full-model optimization. The cyclone configuration supplies the paper's HRES fine-tuning weight adjustments in `loss_overrides`; remove those overrides when deliberately using the original ERA5/pretraining weighting. By default it does not add latitude weighting to the training loss; set `area_weighted_loss=true` consistently across all variants to make that a separate choice. Evaluation always uses geographic distance or area weighting as appropriate. New adapters get a separate learning rate. NowcastNet adds its necessary bilinear auxiliary forecast loss; the other transport variants add a weak motion penalty. These objective differences and training cost must be reported alongside the comparison.
@@ -179,7 +179,7 @@ The default run directories are `runs/cyclone/<approach>_seed42/`. Each contains
 Resume with the exact configuration, code and GPU count:
 
 ```bash
-python finetune_paradis.py \
+python scripts/finetune_paradis.py \
   --config runs/cyclone/paradis_seed42/config.json \
   --output runs/cyclone/paradis_seed42 \
   --resume runs/cyclone/paradis_seed42/latest.pt
@@ -193,7 +193,7 @@ Run the identical command for each trained approach:
 
 ```bash
 for approach in standard paradis nowcastnet adrnet de_bezenac; do
-  python evaluate_cyclones.py \
+  python scripts/evaluate_cyclones.py \
     --checkpoint "runs/cyclone/${approach}_seed42/best.pt" \
     --ibtracs data/ibtracs.csv \
     --leads 24 48 72 96 120
@@ -215,7 +215,7 @@ The summary uses the native IBTrACS basin codes and fixes each forecast's basin 
 Compare on exactly matched cases, retaining failures:
 
 ```bash
-python compare_results.py \
+python scripts/compare_results.py \
   --reference runs/cyclone/standard_seed42/cyclone_evaluation \
   --candidate runs/cyclone/paradis_seed42/cyclone_evaluation \
   --candidate runs/cyclone/nowcastnet_seed42/cyclone_evaluation \
@@ -233,15 +233,15 @@ The same five entry points accept `--config configs/air_pollution.json`. They st
 Supply CAMS analysis/reanalysis fields and all prescribed static emissions/context fields. The required interface is defined explicitly in `advection_ft/schema.py` and matches the official air-pollution class. It includes PM1/PM2.5/PM10, total-column gases and pressure-level gases alongside meteorology. ERA5 alone is insufficient. Missing fields fail explicitly. Do not replace missing pollutant/emissions fields with zeros. Use `--mapping` to specify names and exact unit conversions (for example, µg/m³ to kg/m³ is a factor of 1e-9; verify each variable's native convention). Do not treat total-column quantities as concentrations.
 
 ```bash
-python prepare_data.py --task air_pollution \
+python scripts/prepare_data.py --task air_pollution \
   --source /data/cams_all_fields.zarr --source /data/aurora_pollution_statics.nc \
   --mapping /data/cams_to_aurora.json \
   --start 2017-10-01 --end 2024-12-31 \
   --data-vintage "CAMS analyses; include model-cycle provenance in your source metadata" \
   --output data/cams_1p5.zarr
 
-bash run_all.sh air_pollution
-python evaluate_air_pollution.py \
+bash scripts/run_all.sh air_pollution
+python scripts/evaluate_air_pollution.py \
   --checkpoint runs/air_pollution/paradis_seed42/best.pt \
   --horizon-hours 120
 ```
@@ -253,7 +253,8 @@ The evaluator writes physical-unit, area-weighted RMSE, MAE and bias separately 
 ## 7. Copy the results back
 
 ```bash
-python export_results.py --runs runs --output advection_results.zip
+mkdir -p local-artifacts
+python scripts/export_results.py --runs runs --output local-artifacts/advection_results.zip
 ```
 
 Copy `advection_results.zip` back to this workspace. It contains configs, manifests, logs, per-case errors and comparisons, and excludes large model checkpoints by default. Use `--include-checkpoints` only if you also want to transfer the trained models. Keep the large checkpoints on the GPU server until the results have been reviewed.
@@ -261,7 +262,7 @@ Copy `advection_results.zip` back to this workspace. It contains configs, manife
 To make a new source bundle after editing:
 
 ```bash
-python package_project.py --output ../aurora_cyclone_tracking.zip
+python scripts/package_project.py --output ../aurora_cyclone_tracking.zip
 ```
 
 The source bundle excludes `.venv`, data and runs. The package refuses to overwrite existing training/evaluation/result directories by default so an earlier experiment is not lost.

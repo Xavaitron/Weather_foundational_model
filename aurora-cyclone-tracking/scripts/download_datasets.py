@@ -15,8 +15,10 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 
+if not __package__:
+    import _bootstrap
 from advection_ft.schema import LEVELS, canonical_names
-from prepare_data import open_source, resolve
+from scripts.prepare_data import open_source, resolve
 
 HRES = "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr"
 ERA5 = "gs://weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr"

@@ -88,7 +88,7 @@ def test_training_checkpoint_resume_evaluation_and_export(tmp_path):
     config_path.write_text(json.dumps(config))
     env = dict(os.environ, OMP_NUM_THREADS="2", MKL_NUM_THREADS="2")
     def command(*args):
-        subprocess.run([sys.executable, *map(str, args)], cwd=root, env=env,
+        subprocess.run([sys.executable, str(Path("scripts") / args[0]), *map(str, args[1:])], cwd=root, env=env,
                        check=True, capture_output=True, text=True)
     prepared = tmp_path/"prepared.zarr"
     command("prepare_data.py", "--source", store, "--output", prepared, "--task", "cyclone",

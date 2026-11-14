@@ -8,13 +8,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--output", default="../output/advection_finetuning.zip")
     args = p.parse_args()
-    root, output = Path(__file__).resolve().parent, Path(args.output).resolve()
+    root, output = Path(__file__).resolve().parents[1], Path(args.output).resolve()
     if output.exists():
         raise FileExistsError(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     candidates = list(root.glob("*.py"))+list(root.glob("*.md"))+list(root.glob("*.txt"))+list(root.glob("*.sh"))
-    for directory in ("advection_ft", "configs", "tests"):
-        candidates += [p for p in (root/directory).rglob("*") if p.is_file() and p.suffix in (".py", ".json")]
+    for directory in ("advection_ft", "src", "scripts", "configs", "docs", "tests"):
+        candidates += [p for p in (root/directory).rglob("*") if p.is_file() and p.suffix in (".py", ".json", ".sh", ".md")]
     with ZipFile(output, "w", ZIP_DEFLATED) as archive:
         for path in sorted(candidates):
             archive.write(path, Path(root.name)/path.relative_to(root))
